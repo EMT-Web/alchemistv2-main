@@ -31,7 +31,7 @@ export default function  NextPage({ posts}:any) {
   posts && posts.length > 0 ? posts.map((post:any) => <div key={post._id} className="col-md-4 d-flex ftco-animate">
   <div className="blog-entry justify-content-end">
    <a href={`/blog/${post.slug.current}`} className="block-20" >
-    <Image src={urlFor(post.mainImage).url()!} layout='fill' objectFit="cover" blurDataURL={urlFor(post.mainImage).url()!} placeholder="blur"/>
+    <Image src={urlFor(post.mainImage).url()!} alt={post.title} layout='fill' objectFit="cover" blurDataURL={urlFor(post.mainImage).url()!} placeholder="blur"/>
    </a>
    <div className="text">
     <div className="d-flex align-items-center mb-4 topp">
