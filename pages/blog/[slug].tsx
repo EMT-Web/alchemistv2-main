@@ -21,16 +21,12 @@ function post({ post, destinations, relatedPosts}:any) {
     }
   };
 
-  sanityClient
-  .patch(post._id)
-  .inc({views: 1}) 
-  .commit()
-  // .then((updatedpost) => {
-  //   console.log('Hurray, the post is updated! New document:')
-  // })
-  // .catch((err) => {
-  //   console.error('Oh no, the update failed: ', err.message)
-  // })
+  // View counter disabled during build - requires write permissions
+  // TODO: Move to client-side useEffect if needed
+  // sanityClient
+  // .patch(post._id)
+  // .inc({views: 1}) 
+  // .commit()
 
 
 
