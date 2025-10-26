@@ -93,6 +93,7 @@ export async function getServerSideProps({ query }:any) {
 
 
 // const res = `*[_type == 'post' &amp;&amp; ]`
+const searchQuery = query.q || '';
 const searchResults = await sanityClient.fetch(
   `*[_type == "post" && title match $query]{
     _createdAt,
@@ -102,11 +103,14 @@ const searchResults = await sanityClient.fetch(
     slug,
     mainImage
   }`,
-  { query: `${query.q}*` }
+  { query: `${searchQuery}*` } as any
 );
 
   return {
-    props: { posts: searchResults, keyword: query.q },
+    props: { 
+      posts: searchResults || [], 
+      keyword: searchQuery 
+    },
   };
 }
 export default SearchPage
