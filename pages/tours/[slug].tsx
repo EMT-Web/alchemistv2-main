@@ -77,14 +77,14 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
     <>
     <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content={tour.seodescription}></meta>
-           <meta name="keywords" content={tour.seokeywords}></meta>
-           <title>{tour.seotitle}</title>
+           <meta name="description" content={tour.seodescription || tour.title}></meta>
+           <meta name="keywords" content={tour.seokeywords || ''}></meta>
+           <title>{tour.seotitle || tour.title}</title>
            <meta property='og:image' content={urlFor(tour.mainImage).url()!} />
-           <meta property='og:title' content={tour.seotitle} />
-           <meta property='og:description' content={tour.heroparagraph} />
+           <meta property='og:title' content={tour.seotitle || tour.title} />
+           <meta property='og:description' content={tour.heroparagraph || tour.seodescription || tour.title} />
     </Head>
-    <PageHero title={tour.seotitle} p={tour.heroparagraph} tag={tour.herotag} img={urlFor(tour.coverImage).url()!}/>
+    <PageHero title={tour.seotitle || tour.title} p={tour.heroparagraph || tour.seodescription || ''} tag={tour.herotag || 'Morocco Tour'} img={tour.coverImage ? urlFor(tour.coverImage).url()! : '/images/hero-bgs/singletour.jpg'}/>
    <section className="ftco-section ftco-no-pb" >
   <div className="container">
     <div className="row">
@@ -116,13 +116,13 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
      <div className="sidebar-box ">
         <h5 style={{fontWeight: "600"}}>Book this tour</h5>
           <p></p>
-          <a href={tour.bookviatourradar} className="btn btn-primary" target='blank'>Book Now</a>
+          {tour.bookviatourradar && <a href={tour.bookviatourradar} className="btn btn-primary" target='_blank' rel="noopener noreferrer">Book Now</a>}
         </div> 
       <div className="sidebar-box ">
         <h5 style={{fontWeight: "600"}}>Request a quote now!</h5>
       {tour.tourid ? 
-                <iframe style={{width:"100%", minHeight:"886px", maxWidth: "800px", margin:"auto", border:"0"}} src={`https://escorted-morocco-tours-1.secure.tourradar.com/question?tour_id=${tour.tourid}&embed=true&question_hide_intro=true&question_hide_sidebar=true`} scrolling="no"></iframe>:
-                <iframe style={{width:"100%", minHeight:"580px", maxWidth: "800px", margin:"auto", border:"0"}}  src="https://escorted-morocco-tours-1.secure.tourradar.com/question?embed=true&question_hide_intro=true"></iframe>
+                <iframe style={{width:"100%", minHeight:"886px", maxWidth: "800px", margin:"auto", border:"0", overflow:"hidden"}} src={`https://escorted-morocco-tours-1.secure.tourradar.com/question?tour_id=${tour.tourid}&embed=true&question_hide_intro=true&question_hide_sidebar=true`}></iframe>:
+                <iframe style={{width:"100%", minHeight:"580px", maxWidth: "800px", margin:"auto", border:"0", overflow:"hidden"}}  src="https://escorted-morocco-tours-1.secure.tourradar.com/question?embed=true&question_hide_intro=true"></iframe>
               } 
           <p>Let Us Take You on a Journey Through Time and Culture in Morocco</p>
           <form onSubmit={handleSubmit(onSubmit)}  className="search-form">
