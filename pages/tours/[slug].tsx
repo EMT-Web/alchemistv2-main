@@ -312,14 +312,16 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
   const tour = await sanityClient.fetch(query, {
     slug: params?.slug, 
 })
-const destinations = await sanityClient.fetch(query2)
 
-const relatedTours = tour.related
-if(!tour){
-  return {
+  // Check if tour exists first
+  if(!tour){
+    return {
       notFound: true
+    }
   }
-}
+
+  const destinations = await sanityClient.fetch(query2)
+  const relatedTours = tour.related || []
 
   return {
     props: {

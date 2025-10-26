@@ -167,7 +167,7 @@ export async function getStaticPaths() {
    
   return {
     paths,
-    fallback: false // false or 'blocking'
+    fallback: 'blocking' // Allow dynamic generation of new pages
   };
 }
 
@@ -229,13 +229,19 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
   const post = await sanityClient.fetch(query,{
     slug: params?.slug, 
 })
-const destinations = await sanityClient.fetch(query2,{
-  slug: params?.slug, 
-})
-// const tours = await sanityClient.fetch(query2,{
-//   city: params?.city
-// })
-  const relatedPosts = post.related
+
+  // Check if post exists
+  if (!post) {
+    return {
+      notFound: true
+    }
+  }
+
+  const destinations = await sanityClient.fetch(query2,{
+    slug: params?.slug, 
+  })
+
+  const relatedPosts = post.related || []
 
   return {
     props: {

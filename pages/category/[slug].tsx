@@ -53,7 +53,7 @@ export async function getStaticPaths({context}:any) {
       
     return {
       paths,
-      fallback: false // false or 'blocking'
+      fallback: 'blocking' // Allow dynamic generation of new pages
     };
   }
   
@@ -95,15 +95,19 @@ export async function getStaticPaths({context}:any) {
         slug: params?.slug,
     })
    
-    if(!tours){
+    if(!tours || tours.length === 0){
         return {
             notFound: true
         }
     }
+
+    // Get category data or use null
+    const category = tours[0]?.category?.[0] || null;
+
     return {
         props: {
             tours,
-            category: tours[0]?.category[0]!,
+            category,
         },
         revalidate: 10,
     }

@@ -102,7 +102,7 @@ export async function getStaticPaths() {
       
     return {
       paths,
-      fallback: false // false or 'blocking'
+      fallback: 'blocking' // Allow dynamic generation of new pages
     };
   }
   
