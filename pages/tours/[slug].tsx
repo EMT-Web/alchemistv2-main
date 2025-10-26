@@ -68,7 +68,7 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
     marks: {
       link: ({mark, children}:any) => {
         const { href } = mark
-        return <a href={href} target="_blank" rel="noopener noreferer">{children}</a>
+        return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
       }
     }
   };
@@ -94,12 +94,12 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
         </p>
         <div className="project-wrap">
         <div className="text p-4">
-                        <span className="days">{tour.duration} Days Tour</span>
+                        <span className="days">{tour.duration || 0} Days Tour</span>
                         <h2>{tour.title}</h2>
-                        <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations! && tour.destinations.map((d:any)=> <a key={d._createdAt} href={`/destinations/${d.slug.current}`} target="_blank">{d.city}, </a>)}</p>
+                        <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations?.map((d:any)=> d?.slug?.current && <a key={d._id || d._createdAt} href={`/destinations/${d.slug.current}`} target="_blank" rel="noopener noreferrer">{d.city}, </a>)}</p>
                         <hr />
                         <ul>
-                        {tour.amenities! && tour.amenities.map((a:any) =><li key={a._createdAt}>&#10029; <em style={{display:"inline"}}>{a.title}</em></li>)}
+                        {tour.amenities?.map((a:any) => a?.title && <li key={a._id || a._createdAt}>&#10029; <em style={{display:"inline"}}>{a.title}</em></li>)}
                           </ul>
                     </div>
                     </div>
@@ -165,19 +165,19 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
       <div className="sidebar-box ftco-animate">
           <div className="categories">
             <h3>Destinations</h3>
-            {destinations! && destinations.map((d:any)=> <li key={d._createdAt}><p><a href={`/destinations/${d.slug.current}`} target="_blank">{d.city} </a><a href={`/destination/${d.slug.current}`}><span>{`(${d.count} Tours)`}</span></a></p></li>)}
-            <li><p><a href={`/destinations`} target="_blank"><em>View All Destinations </em> <span><i className='fa fa-arrow-right' /></span></a></p></li>
+            {destinations?.map((d:any)=> d?.slug?.current && <li key={d._id || d._createdAt}><p><a href={`/destinations/${d.slug.current}`} target="_blank" rel="noopener noreferrer">{d.city} </a><a href={`/destination/${d.slug.current}`}><span>{`(${d.count || 0} Tours)`}</span></a></p></li>)}
+            <li><p><a href={`/destinations`} target="_blank" rel="noopener noreferrer"><em>View All Destinations </em> <span><i className='fa fa-arrow-right' /></span></a></p></li>
           </div>
         </div>
 <hr />
         <div className="sidebar-box ftco-animate">
           <h3>Similar Tours</h3>
           {
-            relatedTours! && relatedTours.map((t:any)=><div key={t._createdAt} className="block-21 mb-4 d-flex">
+            relatedTours?.map((t:any)=> t?.slug?.current && <div key={t._id || t._createdAt} className="block-21 mb-4 d-flex">
             <a className="blog-img mr-4" style={{backgroundImage: `url(${urlFor(t.mainImage).url()!})`}}></a>
             <div className="text">
               <h3 className="heading"><a href={`/tours/${t.slug.current}`}>{t.title}</a></h3>
-              <p><span className="fa fa-map-marker mr-2"></span>{t.destinations! && t.destinations.map((d:any)=> <a href={`/destinations/${d.slug.current}`} target="_blank">{d.city}, </a>)}...</p>
+              <p><span className="fa fa-map-marker mr-2"></span>{t.destinations?.map((d:any)=> d?.slug?.current && <a key={d._id || d._createdAt} href={`/destinations/${d.slug.current}`} target="_blank" rel="noopener noreferrer">{d.city}, </a>)}...</p>
             </div>
           </div>)
           }
