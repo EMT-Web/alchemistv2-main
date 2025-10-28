@@ -39,8 +39,8 @@ function InfoAbout2({team, missionvision}:any) {
    <div className="col-md-12 about-intro">
     <div className="row">
      <div className="col-md-6 d-flex align-items-stretch">
-      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative"}}>
-      <Image  src={urlFor(missionvision.mainimage).url()} alt={missionvision.title} layout='fill' objectFit="cover" blurDataURL={urlFor(missionvision.mainimage).url()}  placeholder="blur"/>
+      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative", minHeight: "450px", backgroundColor: "#f8f9fa"}}>
+      <Image  src={urlFor(missionvision.mainimage).url()} alt={missionvision.title || "Our Mission"} layout='fill' objectFit="contain" style={{objectPosition: "center"}} blurDataURL={urlFor(missionvision.mainimage).url()}  placeholder="blur"/>
       </div>
     </div>
     <div className="col-md-6 pl-md-5 py-5">
@@ -76,8 +76,8 @@ index % 2 === 0 ?
      </div>
    </div>
    <div className="col-md-6 d-flex align-items-stretch">
-      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative"}}>
-      <Image  src={urlFor(mem.mainimage).url()} alt={missionvision.title} layout='fill' objectFit="cover" blurDataURL={urlFor(mem.mainimage).url()} placeholder="blur"/>
+      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative", minHeight: "450px", backgroundColor: "#f8f9fa"}}>
+      <Image  src={urlFor(mem.mainimage).url()} alt={mem.title || "Tour Guide"} layout='fill' objectFit="contain" style={{objectPosition: "center"}} blurDataURL={urlFor(mem.mainimage).url()} placeholder="blur"/>
       </div>
     </div>
  </div>
@@ -92,8 +92,8 @@ index % 2 === 0 ?
   <div className="col-md-12 about-intro">
     <div className="row">
     <div className="col-md-6 d-flex align-items-stretch">
-      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative"}}>
-      <Image  src={urlFor(mem.mainimage).url()} alt={missionvision.title} layout='fill' objectFit="cover" blurDataURL={urlFor(mem.mainimage).url()} placeholder="blur"/>
+      <div className="img d-flex w-100 align-items-center justify-content-center" style={{position: "relative", minHeight: "450px", backgroundColor: "#f8f9fa"}}>
+      <Image  src={urlFor(mem.mainimage).url()} alt={mem.title || "Tour Guide"} layout='fill' objectFit="contain" style={{objectPosition: "center"}} blurDataURL={urlFor(mem.mainimage).url()} placeholder="blur"/>
       </div>
     </div>
     <div className="col-md-6 pl-md-5 py-5">

@@ -1,9 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '../sanity'
+import TripAdvisorWidget from './TripAdvisorWidget'
 
 function Testemonials() {
   return (
+    <>
+    {/* Featured Testimonials Section */}
     <section className="ftco-section testimony-section bg-bottom" style={{backgroundImage: `url(/images/hero-bgs/testemo.jpg)`}}>
     <Image src="/images/hero-bgs/testemo.jpg" alt="Guided Morocco Tours" layout='fill' objectFit="cover" blurDataURL="/images/hero-bgs/testemo.jpg" placeholder="blur"/>
     <div className="overlay"></div>
@@ -223,6 +226,19 @@ function Testemonials() {
         </div>
     </div>
 </section>
+
+{/* TripAdvisor Call-to-Action */}
+<section className="ftco-section bg-light" style={{paddingTop: '2rem', paddingBottom: '3rem'}}>
+    <div className="container">
+        <div className="row">
+            <div className="col-md-12">
+                {/* Beautiful TripAdvisor CTA */}
+                <TripAdvisorWidget />
+            </div>
+        </div>
+    </div>
+</section>
+</>
   )
 }
 

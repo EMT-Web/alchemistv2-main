@@ -95,7 +95,7 @@ function contact()  {
     <div className="col-md-6 order-md-last">
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-light p-5 contact-form">
                 <h4>Contact us</h4>
-                 <p>Let us assist you in creating a personalized itinerary that meets your preferences and budget.</p>
+                 <p>Contact Us for a Tailor-Made Itinerary Designed to Your Preferences</p>
                   <div className="form-group">
                     <input type="text" className="form-control" placeholder="Your name" {...register("name", { required: true })}/>
                   </div>
