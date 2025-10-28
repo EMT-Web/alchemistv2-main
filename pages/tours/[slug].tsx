@@ -119,12 +119,13 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
           {tour.bookviatourradar && <a href={tour.bookviatourradar} className="btn btn-primary" target='_blank' rel="noopener noreferrer">Book Now</a>}
         </div> 
       <div className="sidebar-box ">
-        <h5 style={{fontWeight: "600"}}>Request a quote now!</h5>
+        <h5 style={{fontWeight: "600"}}>Request a Quote Now!</h5>
+        <p style={{fontSize: "14px", marginBottom: "15px"}}>Contact Us for a Tailor-Made Itinerary Designed to Your Preferences</p>
       {tour.tourid ? 
                 <iframe style={{width:"100%", minHeight:"886px", maxWidth: "800px", margin:"auto", border:"0", overflow:"hidden"}} src={`https://escorted-morocco-tours-1.secure.tourradar.com/question?tour_id=${tour.tourid}&embed=true&question_hide_intro=true&question_hide_sidebar=true`}></iframe>:
                 <iframe style={{width:"100%", minHeight:"580px", maxWidth: "800px", margin:"auto", border:"0", overflow:"hidden"}}  src="https://escorted-morocco-tours-1.secure.tourradar.com/question?embed=true&question_hide_intro=true"></iframe>
               } 
-          <p>Let Us Take You on a Journey Through Time and Culture in Morocco</p>
+          <p style={{marginTop: "15px"}}>Let Us Take You on a Journey Through Time and Culture in Morocco</p>
           <form onSubmit={handleSubmit(onSubmit)}  className="search-form">
             <div className="form-group">
               <span className="icon fa fa-avatar"></span>
