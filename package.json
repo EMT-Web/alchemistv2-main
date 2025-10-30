@@ -2,10 +2,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
-    "export": "npm run build && next export",
-    "postbuild": "next-sitemap"
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "@portabletext/react": "^2.0.1",
