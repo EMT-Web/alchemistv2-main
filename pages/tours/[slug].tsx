@@ -5,6 +5,7 @@ import Action1 from '../../components/Action1';
 import PageHero from '../../components/PageHero';
 import { sanityClient, config, urlFor } from '../../sanity';
 import PortableText from 'react-portable-text';
+import SEO, { createTourSchema, createBreadcrumbSchema } from '../../components/SEO';
 
 import Image from 'next/image'
 
@@ -73,17 +74,32 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
     }
   };
 
+  // Create breadcrumb schema
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Tours', url: '/tours' },
+    { name: tour.title, url: `/tours/${tour.slug.current}` }
+  ]);
+
+  // Create tour schema
+  const tourSchema = createTourSchema(tour);
+
+  // Combine schemas
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbSchema, tourSchema]
+  };
+
   return (
     <>
-    <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content={tour.seodescription || tour.title}></meta>
-           <meta name="keywords" content={tour.seokeywords || ''}></meta>
-           <title>{tour.seotitle || tour.title}</title>
-           <meta property='og:image' content={urlFor(tour.mainImage).url()!} />
-           <meta property='og:title' content={tour.seotitle || tour.title} />
-           <meta property='og:description' content={tour.heroparagraph || tour.seodescription || tour.title} />
-    </Head>
+    <SEO
+      title={tour.seotitle || tour.title}
+      description={tour.seodescription || tour.heroparagraph || tour.title}
+      keywords={tour.seokeywords || 'Morocco tours, Morocco travel, escorted tours Morocco, guided tours'}
+      image={tour.mainImage ? urlFor(tour.mainImage).url()! : undefined}
+      type="product"
+      schema={combinedSchema}
+    />
     <PageHero title={tour.seotitle || tour.title} p={tour.heroparagraph || tour.seodescription || ''} tag={tour.herotag || 'Morocco Tour'} img={tour.coverImage ? urlFor(tour.coverImage).url()! : '/images/hero-bgs/singletour.jpg'}/>
    <section className="ftco-section ftco-no-pb" >
   <div className="container">

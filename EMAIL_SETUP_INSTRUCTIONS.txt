@@ -1,0 +1,106 @@
+===============================================
+EMAIL CONFIGURATION SETUP - CONTACT FORMS
+===============================================
+
+Your contact forms will now send emails to BOTH addresses:
+✅ info@escortedmoroccotours.com
+✅ escortedmoroccotour@gmail.com
+
+===============================================
+STEP 1: GET GMAIL APP PASSWORD
+===============================================
+
+You MUST use a Gmail App Password (NOT your regular Gmail password)
+
+1. Go to: https://myaccount.google.com/security
+2. Enable "2-Step Verification" (if not already enabled)
+3. Go to: https://myaccount.google.com/apppasswords
+4. Select "Mail" and "Windows Computer" (or Other)
+5. Click "Generate"
+6. Copy the 16-character password (like: abcd efgh ijkl mnop)
+7. Remove all spaces: abcdefghijklmnop
+
+===============================================
+STEP 2: UPDATE YOUR .env.local FILE
+===============================================
+
+Create or update .env.local file in your project root:
+
+# Sanity (you already have these)
+NEXT_PUBLIC_SANITY_PROJECT_ID=q9pyuut1
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_AUTH_TOKEN=your_sanity_token
+
+# Email Configuration (ADD THESE)
+EMAIL_USER=escortedmoroccotour@gmail.com
+EMAIL_PASSWORD=abcdefghijklmnop
+
+(Replace "abcdefghijklmnop" with your actual App Password from Step 1)
+
+===============================================
+STEP 3: ADD TO VERCEL (FOR PRODUCTION)
+===============================================
+
+1. Go to: https://vercel.com/your-project/settings/environment-variables
+
+2. Add these 2 environment variables:
+
+   Variable Name: EMAIL_USER
+   Value: escortedmoroccotour@gmail.com
+
+   Variable Name: EMAIL_PASSWORD
+   Value: your_app_password_here
+
+3. Click "Save" for each
+
+4. Redeploy your project
+
+===============================================
+STEP 4: TEST YOUR CONTACT FORM
+===============================================
+
+Locally:
+1. Run: npm run dev
+2. Go to: http://localhost:3000/contact
+3. Fill out the form and submit
+4. Check BOTH email addresses for the message
+
+On Vercel (after deployment):
+1. Go to your live site
+2. Submit the contact form
+3. Check BOTH email addresses
+
+===============================================
+TROUBLESHOOTING
+===============================================
+
+❌ "Invalid login" error?
+   → You're using your regular Gmail password instead of App Password
+   → Get App Password from Step 1
+
+❌ "Less secure app" error?
+   → App Password is required for Gmail SMTP
+   → Regular passwords don't work anymore
+
+❌ Form submits but no email received?
+   → Check spam/junk folder
+   → Verify EMAIL_USER and EMAIL_PASSWORD in .env.local
+   → Check Vercel environment variables are set
+
+❌ "Connection timeout" error?
+   → Your hosting may block port 465
+   → Contact Vercel support (usually not an issue)
+
+===============================================
+WHAT WAS CHANGED IN YOUR CODE
+===============================================
+
+File: pages/api/contact.ts
+
+✅ Updated to send to BOTH email addresses
+✅ Improved error handling
+✅ Better response messages
+✅ More reliable Gmail SMTP configuration
+
+===============================================
+

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React, { useState } from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
 import PageHero from '../components/PageHero';
+import SEO, { createBreadcrumbSchema } from '../components/SEO';
 
 
 type FormValues = {
@@ -43,17 +44,50 @@ function contact()  {
         setIsError(true);
        }
   }
+  
+  // Create breadcrumb schema
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Contact Us', url: '/contact' }
+  ]);
+
+  // Create local business schema for contact page
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Escorted Morocco Tours",
+    "url": "https://www.escortedmoroccotours.com",
+    "telephone": "+212-669-883-759",
+    "email": "info@escortedmoroccotours.com",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "App 5-L. Elharti. Massira-2",
+        "addressLocality": "Marrakech",
+        "addressCountry": "Morocco"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Dr Ait Tajer, Taftechna",
+        "addressLocality": "Zagora",
+        "addressCountry": "Morocco"
+      }
+    ]
+  };
+
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbSchema, localBusinessSchema]
+  };
+
   return (
     <>
-     <Head>
-           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content="Explore Morocco with our Escorted Tours, Expert guided tours and Packages to get the best out of your vacation in Morocco. Best Immersion Tours and Travel Guides"></meta>
-           <meta name="keywords" content="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, immersions morocco"></meta>
-           <title>Escorted Morocco Tours - Contact Us</title>
-           <meta property="og:image" content="/images/escorted-morocco-tours.png" />
-           <meta property="og:title" content="Escorted Morocco Tours - Contact Us" />
-           <meta property='og:description' content="Let us design a tour that takes you to Morocco's most beautiful and lesser-known destinations. From Bustling Cities to Sahara Desert, Majestic Atlas Mountains to Exotic Beaches. We've got you covered!" />
-    </Head>
+    <SEO
+      title="Contact Us - Plan Your Morocco Tour"
+      description="Contact Escorted Morocco Tours to plan your perfect Morocco vacation. Expert guides ready to create a tailor-made itinerary for your preferences. Get in touch today!"
+      keywords="contact Morocco tours, Morocco tour inquiry, plan Morocco trip, Morocco travel agent, Morocco tour booking"
+      schema={combinedSchema}
+    />
     <PageHero title="We are here to help you plan the ultimate trip to Morocco" tag="Contact Us" p="Let us design a tour that takes you to the country's most beautiful and lesser-known destinations. From Bustling Cities to Sahara Desert, Majestic Atlas Mountains to Exotic Beaches. We've got you covered! 
  "  img="/images/hero-bgs/contact.jpg"/>
     <section className="ftco-section ftco-no-pb contact-section mb-4">

@@ -25,9 +25,9 @@ export default async function async(req: any, res: any) {
   });
 
   const mailData = {
-    from: "Contact EMT",
-    to: process.env.EMAIL_TO || "escortedmoroccotour@gmail.com",
-    subject: req.body.subject,
+    from: process.env.EMAIL_USER || "escortedmoroccotour@gmail.com",
+    to: "info@escortedmoroccotours.com, escortedmoroccotour@gmail.com",
+    subject: req.body.subject || "New Contact Form Inquiry",
     text:
       req.body.message +
       " | Sent from: " +
@@ -162,14 +162,11 @@ export default async function async(req: any, res: any) {
         
         </html>`,
   };
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(mailData, function (err: any, info: any) {
-      if (err) {
-        err.json({ yo: "error" });
-        err.sendStatus(500);
-      } else res.json({ yo: "success" });
-      res.sendStatus(200);
-    });
-  });
-  return res.end();
+  try {
+    await transporter.sendMail(mailData);
+    return res.status(200).json({ success: true, message: "Email sent successfully" });
+  } catch (error: any) {
+    console.error("Error sending email:", error);
+    return res.status(500).json({ success: false, message: "Failed to send email", error: error.message });
+  }
 }

@@ -14,20 +14,44 @@ import PageHero from '../components/PageHero';
 import Head from 'next/head';
 import Action1 from '../components/Action1';
 import FilterForm from '../components/FilterForm';
+import SEO from '../components/SEO';
 
 
 export default function  NextPage({about, destinations, tours, categories}:any) {
 
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Escorted Morocco Tours - Guided Immersion Tours",
+    "url": "https://www.escortedmoroccotours.com",
+    "description": "Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.escortedmoroccotours.com"
+      }]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": tours?.slice(0, 5).map((tour: any, index: number) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://www.escortedmoroccotours.com/tours/${tour.slug?.current}`
+      }))
+    }
+  };
+
   return (
     <>
-    <Head>
-           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <title>Escorted Morocco Tours | Guided Immersion tours | Travel Guides</title>
-           <meta name="description" content="Escorted Morocco Tours, Expert guided Morocco tours and Packages to get the best out of your vacation in Morocco. Best Morocco Immersion Tours and Travel Guides"></meta>
-           <meta name="keywords" content="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"></meta>
-           <meta property="og:image" content="/images/escorted-morocco-tours.png" />
-           <meta property='og:description' content="Escorted Morocco Tours, Expert guided Morocco tours and Packages to get the best out of your vacation in Morocco. Best Morocco Immersion Tours and Travel Guides" />
-    </Head>
+    <SEO
+      title="Guided Immersion Tours & Travel Guides"
+      description="Escorted Morocco Tours - Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides."
+      keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides, culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"
+      schema={homeSchema}
+    />
           <PageHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best Out of your vacation in Morocco with our guided tours. Join Our Exciting Escorted Immersion Tours and Uncover the Best of Morocco." img='/images/hero-bgs/main-hero.jpg'/>
           {about?.mainabout && <InfoAbout about={about.mainabout}/>}
           <HomeDestinations destinations={destinations} />

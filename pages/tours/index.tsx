@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import {paginate} from '../../helpers/paginate'
 import Image from 'next/image'
 import { urlFor } from '../../sanity'
+import SEO, { createBreadcrumbSchema } from '../../components/SEO';
 
 export default function  NextPage({tours}:any) {
   const [ postNum, setPostNum] = useState(9); // Default number of posts dislplayed
@@ -43,17 +44,47 @@ export default function  NextPage({tours}:any) {
       triplet(0, r, g) + triplet(b, 255, 255)
     }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
 
+  // Create breadcrumb schema
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Tours', url: '/tours' }
+  ]);
+
+  // Create tours collection schema
+  const toursCollectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Morocco Tours",
+    "description": "Browse all our guided Morocco tours and packages",
+    "url": "https://www.escortedmoroccotours.com/tours",
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": tours?.length || 0,
+      "itemListElement": tours?.slice(0, 10).map((tour: any, index: number) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "TouristTrip",
+          "name": tour.title,
+          "url": `https://www.escortedmoroccotours.com/tours/${tour.slug?.current}`
+        }
+      }))
+    }
+  };
+
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbSchema, toursCollectionSchema]
+  };
+
   return (
     <>
-     <Head>
-           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content="Make the Most of Your Vacation in Morocco with a Well-Planned Guided Immersion tours. Best Morocco Escorted Tours"></meta>
-           <meta name="keywords" content="Escorted Morocco tours, Morocco Escorted Tours, Travel packages,  vacation, guided tours, Morocco, culture, history, adventure, luxury, holiday, expert guides, tailored experience, hidden gems, immersive journey, personalized service, authentic experiences,"></meta>
-           <title>Escorted Morocco Tours | Best Guided Immersion Tours</title>
-           <meta property="og:image" content="/images/escorted-morocco-tours.png" />
-           <meta property="og:title" content="Escorted Morocco Tours | Travel packages | Guided Immersion tours" />
-           <meta property='og:description' content="Make the Most of Your Vacation in Morocco with a Well-Planned Guided Immersion tours. Best Morocco Escorted Tours" />
-    </Head>
+    <SEO
+      title="Best Guided Immersion Tours | All Morocco Tours"
+      description="Make the Most of Your Vacation in Morocco with a Well-Planned Guided Immersion tour. Browse our complete collection of Morocco escorted tours and travel packages."
+      keywords="Escorted Morocco tours, Morocco Escorted Tours, Travel packages, vacation, guided tours, Morocco, culture, history, adventure, luxury, holiday, expert guides, tailored experience, hidden gems, immersive journey, personalized service, authentic experiences"
+      schema={combinedSchema}
+    />
     <PageHero title='Discover the Best of Morocco with our Escorted Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/images/hero-bgs/all-tours.jpg'/>
     
     <section className="ftco-section" id="toursection">

@@ -8,21 +8,46 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image'
+import SEO, { createBreadcrumbSchema } from '../../components/SEO';
 
 export default function  NextPage({ posts}:any) {
   const router = useRouter();
   
+  // Create breadcrumb schema
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' }
+  ]);
+
+  // Create blog collection schema
+  const blogCollectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Escorted Morocco Tours Blog",
+    "description": "Travel guides, tips, and stories about Morocco tours and destinations",
+    "url": "https://www.escortedmoroccotours.com/blog",
+    "blogPost": posts?.slice(0, 10).map((post: any) => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "url": `https://www.escortedmoroccotours.com/blog/${post.slug?.current}`,
+      "datePublished": post._createdAt,
+      "image": post.mainImage ? urlFor(post.mainImage).url()! : undefined
+    }))
+  };
+
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbSchema, blogCollectionSchema]
+  };
+  
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <meta name="description" content="Uncover the beauty and mystery of Morocco with our expertly crafted escorted tours. Morocco escorted tours, best guided immersion tours"></meta>
-          <meta name="keywords" content="Escorted Morocco tours, Morocco travel,immersionn tours, Morocco, guided tours, desert tours, cultural experiences, Marrakesh, Essaouira, Chefchaouen"></meta>
-          <title>Discover the Best Escorted Morocco Tours | Expert Guide</title>
-          <meta property="og:image" content="/images/escorted-morocco-tours.png" />
-           <meta property="og:title" content="Discover the Best Escorted Morocco Tours | Expert Guide" />
-           <meta property='og:description' content="Uncover the beauty and mystery of Morocco with our expertly crafted escorted tours. Morocco escorted tours, best guided immersion tours" />
-     </Head>
+    <SEO
+      title="Morocco Travel Blog | Expert Guides & Tips"
+      description="Uncover the beauty and mystery of Morocco with our expertly crafted travel guides. Read about Morocco tours, destinations, culture, and travel tips from expert guides."
+      keywords="Escorted Morocco tours, Morocco travel, immersion tours, Morocco blog, guided tours, desert tours, cultural experiences, Marrakech, Essaouira, Chefchaouen, travel tips"
+      schema={combinedSchema}
+    />
     <PageHero title="Discover the Best Escorted Morocco Tours" tag="From cultural experiences to adventure activities," p="Follow us on our journey through Morocco and get a taste of the Morocco's diverse landscapes, history and culture" img='/images/hero-bgs/blog.jpg'/>
     <section className="ftco-section">
    <div className="container">

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import PortableText from 'react-portable-text';
 import { sanityClient, urlFor } from '../../sanity';
+import SEO, { createArticleSchema, createBreadcrumbSchema } from '../../components/SEO';
 
 function post({ post, destinations, relatedPosts}:any) {
   const serializers = {
@@ -28,19 +29,35 @@ function post({ post, destinations, relatedPosts}:any) {
   // .inc({views: 1}) 
   // .commit()
 
+  // Create breadcrumb schema
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: post.title, url: `/blog/${post.slug.current}` }
+  ]);
 
+  // Create article schema
+  const articleSchema = createArticleSchema(post, post.author?.name);
+
+  // Combine schemas
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbSchema, articleSchema]
+  };
 
   return (
     <>
-    <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <meta name="description" content={post.seodescription}></meta>
-          <meta name="keywords" content={post.seokeywords}></meta>
-          <title>{post.seotitle}</title>
-          <meta property='og:image' content={urlFor(post.mainImage).url()!} />
-<meta property='og:title' content={post.seotitle} />
-<meta property='og:description' content={post.heroparagraph} />
-     </Head>
+    <SEO
+      title={post.seotitle || post.title}
+      description={post.seodescription || post.title}
+      keywords={post.seokeywords || 'Morocco travel, Morocco blog, Morocco guide'}
+      image={post.mainImage ? urlFor(post.mainImage).url()! : undefined}
+      type="article"
+      author={post.author?.name}
+      publishedTime={post._createdAt}
+      modifiedTime={post._updatedAt}
+      schema={combinedSchema}
+    />
      <section className="hero-wrap hero-wrap-2 " >
       <Image  src={urlFor(post.mainImage).url()!} alt={post.title} layout='fill' objectFit="cover" blurDataURL={urlFor(post.mainImage).url()!} placeholder="blur"/>
   <div className="overlay"></div>
