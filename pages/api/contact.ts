@@ -6,163 +6,48 @@ export default async function handler(req: any, res: any) {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
-  let nodemailer = require("nodemailer");
+  const RESEND_API_KEY = process.env.RESEND_API_KEY
+  if (!RESEND_API_KEY) {
+    return res.status(500).json({ success: false, message: 'Missing RESEND_API_KEY env' })
+  }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
+  const toAddress = 'escortedmoroccotour@gmail.com'
+  const fromAddress = 'onboarding@resend.dev'
 
-  // Skip verify; let first send perform STARTTLS
+  const html = `<!doctype html>
+  <html><body>
+    <h2>New Contact Inquiry</h2>
+    <p><strong>Name:</strong> ${req.body.name || ''}</p>
+    <p><strong>Email:</strong> ${req.body.email || ''}</p>
+    <p><strong>Arrival:</strong> ${req.body.arrivalDate || ''}</p>
+    <p><strong>Departure:</strong> ${req.body.departureDate || ''}</p>
+    <p><strong>Travelers:</strong> ${req.body.travelers || ''}</p>
+    <p><strong>Message:</strong><br/>${(req.body.message || '').toString().replace(/\n/g, '<br/>')}</p>
+  </body></html>`
 
-  const mailData = {
-    from: process.env.EMAIL_USER || "escortedmoroccotour@gmail.com",
-    to: "escortedmoroccotour@gmail.com",
-    subject: req.body.subject || "New Contact Form Inquiry",
-    text:
-      req.body.message +
-      " | Sent from: " +
-      req.body.email +
-      " | by: " +
-      req.body.name,
-    html: `<!doctype html>
-        <html lang="en-US">
-        <head>
-            <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-            <title>Contact Inquery</title>
-            <meta name="description" content="Contact Inquery">
-        </head>
-        <style>
-            a:hover {text-decoration: underline !important;}
-        </style>
-        
-        <body marginheight="0" topmargin="0" marginwidth="0" style="margin: 0px; padding:20px; background-color: #f2f3f8;" leftmargin="0">
-            <table cellspacing="0" border="0" cellpadding="0" width="100%" bgcolor="#f2f3f8"
-                style="@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Open+Sans:300,400,600,700); font-family: 'Open Sans', sans-serif;">
-                <tr>
-                    <td>
-                        <table style="background-color: #f2f3f8; max-width:670px; margin:0 auto;" width="100%" border="0"
-                            align="center" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td style="height:80px;">&nbsp;</td>
-                            </tr>
-                            <!-- Logo -->
-                            <tr>
-                                <td style="text-align:center;">
-                                  <a href="https://www.escortedmoroccotours.com" title="Escorted Morocco Tours" target="_blank">
-                                    <h1>Escorted Morocco Tours</h1>
-                                  </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height:20px;">&nbsp;</td>
-                            </tr>
-                            <!-- Email Content -->
-                            <tr>
-                                <td>
-                                    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0"
-                                        style="max-width:670px; background:#fff; border-radius:3px;-webkit-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);-moz-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);box-shadow:0 6px 18px 0 rgba(0,0,0,.06);padding:0 40px;">
-                                        <tr>
-                                            <td style="height:40px;">&nbsp;</td>
-                                        </tr>
-                                        <!-- Title -->
-                                        <tr>
-                                            <td style="padding:0 15px; text-align:center;">
-                                                <h1 style="color:#1e1e2d; font-weight:400; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">Contact Inquery</h1>
-                                                <span style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; 
-                                                width:100px;"></span>
-                                            </td>
-                                        </tr>
-                                        <!-- Details Table -->
-                                        <tr>
-                                            <td>
-                                                <table cellpadding="0" cellspacing="0"
-                                                    style="width: 100%; border: 1px solid #ededed">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                                                Name: </td>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                                 ${req.body.name}</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                                                Email:</td>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                                ${req.body.email}</td>
-                                                        </tr>
-                                                        <tr>
-                                                        <td
-                                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                                            Arrival Date:</td>
-                                                        <td
-                                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                            ${req.body.arrivalDate}</td>
-                                                    </tr>
-                                                    <tr>
-                                                    <td
-                                                        style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                                        Departure Date:</td>
-                                                    <td
-                                                        style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                        ${req.body.departureDate}</td>
-                                                </tr>
-                                                <tr>
-                                                <td
-                                                    style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                                    Number of Travelers:</td>
-                                                <td
-                                                    style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                    ${req.body.travelers}</td>
-                                            </tr>
-                                                        <tr>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%;font-weight:500; color:rgba(0,0,0,.64)">
-                                                                Message:</td>
-                                                            <td
-                                                                style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056; ">
-                                                                ${req.body.message}</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height:40px;">&nbsp;</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="height:20px;">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:center;">
-                                        <p style="font-size:14px; color:#455056bd; line-height:18px; margin:0 0 0;">&copy; <strong>www.escortedmoroccotours.com</strong></p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </body>
-        
-        </html>`,
-  };
   try {
-    await transporter.sendMail(mailData);
-    return res.status(200).json({ success: true, message: "Email sent successfully" });
+    const resp = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: fromAddress,
+        to: [toAddress],
+        subject: req.body.subject || 'New Contact Form Inquiry',
+        html
+      })
+    })
+
+    if (!resp.ok) {
+      const err = await resp.text()
+      return res.status(500).json({ success: false, message: 'Resend API error', error: err })
+    }
+
+    const data = await resp.json()
+    return res.status(200).json({ success: true, message: 'Email sent successfully', data })
   } catch (error: any) {
-    console.error("Error sending email:", error);
-    return res.status(500).json({ success: false, message: "Failed to send email", error: error.message });
+    return res.status(500).json({ success: false, message: 'Failed to send email', error: error?.message || String(error) })
   }
 }

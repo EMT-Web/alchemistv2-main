@@ -7,40 +7,49 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 
-  let nodemailer = require("nodemailer");
+  const RESEND_API_KEY = process.env.RESEND_API_KEY
+  if (!RESEND_API_KEY) {
+    return res.status(500).json({ success: false, message: 'Missing RESEND_API_KEY env' })
+  }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
+  const toAddress = 'escortedmoroccotour@gmail.com'
+  const fromAddress = 'onboarding@resend.dev'
 
-  // Skip verify preflight to avoid platform blocks; nodemailer will STARTTLS on first send
-
-  const mailData = {
-    from: process.env.EMAIL_USER || "escortedmoroccotour@gmail.com",
-    to: "escortedmoroccotour@gmail.com",
-    subject: req.body.subject || "New Contact Form Inquiry",
-    text:
-      req.body.message +
-      " | Sent from: " +
-      req.body.email +
-      " | by: " +
-      req.body.name,
-    html: `<p>New inquiry from ${req.body.name} (${req.body.email})</p>
-           <p>Arrival: ${req.body.arrivalDate || ''} | Departure: ${req.body.departureDate || ''} | Travelers: ${req.body.travelers || ''}</p>
-           <p>${req.body.message}</p>`,
-  };
+  const html = `<!doctype html>
+  <html><body>
+    <h2>New Contact Inquiry</h2>
+    <p><strong>Name:</strong> ${req.body.name || ''}</p>
+    <p><strong>Email:</strong> ${req.body.email || ''}</p>
+    <p><strong>Arrival:</strong> ${req.body.arrivalDate || ''}</p>
+    <p><strong>Departure:</strong> ${req.body.departureDate || ''}</p>
+    <p><strong>Travelers:</strong> ${req.body.travelers || ''}</p>
+    <p><strong>Message:</strong><br/>${(req.body.message || '').toString().replace(/\n/g, '<br/>')}</p>
+  </body></html>`
 
   try {
-    await transporter.sendMail(mailData);
-    return res.status(200).json({ success: true, message: "Email sent successfully" });
+    const resp = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: fromAddress,
+        to: [toAddress],
+        subject: req.body.subject || 'New Contact Form Inquiry',
+        html
+      })
+    })
+
+    if (!resp.ok) {
+      const err = await resp.text()
+      return res.status(500).json({ success: false, message: 'Resend API error', error: err })
+    }
+
+    const data = await resp.json()
+    return res.status(200).json({ success: true, message: 'Email sent successfully', data })
   } catch (error: any) {
-    return res.status(500).json({ success: false, message: "Failed to send email", error: error.message });
+    return res.status(500).json({ success: false, message: 'Failed to send email', error: error?.message || String(error) })
   }
 }
 
