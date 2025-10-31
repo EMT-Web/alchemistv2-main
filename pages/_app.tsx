@@ -15,9 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <>
            <Head>
            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content="Escorted Morocco Tours, Expert guided Morocco tours and Packages to get the best out of your vacation in Morocco."/>
+           <meta name="description" content="Expert guided Morocco tours with experienced guides. Customizable packages for cultural immersion, adventure, and luxury experiences across Morocco."/>
            <meta httpEquiv="Content-Type" content="text/html" charSet='UTF-8'/>
-           <title>Escorted Morocco Tours | Visit Morocco</title>
+           <title>Escorted Morocco Tours | Guided Tours & Cultural Immersion</title>
           <link rel="shortcut icon" href="/images/fav.png" />
            <meta name="msvalidate.01" content='B88182ACF6FC3B1F2CA0B9FF61CCB8B3'/>
            <meta name="google-site-verification" content="UqKbxaFJdehuxB7HdYDPdzrYlY7sP1l-80rAxNDmzic" />

@@ -18,6 +18,9 @@ function Footer() {
 										<li className="ftco-animate"><Link href="https://www.tripadvisor.com/Attraction_Review-g293732-d18453425-Reviews-Escorted_Morocco_Tours-Casablanca_Casablanca_Settat.html" target={"_blank"}><a><span className="fa fa-tripadvisor"/></a></Link></li>
 										<li className="ftco-animate"><Link href="https://web.facebook.com/helloescortedmoroccotours" target={"_blank"}><a><span className="fa fa-facebook"/></a></Link></li>
 										<li className="ftco-animate"><Link href="https://www.instagram.com/escortedmoroccotours_/" target={"_blank"}><a><span className="fa fa-instagram"/></a></Link></li>
+										<li className="ftco-animate"><Link href="https://www.youtube.com/watch?v=boiiiVh52v4" target={"_blank"}><a><span className="fa fa-youtube"/></a></Link></li>
+										<li className="ftco-animate"><Link href="https://twitter.com" target={"_blank"}><a><span className="fa fa-twitter"/></a></Link></li>
+										<li className="ftco-animate"><Link href="https://www.linkedin.com/company" target={"_blank"}><a><span className="fa fa-linkedin"/></a></Link></li>
 									</ul>
 								</div>
 							</div>
