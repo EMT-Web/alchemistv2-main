@@ -23,7 +23,7 @@ function HomeDestinations({destinations}:any) {
                               destinations! && destinations.map((destination:any)=>
 							  <div key={destination._id} className="item ">
 								<div className="project-destination">
-									<div  className="img"  style={{backgroundImage: `url(${urlFor(destination.mainImage).url()!})`}}>
+									<div  className="img"  style={{backgroundImage: `url(${urlFor(destination.mainImage).url()!})`, minHeight: '400px', backgroundSize: 'cover', backgroundPosition: 'center'}}>
 										<div className="text">
 											<div className="city"><a href={`/destinations/${destination.slug.current}`} aria-label={destination.city}>{destination.city} <i className="fa fa-arrow-right"/></a></div>
 											

@@ -7,7 +7,7 @@ function Banner() {
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-md-12 text-center">
-						<div className="img"  style={{backgroundImage: `url("/images/service-bgs/s1.jpg")`}}>
+						<div className="img"  style={{backgroundImage: `url("/images/service-bgs/s1.jpg")`, minHeight: '300px', backgroundSize: 'cover', backgroundPosition: 'center'}}>
 							<div className="overlay"></div>
 							<h4>Tailor Your Dream Morocco Vacation with Our Expert Team</h4>
 							<p>Whether you're interested in exploring the imperial cities, the Sahara desert, or the picturesque coastal towns, we can help you plan a customized itinerary that meets your unique preferences and interests.</p>

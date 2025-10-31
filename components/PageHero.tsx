@@ -7,24 +7,31 @@ function PageHero({title, tag, img, p}:any) {
   const router = useRouter()
 
   return (
-    <section className="hero-wrap js-fullheight" >
-      <style>
-{`
-  .hero__desktop-image {
-    display: none !important;
-  }
-  @media(orientation: landscape) {
-    .hero__desktop-image {
-      display: block !important;
-    }
-    .hero__mobile-image {
-      display: none !important;
-    }
-  }
-`}
-</style>
-<Image src="/images/mobile-alt-hero.jpg" className="hero__mobile-image" layout='fill' alt="Escorted Morocco Tours"  objectFit="cover" blurDataURL="/images/hero-bgs/mobile-alt-hero.jpg" placeholder="blur" priority/>
-<Image src={img} className="hero__desktop-image" layout='fill' alt="Escorted Morocco Tours"  objectFit="cover" blurDataURL={img} placeholder="blur" priority/>
+    <section className="hero-wrap js-fullheight">
+      <style jsx>{`
+        .hero-wrap {
+          width: 100%;
+          min-height: 600px;
+          position: relative;
+        }
+        .hero__desktop-image {
+          display: none !important;
+        }
+        @media(orientation: landscape) {
+          .hero__desktop-image {
+            display: block !important;
+          }
+          .hero__mobile-image {
+            display: none !important;
+          }
+        }
+      `}</style>
+      <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }}>
+        <Image src="/images/mobile-alt-hero.jpg" className="hero__mobile-image" layout="fill" alt="Escorted Morocco Tours" objectFit="cover" priority quality={85}/>
+      </div>
+      <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }}>
+        <Image src={img} className="hero__desktop-image" layout="fill" alt="Escorted Morocco Tours" objectFit="cover" priority quality={85}/>
+      </div>
 
     <div className="container">
       <div className="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
