@@ -1,4 +1,11 @@
-export default async function async(req: any, res: any) {
+export default async function handler(req: any, res: any) {
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end()
+  }
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST')
+    return res.status(405).json({ success: false, message: 'Method Not Allowed' })
+  }
   let nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
