@@ -53,9 +53,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             
             {/* <div id="ftco-loader" className="show fullscreen"><svg className="circular" width="48px" height="48px"><circle className="path-bg" cx="24" cy="24" r="22" fill="none" strokeWidth="4" stroke="#eeeeee"/><circle className="path" cx="24" cy="24" r="22" fill="none" strokeWidth="4" strokeMiterlimit="10" stroke="#F96D00"/></svg></div> */}
             
-            {/* Only critical scripts load beforeInteractive, rest load after page is ready */}
+            {/* Scripts loaded after page is interactive */}
             <Script src="/js/jquery.min.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery-migrate-3.0.1.min.js" strategy="afterInteractive"/>
             <Script src="/js/popper.min.js" strategy="afterInteractive"/>
             <Script src="/js/bootstrap.min.js" strategy="afterInteractive"/>
             <Script src="/js/jquery.easing.1.3.js" strategy="afterInteractive"/>
@@ -66,7 +65,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="/js/jquery.animateNumber.min.js" strategy="afterInteractive"/>
             <Script src="/js/bootstrap-datepicker.js" strategy="afterInteractive"/>
             <Script src="/js/scrollax.min.js" strategy="afterInteractive"/>
-      
             <Script src="/js/main.js" strategy="afterInteractive"/>
             
 
