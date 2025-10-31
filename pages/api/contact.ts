@@ -9,31 +9,20 @@ export default async function handler(req: any, res: any) {
   let nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
-    port: 465,
     host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
     },
-    secure: true,
   });
 
-  await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error: any, success: any) {
-      if (error) {
-        // console.log(error);
-        reject(error);
-      } else {
-        console.log("Server is ready to take our messages");
-        resolve(success);
-      }
-    });
-  });
+  // Skip verify; let first send perform STARTTLS
 
   const mailData = {
     from: process.env.EMAIL_USER || "escortedmoroccotour@gmail.com",
-    to: "info@escortedmoroccotours.com, escortedmoroccotour@gmail.com",
+    to: "escortedmoroccotour@gmail.com",
     subject: req.body.subject || "New Contact Form Inquiry",
     text:
       req.body.message +

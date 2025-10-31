@@ -7,31 +7,27 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 
+  // Diagnostic short-circuit: ensure function executes before SMTP
+  // If this returns 200, the issue is in SMTP/nodemailer or env vars
+  return res.status(200).json({ success: true, stage: 'pre-smtp' })
+
   let nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
-    port: 465,
     host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // use STARTTLS
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
     },
-    secure: true,
   });
 
-  await new Promise((resolve, reject) => {
-    transporter.verify(function (error: any, success: any) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(success);
-      }
-    });
-  });
+  // Skip verify preflight to avoid platform blocks; nodemailer will STARTTLS on first send
 
   const mailData = {
     from: process.env.EMAIL_USER || "escortedmoroccotour@gmail.com",
-    to: "info@escortedmoroccotours.com, escortedmoroccotour@gmail.com",
+    to: "escortedmoroccotour@gmail.com",
     subject: req.body.subject || "New Contact Form Inquiry",
     text:
       req.body.message +
