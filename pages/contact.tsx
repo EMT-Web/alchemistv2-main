@@ -26,7 +26,7 @@ function contact()  {
     fileds = setData(data)
     
     try{
-        fetch('/api/contact', {
+        fetch('/api/send-contact', {
           method: 'POST',
           headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -37,6 +37,8 @@ function contact()  {
         }).then((res) => {
           if (res.ok) {
             setIsError(false);
+          } else {
+            setIsError(true);
           }
         })
       }
