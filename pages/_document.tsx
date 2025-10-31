@@ -31,34 +31,24 @@ class MyDocument extends Document {
           {/* Theme color */}
           <meta name="theme-color" content="#f15d30" />
           
-          {/* Fonts with display=swap for performance - deferred loading */}
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" /></noscript>
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet" /></noscript>
-          
-          {/* Font Awesome - deferred */}
-          <link rel="preload" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /></noscript>
-          
           {/* Critical CSS only - style.css is essential for layout */}
           <link rel="stylesheet" href="/css/style.css" />
           
-          {/* Non-critical CSS - deferred loading */}
-          <link rel="preload" href="/css/animate.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/animate.css" /></noscript>
-          <link rel="preload" href="/css/owl.carousel.min.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/owl.carousel.min.css" /></noscript>
-          <link rel="preload" href="/css/owl.theme.default.min.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/owl.theme.default.min.css" /></noscript>
-          <link rel="preload" href="/css/magnific-popup.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/magnific-popup.css" /></noscript>
-          <link rel="preload" href="/css/bootstrap-datepicker.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/bootstrap-datepicker.css" /></noscript>
-          <link rel="preload" href="/css/jquery.timepicker.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/jquery.timepicker.css" /></noscript>
-          <link rel="preload" href="/css/flaticon.css" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
-          <noscript><link rel="stylesheet" href="/css/flaticon.css" /></noscript>
+          {/* Fonts with display=swap for performance */}
+          <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet" />
+          
+          {/* Font Awesome */}
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+          
+          {/* CSS - loaded here for SSR */}
+          <link rel="stylesheet" href="/css/animate.css" />
+          <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+          <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
+          <link rel="stylesheet" href="/css/magnific-popup.css" />
+          <link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
+          <link rel="stylesheet" href="/css/jquery.timepicker.css" />
+          <link rel="stylesheet" href="/css/flaticon.css" />
           
           {/* Organization Schema - Global */}
           <script
