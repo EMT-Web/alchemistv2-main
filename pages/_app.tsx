@@ -18,9 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
            <meta httpEquiv="Content-Type" content="text/html" charSet='UTF-8'/>
            <title>Escorted Morocco Tours | Visit Morocco</title>
           <link rel="shortcut icon" href="/images/fav.png" />
-          <meta name="msvalidate.01" content='B88182ACF6FC3B1F2CA0B9FF61CCB8B3'/>
-          <meta name="google-site-verification" content="UqKbxaFJdehuxB7HdYDPdzrYlY7sP1l-80rAxNDmzic" />
- {/* Global Site Tag (gtag.js) - Google Analytics */}
+           <meta name="msvalidate.01" content='B88182ACF6FC3B1F2CA0B9FF61CCB8B3'/>
+           <meta name="google-site-verification" content="UqKbxaFJdehuxB7HdYDPdzrYlY7sP1l-80rAxNDmzic" />
+           
 
             </Head>
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2934P3WFS5"/>

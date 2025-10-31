@@ -31,22 +31,21 @@ class MyDocument extends Document {
           {/* Theme color */}
           <meta name="theme-color" content="#f15d30" />
           
-          {/* Fonts */}
-          <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
+          {/* Fonts with display=swap for performance */}
+          <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet" />
           
-          {/* CSS */}
-          <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css" />
+          {/* Font Awesome */}
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+          
+          {/* CSS - loaded here for SSR */}
           <link rel="stylesheet" href="/css/animate.css" />
           <link rel="stylesheet" href="/css/owl.carousel.min.css" />
           <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
           <link rel="stylesheet" href="/css/magnific-popup.css" />
-          <link rel="stylesheet" href="/css/aos.css" />
-          <link rel="stylesheet" href="/css/ionicons.min.css" />
           <link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
           <link rel="stylesheet" href="/css/jquery.timepicker.css" />
           <link rel="stylesheet" href="/css/flaticon.css" />
-          <link rel="stylesheet" href="/css/icomoon.css" />
           <link rel="stylesheet" href="/css/style.css" />
           
           {/* Organization Schema - Global */}
