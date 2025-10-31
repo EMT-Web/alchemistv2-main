@@ -28,27 +28,15 @@ class MyDocument extends Document {
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
           
+          {/* Preload critical hero images for homepage */}
+          <link rel="preload" as="image" href="/images/hero-bgs/main-hero.jpg" />
+          <link rel="preload" as="image" href="/images/mobile-alt-hero.jpg" />
+          
           {/* Theme color */}
           <meta name="theme-color" content="#f15d30" />
           
           {/* Critical CSS only - style.css is essential for layout */}
           <link rel="stylesheet" href="/css/style.css" />
-          
-          {/* Fonts with display=swap for performance */}
-          <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet" />
-          
-          {/* Font Awesome */}
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-          
-          {/* CSS - loaded here for SSR */}
-          <link rel="stylesheet" href="/css/animate.css" />
-          <link rel="stylesheet" href="/css/owl.carousel.min.css" />
-          <link rel="stylesheet" href="/css/owl.theme.default.min.css" />
-          <link rel="stylesheet" href="/css/magnific-popup.css" />
-          <link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
-          <link rel="stylesheet" href="/css/jquery.timepicker.css" />
-          <link rel="stylesheet" href="/css/flaticon.css" />
           
           {/* Organization Schema - Global */}
           <script
@@ -128,6 +116,22 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script dangerouslySetInnerHTML={{__html: `
+            // Async load non-critical CSS
+            const loadCSS = (href) => {
+              const link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = href;
+              document.head.appendChild(link);
+            };
+            
+            // Load fonts async after page load
+            setTimeout(() => {
+              loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+              loadCSS('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
+              loadCSS('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+            }, 0);
+          `}} />
         </body>
       </Html>
     )
