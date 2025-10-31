@@ -14,23 +14,17 @@ function PageHero({title, tag, img, p}:any) {
           min-height: 600px;
           position: relative;
         }
-        .hero__desktop-image {
-          display: none !important;
-        }
-        @media(orientation: landscape) {
-          .hero__desktop-image {
-            display: block !important;
-          }
-          .hero__mobile-image {
-            display: none !important;
-          }
-        }
       `}</style>
       <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }}>
-        <Image src="/images/mobile-alt-hero.jpg" className="hero__mobile-image" layout="fill" alt="Escorted Morocco Tours" objectFit="cover" priority quality={85}/>
-      </div>
-      <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }}>
-        <Image src={img} className="hero__desktop-image" layout="fill" alt="Escorted Morocco Tours" objectFit="cover" priority quality={85}/>
+        <Image 
+          src={img} 
+          alt="Escorted Morocco Tours" 
+          layout="fill" 
+          objectFit="cover" 
+          priority 
+          quality={85}
+          sizes="100vw"
+        />
       </div>
 
     <div className="container">
