@@ -28,6 +28,10 @@ class MyDocument extends Document {
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
           
+          {/* Critical hero image preload for home page only */}
+          <link rel="preload" as="image" href="/images/mobile-alt-hero.jpg" media="(max-width: 768px)" />
+          <link rel="preload" as="image" href="/images/hero-bgs/main-hero.jpg" media="(min-width: 769px)" />
+          
           {/* Theme color */}
           <meta name="theme-color" content="#f15d30" />
           
