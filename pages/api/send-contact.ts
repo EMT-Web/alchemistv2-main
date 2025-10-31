@@ -7,16 +7,12 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' })
   }
 
-  // Diagnostic short-circuit: ensure function executes before SMTP
-  // If this returns 200, the issue is in SMTP/nodemailer or env vars
-  return res.status(200).json({ success: true, stage: 'pre-smtp' })
-
   let nodemailer = require("nodemailer");
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
-    secure: false, // use STARTTLS
+    secure: false,
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
