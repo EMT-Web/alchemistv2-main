@@ -11,7 +11,7 @@ export default async function handler(req: any, res: any) {
     return res.status(500).json({ success: false, message: 'Missing RESEND_API_KEY env' })
   }
 
-  const toAddress = 'escortedmoroccotour@gmail.com'
+  const toAddress = 'info@escortedmoroccotours.com'
   const fromAddress = 'onboarding@resend.dev'
 
   const html = `<!doctype html>
