@@ -3,9 +3,12 @@ import { useRouter } from 'next/router'
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
+    // Only run on client-side after mount to prevent hydration mismatch
+    setMounted(true)
     // Check if user has already made a choice
     const cookieConsent = localStorage.getItem('cookieConsent')
     if (!cookieConsent) {
@@ -50,7 +53,8 @@ export default function CookieBanner() {
     }
   }
 
-  if (!showBanner) return null
+  // Prevent hydration mismatch - only render on client after mount
+  if (!mounted || !showBanner) return null
 
   return (
     <>

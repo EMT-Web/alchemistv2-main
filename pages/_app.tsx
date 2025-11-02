@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import CookieBanner from '../components/CookieBanner';
+import ScriptLoader from '../components/ScriptLoader';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -53,19 +54,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             
             {/* <div id="ftco-loader" className="show fullscreen"><svg className="circular" width="48px" height="48px"><circle className="path-bg" cx="24" cy="24" r="22" fill="none" strokeWidth="4" stroke="#eeeeee"/><circle className="path" cx="24" cy="24" r="22" fill="none" strokeWidth="4" strokeMiterlimit="10" stroke="#F96D00"/></svg></div> */}
             
-            {/* Scripts loaded after page is interactive */}
-            <Script src="/js/jquery.min.js" strategy="afterInteractive"/>
-            <Script src="/js/popper.min.js" strategy="afterInteractive"/>
-            <Script src="/js/bootstrap.min.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery.easing.1.3.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery.waypoints.min.js" strategy="afterInteractive"/>
-            <Script src="/js/owl.carousel.min.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery.animateNumber.min.js" strategy="afterInteractive"/>
-            <Script src="/js/bootstrap-datepicker.js" strategy="afterInteractive"/>
-            <Script src="/js/scrollax.min.js" strategy="afterInteractive"/>
-            <Script src="/js/main.js" strategy="afterInteractive"/>
-            {/* Note: Stellar parallax is disabled in main.js (wrapped in try-catch) to prevent React conflicts */}
+            {/* Scripts loaded sequentially via ScriptLoader component */}
+            <ScriptLoader />
             
 
           </>
