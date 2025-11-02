@@ -8,6 +8,7 @@ export default function ScriptLoader() {
     }
 
     // Load scripts sequentially after page is interactive
+    // NOTE: jquery.stellar.min.js is NOT loaded - Stellar causes React conflicts
     const scripts = [
       '/js/jquery.min.js',
       '/js/popper.min.js',
@@ -19,7 +20,7 @@ export default function ScriptLoader() {
       '/js/jquery.animateNumber.min.js',
       '/js/bootstrap-datepicker.js',
       '/js/scrollax.min.js',
-      '/js/main.js'
+      '/js/main.js?v=2' // Versioned to force cache bust on Vercel
     ];
 
     let index = 0;

@@ -60,7 +60,9 @@ function MyApp({ Component, pageProps }: AppProps) {
               }}
             />
             <Nav />
-            <Component {...pageProps} />
+            <div suppressHydrationWarning>
+              <Component {...pageProps} />
+            </div>
             <Analytics />
             <Footer/>
             <CookieBanner />

@@ -20,7 +20,7 @@ function PageHero({title, tag, img, p}:any) {
           position: relative;
         }
       `}</style>
-      <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }}>
+      <div style={{ position: 'absolute', width: '100%', height: '100%', minHeight: '600px', left: 0, top: 0 }} suppressHydrationWarning>
         <Image 
           src={img} 
           alt="Escorted Morocco Tours" 
@@ -29,6 +29,7 @@ function PageHero({title, tag, img, p}:any) {
           priority 
           quality={85}
           sizes="100vw"
+          suppressHydrationWarning
         />
       </div>
 

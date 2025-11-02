@@ -45,7 +45,7 @@ export default function  NextPage({about, destinations, tours, categories}:any) 
   };
 
   return (
-    <>
+    <div suppressHydrationWarning>
     <SEO
       title="Guided Immersion Tours & Travel Guides"
       description="Escorted Morocco Tours - Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides."
@@ -62,7 +62,7 @@ export default function  NextPage({about, destinations, tours, categories}:any) 
           {/* <Testemonials />
           <Banner /> */}
 
-    </>
+    </div>
   )
 }
 

@@ -109,7 +109,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body>
+        <body suppressHydrationWarning>
           <Main />
           <NextScript />
           <script dangerouslySetInnerHTML={{__html: `

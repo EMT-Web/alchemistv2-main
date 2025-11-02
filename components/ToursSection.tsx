@@ -47,8 +47,8 @@ import Image from 'next/image'
                 {tours && Array.isArray(tours) && tours.length > 0 ? tours.map((tour:any, index:any)=> (
                 <div key={index} className="col-md-4 ftco-animate">
                 <div className="project-wrap">
-                    <a href={`/tours/${tour.slug.current}`} className="img" style={{ position: 'relative', display: 'block', minHeight: '250px' }}>
-                    <Image src={urlFor(tour.mainImage).url()!}  alt={tour.title} layout="fill" objectFit="cover" blurDataURL={rgbDataURL(237, 181, 6)} placeholder="blur" loading="lazy"/>
+                    <a href={`/tours/${tour.slug.current}`} className="img" style={{ position: 'relative', display: 'block', minHeight: '250px' }} suppressHydrationWarning>
+                    <Image src={urlFor(tour.mainImage).url()!}  alt={tour.title} layout="fill" objectFit="cover" blurDataURL={rgbDataURL(237, 181, 6)} placeholder="blur" loading="lazy" suppressHydrationWarning/>
                         <span className="price">{tour.duration} Days Tour</span>
                     </a>
                     <div className="text p-4">
