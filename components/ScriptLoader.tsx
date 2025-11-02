@@ -2,6 +2,11 @@ import { useEffect } from 'react';
 
 export default function ScriptLoader() {
   useEffect(() => {
+    // Only run on client-side
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
     // Load scripts sequentially after page is interactive
     const scripts = [
       '/js/jquery.min.js',

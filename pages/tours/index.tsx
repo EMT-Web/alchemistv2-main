@@ -17,8 +17,11 @@ export default function  NextPage({tours}:any) {
 
   function handleClick() {
     setPostNum(prevPostNum => prevPostNum + 3)// 3 is the number of posts you want to load per click
-    window.history.pushState( setToursList(tours.slice(0, postNum)) , 'tours', '/tours' );
-
+    setToursList(tours.slice(0, postNum));
+    // Only update history on client-side
+    if (typeof window !== 'undefined') {
+      window.history.pushState(null, 'tours', '/tours');
+    }
   }
 
   const [currentPage, setCurrentPage] = useState(1);

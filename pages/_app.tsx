@@ -25,27 +25,40 @@ function MyApp({ Component, pageProps }: AppProps) {
            
 
             </Head>
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2934P3WFS5"/>
- <Script>
-  {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `}
-
-            </Script>
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ENWG2RLTV7"/>
-<Script id="google-analytics" strategy="afterInteractive"> 
-            { ` window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-ENWG2RLTV7');`
-            }
-              </Script>
+            <Script 
+              src="https://www.googletagmanager.com/gtag/js?id=G-2934P3WFS5"
+              strategy="afterInteractive"
+            />
+            <Script 
+              id="gtag-init-1"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || 'G-2934P3WFS5'}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+            <Script 
+              src="https://www.googletagmanager.com/gtag/js?id=G-ENWG2RLTV7"
+              strategy="afterInteractive"
+            />
+            <Script 
+              id="gtag-init-2"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-ENWG2RLTV7');
+                `,
+              }}
+            />
             <Nav />
             <Component {...pageProps} />
             <Analytics />

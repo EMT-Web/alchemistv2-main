@@ -113,41 +113,44 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <script dangerouslySetInnerHTML={{__html: `
-            // Async load all non-critical CSS after page load
-            const loadCSS = (href) => {
-              const link = document.createElement('link');
-              link.rel = 'stylesheet';
-              link.href = href;
-              document.head.appendChild(link);
-            };
-            
-            // Load fonts and non-critical CSS async AFTER page is visible
-            if ('requestIdleCallback' in window) {
-              requestIdleCallback(() => {
-                loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-                loadCSS('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
-                loadCSS('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-                loadCSS('/css/animate.css');
-                loadCSS('/css/owl.carousel.min.css');
-                loadCSS('/css/owl.theme.default.min.css');
-                loadCSS('/css/magnific-popup.css');
-                loadCSS('/css/bootstrap-datepicker.css');
-                loadCSS('/css/jquery.timepicker.css');
-                loadCSS('/css/flaticon.css');
-              }, { timeout: 2000 });
-            } else {
-              setTimeout(() => {
-                loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-                loadCSS('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
-                loadCSS('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-                loadCSS('/css/animate.css');
-                loadCSS('/css/owl.carousel.min.css');
-                loadCSS('/css/owl.theme.default.min.css');
-                loadCSS('/css/magnific-popup.css');
-                loadCSS('/css/bootstrap-datepicker.css');
-                loadCSS('/css/jquery.timepicker.css');
-                loadCSS('/css/flaticon.css');
-              }, 1000);
+            // Only run on client-side to prevent SSR issues
+            if (typeof window !== 'undefined') {
+              // Async load all non-critical CSS after page load
+              const loadCSS = (href) => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                document.head.appendChild(link);
+              };
+              
+              // Load fonts and non-critical CSS async AFTER page is visible
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => {
+                  loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+                  loadCSS('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
+                  loadCSS('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+                  loadCSS('/css/animate.css');
+                  loadCSS('/css/owl.carousel.min.css');
+                  loadCSS('/css/owl.theme.default.min.css');
+                  loadCSS('/css/magnific-popup.css');
+                  loadCSS('/css/bootstrap-datepicker.css');
+                  loadCSS('/css/jquery.timepicker.css');
+                  loadCSS('/css/flaticon.css');
+                }, { timeout: 2000 });
+              } else {
+                setTimeout(() => {
+                  loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+                  loadCSS('https://fonts.googleapis.com/css?family=Arizonia&display=swap');
+                  loadCSS('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+                  loadCSS('/css/animate.css');
+                  loadCSS('/css/owl.carousel.min.css');
+                  loadCSS('/css/owl.theme.default.min.css');
+                  loadCSS('/css/magnific-popup.css');
+                  loadCSS('/css/bootstrap-datepicker.css');
+                  loadCSS('/css/jquery.timepicker.css');
+                  loadCSS('/css/flaticon.css');
+                }, 1000);
+              }
             }
           `}} />
         </body>
