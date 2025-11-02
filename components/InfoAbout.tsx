@@ -1,9 +1,14 @@
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { urlFor } from '../sanity';
 import Image from 'next/image';
 
 function InfoAbout({about}:any) {
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
     const keyStr =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
     const triplet = (e1: number, e2: number, e3: number) =>
@@ -45,8 +50,8 @@ function InfoAbout({about}:any) {
 							{about.abouttagline && <span className="subheading">{about.abouttagline}</span>}
 							{about.abouttitle || "Welcome to Escorted Morocco Tours"}</h2>
 							<p>{about.abouttext || "Discover the magic of Morocco with our expert-guided tours."}</p>
-							{router.asPath === `/` && <p><a href="/about" className="btn btn-primary py-3 px-4">More About Us</a></p> }
-							{router.asPath === `/about` && <p><a href="/gallery" target="_blank" className="btn btn-primary py-3 px-4">See the Sights of Morocco</a></p> }
+							{mounted && router.asPath === `/` && <p><a href="/about" className="btn btn-primary py-3 px-4">More About Us</a></p> }
+							{mounted && router.asPath === `/about` && <p><a href="/gallery" target="_blank" className="btn btn-primary py-3 px-4">See the Sights of Morocco</a></p> }
 						</div>
 					</div>
 					<div className="col-md-6">

@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {  useRouter } from 'next/router';
 import Image from 'next/image'
 
 
 function PageHero({title, tag, img, p}:any) {
   const router = useRouter()
+  const [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
-    <section className="hero-wrap js-fullheight">
+    <section className="hero-wrap js-fullheight" suppressHydrationWarning>
       <style jsx>{`
         .hero-wrap {
           width: 100%;
@@ -34,7 +39,7 @@ function PageHero({title, tag, img, p}:any) {
           <h1 className="mb-4">{title}</h1>
           <p className="caps">{p}</p>
         </div>
-        { router.asPath === '/' &&
+        { mounted && router.asPath === '/' &&
         <a href="https://www.youtube.com/watch?v=boiiiVh52v4" aria-label="video player" className="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
           <span className="fa fa-play"></span>
         </a>}

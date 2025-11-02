@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-  reactStrictMode: true,
+  reactStrictMode: false, // Disabled to prevent double-rendering causing hydration issues
   swcMinify: true,
   images: {
     domains: [

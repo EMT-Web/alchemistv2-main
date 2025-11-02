@@ -28,6 +28,7 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter()
   const siteUrl = 'https://www.escortedmoroccotours.com'
+  // router.asPath is safe in Head - it doesn't cause body hydration issues
   const canonicalUrl = `${siteUrl}${router.asPath.split('?')[0]}`
   const fullTitle = `${title} | Escorted Morocco Tours`
   const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
@@ -127,7 +128,7 @@ export function createTourSchema(tour: any) {
       "availability": "https://schema.org/InStock",
       "priceCurrency": "USD",
       "url": `${siteUrl}/tours/${tour.slug?.current}`,
-      "validFrom": new Date().toISOString()
+      "validFrom": typeof window !== 'undefined' ? new Date().toISOString() : (new Date().toISOString()) // Same on server/client to prevent hydration
     }
   }
 }

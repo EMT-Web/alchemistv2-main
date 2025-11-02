@@ -36,10 +36,10 @@ export default function  NextPage({about, destinations, tours, categories}:any) 
     },
     "mainEntity": {
       "@type": "ItemList",
-      "itemListElement": tours?.slice(0, 5).map((tour: any, index: number) => ({
+      "itemListElement": (tours && Array.isArray(tours) ? tours.slice(0, 5) : []).map((tour: any, index: number) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://www.escortedmoroccotours.com/tours/${tour.slug?.current}`
+        "url": `https://www.escortedmoroccotours.com/tours/${tour.slug?.current || ''}`
       }))
     }
   };

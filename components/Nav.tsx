@@ -1,12 +1,17 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 function Nav() {
-   let router = useRouter()
+   const router = useRouter()
+   const [mounted, setMounted] = useState(false)
+   
+   useEffect(() => {
+     setMounted(true)
+   }, [])
  
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
+    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" suppressHydrationWarning>
 		<div className="container">
 			{/* <a href='/' className="navbar-brand"  style={{display:"inline"}}>Escorted<span>Morocco Tours</span></a> */}
       <a href='/' className="navbar-brand"  style={{display:"inline"}}><Image src='/images/logo-white-01.png' alt="Escorted Morocco Tours" width={108} height={61} priority/></a>
@@ -15,7 +20,7 @@ function Nav() {
 			</button>
 			<div className="collapse navbar-collapse" id="ftco-nav">
 				<ul className="navbar-nav ml-auto">
-               <li className={`nav-item ${router.asPath === '/' ? "active" : '' }`}>
+               <li className={`nav-item ${mounted && router.asPath === '/' ? "active" : '' }`}>
                   <a href="/" className="nav-link">Home</a>
                </li>
                <li className="nav-item dropdown position-static">
@@ -63,13 +68,13 @@ function Nav() {
         </div>
       </li>
              
-					<li className={`nav-item ${router.asPath === '/about' ? "active" : '' }`}>
+					<li className={`nav-item ${mounted && router.asPath === '/about' ? "active" : '' }`}>
                   <a href="/about" className="nav-link">About Us</a>
                </li>
-               <li className={`nav-item ${router.asPath === '/blog' ? "active" : '' }`}>
+               <li className={`nav-item ${mounted && router.asPath === '/blog' ? "active" : '' }`}>
                   <a href="/blog" className="nav-link">Blog</a>
                </li>
-               <li className={`nav-item ${router.asPath === '/contact' ? "active" : '' }`}>
+               <li className={`nav-item ${mounted && router.asPath === '/contact' ? "active" : '' }`}>
                   <a href="/contact" className="nav-link">Contact Us</a>
                </li>
 				</ul>
