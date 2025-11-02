@@ -59,13 +59,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="/js/bootstrap.min.js" strategy="afterInteractive"/>
             <Script src="/js/jquery.easing.1.3.js" strategy="afterInteractive"/>
             <Script src="/js/jquery.waypoints.min.js" strategy="afterInteractive"/>
-            <Script src="/js/jquery.stellar.min.js" strategy="afterInteractive"/>
             <Script src="/js/owl.carousel.min.js" strategy="afterInteractive"/>
             <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive"/>
             <Script src="/js/jquery.animateNumber.min.js" strategy="afterInteractive"/>
             <Script src="/js/bootstrap-datepicker.js" strategy="afterInteractive"/>
             <Script src="/js/scrollax.min.js" strategy="afterInteractive"/>
             <Script src="/js/main.js" strategy="afterInteractive"/>
+            {/* Note: Stellar parallax is disabled in main.js (wrapped in try-catch) to prevent React conflicts */}
             
 
           </>

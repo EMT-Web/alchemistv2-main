@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import Link from 'next/link'
 import Script from 'next/script'
 import React from 'react'

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslations } from 'next-intl';
 import ReactSelect, { components } from "react-select";
 
 export const tourOptions = [

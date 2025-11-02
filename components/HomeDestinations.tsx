@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl'
 import React from 'react'
 import { urlFor } from '../sanity'
 
@@ -20,7 +19,7 @@ function HomeDestinations({destinations}:any) {
 					<div className="col-md-12">
 						<div className="carousel-destination owl-carousel ftco-animate">
 							{
-                              destinations! && destinations.map((destination:any)=>
+                              destinations && Array.isArray(destinations) && destinations.length > 0 ? destinations.map((destination:any)=>
 							  <div key={destination._id} className="item ">
 								<div className="project-destination">
 									<div  className="img"  style={{backgroundImage: `url(${urlFor(destination.mainImage).url()!})`, minHeight: '400px', backgroundSize: 'cover', backgroundPosition: 'center'}}>
@@ -32,7 +31,7 @@ function HomeDestinations({destinations}:any) {
 									</div>
 								</div>
 							</div>
-							)
+							) : null
 							}
 						</div>
 					</div>

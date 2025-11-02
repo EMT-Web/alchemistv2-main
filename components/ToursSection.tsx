@@ -1,4 +1,3 @@
- import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { urlFor } from '../sanity'
@@ -40,12 +39,13 @@ import Image from 'next/image'
                 <span className="subheading">Make the Most of Your Time in Morocco with a Well-Planned packages</span>
                 <h2>Morocco Immersion Tours</h2>
                 <p className="mb-4">Whether you're looking for a private tour or a group excursion, our experienced guides can tailor your itinerary to your liking</p>
-                {tours.length === 0 && <div><p>Nothing Found</p><p className="mb-0"><a href="/tours" className="btn btn-primary px-4 py-3">Browes All tours</a></p></div>}
+                {(!tours || tours.length === 0) && <div><p>Nothing Found</p><p className="mb-0"><a href="/tours" className="btn btn-primary px-4 py-3">Browes All tours</a></p></div>}
             </div>
         </div>
        
         <div className="row">
-                {tours.map((tour:any, index:any)=> <div key={index} className="col-md-4 ftco-animate">
+                {tours && Array.isArray(tours) && tours.length > 0 ? tours.map((tour:any, index:any)=> (
+                <div key={index} className="col-md-4 ftco-animate">
                 <div className="project-wrap">
                     <a href={`/tours/${tour.slug.current}`} className="img" style={{ position: 'relative', display: 'block', minHeight: '250px' }}>
                     <Image src={urlFor(tour.mainImage).url()!}  alt={tour.title} layout="fill" objectFit="cover" blurDataURL={rgbDataURL(237, 181, 6)} placeholder="blur" loading="lazy"/>
@@ -63,7 +63,8 @@ import Image from 'next/image'
                         </ul>
                     </div>
                 </div>
-            </div>)
+            </div>
+                )) : null
             }
             
         </div>
