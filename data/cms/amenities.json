@@ -1,0 +1,87 @@
+[
+  {
+    "_createdAt": "2023-04-13T22:06:18Z",
+    "_id": "df9c3f51-69f9-4f6c-b2e2-c56be82bb600",
+    "_type": "amenity",
+    "_updatedAt": "2023-04-13T22:06:18Z",
+    "icon": {
+      "src": "/cms/db8001e4906eb71ddd23e3d93cedaf633fc7b90a.png",
+      "width": 500,
+      "height": 500,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcUlEQVQ4jc2UyU7DMBCG8/5Pw4EDnLhwASGkspR9LVQlatrs3udHmXRL4kJZhLA0GSsef/49YzvAL7fgD4FUf4ka9i0gkR/mh5Mf+BFkNcY3RuxpCfTBmhDH5tsJVbHzeCIEbVgTbOFMAacTOFuCrKy902uVBl1FFuRUPVmn0MUzdHYHU45gihfo7B5WjuuY1k54y42VrOJgU77CyghGvEEll5DTHlR6A5VcQU5PF1Bn8oXahcJ5x1kBK0Ko9BpyegKdPcCUQwaK8SFEdAQ56UHGff6nkgvI+AymGLDaFtBxrowIofNHyPicrVKi4j6K0R6ywRbyl22Gq/SWlZbhPoOdKbsKyZlZ3hLOl86foIsBKxXjA+TDXeTDHYjomJUbMeJxKyOe6y1KA2xLXrnKk1WTuigMCmGrqpuC46gqYjuHnx3apbl6waoQlZ/BvEVZB9n0CtL82Hzl7voeCPIpXBmeXaPuq7LpIxF0Zv6w/X/gO1cYKcgHJsgtAAAAAElFTkSuQmCC"
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "desert"
+    },
+    "title": "Desert"
+  },
+  {
+    "_createdAt": "2023-04-04T22:05:27Z",
+    "_id": "b943c307-eaca-4acc-b5b6-77e41735ce4e",
+    "_type": "amenity",
+    "_updatedAt": "2023-04-04T22:05:27Z",
+    "icon": {
+      "src": "/cms/daa59d7a4885641520d1e15e54acf56cf6caffa1.png",
+      "width": 500,
+      "height": 500,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACgUlEQVQ4jX2U127bQBBF/f8/lYckD0Ea4jiwpURWo0Sx97JsE9w7JAU6UgSMqBV3zt5p+yAiMgzD1fpeWlNInXpSRicpgqMUwWG0o5TRWerMl66pZBh6uM+++DwsYZ20dU5YnbpiiojrzpS0tsrE5CHfAYqDh34JJVD/6KWtVVmdjA51Tgfs6btWuqam8dDMV6WmnNXNQBg2AlYlDjciNKiBahxGhXUufWsWkZg8lL5trkD+6HtpykQKfy+5v2OuMucPoTgI6gBSa5i/zlTSlDHDZyRTDvHVdw1V5d5O0sta4uNPCbdfJDk/axHGfBLYt5pThG9KVVlEVH0FtoZOqGruvhLmPL8Tb/1R4sOjpPZaytAac9pRwPQ0KFLmk7EAVvFlVhjuvom3ei/e6oOE26+SXX5TCYAoXFOlrDBCN6y6dwMY2ZK7WypMzy8SHR4l2n9n+JmzoYqpZVg4pCELtCMSV7q2vgKxgMIqtrmZUHtFy9zN3NBICZxNHmmKQovv4HsXWEa2pPaLJNYvKoNyHFKGJwKgFB1h8oDr3NvSbxEygYmjwPDEnCFsbEZYqKJOj1YUEwMoxzO0biuccoPQGGKoc0yAKRSCYrwZxTq9k0MCY3uEWQRjDSXad9U4LQWf2uA1Q4fvAsgqJ47eLJgWb0vDyRNAWyajKhrWUIiZvgv097MByHkuIg2VEA0bVUYLaW7d+0A0NmDaZ3pRTMVC4lEgpGC2Kv2/QgUepCli/odNvNJw+0w9lzhUB6AWRa+7f4qCpsXM4pbRYsTSlCmfSDxH09/xvUZxGZv7dKNtTMUmDl4/S7D5NI9cbD1JfBzNepLo8IMXB2ad70fDAag4gH8Bk8oDZX+fk+QAAAAASUVORK5CYII="
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "coastal"
+    },
+    "title": "Coastal"
+  },
+  {
+    "_createdAt": "2023-02-19T19:10:36Z",
+    "_id": "54137f19-62af-4a34-949c-f4b847d0e1f6",
+    "_type": "amenity",
+    "_updatedAt": "2023-03-23T23:16:44Z",
+    "icon": {
+      "src": "/cms/4584ca650cfa3b0804835a399f675fa180c5c0ff.png",
+      "width": 500,
+      "height": 500,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACGklEQVQ4jb2Uy4oTQRSG+7V8BN9B8AnEhbjQhTdc6EbQhaCIiDqjrkQZEa8BFw7IOJeMc83kMpPE7iTdSV/T3XX7pU4mmW4nCUFkCg5d1afqO/+pOlUG/nMzTgyolBp9s5b1zQxUE2CzQI1psOy/aabb8JsHjpkoRQzeNyESB0qJ3OJhX2WgxhCSdY5McrCgjKD+BpH5CSLpZPzy2DrdjGkpaFWR+RF28Ro6KxcR1F+Dxy2ItAsWVKmvJB/NJ4VZyJFDQrIAqbcFrzoHc/EsDj6cQmvpHCLrK5LuCsLGAsLmO8ogC80oFIeRK0jdTVKmFYXNBdjrN9AonIb5/Qx6u/cRWV8QWQW45cfway/BwiqUFId7SGQBHjUoolt6gO7WHbSXL8AuXicl/dY3eJWncH7dhL12BW7pIWL7x+B/9TnBRWITxyBliU2b7mzchl28is7qJbSXzqOzepngWmm/s4jI/EwBnY1bCJvvwcID2pbY+Ul7KpkHQ/IQLNgjoJbv77+CX5snRe7eI3S376K3fQ9e+cnAV52nVIPGWyS9dbCwhtTbQeqXSJgheQARt8H7v8FjC1z3aWyChftI/R3EzjKlpSF+7QW8yjMKrseRVSA/i+qQvD9IeWCT76f26wKnQ9Npupt00kl3Dam/S+Wj/aNDyZfM+LrMz5NQkg1M5cWMLexZ7u7xIOqoDvX1m9ymvzx/28k9sP8K/APUxgazb1oP9QAAAABJRU5ErkJggg=="
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "mountains"
+    },
+    "title": "Mountains"
+  },
+  {
+    "_createdAt": "2023-02-16T20:18:07Z",
+    "_id": "caf7df17-26d7-4146-b115-67e8c11abed9",
+    "_type": "amenity",
+    "_updatedAt": "2023-03-03T19:59:07Z",
+    "icon": {
+      "src": "/cms/faaf8e0d4f1eb9a03365284f29df57691f719b78.png",
+      "width": 500,
+      "height": 500,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADNElEQVQ4jY1VSWsUYRD9/oAr4oKoeFNRUBQJCl5URBBBQUVEQfTkQdzwJKigBxFFvSiuB0HRxERNzDIhiUsSgyYRTTQx07OvmbUz0z1Lb0+qOqNxHEw+KLp7+utX9b33qkZYloVKMXGVP/9viUqbLcuEZer2dfz9VEEFV2TqMHUVRiEBPR+FpnhRkL/DKMTLACcHFZapQVN8yMU6kfE9gyw9gOy8A1m6j+LYz4p0/KalQhKhq0GMuR4h1ncSke5DCHfuQ7hzLxLfzqOYGfld3VRDKOFmhLv2w/tmJbxvVsHXvA6+prWIdB+EGm2HaeQqCvWHb+tvwNTwDfhaquB6MReu2gVwv1wCd90ieBtWINZ3Avl4D0wjz5tNXYGeH2Wu6d6yjH8SidHe4/A0LIdUPRNSzSxI1aWYyVUnBy9BU/0wijLUSCtSP64iNXQdSqiJwS1T5wSa4oepZSAC7VvhqlsI5/NpkKpnwPl8+p9rzRwE3+5AxvsU2eBrRHuOwt9ShdD73UgP34KWdcMopqEE68dFHIbwNCzjD0tAJbDSs/vVUgQ7tiP0fhf8jg2IdB2A7HqIfOITjGKKhYt/PYdY3ykU0gMQnvoSoF2hHbMg1cyGq3Y+vI1rEGjbgtC7nYj1n4ESbhnnUGUec/FuRD4exujnYyjKPyDoCO6Xi+GqncfV+JrWIdi+FYG2zfC3bmKQjK8aasTBZrfFIEUNvlcjDoQ/7EG05wjyyV6IYPs2eBtXw+/YyC+Sg5eR9ddCdt5FrP80m1xTPKAGoFac2IaWUWBxiGf6Vgk7IMhv9AMRnvh2gY9EquZiHzDmeYyM5wlzQ4ATfUeL7JT1v+CTUJAwIjFwEfEvZ5nY5PcryMW6GDCf6GHi1dG3KKS+sMHLAYnL9PBNeBpWsMWoICFL95Aeuc1g5DEC0bIuNnQx42SwfLIPppb9B7CYkZgW5r55PWMI2kxKUQuq0Q7ouZBdYaofmhpgIQicqilvNS3rQWroGrcudRUdXxCxpJapjbEVbPXsUWbqWbsL1ABXWD6AaR9NJKKJFCaji8kbnoYs9WzlYWvPU8MeyKYxPmAn+QsoT1aedOJw+AXDIJwfURIDxAAAAABJRU5ErkJggg=="
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "trekking"
+    },
+    "title": "Trekking"
+  },
+  {
+    "_createdAt": "2023-02-16T20:12:36Z",
+    "_id": "8684371a-7583-4ff2-843b-6d58a6a4f9fa",
+    "_type": "amenity",
+    "_updatedAt": "2023-03-03T19:59:40Z",
+    "icon": {
+      "src": "/cms/f1ad71336c41b3c3bc4d6837f5587ea1ec469e0b.png",
+      "width": 500,
+      "height": 500,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACk0lEQVQ4jX1Va08TQRTt//8RflCjMaIREx/RGAVEVB6CgIhCWwqltKXt7s7u7GNm9ph7pi1daJ1kMs3dmTPnnnvutAYAZVlisvrp/HQF8vA3wvoDRM0nKFSdsbK0/D57RoastWrAwuZDFPEZCnVKMN1dRdh4iKj5GLr3GXl4hDz6A5NcwBldAZNRAXRW84Duf0F6/Z1TAOPLt4jbr5F0PkD3N5AONpEOtnipM/FihvIxG+0jHe6giJtkmkcnyKNjZMEhstFPXiipC8ts+AN5eAxXqGnqNdxmGPwiqEnaTMvoDmweUAqTnJOVxG3WRx4cMhuj21NNa7P5O5t6wOGuZ6jqKFSDoEZfjmOnKOIGV9mXjfZ42VTDWcDSZixEer3pUxzuQvfWkVx99Pp1V6mdSCI6yuWWYHZBlZ0lGwFKB9ssgLpYRli/j6j5CEnnPQFFS2HviuiOfaoMy5KbJE0RX9KJ268QnN6jdZLuyrQwJu1WmJXzbZNSJ2FHy/Q3ELffkJ34UOwjXtS9NYI6m1UAKymLfmIT0S8d7JCJ6CQASffTWD/R9sCvo304k9xlOOkQKb3ufyWzPPqLIm6hUCc8yGoGB9RN7EQnBIf07XxAZ2gD3V1humJabxkx8MnYKme0jkmvvL7BAZxRCwDLkuWXIghD2ewNvje2yPbULpTi+hu/SYfMLYoPWrrfa7fFthLwpPMOqrWE6OzpuChr0P11tqMU8b9VltT52iQtP1WDrRW1lqDOX1BL0dqkvXH/uruAtwP87QwnWzE8gmo952sjl0y8Nxnl+NxkzKR8A3qz2bLiqvWMBpfKL3pYgXm9PGPQCaCkrS5eeoZxc253yIs1ZVihdCsNYSN2UefL1JB/ATOA88Y/snb/Xt3zGlwAAAAASUVORK5CYII="
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "sightseeing"
+    },
+    "title": "Sightseeing "
+  }
+]

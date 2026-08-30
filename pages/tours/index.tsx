@@ -106,9 +106,9 @@ export default function  NextPage({tours}:any) {
                         <span className="price">{tour.duration} Days Tour</span>
                     </a>
                     <div className="text p-4">
-                        <span>Starts From </span><span className="days">{tour.destinations! && tour.destinations[0].city}</span>
+                        <span>Starts From </span><span className="days">{tour.destinations?.[0]?.city}</span>
                         <h3 className='my-2'><a href={`/tours/${tour.slug.current}`}>{tour.title}</a></h3>
-                        <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations! && tour.destinations.slice(1).map((d:any, index:any)=> <a key={index} href={`/destinations/${d.slug.current}`} target="_blank">{d.city}, </a>)}...</p>
+                        <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations?.slice(1).filter((d:any)=>d?.slug?.current).map((d:any, index:any)=> <a key={index} href={`/destinations/${d.slug.current}`} target="_blank">{d.city}, </a>)}...</p>
                         <hr />
                         <ul>
                             {tour.amenities! && tour.amenities.map((a:any, index:any) =>

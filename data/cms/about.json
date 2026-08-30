@@ -1,0 +1,162 @@
+{
+  "_createdAt": "2023-02-25T17:45:32Z",
+  "_id": "f432ce50-ae3e-4d3c-9d4f-8a936d4ca15d",
+  "_type": "abouts",
+  "_updatedAt": "2024-11-23T12:32:58Z",
+  "coverImage": {
+    "src": "/cms/ec985e3005bdddb9579c346b9b4d7b150a866c16.jpg",
+    "width": 2365,
+    "height": 1330,
+    "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAkEAABBAEDBAMBAAAAAAAAAAABAgMEBQAREjEHIWFxExQjof/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAHBEAAwABBQAAAAAAAAAAAAAAAAECAxESISNR/9oADAMBAAIRAxEAPwCVu6oVkVx2yU8y+B+be3TXyc0r0TLqLEdaW3GfB2bXOPeVPUOwkv2k5x5wLWle0FSEnQAccYj09YbXEkSVoCnlKAKj3/nGBUTC5RSu70OvX0sD6wE25YbfBIUkIJAPvDG3IrBIPxJ1I1PbzhienxhN2Vn/2Q==",
+    "alt": "Escorted Morocco Tours",
+    "crop": {
+      "_type": "sanity.imageCrop",
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0
+    },
+    "hotspot": {
+      "_type": "sanity.imageHotspot",
+      "height": 1,
+      "width": 1,
+      "x": 0.5,
+      "y": 0.5
+    }
+  },
+  "heroquote": "I HAVEN'T BEEN EVERY- WHERE BUT IT'S ON MY LIST.",
+  "herotag": "Susan Sontag",
+  "mainabout": {
+    "abouttagline": "Ideal Immersion Tours with",
+    "abouttext": "We offer a range of customizable tours that cater to all types of travelers, from cultural immersion tours to adventure and luxury. Our experienced team of guides will take you on an unforgettable journey through Morocco's most iconic cities, majestic mountains, and breathtaking deserts.\n\nwe believe that travel is more than just seeing new places. It's about immersing yourself in different cultures, creating lasting memories, and gaining new perspectives. That's why we're dedicated to providing our clients with authentic and enriching travel experiences that are tailored to their unique interests and preferences.\n\nSo whether you're a first-time traveler or a seasoned adventurer, join us on an Escorted Morocco Tour and discover the magic of this captivating country.",
+    "abouttitle": "Escorted Morocco Tours",
+    "service1": {
+      "mainImage": {
+        "src": "/cms/fabaf717c1e08ffe9b4a2bbf4eab210cf1ebc4f6.jpg",
+        "width": 2048,
+        "height": 1536,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgf/xAAkEAABAwMDBAMAAAAAAAAAAAABAgMEAAURBhITByEiQRVhgf/EABYBAQEBAAAAAAAAAAAAAAAAAAQBA//EAB0RAAEEAwEBAAAAAAAAAAAAAAIBAwQRAAWRErH/2gAMAwEAAhEDEQA/AJ21aitU8L5o6I6fRPf8ptarZFuzjZbeQkOr2JyMCp/pdoT5OG3NvU5LcdzybbQgqJH2a7E/Y7CITTKnHRxYUFISUntWhznmjsXCvKMCO6HkmxrnzMxem0NLKeWUrf72pGKKfN6ltbTaW+RwbRgeBooZbCUq2ri9xQ6+IKUjacTP/9k=",
+        "alt": "Cultural Immersion Escorted Morocco Tours"
+      },
+      "paragraph": "Explore Morocco's history and culture with immersive tours to iconic landmarks and hidden gems.",
+      "title": "Cultural Immersion"
+    },
+    "service2": {
+      "mainImage": {
+        "src": "/cms/cc792a174d7c680ed29c4a74fac1265e2e998205.jpg",
+        "width": 2048,
+        "height": 1536,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAUH/8QAJRAAAQMDAgYDAAAAAAAAAAAAAwECBAAFERITBhUxMlFhQ5Gh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAHREAAgEEAwAAAAAAAAAAAAAAAQMAAhEVUQQSFP/aAAwDAQACEQMRAD8ASrYDiNJCgiTZrtoiMIxXZx910S03N0cThXyGRrmP0oRyY1JWLbRFLdt+OVyEHIe8nvPnzTqQEeVoivcQj+9yr0Sj1sXVUFm1pFFLAO4vIx3mwOYiqMufSUVY5NET4v2isstzNxxiNT//2Q==",
+        "alt": "Adventure Tours Escorted Morocco Tours"
+      },
+      "paragraph": "Experience Morocco's natural beauty with thrilling activities like camel riding and hiking.",
+      "title": "Adventure Tours"
+    },
+    "service3": {
+      "mainImage": {
+        "src": "/cms/8373f991be3f6d85d81127e4bc2a288f4e2729df.jpg",
+        "width": 2400,
+        "height": 1800,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYEB//EACEQAAICAwACAgMAAAAAAAAAAAECAwQABREGIhJBEzFC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwH/xAAdEQACAgEFAAAAAAAAAAAAAAAAAQIRUQMEEhQV/9oADAMBAAIRAxEAPwBS8to/kjbVw3ZGU/tWAxs/IKsjlm1+xEjHrFh3ObraMRLVgUbv8nmb624uEe1mb1+vl3Kt9NPlQUtBVRXC5qpQHaWdSfpoj0YyVfY3mbpsyYxfYeAOmsn/2Q==",
+        "alt": "Coastal Getaways Escorted Morocco Tours"
+      },
+      "paragraph": "Relax on Morocco's picturesque beaches, explore charming coastal towns, and indulge in fresh seafood.",
+      "title": "Coastal Getaways"
+    },
+    "service4": {
+      "mainImage": {
+        "src": "/cms/dee3a8cd3984184fa94cc5d63439f88ed2eea715.jpg",
+        "width": 2365,
+        "height": 1330,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFB//EACEQAAEEAgICAwAAAAAAAAAAAAECAwQRACEFEgYTFDFB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB4RAAEDBAMAAAAAAAAAAAAAAAEAAgQDFDJSEYGh/9oADAMBAAIRAxEAPwCrKlxIklxUhhfr7JSEnVX+445fhTKajhlanHNWPoYroEqCj5IDna77C7zPOLJj+cTGWSUtJYsJuwDYwtmSHDM89JjGoA4D1ap6oB2I6qOGQ35khCwlLqgAkaGGZL+Xur2kbRf/2Q==",
+        "alt": "Customized Tours"
+      },
+      "paragraph": "Tailor your dream vacation to fit your interests, preferences, and budget. Our expert team will design your perfect itinerary.",
+      "title": "Customized Tours"
+    }
+  },
+  "missionvision": {
+    "coverimage": {
+      "src": "/cms/e753493545cb9555c9a65a96b47ed3fa552830f6.jpg",
+      "width": 1440,
+      "height": 540,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAABBQEAAwAAAAAAAAAAAAAEAAECAyERBRIT/8QAFgEBAQEAAAAAAAAAAAAAAAAABAAB/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAQCFQExQlL/2gAMAwEAAhEDEQA/AIh3kgGyseVj93OKKWZXbz4Axju+80RDtGcakLqFZbiBoiSqZyauWd1oviIirhv0ZRpZ4P/Z"
+    },
+    "mainimage": {
+      "src": "/cms/fabaf717c1e08ffe9b4a2bbf4eab210cf1ebc4f6.jpg",
+      "width": 2048,
+      "height": 1536,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAgf/xAAkEAABAwMDBAMAAAAAAAAAAAABAgMEAAURBhITByEiQRVhgf/EABYBAQEBAAAAAAAAAAAAAAAAAAQBA//EAB0RAAEEAwEBAAAAAAAAAAAAAAIBAwQRAAWRErH/2gAMAwEAAhEDEQA/AJ21aitU8L5o6I6fRPf8ptarZFuzjZbeQkOr2JyMCp/pdoT5OG3NvU5LcdzybbQgqJH2a7E/Y7CITTKnHRxYUFISUntWhznmjsXCvKMCO6HkmxrnzMxem0NLKeWUrf72pGKKfN6ltbTaW+RwbRgeBooZbCUq2ri9xQ6+IKUjacTP/9k="
+    },
+    "missiontag": "Our Mission",
+    "missiontext": "Our mission at Escorted Morocco Tours is to provide our clients with an unforgettable travel experience in one of the most captivating destinations in the world. We strive to showcase the beauty, culture, and diversity of Morocco through carefully curated tours that cater to a wide range of interests and preferences.",
+    "videolink": "https://www.youtube.com/watch?v=boiiiVh52v4",
+    "visiontag": "Our Vision",
+    "visiontext": "To be the leading provider of authentic and immersive travel experiences in Morocco. We strive to create a meaningful and memorable journey for our clients by offering unique and personalized itineraries that showcase the country's rich culture, history, and natural beauty. Through our commitment to sustainability and responsible tourism practices, we aim to contribute to the preservation and development of the communities we visit, while providing our clients with a transformative travel experience."
+  },
+  "seodescription": "Discover the rich culture, fascinating history, and adventurous spirit of Morocco with our escorted tours. From the vibrant cities of Marrakech and Fez to the stunning landscapes of the Atlas Mountains and the Sahara Desert, our tours offer a comprehensive and immersive experience of this vibrant country. With expert guides, comfortable accommodations, and a variety of cultural and adventure activities, our escorted tours will take you on a journey that you'll never forget.",
+  "seokeywords": "Escorted tours, Morocco, Tour Agency, Morocco tours, Tour Operator, expert guides, accommodations, cultural activities, adventure activities, immersive experience.",
+  "seotitle": " About Escorted Morocco Tours | Tour Agency",
+  "slug": {
+    "_type": "slug",
+    "current": "about-us"
+  },
+  "team": [
+    {
+      "_key": "1fe67283c2cc",
+      "_type": "team",
+      "alt": "Manager",
+      "mainimage": {
+        "src": "/cms/cc792a174d7c680ed29c4a74fac1265e2e998205.jpg",
+        "width": 2048,
+        "height": 1536,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAUH/8QAJRAAAQMDAgYDAAAAAAAAAAAAAwECBAAFERITBhUxMlFhQ5Gh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAHREAAgEEAwAAAAAAAAAAAAAAAQMAAhEVUQQSFP/aAAwDAQACEQMRAD8ASrYDiNJCgiTZrtoiMIxXZx910S03N0cThXyGRrmP0oRyY1JWLbRFLdt+OVyEHIe8nvPnzTqQEeVoivcQj+9yr0Sj1sXVUFm1pFFLAO4vIx3mwOYiqMufSUVY5NET4v2isstzNxxiNT//2Q=="
+      },
+      "paragraph": "Mustafa was born into a small Berber nomadic family in the heart of the Zagora desert in Morocco. Despite the challenges of growing up in such a remote area, he was fortunate enough to attend school, unlike his older siblings. In the 1990s, a severe drought forced his family to abandon their nomadic lifestyle and settle closer to a village with access to water for their animals. This change, though difficult, allowed Mustafa the opportunity to pursue an education.\n\nAfter completing primary school in his village, Mustafa moved to another village, where he stayed in a dormitory for six years to finish middle school. He later traveled to Marrakech, the nearest city with a university, where he earned a degree in Linguistics from Cadi Ayyad University in 2015.\n\nFollowing graduation, Mustafa held various jobs but always felt drawn to tourism, a field that had fascinated him since childhood when he saw tourists visiting his desert village. He began working for local tour agencies before realizing his dream of becoming a tour guide and starting his own company. For Mustafa, guiding tours felt like a modern version of his nomadic roots, as he moved around Morocco, sharing his passion for Berber culture and traditions with visitors.\n\nMustafa's background in desert life allowed him to connect with other local guides, forming a strong team dedicated to providing immersive, authentic tours of Morocco, with a special focus on desert trekking and overnight experiences. As a team, their goal is not just to take visitors to picturesque locations but to deeply immerse them in the local Berber culture, way of life, and traditions.",
+      "role": "CEO & Tour Manager",
+      "title": "Mustafa"
+    },
+    {
+      "_key": "1df4bb15bf47",
+      "_type": "team",
+      "alt": "Abdul",
+      "mainimage": {
+        "src": "/cms/16407aa292ef4ffa37f8bf7b617b92648ee2c55a.jpg",
+        "width": 2048,
+        "height": 1536,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUEBgf/xAAmEAACAQMDAwQDAAAAAAAAAAABAwIABAUGERIUITETFSMyQVJh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIF/8QAHxEAAQQCAgMAAAAAAAAAAAAAAQACAyEEEhFhE0GR/9oADAMBAAIRAxEAPwBlf6lbapXPouSnxIWyI78tqVaU1g69s4dVbc5mcogn7Hb8UnOtE5fGY0LtSpimcWEeNyKq1h7i50xbSilaWymGCXfYnbxVeWY6tLzfaeKDF4cXsFCq9raVZ9Qh8tr6cv1NFScHiovxNqx7Q1hWOU5R7y/tFZ0mdM1xaJDXaZuDEQDoPi//2Q=="
+      },
+      "paragraph": "Abdul was born into a nomadic family residing in the desert village of N'kob. In pursuit of his curiosity for language and culture, he pursued a degree in Amazigh Studies at Agadir University.\n\nAfter spending several years employed at a prominent hotel chain in Marrakech, Abdul proceeded to oversee opulent desert camps. Subsequently, he became a part of the esteemed Escorted Morocco Tours organization.",
+      "role": "Tour Guide/Driver",
+      "title": "Abdul"
+    },
+    {
+      "_key": "a59938bf9368",
+      "_type": "team",
+      "alt": "Said",
+      "mainimage": {
+        "src": "/cms/3251f498b91bded2b2a8f40d39553d98e21696ec.jpg",
+        "width": 2364,
+        "height": 1330,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACMQAAIBAwMEAwAAAAAAAAAAAAEDAgAEEQUGEyExQVESQtH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBv/EABwRAAICAgMAAAAAAAAAAAAAAAECAAMRYRITQf/aAAwDAQACEQMRAD8Asx19ibsz4ltRjAiOmD7qDru69anelGllR5Y4CBDx561txwi9pERmJOKnXTJqfBiz8WAHEh3qouQmwLk+SdUIFLcRFDa7pcTOVsuJP1IHSikJ7g1USIF6zv6H5RS5TcLrfU//2Q=="
+      },
+      "paragraph": "Said was born into a nomadic family in the Ramlia Desert, located in close proximity to the borders of Algeria. His birth in the desert has enabled him to develop an openness to diverse international cultures and nationalities. Following his experience as a camel guide in the desert, Said served for a period of three years at a luxurious desert camp. Subsequently, he joined our esteemed Escorted Morocco Tours family.",
+      "role": "Tour Guide & Driver",
+      "title": "Said"
+    },
+    {
+      "_key": "863ae06d0f3f",
+      "_type": "team",
+      "alt": "Anwar",
+      "mainimage": {
+        "src": "/cms/64c449b71f7a4cec1bd94b29bfc0d65f34350243.jpg",
+        "width": 2400,
+        "height": 1600,
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQcA/8QAIRAAAQQCAgIDAAAAAAAAAAAAAwECBAUAERIhMWEGFpH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EAB4RAAEDBAMAAAAAAAAAAAAAAAEABBECA0FxISLh/9oADAMBAAIRAxEAPwB1IQ9dqn7hHyG1rqAYCTytawr+PntPeTqptpv16wmkkFeQGuKK7rAbspbkURZhFcu9p6yIfXZEgAKxZ2xnlXWKSDKjsMA43iem2uRfObIdFu50MSAjlRomLpE1mwXL0nrTTG/EDdrmozpf/9k="
+      },
+      "paragraph": "Anwar was born in the captivating ancient city of Marrakech. He obtained a Bachelor of Arts degree in English Linguistics in Marrakech, which provided him with early exposure to various nationalities and cultures. As a result, Anwar possesses significant competence and knowledge of the diverse Moroccan culture and traditions, rendering him an excellent tour companion.",
+      "role": "Tour Guide & Driver",
+      "title": "Anwar"
+    }
+  ]
+}

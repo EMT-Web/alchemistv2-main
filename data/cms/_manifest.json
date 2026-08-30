@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-08-30T23:18:50.220Z",
+  "source": "production-export-2026-08-30t21-28-01-358z",
+  "counts": {
+    "tour": 30,
+    "post": 8,
+    "gallery": 19,
+    "destination": 13,
+    "categoryblog": 5,
+    "faq": 34,
+    "category": 7,
+    "author": 2,
+    "amenity": 5
+  },
+  "about": 1,
+  "images": {
+    "processed": 110,
+    "copiedRaw": 0,
+    "unique": 110
+  }
+}

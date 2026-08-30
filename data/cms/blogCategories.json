@@ -1,0 +1,107 @@
+[
+  {
+    "_createdAt": "2023-02-27T04:50:11Z",
+    "_id": "23a985a7-d38c-4985-a2fc-8fd174b0adf6",
+    "_type": "categoryblog",
+    "_updatedAt": "2023-03-07T01:52:11Z",
+    "description": "Attractions ",
+    "mainImage": {
+      "src": "/cms/29c1ea42a9eca6dc5c59c70789fe3271290a9a4b.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFBgf/xAAhEAACAgMAAQUBAAAAAAAAAAABAgMRAAQSEwUGISIxUf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABkRAQADAQEAAAAAAAAAAAAAAAEAAiERQf/aAAwDAQACEQMRAD8A4hHJw1cm/wCVmm9uaK7/AJROrR8/hY85NVjKolkppFIpqGW9Df2QJ18v1arFDMrZRfSLmhF/W119Dd8MZcryDZ+cMX3JGlnLSHpqqyMMWuy4GT//2Q=="
+    },
+    "seodescription": "We  share insider tips, fascinating stories, and practical advice to help you plan your itinerary and make the most of your trip to Morocco. From the ancient ruins of Volubilis to the colorful gardens of Majorelle, this blog category is your ultimate guide to the must-see attractions of Morocco.",
+    "seokeywords": "Morocco travel, Morocco attractions, Morocco landmarks, Morocco historical sites, Volubilis, Majorelle Garden, Hassan II Mosque, Ait Ben Haddou, Chefchaouen, Fes Medina, Marrakech attractions.",
+    "seotitle": "Discover the Top Attractions of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "attractions"
+    },
+    "title": "Attractions "
+  },
+  {
+    "_createdAt": "2023-02-16T01:57:01Z",
+    "_id": "077959db-19c1-45ff-b343-b5ca7943bb2d",
+    "_type": "categoryblog",
+    "_updatedAt": "2023-03-07T01:50:00Z",
+    "description": "Culture",
+    "mainImage": {
+      "src": "/cms/1d938fa4308860ca1f94453d894ed4167d42473e.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwAFB//EACIQAAEDAwQDAQAAAAAAAAAAAAECAwQABRESEyExQVFxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAGhEAAgMBAQAAAAAAAAAAAAAAABEBAhIxIf/aAAwDAQACEQMRAD8A4pCkFpJaKD3xWra4Mm5LUpsBstHpRwT8oFKLjG8vBdHSsc0iLlLE3h4j8FFuS4rV+g39xuNP245UUhAzq9+aqO7OrkTFLeOpWAM4qpKtdDnL4f/Z"
+    },
+    "seodescription": "Immerse yourself in the vibrant culture of Morocco with us. We share insider tips, fascinating stories, and practical advice to help you understand and appreciate the unique customs, traditions, and art of Morocco. From the colorful music and dance of Gnawa to the intricate designs of Moroccan pottery, this blog category is your ultimate guide to the rich and diverse culture of Morocco.",
+    "seokeywords": "Morocco travel, Morocco culture, Moroccan traditions, Moroccan art, Moroccan music, Gnawa, Moroccan pottery, Moroccan cuisine, Morocco architecture, Morocco festivals.",
+    "seotitle": "Explore the Vibrant Culture of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "culture"
+    },
+    "title": "Culture"
+  },
+  {
+    "_createdAt": "2023-02-16T01:56:28Z",
+    "_id": "1e8e5cff-42c6-4177-b1be-836f037c9c61",
+    "_type": "categoryblog",
+    "_updatedAt": "2023-03-07T01:51:06Z",
+    "description": "Sahara Desert",
+    "mainImage": {
+      "src": "/cms/94b0252f0fdf8c6ecaec823a78cc329cb6ba5306.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUDBAf/xAAhEAABBAICAgMAAAAAAAAAAAABAgMEEQAhBRMSUTEyQf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABkRAQADAQEAAAAAAAAAAAAAAAEAAhExIf/aAAwDAQACEQMRAD8AxNz7gKUSfWPeI4xmZFeDp6nhQb8zV+9fuLnVFxrvXRdT8KreTOcjLW5HWp4laL8TQ1gt18jVqSxy0WNEldTKrSEgk3e8MQzHFKkKUVGzs4ZTc7Mqbyf/2Q=="
+    },
+    "seodescription": "Immerse yourself in the magic of the Sahara Desert with  us. We share insider tips, fascinating stories, and practical advice to help you prepare for your journey through the stunning landscapes and ancient cultures of the Sahara. From the camel rides and luxury desert camps to the breathtaking sunsets and sunrises, this blog category is your ultimate guide to the Sahara Desert in Morocco.",
+    "seokeywords": "Morocco travel, Sahara Desert, Morocco Sahara Desert, camel rides, desert camps, Erg Chebbi, Merzouga, Sahara Desert tours, Morocco adventure, Berber culture, Morocco landscapes.",
+    "seotitle": "Discover the Magic of the Sahara Desert",
+    "slug": {
+      "_type": "slug",
+      "current": "sahara-desert"
+    },
+    "title": "Sahara Desert"
+  },
+  {
+    "_createdAt": "2023-02-16T01:56:02Z",
+    "_id": "d9570c53-ecef-4f9a-b36a-c34c0b74c976",
+    "_type": "categoryblog",
+    "_updatedAt": "2023-03-07T01:48:01Z",
+    "description": "High Atlas Mountains",
+    "mainImage": {
+      "src": "/cms/f1fbee442691ed6da0003248d0ed3fd8b793d241.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBAf/xAAgEAACAgIBBQEAAAAAAAAAAAABAgMEABESBQYhMVEi/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAaEQACAgMAAAAAAAAAAAAAAAAAARESEyEx/9oADAMBAAIRAxEAPwDGmiVfyqHfzHfb3TIJ2d7qMqj0N8d5SjmkkiErtuQHw2hjqa5YFTYk9j4MGRiqhf12rVrXzHWDCPiD5O/OGQsyvNIHlbk2gNnDHadonEdP/9k="
+    },
+    "seodescription": "Embark on a journey through the majestic High Atlas Mountains with Escorted Morocco Tours.  We share insider tips, breathtaking photos, and fascinating stories to help you discover the beauty and culture of this iconic Moroccan region. From the charming Berber villages to the stunning natural scenery, this blog category is your ultimate guide to exploring the High Atlas Mountains.",
+    "seokeywords": "Escorted Morocco Tours, High Atlas Mountains, Morocco Travel, Berber Villages, Atlas Mountains Trekking, Morocco Hiking, Toubkal National Park, Morocco Scenery, Morocco Culture, Morocco Adventure.",
+    "seotitle": "Explore the Majestic High Atlas Mountains with Escorted Morocco Tours",
+    "slug": {
+      "_type": "slug",
+      "current": "high-atlas-mountains"
+    },
+    "title": "High Atlas Mountains"
+  },
+  {
+    "_createdAt": "2023-02-16T01:55:39Z",
+    "_id": "9e527db7-676f-4f61-9830-8cc92858cf44",
+    "_type": "categoryblog",
+    "_updatedAt": "2023-03-07T01:48:38Z",
+    "description": "About Morocco",
+    "mainImage": {
+      "src": "/cms/3bb4a797ffe7ba04d4f1d3542299543c53998b28.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACMQAAEEAgEDBQAAAAAAAAAAAAEAAgMEBRESBiExE0FRYdH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAP/xAAZEQACAwEAAAAAAAAAAAAAAAAAEQECAwT/2gAMAwEAAhEDEQA/AMaqZY71aBJP13VTg4qt6OfmHhzQOGzoFI6uppGSyhrpARpxAVLkLU0NRxicGkj2aPxGejRIoxo2JuoPRx2RdAIz2aD535QlGcuWLl0S2ZTJJwa3Z+AhKOqxnOFWf//Z"
+    },
+    "seodescription": "Dive into the vibrant culture, rich history, and breathtaking landscapes of Morocco with Escorted Morocco Tours. We share insider tips, fascinating stories, and practical advice to help you prepare for your trip and get the most out of your experience in Morocco. From the bustling markets of Marrakech to the golden dunes of the Sahara Desert, this blog category is your ultimate guide to Morocco.",
+    "seokeywords": "Escorted Morocco Tours, About Morocco, Morocco Culture, Morocco History, Morocco Landscapes, Morocco Travel Tips, Morocco Insider Tips, Morocco Market, Marrakech, Sahara Desert.",
+    "seotitle": " The Fascinating Culture and History of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "about-morocco"
+    },
+    "title": "About Morocco"
+  }
+]

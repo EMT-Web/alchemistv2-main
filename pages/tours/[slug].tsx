@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Action1 from '../../components/Action1';
 import PageHero from '../../components/PageHero';
 import { sanityClient, config, urlFor } from '../../sanity';
-import PortableText from 'react-portable-text';
+import { PortableText } from '@portabletext/react';
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO';
 
 import Image from 'next/image'
@@ -114,19 +114,15 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
       setIsError(true)
     }
   }
-  const serializers = {
+  const ptComponents = {
     types: {
-      image: ({value}:any) => <img src={value.asset.url} width="40px" />,
-    },
-    blocks:{
-      h3:(props:any) => <h3 style={{ fontSize:"5px", color: "red" }} {...props} />,
+      image: () => null,
     },
     marks: {
-      link: ({mark, children}:any) => {
-        const { href } = mark
-        return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-      }
-    }
+      link: ({ value, children }: any) => (
+        <a href={value?.href} target="_blank" rel="noopener noreferrer">{children}</a>
+      ),
+    },
   };
 
   // Create breadcrumb schema
@@ -179,12 +175,7 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
                     </div>
                     </div>
                     <div className="tour-itinerrary">
-                    <PortableText
-                    projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!} 
-                    dataset={process.env.NEXT_PUBLIC_SANITY_DATASET || "production"}
-                    content={tour.body}
-                    serializers={serializers}
-            />
+                    <PortableText value={tour.body} components={ptComponents} />
             </div>
             <div className="tour-faqs mt-5">
               <h2 className="mb-3">Frequently Asked Questions</h2>

@@ -1,7 +1,5 @@
 import React from 'react'
-import { sanityClient, urlFor } from '../sanity';
-import {PortableText} from '@portabletext/react';
-import imageUrlBuilder from "@sanity/image-url";
+import { urlFor } from '../sanity';
 import Image from 'next/image'
 
 function InfoAbout2({team, missionvision}:any) {

@@ -22,7 +22,6 @@ class MyDocument extends Document {
           {/* Preconnect to external domains */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
-          <link rel="preconnect" href="https://cdn.sanity.io" />
           
           {/* DNS Prefetch */}
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

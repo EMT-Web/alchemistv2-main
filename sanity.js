@@ -1,31 +1,77 @@
-import { createClient } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
+/**
+ * Local content layer — replaces the Sanity client.
+ *
+ * `sanityClient.fetch(groqQuery, params)` runs the SAME GROQ queries the site
+ * already had, but against a local snapshot of the dataset
+ * (`data/cms/dataset.json`) using groq-js. No network, no Sanity.
+ * groq-js + the dataset are loaded lazily so they never end up in a client bundle
+ * (only getStaticProps / getServerSideProps ever call `.fetch`).
+ *
+ * `urlFor(imageField).url()` returns a local `/cms/<hash>.<ext>` path (images
+ * live in `public/cms/`, produced by `scripts/migrate-cms-content.mjs`).
+ *
+ * To refresh content: re-export the dataset, re-run the migration script, and
+ * rebuild `data/cms/dataset.json` from the export's `data.ndjson`.
+ */
 
+// keep the old shape some pages import
 export const config = {
-  /**
-   * Find your project ID and dataset in `sanity.json` in your studio project.
-   * These are considered "public", but you can use environment variables
-   * if you want differ between local dev and production.
-   *
-   * https://nextjs.org/docs/basic-features/environment-variables
-   **/
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  apiVersion: "2024-01-01", // Use current date for latest API version
-  /**
-   * Set useCdn to `false` if your application require the freshest possible
-   * data always (potentially slightly slower and a bit more expensive).
-   * Authenticated request (like preview) will always bypass the CDN
-   **/
-  token: process.env.SANITY_AUTH_TOKEN,
-  useCdn: process.env.NODE_ENV === "production",
+  dataset: "production",
+  projectId: "local",
+  apiVersion: "2024-01-01",
+  useCdn: false,
 };
 
-export const sanityClient = createClient(config);
+let _datasetPromise;
+const loadDataset = () => {
+  if (!_datasetPromise) {
+    _datasetPromise = import("./data/cms/dataset.json").then((m) => m.default || m);
+  }
+  return _datasetPromise;
+};
 
-const builder = imageUrlBuilder({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-});
+export const sanityClient = {
+  async fetch(query, params = {}) {
+    const [{ parse, evaluate }, dataset] = await Promise.all([
+      import("groq-js"),
+      loadDataset(),
+    ]);
+    const value = await evaluate(parse(query), { dataset, params });
+    return value.get();
+  },
+};
 
-export const urlFor = (source) => builder.image(source);
+// Turn a Sanity-export image field into a local /cms/<hash>.<ext> path.
+function resolveImage(source) {
+  if (!source) return "";
+  if (typeof source === "string") {
+    const m = source.match(/([0-9a-f]{6,})-\d+x\d+[.-](\w+)/);
+    return m ? `/cms/${m[1]}.${m[2]}` : source;
+  }
+  if (source.src) return source.src;
+  const ref =
+    source._sanityAsset ||
+    (source.asset && (source.asset._ref || source.asset._id)) ||
+    source._ref ||
+    "";
+  const m = String(ref).match(/([0-9a-f]{6,})-\d+x\d+[.-](\w+)/);
+  return m ? `/cms/${m[1]}.${m[2]}` : "";
+}
+
+export const urlFor = (source) => {
+  const url = resolveImage(source);
+  const builder = {
+    url: () => url,
+    toString: () => url,
+    width: () => builder,
+    height: () => builder,
+    quality: () => builder,
+    format: () => builder,
+    auto: () => builder,
+    fit: () => builder,
+    crop: () => builder,
+    dpr: () => builder,
+    ignoreImageParams: () => builder,
+  };
+  return builder;
+};

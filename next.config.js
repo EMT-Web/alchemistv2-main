@@ -5,7 +5,6 @@ module.exports = {
   swcMinify: true,
   images: {
     domains: [
-      "cdn.sanity.io",
       "localhost",
       "media-cdn.tripadvisor.com",
       "dynamic-media-cdn.tripadvisor.com",

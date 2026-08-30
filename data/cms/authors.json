@@ -1,0 +1,52 @@
+[
+  {
+    "_createdAt": "2023-02-16T04:56:53Z",
+    "_id": "5cde3abc-9f1c-400f-a1a7-c6a13160c417",
+    "_type": "author",
+    "_updatedAt": "2023-02-24T17:36:57Z",
+    "bio": "Originating from the small Berber village of Taftechna, Mustapha pursued a degree in linguistics at the university prior to uncovering his enthusiasm for disseminating his cultural heritage to globetrotters from various corners of the world. Possessing a humble and charming demeanor, Mustapha's optimism and proactive attitude render him an exceptional accompaniment for travel.",
+    "image": {
+      "src": "/cms/fb916a3703acc9a358a45d70947c2659817a3003.jpg",
+      "width": 352,
+      "height": 500,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAYCBAEDB//EACUQAAICAgEDBAMBAAAAAAAAAAECAwQABREGIUEHEhMxImFxkf/EABgBAAIDAAAAAAAAAAAAAAAAAAMEAQIF/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAEREgIDBBNRIUFh/9oADAMBAAIRAxEAPwBztMIoGZE5KDz4/uQoWpbUbGZI+R+PuQ9sWdl15p12NfWxWVaWaX45WI7IP3mdD1rpJd1c1El2NEhfhJPDYKM7wMLHDhb9yOAEagB07/3DLK05JB7o5FKH67eMMtZAavoTtXstQ9uzJtunqbyhuAyoAT/uT2UvT9SSO5o+noo75YD3PB2AOJvrHvber6kjqUxCkPxh+CgJBzZ6c9WbTYbarTtvHJCTweU74Pk1UvMGhTbtykzvFSas1WFphGJCgLD64PGGU66KU5KqST5GGRH0Vno//9k="
+    },
+    "name": "Mustapha",
+    "slug": {
+      "_type": "slug",
+      "current": "mustapha"
+    }
+  },
+  {
+    "_createdAt": "2023-02-16T01:58:48Z",
+    "_id": "42851dab-f8ce-422a-9611-675e64c422ec",
+    "_type": "author",
+    "_updatedAt": "2024-01-16T16:28:44Z",
+    "bio": "From the stunning coastline to the charming villages in the Atlas Mountains. From the vibrant cities to the bosom of canyons and the Sahara Desert, always on the lookout for unique experiences, whether it's camping, trekking, cultural immersion or discovering hidden gems in the medinas. We strive to create content and escorted tours that showcase the best of what Morocco has to offer.",
+    "image": {
+      "src": "/cms/e4579bfe393970be681f79f4e6d852f74a7c109c.png",
+      "width": 2084,
+      "height": 2084,
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAC4jAAAuIwF4pT92AAABnElEQVQ4jdWTW4/TMBCF+/9/Ai+8IIEECPGI4AnEbWG3XYmlQNrups3VcZqkTZw4tw8l0Krd7iIkKgRHGnk8njk+tscDjozBv0/Ytm3vdOOfWIdu7BVuArfiWuHNKe2vFTZNc6iA3fX9nK3C3Uld12itSdOU9XpNniVURUxba9qmRqsYtQ7J0hVxFJEkSZ+/S7xHWJUl61WC8F18zyF0v5JYr9HxBL1yCIyX+MYbhGUwHZ9iz6copQ4JN1aWJbF08M1PfZEzG2Ke3cO/eEB0+Rzr5A726CHy8h3m+RPkYkRV6e6KDwm7aJ7nOFdfsC5eEFx9wDE/Mxk9Y3Zyl2D8CDm+T/jtKcniFUvjMUoMaZtye8IOewrTNMMyJyyM94j5CM+eYc8n2NNTgsWQyDkjsj8SOedE1luy5ZT6p8JNJ2wJ67ohUwoZhvjCRQgXX3j4gUAEgkAKpPQJQw8pPULpskqWFLqguf7Kmzbp7rDQGpUXZCrvN/hhnZ+j8py8KPp1VRR9blVVt7fN3/spv4H2pkc5msJjYnBUtv+C8DsCRR6KX3FcGAAAAABJRU5ErkJggg==",
+      "crop": {
+        "_type": "sanity.imageCrop",
+        "bottom": 0.1568627450980392,
+        "left": 0.11274509803921567,
+        "right": 0.12254901960784315,
+        "top": 0.10539215686274521
+      },
+      "hotspot": {
+        "_type": "sanity.imageHotspot",
+        "height": 0.7303921568627451,
+        "width": 0.7524509803921567,
+        "x": 0.49387254901960786,
+        "y": 0.47058823529411775
+      }
+    },
+    "name": "EMT",
+    "slug": {
+      "_type": "slug",
+      "current": "emt"
+    }
+  }
+]

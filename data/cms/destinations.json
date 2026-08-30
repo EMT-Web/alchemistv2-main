@@ -1,0 +1,2288 @@
+[
+  {
+    "_createdAt": "2023-02-27T05:39:29Z",
+    "_id": "05a13091-cb22-4bca-b8c3-723a1efd2626",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:31:07Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "8f729d40f37f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "fd62e28952d80",
+            "_type": "span",
+            "marks": [],
+            "text": "Located in the foothills of the Atlas Mountains, Ait Ben Haddou is an ancient fortified village or ksar that has stood the test of time. Its stunning architecture and rich history have earned it a spot on the UNESCO World Heritage list and made it a popular destination for travelers on Morocco tours."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "28102075078b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9d03e4b72ad50",
+            "_type": "span",
+            "marks": [],
+            "text": "Constructed from mud and straw, the buildings of Ait Ben Haddou are an excellent example of traditional Moroccan earthen architecture. The village's unique layout, which includes a central mosque and towering walls, served as a defense mechanism against raiders in ancient times."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "e402478c4324",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "1e993107976e0",
+            "_type": "span",
+            "marks": [],
+            "text": "A visit to Ait Ben Haddou is a must for anyone interested in Morocco's rich culture and history. Take a stroll through the narrow alleyways and soak in the village's unique atmosphere. Explore the traditional homes, many of which have been restored and converted into museums, and learn about the village's inhabitants' way of life."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "cdedbd86b6cb",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "15afe840dc820",
+            "_type": "span",
+            "marks": [],
+            "text": "For those interested in film and television, Ait Ben Haddou has served as a filming location for numerous productions, including Game of Thrones, Gladiator, and Lawrence of Arabia. The village's unique setting and stunning architecture make it a popular destination for filmmakers from around the world."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "047d9e07f7e5",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "44f2625fc5910",
+            "_type": "span",
+            "marks": [],
+            "text": "Book your Morocco tour today and discover the legendary ksar of Ait Ben Haddou. Immerse yourself in the rich culture and history of this ancient fortress, and experience the stunning beauty of one of Morocco's most iconic landmarks."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Ait Ben Haddou",
+    "coverImage": {
+      "src": "/cms/91e1faf279b51fbd88fc29a4bdbbbfd9fd54e43b.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAcE/8QAIRAAAgICAgEFAAAAAAAAAAAAAQIDBAARBhIhBRQVUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/EABoRAQACAwEAAAAAAAAAAAAAAAEAAhEhQVH/2gAMAwEAAhEDEQA/AIvxurWtXGW2jugG9KfOUuHivG/gLltaV0TpGShZh1ByPo7xnaMVP2DrNkfqNzqU91N11rXc6w2F7HW1Q2RYgjEp14/MZkdmZiWJJxlB9gyT/9k=",
+      "alt": "Ait Ben Haddou UNESCO World Heritage site"
+    },
+    "mainImage": {
+      "src": "/cms/451960c979fc04894c0dc61852e3850ad7a7ab26.jpg",
+      "width": 948,
+      "height": 711,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQGB//EACUQAAEDAwMDBQAAAAAAAAAAAAIBAwQABREGEjEHFWEhQUJxgf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EACIRAAECBAcBAAAAAAAAAAAAAAEAAwIEBREGFiExQWGRcf/aAAwDAQACEQMRAD8AVs0Gy3ZlXIMwHBHnCeqflOjY7YS7VfHHlKz7ptpa/m93S3TG4rD3sq53J9Vsr8YWIIFIZbJ5BTeophCWmfxDNg7gj4q1R2YhyCe1LO6Zs4ngnmkXmiqOPpeJPZGQMiQKF8c8eKKLMEwdbQ+LRo7YNrn1f//Z",
+      "alt": "Ait Ben Haddou UNESCO World Heritage site"
+    },
+    "seodescription": "Discover the breathtaking beauty of Ait Ben Haddou, a UNESCO World Heritage site and one of the most stunning ksars in Morocco. Book your Morocco tour today and immerse yourself in the rich culture and history of this ancient fortress.",
+    "seokeywords": "Ait Ben Haddou, Ksar, Morocco tour, UNESCO World Heritage site, ancient fortress",
+    "seotitle": "Discover the Stunning Beauty of Ait Ben Haddou on Your Morocco Tour",
+    "slug": {
+      "_type": "slug",
+      "current": "ait-ben-haddou-unesco-world-heritage-site"
+    },
+    "title": "Ait Ben Haddou UNESCO World Heritage site"
+  },
+  {
+    "_createdAt": "2023-02-27T04:34:24Z",
+    "_id": "a0ddbea3-4866-4b6f-81e4-a0383065d6b1",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:29:58Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "f551ba0c54a0",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c5c34c6fa6cc0",
+            "_type": "span",
+            "marks": [],
+            "text": "Agadir "
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "2169cd5edb82",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c8b808780cf4",
+            "_type": "span",
+            "marks": [],
+            "text": "Agadir is a popular tourist destination in Morocco, known for its stunning beaches, vibrant markets, and rich culture. Located on the shores of the Atlantic Ocean, this coastal city offers a unique blend of modern amenities and traditional"
+          },
+          {
+            "_key": "e628e98e41a7",
+            "_type": "span",
+            "marks": [
+              "0e464048db52"
+            ],
+            "text": " Moroccan charm."
+          }
+        ],
+        "markDefs": [
+          {
+            "_key": "0e464048db52",
+            "_type": "link"
+          }
+        ],
+        "style": "normal"
+      },
+      {
+        "_key": "cbe00824e812",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8a4f8a7fa3130",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the highlights of Agadir is its beaches. The city boasts a long coastline that stretches for miles, offering plenty of space for sunbathing, swimming, and water sports. Some of the most popular beaches in Agadir include Taghazout Beach, Tamraght Beach, and Agadir Beach. Visitors can relax on the soft sand, take a dip in the crystal-clear water, or try their hand at surfing or paddleboarding."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "70aa4bc4af39",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6eaceb95d12f0",
+            "_type": "span",
+            "marks": [],
+            "text": "Apart from the beaches, Agadir is also home to many traditional markets or souks, where visitors can experience the city's rich culture and history. The Souk El Had is one of the largest markets in Morocco, offering a wide range of products such as spices, textiles, jewelry, and pottery. It's an excellent place to shop for souvenirs and immerse yourself in the local culture."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "ebb4198b1170",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e4cebbb7f7940",
+            "_type": "span",
+            "marks": [],
+            "text": "For those who love adventure, Agadir offers many activities such as horseback riding, quad biking, and camel riding. Visitors can also explore the surrounding countryside, which is home to stunning natural attractions such as the Paradise Valley and the Anti-Atlas Mountains."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "fc39d331f425",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ad1234b61a390",
+            "_type": "span",
+            "marks": [],
+            "text": "In conclusion, Agadir is a must-visit destination in Morocco, offering something for everyone. Whether you're looking for a relaxing beach vacation, an immersive cultural experience, or an exciting adventure, Agadir has it all. Book your trip with our escorted tours and discover the beauty of this beach paradise."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Agadir",
+    "coverImage": {
+      "src": "/cms/fa71e7a2de725a0b80a8939a383c7c697138b81f.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHAf/EACEQAAIBBAICAwAAAAAAAAAAAAECBAADBREGEiFhE0Fx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQADAAMAAAAAAAAAAAAAAAAAARFBUXH/2gAMAwEAAhEDEQA/AJRwCHiJuWuW86jtH6bUI/Xz+1RspxDikbDyZMS1d+UWyydru/P1UTVmU7ViD6NNpPlkdTIulQNaLHWqeg7g2RYti6dePVFKOzMxLEk0VKT2NR//2Q==",
+      "alt": "Agadir city in morocco"
+    },
+    "mainImage": {
+      "src": "/cms/33fae459b34508b60885f3a919d7fe4e49e02f45.jpg",
+      "width": 856,
+      "height": 538,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQj/xAAkEAACAgEDAgcAAAAAAAAAAAABAgADBAUGERJRBxYjMUFjgf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGxEAAgIDAQAAAAAAAAAAAAAAAQIAEQMSIVL/2gAMAwEAAhEDEQA/AGRR4g25IVKKizH2JUSU25tRNY9DHD9y45mdX1jNwTxXd1L8AiXOl7lyGPVZSjuQByTFwlLhuxZeCO3zJqf0D9EIuFyrLUVzwCR2hL9V8yIu4NXP/9k=",
+      "alt": "Agadir city in morocco"
+    },
+    "seodescription": "Experience the beauty of Agadir with our escorted tours in Morocco, which offer a perfect blend of culture, adventure, and relaxation. Explore the Agadir's stunning beaches, traditional markets, and more.",
+    "seokeywords": "Agadir, Morocco, beaches, guided tours, culture, adventure, relaxation, traditional markets, activities",
+    "seotitle": "Agadir - Morocco's Beach Paradise ",
+    "slug": {
+      "_type": "slug",
+      "current": "agadir-morocco-s-beach-paradise"
+    },
+    "title": "Agadir - Morocco's Beach Paradise"
+  },
+  {
+    "_createdAt": "2023-02-27T04:28:44Z",
+    "_id": "77198fbd-a256-4b83-951b-560c10bcbbf7",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:31:59Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "260c2998a741",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "822fb0c2c6fd0",
+            "_type": "span",
+            "marks": [],
+            "text": "Boumalne Dades is a picturesque valley located in the High Atlas Mountains of Morocco. This stunning destination is a hidden gem that offers breathtaking views of towering rock formations, verdant landscapes, and stunning Berber villages. Boumalne Dades is a must-visit destination for adventure lovers and nature enthusiasts alike, and the best way to experience this beautiful valley is with Escorted Morocco Tours."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "8b1a30228934",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6356e2e901b20",
+            "_type": "span",
+            "marks": [],
+            "text": "Escorted Morocco Tours offers a range of tour packages that allow visitors to experience the beauty and culture of Boumalne Dades. Their expert guides will take you on a journey through the valley, where you will witness the majestic rock formations and learn about the rich Berber culture. You can also explore the surrounding area on foot, taking in the stunning natural beauty of the region."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "3f1ac8240e66",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "37b25b9af3d20",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the highlights of a tour of Boumalne Dades is visiting the nearby Todgha Gorge. This beautiful canyon is carved into the mountains by the Todgha River, and visitors can walk through the gorge and marvel at the stunning rock formations. The area is also home to a number of traditional Berber villages, where you can immerse yourself in the local culture and enjoy delicious Moroccan cuisine."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "0abec6fa7a2e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "f06dfa94cac80",
+            "_type": "span",
+            "marks": [],
+            "text": "Boumalne Dades is a destination that offers something for everyone. Whether you're looking for adventure, relaxation, or cultural immersion, you will find it here. Escorted Morocco Tours is the perfect way to experience this stunning valley, as their expert guides will ensure that you get the most out of your visit. "
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Boumalne Dades",
+    "coverImage": {
+      "src": "/cms/3970699a119c4b92a77d68e8d3c7aca64ad6b8ab.jpg",
+      "width": 500,
+      "height": 348,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFCP/EACEQAAEEAgICAwAAAAAAAAAAAAEAAgMRBAUGEhMxFEFh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/8QAHxEAAQMDBQAAAAAAAAAAAAAAAgABBAMRURITIjJx/9oADAMBAAIRAxEAPwDPGljnaQ+BpN/VWCrGc3IMdfEfESPdXai6vkeZr4PFjdALuy2yns3me1y4fHLI3r+NAVCXKp3AH4+pCoRTZiLsok75WSkdnIS8uQ6R5c72ULe6eXR6Qwv/2Q==",
+      "alt": "Boumalne Dades - Roses Valley "
+    },
+    "mainImage": {
+      "src": "/cms/3d2f02760d4e4c97faa3dd08087b9c762edee566.jpg",
+      "width": 1024,
+      "height": 768,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHBAX/xAAlEAABBAEDAgcAAAAAAAAAAAABAgMEEQAFBhIiQQcUITFRYcH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABoRAAICAwAAAAAAAAAAAAAAAAECABESITH/2gAMAwEAAhEDEQA/AOpqk4rCVtOWQAb/ADMm297P6fr3ljIUyXEmk9lH4xXiLeII59KhY+sXd2trS2iSnpdYPIEGvTAOxQ4k9lZVDrlXJfo0xUlsvB2uZule+GTnafiHHRojCZsEOv8AdYNXhk5lcGoobGp//9k=",
+      "alt": "Boumalne Dades - Roses Valley "
+    },
+    "seodescription": "Experience the stunning beauty of Boumalne Dades with Escorted Morocco Tours. Explore the magnificent valley, marvel at the towering rock formations and immerse yourself in Berber culture.",
+    "seokeywords": "Boumalne Dades, Escorted Morocco Tours, Valley, Rock formations, Berber Culture, Adventure, Nature",
+    "seotitle": "Explore Boumalne Dades with Escorted Morocco Tours | Discover the Beauty of the Valley",
+    "slug": {
+      "_type": "slug",
+      "current": "boumalne-dades-roses-valley"
+    },
+    "title": "Boumalne Dades - Roses Valley "
+  },
+  {
+    "_createdAt": "2023-02-27T03:40:36Z",
+    "_id": "af1af394-8b82-4067-b4f6-214e0c8ffaa0",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:31:21Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "b382ed37b410",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4dd21b09a4d00",
+            "_type": "span",
+            "marks": [],
+            "text": "Tangier is a fascinating city located on Morocco's northern coast. Once a bustling port city and a gateway to Africa, Tangier has a rich history that is reflected in its architecture, culture, and people."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "6f45bdb2f660",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "23cd25f8b5c30",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the most iconic landmarks of Tangier is the Kasbah, a fortress built in the 17th century. The Kasbah offers stunning views of the city and the sea and is home to a number of museums and galleries, including the Museum of Moroccan Arts and the American Legation Museum."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "08c5c09ef4cf",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e2ebce89ff7b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-visit attraction is the medina, a maze-like old town filled with narrow streets, traditional shops, and bustling markets. Here, visitors can immerse themselves in the local culture and try traditional Moroccan dishes, such as tagine and couscous."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "7aea7904dc4a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "466fac07c0200",
+            "_type": "span",
+            "marks": [],
+            "text": "Tangier is also known for its beautiful beaches, such as Achakkar and Malabata. These stunning stretches of sand offer a tranquil escape from the bustling city and are perfect for swimming, sunbathing, and water sports."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "ccebb2cedcda",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c73fedd1c4780",
+            "_type": "span",
+            "marks": [],
+            "text": "For those interested in history, Tangier has a rich and fascinating past. The city has been ruled by many different civilizations throughout the centuries, including the Phoenicians, Romans, Arabs, and Europeans. Visitors can explore the city's history through its many museums, landmarks, and monuments."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "c02d6e6bab9e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "deb35e8da64b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Tangier is a city that should not be missed when visiting Morocco. Its unique blend of history, culture, and natural beauty make it a truly unforgettable destination."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Tangier",
+    "coverImage": {
+      "src": "/cms/7eaba160c66580fcb3de9aae74ab39329c14229c.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBAUGB//EACIQAAICAgEDBQAAAAAAAAAAAAECAAMEEQUGImESITEzgf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQIAEVH/2gAMAwEAAhEDEQA/AOL9OcdXyOW1djKoA33HW5c5XCYeN6zXaHYb7SPiZFWZDtWIPgx+vJu39jfpk7iqejnNSHEy76kFh17eISK7FmJYkmEYPuHTf//Z",
+      "alt": "Tangier"
+    },
+    "mainImage": {
+      "src": "/cms/0bf0511d4c09b22d33ec0fb36706e0053292bc6c.jpg",
+      "width": 802,
+      "height": 1002,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIEBQcIBv/EACoQAAEEAgECAgsAAAAAAAAAAAEAAgMEBhEFBxIhYRMUIjEzNUFDUXGB/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgMAAQT/xAAaEQEAAgMBAAAAAAAAAAAAAAABAAIDEiER/9oADAMBAAIRAxEAPwDM/FUZ+T5GvSqN7p5nhjR5ldTmXTbIMViE16uJKx+7Ee4D9pXSOz6tlkLm145JSPZkefh+auDqtkN/icbhtEwWBMTCWOHhoj8J19k5LxaKlnyZoB0hKee57ne7Z3ofRChsEDkc8RZNXkYJmvLC1wPcCrFzHI4eSxI15j6STYLCfHRVXBTdz5Mz+JteiTPk9L1RkJtCEII+f//Z",
+      "alt": "Tangier"
+    },
+    "seodescription": "Explore the charming city of Tangier with our guide. Discover its rich history, vibrant culture, and breathtaking views. From the bustling medina to the stunning beaches, Tangier is a must-visit destination in Morocco.",
+    "seokeywords": "Tangier, Morocco, Escorted Morocco Tours, travel guide, things to do, attractions, culture, history, food, accommodation",
+    "seotitle": "Tangier Travel Guide | Visit the Magic of Morocco with Escorted Morocco Tours",
+    "slug": {
+      "_type": "slug",
+      "current": "tangier-the-bride-of-the-north"
+    },
+    "title": "Tangier - the bride of the North"
+  },
+  {
+    "_createdAt": "2023-02-27T03:29:04Z",
+    "_id": "dd791174-24f3-4edb-b84b-78c4dabaf431",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:29:17Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "5cf8bcdefb99",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "d6dc9c29d7d40",
+            "_type": "span",
+            "marks": [],
+            "text": "Casablanca, the largest city in Morocco, is a bustling metropolis that's sure to captivate your senses. With its unique blend of modernity and tradition, it's a destination that offers a truly unique experience to visitors."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "96b4ed2dcf03",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8e16f7169f790",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the city's main attractions is the Hassan II Mosque, which is one of the largest mosques in the world and a true masterpiece of Moroccan architecture. It's a must-see destination for anyone visiting Casablanca, with its stunning minaret and intricate mosaics that will leave you in awe."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "172207f868be",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "cc4b787353940",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-visit destination in Casablanca is the Old Medina, a maze-like network of narrow streets and alleys that's home to some of the city's oldest buildings and traditional markets. Here you can immerse yourself in the local culture, shopping for souvenirs and sampling traditional Moroccan cuisine."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "872c20198144",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "5d056aa1b1b30",
+            "_type": "span",
+            "marks": [],
+            "text": "If you're looking for some relaxation, the Corniche is the perfect place to unwind. This beautiful coastal promenade stretches for several kilometers and offers stunning views of the ocean. You can take a leisurely walk along the beach, stop at a café for a drink, or simply enjoy the sunshine."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "84775ae41af5",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "dacecba42c5f0",
+            "_type": "span",
+            "marks": [],
+            "text": "Overall, Casablanca is a destination that's not to be missed on our escorted Morocco tours. With its stunning architecture, bustling markets, and beautiful coastline, it offers a unique blend of modernity and tradition that's sure to leave you with unforgettable memories of your trip to Morocco."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Casablanca",
+    "coverImage": {
+      "src": "/cms/155de1b12603180a4de7834f73e28a51a06e6ffa.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQHAgb/xAAgEAACAgICAgMAAAAAAAAAAAABAgADBBEFIQZhEjFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/xAAZEQACAwEAAAAAAAAAAAAAAAABEQACElH/2gAMAwEAAhEDEQA/AJH4TxGNzPIXUZbhFWv5Ak67nTX+J8djY+RYlqsUUkbP3+Sc12PWdozKfR1GUzck9G+wjWu2l7VcoQzR20zNZFFYtOuvUIo7MzEsSTCGAexGJ//Z",
+      "alt": "Casablanca"
+    },
+    "mainImage": {
+      "src": "/cms/e38ea6bb23643eb3b58301b01cf08200b927ccb1.jpg",
+      "width": 1200,
+      "height": 750,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/EACUQAAMAAQIEBwEAAAAAAAAAAAECAwAEIQUGMVEREhQXI0FTwf/EABYBAQEBAAAAAAAAAAAAAAAAAAIDBP/EAB8RAAAFBAMAAAAAAAAAAAAAAAABAgMEMVFhoRESFP/aAAwDAQACEQMRAD8Ax9+RnenxwfKHCuS4ScrZkWv0hO+bHQLq4hG9dVx2YDG65J6ipJmFt4bUB3B74HJr6U9SKuRvKGwpRK5pgSPbY/l13wxlLcYk3knxm4QdAUB/uGL2v22JHCZvof/Z",
+      "alt": "Casablanca"
+    },
+    "seodescription": "Casablanca is a vibrant city that blends modernity and tradition, offering a unique experience to visitors. With its stunning architecture, bustling markets, and beautiful coastline, it's a destination that's not to be missed on our escorted Morocco tours.",
+    "seokeywords": "Casablanca tours, Hassan II Mosque, Old Medina, Corniche, Moroccan architecture",
+    "seotitle": "Casablanca  - Explore Morocco's Big Vibrant City",
+    "slug": {
+      "_type": "slug",
+      "current": "casablanca-casa-city-morocco"
+    },
+    "title": "Casablanca - Casa City "
+  },
+  {
+    "_createdAt": "2023-02-27T03:19:07Z",
+    "_id": "48203210-79c8-4e78-87bb-ccca0d0b3751",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:31:33Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "8896723b3c74",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "603fcc1663320",
+            "_type": "span",
+            "marks": [],
+            "text": "Located on the eastern edge of the Sahara desert, Merzouga is a destination that's sure to captivate your senses. With its golden dunes stretching as far as the eye can see and a sense of peacefulness that's hard to find anywhere else, it's the perfect place to experience the magic of Morocco's natural beauty."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "c8c1bb5be53a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "56974377372e0",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the highlights of Merzouga is its iconic camel rides. You can climb aboard a camel and ride into the desert at sunset, enjoying the breathtaking views and peaceful atmosphere as you make your way to your campsite for the night. Once you arrive, you can enjoy a traditional Moroccan meal and then spend the night under the stars, surrounded by the quiet beauty of the desert."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "66480d2650de",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "48020c4365cb0",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-see destination in Merzouga is the Erg Chebbi dunes, which are some of the largest and most stunning dunes in Morocco. You can explore the dunes on foot or by camel, marveling at their size and beauty as you go. You can also take a 4x4 tour of the desert, which will give you a chance to explore some of the more remote areas and see some of the desert's unique wildlife."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "a0aef79c7826",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4ecfd205e8020",
+            "_type": "span",
+            "marks": [],
+            "text": "Overall, Merzouga is a destination that's not to be missed on our escorted Morocco tours. Whether you want to ride a camel into the sunset, explore the golden dunes of the Sahara, or spend a night under the stars, it's a place that will leave you with memories that will last a lifetime."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Merzouga",
+    "coverImage": {
+      "src": "/cms/8eb0d8d40e239c73b5b5adcf2bbadb524a0d4d27.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHBv/EACAQAAIBAwUBAQAAAAAAAAAAAAECAwAEEQUGEiFRBzH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAcEQACAgMBAQAAAAAAAAAAAAABEQACIXGRAxP/2gAMAwEAAhEDEQA/AJb842/a7i1ea1vX4IsRcHOO60+rbO0mxtbqSAvIYlPfLODUvhlkhYtFIyN6pxTCX11hlNxKVP6Cx7rO32aqQtZ7EV8jmwL2QOQliTn5RSrszMSTk0VaMJ//2Q==",
+      "alt": "Merzouga Sahara desert"
+    },
+    "mainImage": {
+      "src": "/cms/3d30861651b180d3acd37e676ca99f3826128f33.jpg",
+      "width": 1080,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYFAwT/xAAjEAACAQQBBAMBAAAAAAAAAAABAgMABAUREgYTIUEHFBVx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAdEQACAgIDAQAAAAAAAAAAAAABAgARAwUUITES/9oADAMBAAIRAxEAPwCV6f8AjyHMYn7KgOeR8q3qs3L9CpZAjsMBv21cLTM5TCYmD89SkI5MWBO/5Xgx3VubvHKyobhzIDxlG/FMXZKAfpfJh1btRQ+ySytgttfzRLvSnVKsMzGWyc7zQL3HbkwUeAdUoeaD3UHh11cmczl76KBokuGEZ9Vl43NX8VxtJ2BI1SlQ4lBxzqMxDgAzfF5cXA7ssrM7eSd0pSpLMdQn/9k=",
+      "alt": "Merzouga Sahara desert"
+    },
+    "seodescription": "Embark on an unforgettable journey to Merzouga, home to some of the most stunning landscapes in Morocco. Explore the golden dunes of the Sahara, ride a camel at sunset, and spend a night under the stars.",
+    "seokeywords": "Merzouga tours, Sahara desert, golden dunes, camel ride, starry night",
+    "seotitle": "Merzouga - Discover the Sahara's Golden Dunes with Our Guided Tours",
+    "slug": {
+      "_type": "slug",
+      "current": "merzouga-sahara-desert"
+    },
+    "title": "Merzouga Sahara Desert"
+  },
+  {
+    "_createdAt": "2023-02-27T03:12:23Z",
+    "_id": "dc85539b-1763-4e27-b665-4762778dcdd2",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:30:25Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "c4428eb9e07e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "f403516160c90",
+            "_type": "span",
+            "marks": [],
+            "text": "Essaouira, Morocco"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "a73bc113cd2f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8beceade6f08",
+            "_type": "span",
+            "marks": [],
+            "text": "Located on Morocco's picturesque Atlantic coast, Essaouira is a charming seaside city that offers a unique blend of history, culture, and natural beauty. Known for its laid-back atmosphere and constant coastal breezes, it's a popular destination for those looking to escape the hustle and bustle of Morocco's more hectic cities."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "d40873bb9a48",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "82ace3adcc1c",
+            "_type": "span",
+            "marks": [],
+            "text": "Essaouira Highlights"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "48e36f779617",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b6091e40a8540",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the highlights of Essaouira is its historic medina, which is a UNESCO World Heritage site. This walled city is filled with narrow alleyways, traditional houses, and bustling souks where you can find everything from spices to jewelry to textiles. You can also visit the Skala de la Ville, a fortified bastion that offers stunning views of the sea and the medina."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "2d36477956bb",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "de2cbae6d1c60",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-visit destination in Essaouira is its beautiful beach, which stretches for miles along the coast. Whether you want to sunbathe, swim, or simply take a stroll along the sand, it's the perfect place to relax and unwind. You can also take a camel or horse ride along the beach, or try your hand at windsurfing or kiteboarding."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "e0ffe25f95d1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "70d1b51f50e20",
+            "_type": "span",
+            "marks": [],
+            "text": "Secret Fish Eatery of Essaouira"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "87b23a9e898b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "90a32ee6834e0",
+            "_type": "span",
+            "marks": [],
+            "text": "Of course, no visit to Essaouira would be complete without sampling its famous seafood. The city is known for its fresh fish, which is grilled or fried and served with a variety of delicious side dishes. You can enjoy a seafood feast at one of the many restaurants in the medina or along the beach."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "cbfc1d13276b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "5d6d23eb59c10",
+            "_type": "span",
+            "marks": [],
+            "text": "Overall, Essaouira is a charming and unique destination that's not to be missed on our escorted Morocco tours. Whether you want to explore the historic medina, soak up the sun on the beach, or indulge in some delicious seafood, it's a city that offers something for everyone."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Essaouira",
+    "coverImage": {
+      "src": "/cms/1e23bd2093394c4f85b3ade25ec2abd8f0ec7c6c.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMGB//EACQQAAEDAgQHAAAAAAAAAAAAAAEAAgMEEQUGEiEUIiMxMlFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAaEQACAgMAAAAAAAAAAAAAAAAAAQIREkGh/9oADAMBAAIRAxEAPwDE8DgpJ5pG1pIGnlt7uqiTLdDSwTSSvDunrjse6hWuLfEkfE/iZnAB0ryALblDy0+CnGqaCRjQ8oSXEk7lCaJP/9k=",
+      "alt": "Essaouira -  The Windy Coastal City of Morocco"
+    },
+    "mainImage": {
+      "src": "/cms/e81d9b624a215d0189287a06fd64347d556586d7.jpg",
+      "width": 2400,
+      "height": 1600,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUDBAYH/8QAIhAAAgICAQMFAAAAAAAAAAAAAQMCBAARBQYSIRQyYXGh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAIFURX/2gAMAwEAAhEDEQA/AOgXupOGoVQ6VqDFAgSks7184h5Xrnjq9la0KnYWzXayB8ecpNqVKqNQqq0fHt1kqKVOaYy9IkfQy50bjBM+iTSmKpiMiYjuAOt4YjVVROAJh+nDKjYOQfMez//Z",
+      "alt": "Essaouira -  The Windy Coastal City of Morocco"
+    },
+    "seodescription": "Discover the charm of Essaouira with our guided tours. Enjoy the stunning beaches, explore the medina, and indulge in the local cuisine.",
+    "seokeywords": "Essaouira, Essaouira tours, coastal city, historic medina, laid-back atmosphere, seafood",
+    "seotitle": "Essaouira -  Morocco's Windy Coastal City",
+    "slug": {
+      "_type": "slug",
+      "current": "essaouira-the-windy-coastal-city-of-morocco"
+    },
+    "title": "Essaouira -  The Windy Coastal City of Morocco"
+  },
+  {
+    "_createdAt": "2023-02-27T03:04:34Z",
+    "_id": "e507253e-c142-46f7-9861-c7df00343355",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:30:12Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "a31cbaf74283",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8cb11110f6290",
+            "_type": "span",
+            "marks": [],
+            "text": "Meknes, Morocco's Imperial city"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "aa03f78ade89",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "22d31611ce62",
+            "_type": "span",
+            "marks": [],
+            "text": "Meknes may not be as famous as some of Morocco's other imperial cities like Marrakech or Fez, but it certainly has its own unique charm and history. Located in the northern part of Morocco, Meknes was once the capital of the country and served as the seat of the powerful Alaouite dynasty. Today, it's a vibrant city that's filled with historic landmarks, stunning architecture, and bustling markets."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "93a70ab11240",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "556b5774a86d",
+            "_type": "span",
+            "marks": [],
+            "text": "Attractions in and around Meknes City"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "96107d18e350",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8f2be5808cf30",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the most popular attractions in Meknes is the sprawling royal palace complex known as the Dar el Makhzen. This impressive site was built in the 17th century and features a wide range of architectural styles, including Andalusian and Moorish designs. Inside, you'll find beautifully landscaped gardens, ornate courtyards, and stunning mosaics."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "f232501ef88f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "526543f754af0",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-visit destination in Meknes is the Bou Inania Medersa, which is a well-preserved example of traditional Islamic architecture. This stunning building was constructed in the 14th century and features intricate stucco carvings, colorful mosaics, and a peaceful central courtyard."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "976db1491fe2",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "67fa1be7b36b0",
+            "_type": "span",
+            "marks": [],
+            "text": "For those interested in exploring the local markets, Meknes offers a vibrant medina that's filled with traditional souks and artisan shops. Here, you can browse through a wide range of goods, including textiles, pottery, spices, and handmade crafts."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "4aeca9c6b7b2",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c9f7c375c1fc0",
+            "_type": "span",
+            "marks": [],
+            "text": "Overall, Meknes is a hidden gem in Morocco that's worth exploring with our escorted tours. With its rich history, stunning architecture, and vibrant markets, it offers a unique glimpse into the country's past and present."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Meknes",
+    "coverImage": {
+      "src": "/cms/cde0d6bd1cb7bc0c2e8da3aab5861fb2540bc7f0.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAgf/xAAfEAACAgICAwEAAAAAAAAAAAABAgADBBESIQUGYXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGhEAAgMBAQAAAAAAAAAAAAAAAQIAESFRA//aAAwDAQACEQMRAD8A416vi4eVmWJnLyQLtRy13KHMo8JQHrp8VeH4nVj27H6JDKxU7UkH5GEy7z0bnI1rswX8nZrDZyKrqFors1fUgsOuvkIq7FmJYkmEUA9hWJ//2Q==",
+      "alt": "Meknes -  An Imperial City of Morocco"
+    },
+    "mainImage": {
+      "src": "/cms/de8ca4e215cebc97cdd66a07f6bfc7c7470561d8.jpg",
+      "width": 1800,
+      "height": 2400,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGwAAAgEFAAAAAAAAAAAAAAAAAAcIAgMEBQb/xAAoEAACAQMCBQMFAAAAAAAAAAABAgMABBEFBhITISJRBxQjMTIzYXH/xAAWAQEBAQAAAAAAAAAAAAAAAAACBAP/xAAfEQABBAICAwAAAAAAAAAAAAABAAIDIRESBFETMWH/2gAMAwEAAhEDEQA/AIsxxSSfjRm/gzVTWs6jLQyAHypqTfppti02volyWFte3MsvB8qA4z4roba10/Wbho1htWET8phyeHB/XmpxMXWwZC3MOtONqHxGDg9DRTo3T6PzNrt0+n38Pt3csAwxjyKKQ5EfaPgf0rqbznjs4I4370lEjNw9a2Q3pePNbC3ujAq97HhHec9M0soOjNWTFI2R3GphJoC0BVOZsclNGbcnuW5kt6Q5+uBRSyMr5+40UxLXpEx/V//Z",
+      "alt": "Meknes -  An Imperial City of Morocco"
+    },
+    "seodescription": " Immerse yourself in the rich history and culture of Meknes with our escorted tours. Explore the stunning architecture, vibrant markets, and charming neighborhoods of this hidden gem.",
+    "seokeywords": "Meknes tours, Imperial city, historic landmarks, vibrant markets, hidden gems",
+    "seotitle": "Meknes -  An Imperial City of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "meknes-versailles-city-of-morocco"
+    },
+    "title": "Meknes - Versailles of Morocco"
+  },
+  {
+    "_createdAt": "2023-02-15T22:25:41Z",
+    "_id": "23a86364-ca23-45fa-a226-06ab4534512b",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:29:45Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "f9f275588555",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e740fb9ea3760",
+            "_type": "span",
+            "marks": [],
+            "text": "Fes Morocco's Vibrant City"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "e06f13e54f74",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "214b3238cdd4",
+            "_type": "span",
+            "marks": [],
+            "text": "Fez or Fes is a city that captures the essence of Morocco's rich history and diverse culture. As one of the country's oldest imperial cities, Fez is home to a wealth of architectural and cultural treasures that reflect its long and fascinating past."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "58d97507f7de",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "08613ca19b5f",
+            "_type": "span",
+            "marks": [],
+            "text": "Fes attractions"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "cfa8dc5ceb76",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a40d7d9e0d420",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the most famous sights in Fez is its medina, a UNESCO World Heritage Site that has been preserved for over a thousand years. The medina is a labyrinth of narrow streets and alleys, lined with ancient buildings and bustling souks. Visitors can explore the medina's many shops and workshops, where traditional crafts such as pottery and carpet weaving are still practiced today."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "5201a952facf",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "550cf712062e0",
+            "_type": "span",
+            "marks": [],
+            "text": "Another must-see destination in Fez is the Al-Attarine Madrasa, a beautiful example of Islamic architecture that dates back to the 14th century. The madrasa features intricate tile work, carved stucco, and a peaceful courtyard that is a favorite spot for visitors to relax and take in the atmosphere."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "e9b0260fa3d3",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "50b8667eda4c",
+            "_type": "span",
+            "marks": [],
+            "text": "Local Cuisine in Fes"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "56d550049f5f",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "181c36fb53430",
+            "_type": "span",
+            "marks": [],
+            "text": "In addition to its rich history and architecture, Fez is also known for its delicious cuisine. One of the most famous dishes in the city is pastilla, a savory pastry filled with spiced chicken or pigeon, almonds, and cinnamon. Another popular dish is tagine, a slow-cooked stew made with meat, vegetables, and aromatic spices."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "99af4abb42a9",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a4e6406b880f0",
+            "_type": "span",
+            "marks": [],
+            "text": "For travelers looking to experience the vibrant culture of Morocco, Fez is an ideal destination. With its ancient medina, beautiful architecture, and delicious cuisine, Fez offers a unique and unforgettable journey through the history and culture of this fascinating country."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Fes",
+    "coverImage": {
+      "src": "/cms/4708a7ceb2c8b192bfc95b9e0965874b038e60c4.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBQYH/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIDAAQFERIhBxQiMv/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQACETH/2gAMAwEAAhEDEQA/AOU+P8JbZ3KT293+EiLj641cZjAYuzSVYYJC6qdNz2KwMUskRJjdkJ62p1TvbuGGmmkI1rRahrCvRnjQelGRFDmilMST2aKfKd//2Q==",
+      "alt": "Fes, Fez - Imperial City in Morocco"
+    },
+    "mainImage": {
+      "src": "/cms/97fa046093d69375f74546f396e7a497f85edc82.jpg",
+      "width": 2000,
+      "height": 1333,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGAv/EAB8QAAICAgIDAQAAAAAAAAAAAAECAwQAEQUSBiFBE//EABYBAQEBAAAAAAAAAAAAAAAAAAQCA//EABsRAAIBBQAAAAAAAAAAAAAAAAAhIgEDERJh/9oADAMBAAIRAxEAPwCQnR4oCUrvJv4oxda5df00qOVC60R9ys8juy0KiCv1Ut63rIO0xszAyklyN9sNr0Tbk8Iyti047KqqPgOGNuH4ZbVFZZLD9iSPQwyImiof/9k=",
+      "alt": "Fes, Fez - Imperial City in Morocco"
+    },
+    "seodescription": "Fez or Fes is an ancient imperial city in Morocco that embodies the rich history and vibrant culture of Morocco. Explore its winding streets, ancient mosques, and souks to immerse yourself in the city's unique atmosphere. Discover the traditional crafts of Fez, pottery and carpet weaving, and taste the local cuisine.",
+    "seokeywords": "Fez, Fes, Morocco, history, culture, traditional crafts, pottery, carpet weaving, local cuisine, pastilla, tagine, medina, UNESCO World Heritage Site.",
+    "seotitle": "Fes, Fez - Imperial City in Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "fes-fez-imperial-city-in-morocco"
+    },
+    "title": "Fes, Fez - Imperial City in Morocco"
+  },
+  {
+    "_createdAt": "2023-02-15T19:13:27Z",
+    "_id": "d42533fb-fe1f-4b28-bf64-3c1d4bddb0bd",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:30:38Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "5a1c34a3c46d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7c2ae1a8291b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Discovering the Blue Pearl of Morocco: A Tourist's Guide to Chefchaouen"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "4a89680eb8f9",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b951ad1c8a5c0",
+            "_type": "span",
+            "marks": [],
+            "text": "Located in the heart of Morocco's Rif Mountains, Chefchaouen is a charming and peaceful town that is renowned for its stunning blue-washed buildings, narrow alleys, and relaxed atmosphere. Also known as the \"Blue Pearl of Morocco,\" Chefchaouen is a must-visit destination for travelers who want to experience the beauty and tranquility of Morocco."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "c48b31ef3ba5",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4aa311cb7c360",
+            "_type": "span",
+            "marks": [],
+            "text": "Getting to the blue pearl"
+          }
+        ],
+        "markDefs": [],
+        "style": "h4"
+      },
+      {
+        "_key": "5106d159f7ad",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "fd0fc8100b9e0",
+            "_type": "span",
+            "marks": [],
+            "text": "The nearest airports to Chefchaouen are Tangier Ibn Battouta Airport and Tetouan-Sania Ramel Airport, which are both about two hours away by car. You can also take a bus or taxi from Tangier or Fes, both of which are major cities with international airports."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "f53bc8a323ae",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bd653e06512b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Exploring Chefchaouen"
+          }
+        ],
+        "markDefs": [],
+        "style": "h4"
+      },
+      {
+        "_key": "8a0018d26335",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "3a16738c58850",
+            "_type": "span",
+            "marks": [],
+            "text": "Once you arrive in Chefchaouen, the best way to explore the town is on foot. Wander through the blue-washed alleys, admiring the beautiful architecture and taking in the sights and sounds of this charming town. Be sure to visit the Plaza Uta el-Hammam, which is the main square in the center of the town and is surrounded by cafes and restaurants."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "dc1a4941c866",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c9907b4561040",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the must-see attractions in Chefchaouen is the Kasbah Museum, which is housed in a 15th-century fortress and showcases traditional Moroccan art and artifacts. You can also visit the Grand Mosque, which was built in the 15th century and is one of the most important religious sites in the town."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "db83a9cd754a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6001b17478670",
+            "_type": "span",
+            "marks": [],
+            "text": "Another highlight of Chefchaouen is the Ras El Maa waterfall, which is a beautiful natural site located just outside the town. Take a short hike to the waterfall and enjoy the peaceful surroundings and the refreshing coolness of the water."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "8798e11eca95",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6469b86f81800",
+            "_type": "span",
+            "marks": [],
+            "text": "Shopping in the blue pearl"
+          }
+        ],
+        "markDefs": [],
+        "style": "h4"
+      },
+      {
+        "_key": "2ef3e001e10c",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "3d7f30e1c87c0",
+            "_type": "span",
+            "marks": [],
+            "text": "Chefchaouen is known for its vibrant markets and colorful handicrafts. Take some time to explore the local shops and boutiques, where you can find everything from handwoven rugs and pottery to traditional clothing and leather goods. One of the most famous products of Chefchaouen is its cannabis, which is widely available in the markets and is used in traditional medicines and cosmetics."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "24bc451e44dc",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b325ebd78a990",
+            "_type": "span",
+            "marks": [],
+            "text": "Dining in Chefchaouen"
+          }
+        ],
+        "markDefs": [],
+        "style": "h4"
+      },
+      {
+        "_key": "cf55bee51f42",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4137bf492e3a0",
+            "_type": "span",
+            "marks": [],
+            "text": "Chefchaouen has a wide variety of dining options to suit all tastes and budgets. From street food and cafes to upscale restaurants, there is something for everyone. Be sure to try some of the local specialties, such as the lamb tagine with prunes and almonds or the pastilla, a savory pie made with chicken, almonds, and spices."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "791e1e9d32ac",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "3dfe2ccc1c1d0",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "8c0469a4181a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6fa22fa5a76d0",
+            "_type": "span",
+            "marks": [],
+            "text": "In conclusion, Chefchaouen is a charming and tranquil town that offers a unique and unforgettable experience for travelers. Whether you are looking for natural beauty, cultural richness, or simply a relaxing getaway, Chefchaouen has something to offer. Plan your trip today and discover the magic of the Blue Pearl of Morocco."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Chefchaouen",
+    "coverImage": {
+      "src": "/cms/f25ec821cab1516b9c5d02699d2da3ad9e570cc0.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQHAgb/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABAUSESEGEzFRYf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGhEBAAMBAQEAAAAAAAAAAAAAAQACESESUf/aAAwDAQACEQMRAD8AkvgttibrJSx5uKSWL1nQRvqdq6fNYLB2tqzWluUk15G0mxqaqzIeVYg/YNMR3dx8e5z1x2aXPKZ2RtSzYS2E1PEgkPHX5RSrsWYliSaKAP2W0n//2Q==",
+      "alt": "Chefchaouen the blue pearl Morocco city"
+    },
+    "mainImage": {
+      "src": "/cms/2c630b9895e239daf4aaff6f684ea39be758cf7c.jpg",
+      "width": 947,
+      "height": 710,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACEQAAIBBAICAwAAAAAAAAAAAAEDAgAEBREhURMxBhJh/8QAFQEBAQAAAAAAAAAAAAAAAAAABQT/xAAbEQACAwEBAQAAAAAAAAAAAAABAgADETESIf/aAAwDAQACEQMRAD8AUx2edb5IW12uBTBZIkz0Oqf+W5Bl/ZqW96SWqMlCA0Y/lYHBXsszl4SbM+Qw5jIcDqqWaxt8wxkHQMVncIjim66QSXHCeQ5rQuKeyCxP2I3skDR33RViwReC3HkUsy2fRFFPItfkYJA1r6fs/9k=",
+      "alt": "Chefchaouen the blue pearl city of Morocco"
+    },
+    "seodescription": "Explore the Blue Pearl City of Morocco with our guided tours. Discover the charming streets, colorful houses, and rich culture of Chefchaouen.",
+    "seokeywords": "Chefchaouen, blue city, blue pearl,  Rif Mountains, Moroccan culture, Andalusian architecture, local experiences, travel guide, hidden gem, peaceful escape.",
+    "seotitle": "Chefchaouen - the Blue Pearl City of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "chefchaouen-the-blue-pearl-city-of-morocco"
+    },
+    "title": "Chefchaouen The Blue Pearl City"
+  },
+  {
+    "_createdAt": "2023-02-02T17:50:47Z",
+    "_id": "20619b00-48e3-42ff-9a60-f16e90abd953",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:29:31Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "8980577b14d7",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "f05f6c8eec7f0",
+            "_type": "span",
+            "marks": [],
+            "text": "The City of Ouarzazate, Morocco: Africa's Hollywood"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "b9372d35dea7",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6e74c759abfc",
+            "_type": "span",
+            "marks": [],
+            "text": "Are you dreaming of a destination that combines adventure, history, and stunning landscapes? Look no further than Ouarzazate, a city in southern Morocco that will take your breath away. Here's your guide to exploring this fascinating destination and discovering all it has to offer."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "88aaca751b67",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c29ae4f4f4bd",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "93b9bb34148a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "0f934d4d2b7c",
+            "_type": "span",
+            "marks": [],
+            "text": "Explore the city's rich cultural heritage"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "b4d377d5a182",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "49ae2aa30a510",
+            "_type": "span",
+            "marks": [],
+            "text": "Ouarzazate is home to some of Morocco's most significant cultural landmarks, including the Kasbah Ait Ben Haddou, a UNESCO World Heritage site. This ancient fortress is one of the best-preserved kasbahs in Morocco and has served as a backdrop for many famous films."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "6c42c1816997",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ff97c70a7c5a",
+            "_type": "span",
+            "marks": [],
+            "text": "Take a trip to the Sahara Desert via Ouarzazate"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "ee3bc93f695d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "46d596a5bf810",
+            "_type": "span",
+            "marks": [],
+            "text": "No trip to Ouarzazate is complete without a visit to the Sahara Desert. Experience the breathtaking beauty of the desert landscape as you ride on a camel or go on a desert trek. Witness the stunning sunsets, the vast expanses of sand dunes, and the night sky filled with stars."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "f64845cadb6d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4bb82ba8e2aa",
+            "_type": "span",
+            "marks": [],
+            "text": "Marvel at the Atlas Mountains"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "8bf3228aabec",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "f7b7416d70e90",
+            "_type": "span",
+            "marks": [],
+            "text": "The Atlas Mountains provide a beautiful backdrop to Ouarzazate, and it's worth taking a day trip to explore this stunning mountain range. From scenic drives to hiking trails, there's something for everyone."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "0081e6e59e60",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c8d1e633b328",
+            "_type": "span",
+            "marks": [],
+            "text": "Ouarzazate Popular Attraction Taourirt Kasbah"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "9d0c76f2b8ac",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "da5c42f8390e0",
+            "_type": "span",
+            "marks": [],
+            "text": "This ancient fortress is another one of Ouarzazate's must-see landmarks. It was once the residence of the Glaoui family, and today, it has been converted into a museum that showcases the region's history and culture."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "020d84df9f57",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "95fa6807c50e",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "71103f263082",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e5920a0cc3ff",
+            "_type": "span",
+            "marks": [],
+            "text": "Discover the city's film studios"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "a4853ce43de3",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "8d89d05d89b40",
+            "_type": "span",
+            "marks": [],
+            "text": "Ouarzazate has been the location for numerous famous films, and you can visit the city's film studios to learn more about this aspect of its history. From Gladiator to Game of Thrones, the studios have been used to film some of the biggest blockbuster movies and TV shows."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "f5ba116f1ad3",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b9d603bc47b4",
+            "_type": "span",
+            "marks": [],
+            "text": "Indulge in Ouarzazate's region cuisine "
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "cec847875672",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "598914122dc60",
+            "_type": "span",
+            "marks": [],
+            "text": "Moroccan cuisine is known for its bold flavors and diverse ingredients. Ouarzazate has a variety of restaurants that serve up traditional Moroccan dishes, including tagines, couscous, and pastilla."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "c6096bd787f0",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "45326b778fe2",
+            "_type": "span",
+            "marks": [],
+            "text": "Shop for souvenirs"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "356efb69e2d2",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "36e3cdd1bdaf0",
+            "_type": "span",
+            "marks": [],
+            "text": "Ouarzazate is a great place to pick up souvenirs to bring back home. From handmade pottery to colorful textiles and spices, you'll find plenty of unique items to remember your trip by."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "bb0df3e6dd11",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9b5daed2b1a3",
+            "_type": "span",
+            "marks": [],
+            "text": "Experience adventure activities around the city"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "e56a2dc76526",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "63719ff9e13c0",
+            "_type": "span",
+            "marks": [],
+            "text": "Ouarzazate is a great destination for adventure seekers. From hiking to mountain biking to off-roading, there are plenty of ways to get your adrenaline pumping."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "66ad38b53ea6",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "efab47c19809",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "48b309637842",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "15d3ab368c6d",
+            "_type": "span",
+            "marks": [],
+            "text": "Enjoy the warmth of Moroccan hospitality"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "560ea2a2c47d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "3555e355422b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Moroccan hospitality is renowned for its warmth and generosity. You'll find this on full display in Ouarzazate, where locals are eager to share their culture and traditions with visitors."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "a24871c0ff02",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "238f02beb7060",
+            "_type": "span",
+            "marks": [],
+            "text": "In conclusion, Ouarzazate is a unique and fascinating destination that offers something for everyone. Whether you're looking to explore Morocco's rich cultural heritage, enjoy adventure activities, or simply relax and enjoy the warmth of Moroccan hospitality,"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Ouarzazate",
+    "coverImage": {
+      "src": "/cms/23a7ea71d2d522152d6c688fc0db715c8633dbd1.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcCAwT/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABAURBhIhYTFBUf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGREAAgMBAAAAAAAAAAAAAAAAAQIAERIh/9oADAMBAAIRAxEAPwBPcPhxs2RZcvBJNB18LG3U7/aZtxw3hy4LI3cNxPHcxwl4Y5D96+PdJZHZDtGKn0a0i9umXq1xKV1rRY0Cr6sHkorJmiOyLRqTs+KKoZiTsminUnP/2Q==",
+      "alt": "Ouarzazate - Cinema City Of Morocco"
+    },
+    "mainImage": {
+      "src": "/cms/b203633274a6e61cb74760527fdd91806c20e907.jpg",
+      "width": 612,
+      "height": 408,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUHBv/EACUQAAEEAgAEBwAAAAAAAAAAAAIBAwQRAAUGISMxBxITFFGBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAGxEAAQQDAAAAAAAAAAAAAAAAAQACAxEEFFH/2gAMAwEAAhEDEQA/AH+m8UgnkUKZGb9OuoYFyT6zS6fVQJm3CZFnQibVLEFPn+ZPNXwJGTqe7dtbugRLxvF4Khtvo6MmShp2USrAQ5czLDhYVibEjfRBoqwua6ySpqjyqh7YZIpqzYsgmm9pN8qfJ4Yrbbwo+o/oX//Z",
+      "alt": "Ouarzazate - Cinema City Of Morocco"
+    },
+    "seodescription": "Looking for a unique and breathtaking destination in Morocco? Look no further than Ouarzazate. This guide will take you on a journey through the city's rich culture, stunning landscapes, and must-see attractions.",
+    "seokeywords": "Ouarzazate, Morocco, Sahara Desert, Atlas Mountains, Kasbah Ait Ben Haddou, Taourirt Kasbah, film studios, cultural heritage, adventure, travel guide",
+    "seotitle": "Ouarzazate - Cinema City Of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "ouarzazate-the-cinema-city-of-morocco"
+    },
+    "title": "Ouarzazate - Cinema City Of Morocco"
+  },
+  {
+    "_createdAt": "2023-01-30T17:40:41Z",
+    "_id": "37f96f45-5822-45dd-8a67-66a41fc0742e",
+    "_type": "destination",
+    "_updatedAt": "2023-04-18T21:31:46Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "ed4b56ebd43c",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "0535ab404aae0",
+            "_type": "span",
+            "marks": [],
+            "text": "Rabat, the capital city of Morocco, is a hidden gem that's waiting to be discovered. This charming city has something to offer for everyone - from historical landmarks to delicious cuisine. In this guide, we'll take you through the best places to visit and things to do in Rabat."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "350ef9c6e6b4",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "eca6e1e410a70",
+            "_type": "span",
+            "marks": [],
+            "text": "Kasbah of the Udayas"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "5562ca8388d6",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a8568851b7c40",
+            "_type": "span",
+            "marks": [],
+            "text": "One of the most iconic landmarks in Rabat, the Kasbah of the Udayas is a must-visit for anyone traveling to the city. This 12th-century fortress is located at the mouth of the Bou Regreg River, and is known for its stunning views of the ocean."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "200d6aa03600",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4bf17a5e44780",
+            "_type": "span",
+            "marks": [],
+            "text": "Hassan Tower"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "eeacf2949c20",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "331d1ab6f6b70",
+            "_type": "span",
+            "marks": [],
+            "text": "The Hassan Tower is another iconic landmark in Rabat. This minaret was built in the 12th century and was meant to be the tallest in the world, but the construction was abandoned before it was completed. Despite this, the Hassan Tower remains a popular tourist spot in Rabat."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "78634ea2d732",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "dfdffb318a830",
+            "_type": "span",
+            "marks": [],
+            "text": "Chellah"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b7596573cdc9",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e55b3aa3f82b0",
+            "_type": "span",
+            "marks": [],
+            "text": "Chellah is an ancient Roman ruin that's located in the heart of Rabat. This site was originally a Phoenician trading post, but it was later occupied by the Romans. Today, Chellah is a popular tourist attraction that's known for its stunning architecture and peaceful gardens."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "f90a84379723",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7cd34040a5220",
+            "_type": "span",
+            "marks": [],
+            "text": "The Medina"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b976143270c3",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "fa98d0e571c30",
+            "_type": "span",
+            "marks": [],
+            "text": "No trip to Rabat is complete without a visit to the Medina. This bustling market is home to a variety of shops, cafes, and restaurants. It's the perfect place to pick up some souvenirs, try some local cuisine, and immerse yourself in the culture of the city."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "e8bb90ddf1fd",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "183669e32c3c0",
+            "_type": "span",
+            "marks": [],
+            "text": "Mausoleum of Mohammed V"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b6d7c7c531e1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "570e3e3829530",
+            "_type": "span",
+            "marks": [],
+            "text": "The Mausoleum of Mohammed V is a stunning tribute to one of Morocco's most beloved kings. This mausoleum was built in the 1970s and is known for its stunning architecture and intricate mosaics."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "269d661f4857",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "af02c6261af70",
+            "_type": "span",
+            "marks": [],
+            "text": "Traditional Moroccan Cuisine"
+          }
+        ],
+        "level": 1,
+        "listItem": "number",
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "79ac077df1dc",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "cf066cc14bd80",
+            "_type": "span",
+            "marks": [],
+            "text": "Rabat is known for its delicious cuisine, which is a blend of Berber, Arabic, and Andalusian influences. Some of the must-try dishes include tagine, couscous, and harira soup. Don't forget to try some of the delicious sweets and pastries that are unique to Morocco."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "dc2444f82f4b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "37594f77698f0",
+            "_type": "span",
+            "marks": [],
+            "text": "Rabat is a city that's full of history, culture, and beauty. Whether you're interested in exploring ancient landmarks or trying some delicious cuisine, there's something for everyone in this city. Plan your trip to Rabat today and discover the charm of Morocco's capital city."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "be23d0a35f2a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ad568a7777da0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Rabat ",
+    "coverImage": {
+      "src": "/cms/adf6341bcd3cf588cc7db42d6e7bb6f2459c38d1.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcCAwT/xAAfEAACAgMAAgMAAAAAAAAAAAABAgMEAAURBiESQVH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oADAMBAAIRAxEAPwBTeB6mnt9lLDeBKhOgBufeMjdeD+K09JcsVWmaxHGWXr9AOJSKR4j8o3ZD+qeZpF60ylWsSlSOEFjjdEQaNSffrDKGYk9Jwwhf/9k=",
+      "alt": "Rabat"
+    },
+    "mainImage": {
+      "src": "/cms/d5a43e592b556fdfe004d322ce7086cafa372a94.jpg",
+      "width": 2400,
+      "height": 1800,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAX/xAAhEAACAgICAgMBAAAAAAAAAAABAwIEABEFEjFBExQhUf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAHBEAAgIDAQEAAAAAAAAAAAAAAQIABQMRMRKR/9oADAMBAAIRAxEAPwB1qiuqUpmuLVskQD7jmfz/AAMPrRcIDUSDv35wqX13UKchzBEjcew8Yq4bNyPWLu8Iy3o7GtYhLrJ6Ytwj5JtXAKvnold/CEtkYKOjhk7DLHyyO2/v8Zhjlv1AA1DGtyb7P//Z",
+      "alt": "Rabat"
+    },
+    "seodescription": "Explore the wonders of Rabat, the capital city of Morocco, with our comprehensive guide. From historical landmarks to delicious cuisine, we've got you covered!",
+    "seokeywords": "Rabat, Morocco, tourism, travel, landmarks, history, culture, cuisine, vacation, holiday",
+    "seotitle": "Discovering the Charm of Rabat: A Complete Guide for Tourists",
+    "slug": {
+      "_type": "slug",
+      "current": "rabat-the-capital-city-of-morocco"
+    },
+    "title": "Rabat  the capital city of Morocco"
+  },
+  {
+    "_createdAt": "2023-01-30T17:19:17Z",
+    "_id": "c093b388-e8c0-4ddf-bbf8-edeff2ce0e14",
+    "_type": "destination",
+    "_updatedAt": "2024-01-17T12:24:23Z",
+    "author": {
+      "id": "42851dab-f8ce-422a-9611-675e64c422ec",
+      "type": "author",
+      "slug": "emt",
+      "label": "EMT"
+    },
+    "body": [
+      {
+        "_key": "ef801c857600",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "cd17a25887140",
+            "_type": "span",
+            "marks": [],
+            "text": "Discovering the Magic of Marrakech"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "0bcbd29e27fd",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "cedb56acab320",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Marrakech"
+          },
+          {
+            "_key": "b0960427ca94",
+            "_type": "span",
+            "marks": [],
+            "text": ", also known as "
+          },
+          {
+            "_key": "d00085f61f32",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "the Red City"
+          },
+          {
+            "_key": "25fa7e0b6968",
+            "_type": "span",
+            "marks": [],
+            "text": ", is a fascinating destination that has captivated travelers for centuries. From the bustling souks to the stunning architecture, there is no shortage of things to see and do in this vibrant city."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "26992f861bc8",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "60c7e7323cba0",
+            "_type": "span",
+            "marks": [],
+            "text": "Exploring the Medina and Souks"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "6847866312e6",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "0b5561847d2e0",
+            "_type": "span",
+            "marks": [],
+            "text": "The heart of "
+          },
+          {
+            "_key": "6ada76a6110d",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Marrakech "
+          },
+          {
+            "_key": "0fce0daf2c80",
+            "_type": "span",
+            "marks": [],
+            "text": "is the Medina, the old walled city. Within its walls lies a maze of narrow streets and alleys lined with colorful shops and stalls. This is where you'll find the famous souks, the traditional markets where vendors sell everything from spices and textiles to jewelry and pottery. The best way to experience the Medina is to wander around and get lost in the sights and sounds."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b7fd86fa4ac1",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a441e985624d0",
+            "_type": "span",
+            "marks": [],
+            "text": "Marveling at the Majorelle Garden"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "4b4a38fbff3d",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "1970ec49161f0",
+            "_type": "span",
+            "marks": [],
+            "text": "Escape the hustle and bustle of the city and retreat to the serene "
+          },
+          {
+            "_key": "a9f22f1c0b4e",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Majorelle Garden"
+          },
+          {
+            "_key": "a04fa218d6c0",
+            "_type": "span",
+            "marks": [],
+            "text": ". Created by French painter Jacques Majorelle, the garden is a tranquil oasis filled with exotic plants, water features, and vibrant blue buildings. Be sure to snap a photo of the iconic blue and yellow buildings, which have become synonymous with Marrakech."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "c32fe3c36a19",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c88a27a7481f0",
+            "_type": "span",
+            "marks": [],
+            "text": "Admiring the Architecture of Bahia Palace"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "2e709af2cb06",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c632635849780",
+            "_type": "span",
+            "marks": [],
+            "text": "Located in the heart of the Medina, Bahia Palace is a stunning example of Moroccan architecture. Built in the late 19th century, the palace is a grand display of intricate tile work, ornate stucco, and colorful mosaics. Be sure to visit the lush gardens, which provide a peaceful retreat from the busy streets outside."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "1291d019ba3e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e816e8bc8e050",
+            "_type": "span",
+            "marks": [],
+            "text": "Soaking up the Atmosphere of Marrakech at Jemaa el-Fnaa"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "6870cab47d50",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ee6f18848aa10",
+            "_type": "span",
+            "marks": [],
+            "text": "No visit to "
+          },
+          {
+            "_key": "264a2793f268",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Marrakech"
+          },
+          {
+            "_key": "db6dbc8edd9c",
+            "_type": "span",
+            "marks": [],
+            "text": " is complete without a trip to "
+          },
+          {
+            "_key": "584b34894ddf",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Jemaa el-Fnaa"
+          },
+          {
+            "_key": "1a5f96c90cbf",
+            "_type": "span",
+            "marks": [],
+            "text": ", the city's main square. Here you'll find a carnival-like atmosphere with snake charmers, henna artists, and street performers vying for your attention. As night falls, the square comes alive with food vendors serving up traditional Moroccan dishes, making it the perfect place to soak up the local culture."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "8ad0e0bc4cb0",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "4d8a2185c4de0",
+            "_type": "span",
+            "marks": [],
+            "text": "Unwinding at a Traditional Hammam in Marrakech"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "3d18195173c8",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b32b375f79600",
+            "_type": "span",
+            "marks": [],
+            "text": "After a long day of sightseeing, unwind and rejuvenate at a traditional hammam. These steam baths have been a part of Moroccan culture for centuries and offer a unique spa experience. Choose from a range of treatments, from a simple steam bath to a full body scrub, and emerge feeling refreshed and renewed."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "4f2d1d863c0a",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7e43b9e3d75b0",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Marrakech"
+          },
+          {
+            "_key": "7b214f6dd5ba",
+            "_type": "span",
+            "marks": [],
+            "text": " truly is a magical destination that offers a glimpse into a rich and "
+          },
+          {
+            "_key": "e37d91ae7200",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "vibrant culture."
+          },
+          {
+            "_key": "7c878d4f5b3e",
+            "_type": "span",
+            "marks": [],
+            "text": " With so much to see and do, it's no wonder why it continues to be a top choice for travelers from around the world."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "0088c16e1956",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "106a57d1ab7e0",
+            "_type": "span",
+            "marks": [],
+            "text": ""
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "city": "Marrakech",
+    "coverImage": {
+      "src": "/cms/1b8465c24720c98acacbdc983ad711a6f6d72fec.jpg",
+      "width": 1920,
+      "height": 1080,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCBQYH/8QAIBAAAgIBBQADAAAAAAAAAAAAAQIAAwQFERITIQYiUf/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAhJBkf/aAAwDAQACEQMRAD8A4v8AG6MHIzGTUeXAr9eJ29lzqeh1Yi9tNQ6j6CzezIKSvoJEYXJvYANa5AG2xMm8pFPBWvSdtSc/yEVdmLEk7mEIwP/Z",
+      "alt": "Marrakech Morocco"
+    },
+    "mainImage": {
+      "src": "/cms/c3c1d5c824879ec7b668b38db2d3cc2059b6c31c.jpg",
+      "width": 1920,
+      "height": 1280,
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACMQAAIBBAIABwAAAAAAAAAAAAECAwAEBREGIRITFBYyUmL/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EAB0RAAEEAgMAAAAAAAAAAAAAAAEAAgQRAwUUQVL/2gAMAwEAAhEDEQA/AJ5ZcXPFq2WVtD6EVM5iNGRmjt5iu9fGo/Bcjv7WJo1kLA97Y7NPk5zkoIG8qOAORosV3VX7KWw0KISZBjOFmwUouMfKZSfTS9/mis/dd87M0nhZiezuigdlJ8hPhYOiv//Z",
+      "alt": "Marrakech the red city"
+    },
+    "seodescription": "Discover the best things to do and places to visit in Marrakech, Morocco. Explore the city's vibrant culture, stunning architecture, and rich history.",
+    "seokeywords": "Marrakech, Morocco, cultural heritage, souks, markets, Djemaa el-Fna, Majorelle Garden, Bahia Palace, travel guide, adventure, unique experiences.",
+    "seotitle": "Marrakech - The Red city of Morocco",
+    "slug": {
+      "_type": "slug",
+      "current": "marrakesh-the-red-city-of-morocco"
+    },
+    "title": "Marrakech the red city"
+  }
+]

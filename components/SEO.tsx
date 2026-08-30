@@ -1,5 +1,13 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { urlFor } from '../sanity'
+
+const SITE_URL = 'https://www.escortedmoroccotours.com'
+const absImg = (source: any, fallback = `${SITE_URL}/images/escorted-morocco-tours.png`) => {
+  const u = urlFor(source).url()
+  if (!u) return fallback
+  return u.startsWith('http') ? u : `${SITE_URL}${u}`
+}
 
 interface SEOProps {
   title: string
@@ -104,7 +112,7 @@ export function createTourSchema(tour: any) {
     "@type": "TouristTrip",
     "name": tour.title,
     "description": tour.seodescription || tour.heroparagraph,
-    "image": tour.coverImage ? `https://cdn.sanity.io${tour.coverImage}` : `${siteUrl}/images/escorted-morocco-tours.png`,
+    "image": absImg(tour.coverImage || tour.mainImage),
     "url": `${siteUrl}/tours/${tour.slug?.current}`,
     "provider": {
       "@type": "TravelAgency",
@@ -141,7 +149,7 @@ export function createArticleSchema(post: any, author?: string) {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.seodescription || post.title,
-    "image": post.mainImage ? `https://cdn.sanity.io${post.mainImage}` : `${siteUrl}/images/escorted-morocco-tours.png`,
+    "image": absImg(post.mainImage || post.localImage),
     "datePublished": post._createdAt || post.publishedAt,
     "dateModified": post._updatedAt || post._createdAt,
     "author": {
