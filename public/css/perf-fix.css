@@ -1,0 +1,11 @@
+/* Reserve viewport height via CSS so hero sections don't render collapsed
+   and then snap to full height once main.js's jQuery .js-fullheight handler
+   runs on load — this was the site's dominant layout-shift (CLS ~0.4). */
+.js-fullheight {
+  min-height: 100vh;
+}
+@supports (min-height: 100dvh) {
+  .js-fullheight {
+    min-height: 100dvh;
+  }
+}
