@@ -2,21 +2,13 @@ import { GetStaticProps } from 'next';
 import Router, { useRouter } from 'next/router';
 import React from 'react'
 import { PortableText } from '@portabletext/react';
+import { bodyComponents } from '../../components/portableTextComponents';
 import { sanityClient, urlFor } from '../../sanity';
 import Image from 'next/image'
 import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
 import SEO, { createBreadcrumbSchema } from '../../components/SEO';
 
 function destinationDetails({ destination, destinations, relatedTours}:any) {
-
-  const ptComponents = {
-    types: {
-      image: ({ value }: any) => {
-        const url = urlFor(value).url()
-        return url ? <img src={url} alt="" /> : null
-      },
-    },
-  };
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -72,7 +64,8 @@ function destinationDetails({ destination, destinations, relatedTours}:any) {
         <p>
           <img src={urlFor(destination.mainImage).url()!} alt={destination.city} className="img-fluid" />
         </p>
-        <PortableText value={destination.body} components={ptComponents} />
+        <h2 className="mb-3">About {destination.city}</h2>
+        <PortableText value={destination.body} components={bodyComponents} />
         
         <div className="about-author d-flex p-4 bg-light">
           <div className="bio mr-5">

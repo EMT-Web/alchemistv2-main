@@ -5,6 +5,7 @@ import Action1 from '../../components/Action1';
 import PageHero from '../../components/PageHero';
 import { sanityClient, config, urlFor } from '../../sanity';
 import { PortableText } from '@portabletext/react';
+import { bodyComponents } from '../../components/portableTextComponents';
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO';
 
 import Image from 'next/image'
@@ -114,17 +115,6 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
       setIsError(true)
     }
   }
-  const ptComponents = {
-    types: {
-      image: () => null,
-    },
-    marks: {
-      link: ({ value, children }: any) => (
-        <a href={value?.href} target="_blank" rel="noopener noreferrer">{children}</a>
-      ),
-    },
-  };
-
   // Create breadcrumb schema
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -166,7 +156,7 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
         <div className="project-wrap">
         <div className="text p-4">
                         <span className="days">{tour.duration || 0} Days Tour</span>
-                        <h2>{tour.title}</h2>
+                        <h2>Tour Overview</h2>
                         <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations?.map((d:any)=> d?.slug?.current && <a key={d._id || d._createdAt} href={`/destinations/${d.slug.current}`} target="_blank" rel="noopener noreferrer">{d.city}, </a>)}</p>
                         <hr />
                         <ul>
@@ -174,8 +164,9 @@ function tourDetails({ tour, destinations, relatedTours}:any) {
                           </ul>
                     </div>
                     </div>
+                    <h2 className="mt-4 mb-3">Day-by-Day Itinerary</h2>
                     <div className="tour-itinerrary">
-                    <PortableText value={tour.body} components={ptComponents} />
+                    <PortableText value={tour.body} components={bodyComponents} />
             </div>
             <div className="tour-faqs mt-5">
               <h2 className="mb-3">Frequently Asked Questions</h2>

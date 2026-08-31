@@ -37,7 +37,11 @@ export default function SEO({
   const router = useRouter()
   const siteUrl = 'https://www.escortedmoroccotours.com'
   const canonicalUrl = `${siteUrl}${router.asPath.split('?')[0]}`
-  const fullTitle = `${title} | Escorted Morocco Tours`
+  const brand = 'Escorted Morocco Tours'
+  const cleanTitle = (title || '').replace(/\s*\|\s*/g, ' | ').trim()
+  const fullTitle = cleanTitle.toLowerCase().includes(brand.toLowerCase())
+    ? cleanTitle
+    : `${cleanTitle} | ${brand}`
   const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
 
   return (

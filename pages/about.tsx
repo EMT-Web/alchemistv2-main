@@ -62,7 +62,12 @@ export default function  About({about}:any) {
       keywords={aboutData.seokeywords || "Morocco tours, about us, travel agency, guided tours, escorted tours, expert guides"}
       schema={combinedSchema}
     />
-    <PageHero title={`"${aboutData.heroquote}"`} tag="" p={aboutData.herotag} img={about?.coverImage ? urlFor(aboutData.coverImage).url()! : '/images/hero-bgs/about-us.jpg'} />
+    <PageHero
+      title="About Escorted Morocco Tours"
+      tag="Who We Are"
+      p={aboutData.heroquote ? `"${aboutData.heroquote}"${aboutData.herotag ? ` — ${aboutData.herotag}` : ''}` : aboutData.herotag}
+      img={about?.coverImage ? urlFor(aboutData.coverImage).url()! : '/images/hero-bgs/about-us.jpg'}
+    />
     {aboutData.mainabout && <InfoAbout about={aboutData.mainabout} />}
     {aboutData.team && <InfoAbout2 team={aboutData.team} missionvision={aboutData.missionvision}/>}
     <Testemonials />

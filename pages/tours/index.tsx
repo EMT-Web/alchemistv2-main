@@ -80,7 +80,7 @@ export default function  NextPage({tours}:any) {
   return (
     <>
     <SEO
-      title="Best Guided Immersion Tours | All Morocco Tours"
+      title="All Morocco Tours & Travel Packages"
       description="Make the Most of Your Vacation in Morocco with a Well-Planned Guided Immersion tour. Browse our complete collection of Morocco escorted tours and travel packages."
       keywords="Escorted Morocco tours, Morocco Escorted Tours, Travel packages, vacation, guided tours, Morocco, culture, history, adventure, luxury, holiday, expert guides, tailored experience, hidden gems, immersive journey, personalized service, authentic experiences"
       schema={combinedSchema}
