@@ -2,12 +2,11 @@
 
 module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  outputFileTracingRoot: __dirname,
   images: {
-    domains: [
-      "localhost",
-      "media-cdn.tripadvisor.com",
-      "dynamic-media-cdn.tripadvisor.com",
+    remotePatterns: [
+      { protocol: "https", hostname: "media-cdn.tripadvisor.com" },
+      { protocol: "https", hostname: "dynamic-media-cdn.tripadvisor.com" },
     ],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
