@@ -56,18 +56,15 @@ export async function getStaticPaths({context}:any) {
   
   export const getStaticProps: GetStaticProps = async ({params}) => {
     const query = `
-    *[_type == 'tour' && $slug in categories[]->slug.current ]{
+    *[_type == 'tour' && $slug in categories[]->slug.current ] | order(duration asc){
         _id,
         _createdAt,
         title,
         duration,
         slug,
-        "amenities": amenities[]->{
-          slug,
-          title,
-          icon
-        },
-        "destinations": destinations[][0..2]->{
+        herotag,
+        seodescription,
+        "destinations": destinations[]->{
           slug,
           city
         },

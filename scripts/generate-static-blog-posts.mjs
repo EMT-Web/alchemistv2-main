@@ -13,26 +13,32 @@ const pagesDir = path.join(root, 'pages', 'blog')
 
 fs.mkdirSync(dataDir, { recursive: true })
 
-// Real, already-published destination photos (read from Sanity's own CDN, no write needed)
+// Local copies of already-published photos (Sanity removed — served from public/cms/).
+// Each blog post gets its OWN image; none are shared between posts.
 const IMAGES = {
-  merzouga: 'https://cdn.sanity.io/images/7y3hy4cc/production/3d30861651b180d3acd37e676ca99f3826128f33-1080x1080.jpg?w=1600',
-  marrakech: 'https://cdn.sanity.io/images/7y3hy4cc/production/c3c1d5c824879ec7b668b38db2d3cc2059b6c31c-1920x1280.jpg?w=1600',
-  chefchaouen: 'https://cdn.sanity.io/images/7y3hy4cc/production/2c630b9895e239daf4aaff6f684ea39be758cf7c-947x710.jpg?w=1600',
-  essaouira: 'https://cdn.sanity.io/images/7y3hy4cc/production/e81d9b624a215d0189287a06fd64347d556586d7-4608x3072.jpg?w=1600',
-  aitbenhaddou: 'https://cdn.sanity.io/images/7y3hy4cc/production/451960c979fc04894c0dc61852e3850ad7a7ab26-948x711.jpg?w=1600',
+  greenHills: '/cms/8373f991be3f6d85d81127e4bc2a288f4e2729df.jpg',
+  duneRider: '/cms/64c449b71f7a4cec1bd94b29bfc0d65f34350243.jpg',
+  camelCaravan: '/cms/20bb9ca945762657cc651c7c56d70edbe44d75bc.jpg',
+  chefchaouen: '/cms/2c630b9895e239daf4aaff6f684ea39be758cf7c.jpg',
+  essaouira: '/cms/e81d9b624a215d0189287a06fd64347d556586d7.jpg',
+  desertCamp: '/cms/98e4cc214bfa50c635418b781076d18b43e5e28c.jpg',
+  cedarForest: '/cms/3251f498b91bded2b2a8f40d39553d98e21696ec.jpg',
+  dadesGorge: '/cms/3d2f02760d4e4c97faa3dd08087b9c762edee566.jpg',
+  marrakech: '/cms/c3c1d5c824879ec7b668b38db2d3cc2059b6c31c.jpg',
+  campfireNight: '/cms/7bf5d45820575f7f5927e5c38966917236611e55.jpg',
 }
 
 const SLUG_IMAGE = {
-  'best-time-to-visit-sahara-desert': IMAGES.merzouga,
-  '7-day-morocco-itinerary-marrakech-to-sahara': IMAGES.aitbenhaddou,
-  'merzouga-vs-zagora-sahara-desert-tour': IMAGES.merzouga,
+  'best-time-to-visit-sahara-desert': IMAGES.greenHills,
+  '7-day-morocco-itinerary-marrakech-to-sahara': IMAGES.duneRider,
+  'merzouga-vs-zagora-sahara-desert-tour': IMAGES.camelCaravan,
   'chefchaouen-day-trip-from-marrakech': IMAGES.chefchaouen,
   'essaouira-day-trip-from-marrakech': IMAGES.essaouira,
-  'luxury-vs-standard-desert-camps-merzouga': IMAGES.merzouga,
-  'what-to-pack-sahara-desert-tour': IMAGES.merzouga,
-  'ait-benhaddou-ouarzazate-guide': IMAGES.aitbenhaddou,
+  'luxury-vs-standard-desert-camps-merzouga': IMAGES.desertCamp,
+  'what-to-pack-sahara-desert-tour': IMAGES.cedarForest,
+  'ait-benhaddou-ouarzazate-guide': IMAGES.dadesGorge,
   'why-small-group-escorted-tours-morocco': IMAGES.marrakech,
-  'sahara-desert-stargazing-guide': IMAGES.merzouga,
+  'sahara-desert-stargazing-guide': IMAGES.campfireNight,
 }
 
 // Staggered recent publish dates, most recent = today
@@ -111,7 +117,7 @@ files.forEach((file, i) => {
     seodescription: data.seodescription,
     seokeywords: data.seokeywords,
     category: data.category,
-    image: SLUG_IMAGE[data.slug] || IMAGES.merzouga,
+    image: SLUG_IMAGE[data.slug] || IMAGES.marrakech,
     publishedAt: PUBLISH_DATES[i] || '2026-08-01',
     bodyHtml,
     related,

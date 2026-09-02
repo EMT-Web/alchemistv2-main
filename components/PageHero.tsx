@@ -1,45 +1,23 @@
 import React from 'react'
-import {  useRouter } from 'next/router';
 import Image from 'next/image'
 
-
 function PageHero({title, tag, img, p}:any) {
-  const router = useRouter()
-
   return (
-    <section className="hero-wrap js-fullheight" >
-      <style>
-{`
-  .hero__desktop-image {
-    display: none !important;
-  }
-  @media(orientation: landscape) {
-    .hero__desktop-image {
-      display: block !important;
-    }
-    .hero__mobile-image {
-      display: none !important;
-    }
-  }
-`}
-</style>
-<Image src="/images/mobile-alt-hero.jpg" className="hero__mobile-image" layout='fill' alt="Escorted Morocco Tours"  objectFit="cover" priority/>
-<Image src={img} className="hero__desktop-image" layout='fill' alt="Escorted Morocco Tours"  objectFit="cover" loading="eager"/>
-
-    <div className="container">
-      <div className="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-        <div className="col-md-7 ftco-animate">
-          <span className="subheading">{tag}</span>
-          <h1 className="mb-4">{title}</h1>
-          <p className="caps">{p}</p>
-        </div>
-        { router.asPath === '/' &&
-        <a href="https://www.youtube.com/watch?v=boiiiVh52v4" aria-label="video player" className="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-          <span className="fa fa-play"></span>
-        </a>}
+    <section className="hero-wrap hero-wrap--compact">
+      <div className="hero-wrap__bg">
+        <Image src={img} alt="Escorted Morocco Tours" fill sizes="100vw" priority style={{ objectFit: 'cover' }} />
       </div>
-    </div>
-  </section>
+      <div className="hero-wrap__scrim" />
+      <div className="container">
+        <div className="row no-gutters slider-text align-items-center">
+          <div className="col-md-8 ftco-animate">
+            {tag ? <span className="subheading">{tag}</span> : null}
+            <h1 className="mb-3">{title}</h1>
+            {p ? <p className="caps">{p}</p> : null}
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

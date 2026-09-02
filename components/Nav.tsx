@@ -1,81 +1,180 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router';
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-function Nav() {
-   let router = useRouter()
- 
+
+const TOURS_MENU = {
+  'Starts from': [
+    ['Marrakesh', '/category/tours-from-marrakesh'],
+    ['Fez', '/category/tours-from-fez'],
+    ['Casablanca', '/category/tours-from-casablanca'],
+    ['Tangier', '/category/tours-from-tangier'],
+  ],
+  Duration: [
+    ['1-3 Day Tours', '/category/1-3-day-tours'],
+    ['3-7 Day Tours', '/category/3-7-day-tours'],
+    ['1-2 Weeks', '/category/1-2-week-tours'],
+    ['All Tours', '/tours'],
+  ],
+}
+
+const DEST_MENU = {
+  'Imperial cities': [
+    ['Marrakesh', '/destinations/marrakesh-the-red-city-of-morocco'],
+    ['Fes', '/destinations/fes-fez-imperial-city-in-morocco'],
+    ['Casablanca', '/destinations/casablanca-casa-city-morocco'],
+    ['Rabat', '/destinations/rabat-the-capital-city-of-morocco'],
+  ],
+  'Desert & coast': [
+    ['Ouarzazate', '/destinations/ouarzazate-the-cinema-city-of-morocco'],
+    ['Chefchaouen', '/destinations/chefchaouen-the-blue-pearl-city-of-morocco'],
+    ['Essaouira', '/destinations/essaouira-the-windy-coastal-city-of-morocco'],
+    ['All Destinations', '/destinations'],
+  ],
+}
+
+type MenuKey = 'tours' | 'destinations'
+
+function MegaMenu({ groups }: { groups: Record<string, string[][]> }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" >
-		<div className="container">
-			{/* <a href='/' className="navbar-brand"  style={{display:"inline"}}>Escorted<span>Morocco Tours</span></a> */}
-      <a href='/' className="navbar-brand"  style={{display:"inline"}}><Image src='/images/logo-white-01.png' alt="Escorted Morocco Tours" width={108} height={61} priority/></a>
-			<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span className="oi oi-menu"/> Menu
-			</button>
-			<div className="collapse navbar-collapse" id="ftco-nav">
-				<ul className="navbar-nav ml-auto">
-               <li className={`nav-item ${router.asPath === '/' ? "active" : '' }`}>
-                  <a href="/" className="nav-link">Home</a>
-               </li>
-               <li className="nav-item dropdown position-static">
-        <a className="nav-link dropdown-toggle" href="/tours" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tours
-        </a>
-        <div className="dropdown-menu mega-menu p-2" aria-labelledby="navbarDropdownMenuLink">
-          <div className="row">
-            <div className="col-sm-6">
-              <h6 className="dropdown-header">Starts from</h6>
-              <a className="dropdown-item" href="/category/tours-from-marrakesh">Marrakesh</a>
-              <a className="dropdown-item" href="/category/tours-from-fez">Fez</a>
-              <a className="dropdown-item" href="/category/tours-from-casablanca">Casablanca</a>
-              <a className="dropdown-item" href="/category/tours-from-tangier">Tangier</a>
-            </div>
-            <div className="col-sm-6">
-              <h6 className="dropdown-header">Duration</h6>
-              <a className="dropdown-item" href="/category/1-3-day-tours">1-3 Day Tours</a>
-              <a className="dropdown-item" href="/category/3-7-day-tours">3-7 Day Tours</a>
-              <a className="dropdown-item" href="/category/1-2-week-tours">1-2 Weeks</a>
-              <a className="dropdown-item" href="/tours">All Tours</a>
-            </div>
+    <div className="mega-menu">
+      <div className="mega-menu__inner">
+        {Object.entries(groups).map(([heading, links]) => (
+          <div className="mega-menu__col" key={heading}>
+            <h6 className="mega-menu__header">{heading}</h6>
+            {links.map(([label, href]) => (
+              <a key={href} href={href} className="mega-menu__item">
+                {label}
+              </a>
+            ))}
           </div>
-        </div>
-      </li>
-      <li className="nav-item dropdown position-static">
-        <a className="nav-link dropdown-toggle" href="/tours" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Destinations
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Nav() {
+  const router = useRouter()
+  // mobile-only: which mega-menu is expanded (desktop uses CSS :hover)
+  const [openMenu, setOpenMenu] = useState<null | MenuKey>(null)
+  const toggle = (m: MenuKey) => setOpenMenu((cur) => (cur === m ? null : m))
+
+  // navbar is fixed + transparent over the hero; turn it solid white once the
+  // page has scrolled past the hero's top edge (legacy main.js had this handler
+  // but never invoked it). Same pattern as components/ScrollTop.tsx.
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const isActive = (p: string) => (router.asPath === p ? ' active' : '')
+  const inSection = (p: string) =>
+    router.asPath === p || router.asPath.startsWith(p + '/') ? ' active' : ''
+
+  return (
+    <nav
+      className={`navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light${
+        scrolled ? ' scrolled' : ''
+      }`}
+      id="ftco-navbar"
+    >
+      <div className="container">
+        <a href="/" className="navbar-brand" aria-label="Escorted Morocco Tours — home">
+          <Image
+            src="/images/logo-white-01.png"
+            alt="Escorted Morocco Tours"
+            width={112}
+            height={63}
+            priority
+            className="nav-logo nav-logo--light"
+          />
+          <Image
+            src="/images/logo-colored-01.png"
+            alt="Escorted Morocco Tours"
+            width={112}
+            height={63}
+            priority
+            className="nav-logo nav-logo--dark"
+          />
         </a>
-        <div className="dropdown-menu mega-menu p-2" aria-labelledby="navbarDropdownMenuLink2">
-          <div className="row">
-            <div className="col-sm-6">
-              <a className="dropdown-item" href="/destinations/marrakesh-the-red-city-of-morocco">Marrakesh</a>
-              <a className="dropdown-item" href="/destinations/fes-fez-imperial-city-in-morocco">Fes</a>
-              <a className="dropdown-item" href="/destinations/casablanca-casa-city-morocco">Casablanca</a>
-              <a className="dropdown-item" href="/destinations/rabat-the-capital-city-of-morocco">Rabat</a>
-            </div>
-            <div className="col-sm-6">
-              <a className="dropdown-item" href="/destinations/ouarzazate-the-cinema-city-of-morocco">Ouarzazate</a>
-              <a className="dropdown-item" href="/destinations/chefchaouen-the-blue-pearl-city-of-morocco">Chefchaouen</a>
-              <a className="dropdown-item" href="/destinations/essaouira-the-windy-coastal-city-of-morocco">Essaouira</a>
-              <a className="dropdown-item" href="/destinations">All Destinations</a>
-            </div>
-          </div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="fa fa-bars" aria-hidden="true" /> Menu
+        </button>
+        <div className="collapse navbar-collapse" id="ftco-nav">
+          <ul className="navbar-nav ml-auto">
+            <li className={`nav-item${isActive('/')}`}>
+              <a href="/" className="nav-link">
+                Home
+              </a>
+            </li>
+
+            <li className={`nav-item has-mega${inSection('/tours')}${openMenu === 'tours' ? ' is-open' : ''}`}>
+              <span className="nav-link mega-link">
+                <a href="/tours" className="mega-link__label">
+                  Tours
+                </a>
+                <button
+                  type="button"
+                  className="mega-link__caret"
+                  aria-label="Toggle tours menu"
+                  aria-expanded={openMenu === 'tours'}
+                  onClick={() => toggle('tours')}
+                >
+                  <span className="fa fa-angle-down" />
+                </button>
+              </span>
+              <MegaMenu groups={TOURS_MENU} />
+            </li>
+
+            <li className={`nav-item has-mega${inSection('/destinations')}${openMenu === 'destinations' ? ' is-open' : ''}`}>
+              <span className="nav-link mega-link">
+                <a href="/destinations" className="mega-link__label">
+                  Destinations
+                </a>
+                <button
+                  type="button"
+                  className="mega-link__caret"
+                  aria-label="Toggle destinations menu"
+                  aria-expanded={openMenu === 'destinations'}
+                  onClick={() => toggle('destinations')}
+                >
+                  <span className="fa fa-angle-down" />
+                </button>
+              </span>
+              <MegaMenu groups={DEST_MENU} />
+            </li>
+
+            <li className={`nav-item${inSection('/about')}`}>
+              <a href="/about" className="nav-link">
+                About
+              </a>
+            </li>
+            <li className={`nav-item${inSection('/blog')}`}>
+              <a href="/blog" className="nav-link">
+                Blog
+              </a>
+            </li>
+
+            <li className="nav-item nav-cta">
+              <a href="/contact" className="nav-cta__btn">
+                Plan your trip
+              </a>
+            </li>
+          </ul>
         </div>
-      </li>
-             
-					<li className={`nav-item ${router.asPath === '/about' ? "active" : '' }`}>
-                  <a href="/about" className="nav-link">About Us</a>
-               </li>
-               <li className={`nav-item ${router.asPath === '/blog' ? "active" : '' }`}>
-                  <a href="/blog" className="nav-link">Blog</a>
-               </li>
-               <li className={`nav-item ${router.asPath === '/contact' ? "active" : '' }`}>
-                  <a href="/contact" className="nav-link">Contact Us</a>
-               </li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+      </div>
+    </nav>
   )
 }
 

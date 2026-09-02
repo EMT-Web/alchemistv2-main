@@ -1,76 +1,125 @@
 import React from 'react'
 import Image from 'next/image'
+
+const TRIPADVISOR =
+  'https://www.tripadvisor.com/Attraction_Review-g293732-d18453425-Reviews-Escorted_Morocco_Tours-Casablanca_Casablanca_Settat.html'
+const WHATSAPP = 'https://wa.me/212623668013'
+
 function Footer() {
+  const year = new Date().getFullYear()
+
   return (
-    <>
-		<footer className="ftco-footer bg-bottom  pt-5" >
-			<div className="container">
-				<div className="row mb-5">
-							<div className="col-md pt-3">
-								<div className="ftco-footer-widget pt-md-3 mb-4">
-								<a href="/"><Image src='/images/logo-colored-01.png' alt="Morocco Immersion Tours" width={170} height={67}/></a>
-									<p> Our team of experienced and knowledgeable guides is committed to delivering the highest level of service, from the moment you contact us to the end of your trip.</p>
-									<ul className="ftco-footer-social list-unstyled float-md-left float-lft">
-									<li className="ftco-animate"><a href="https://wa.me/+212623668013" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span className="fa fa-whatsapp"/></a></li>
-										<li className="ftco-animate"><a href="https://www.tripadvisor.com/Attraction_Review-g293732-d18453425-Reviews-Escorted_Morocco_Tours-Casablanca_Casablanca_Settat.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><span className="fa fa-tripadvisor"/></a></li>
-										<li className="ftco-animate"><a href="https://web.facebook.com/helloescortedmoroccotours" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span className="fa fa-facebook"/></a></li>
-										<li className="ftco-animate"><a href="https://www.instagram.com/escortedmoroccotours_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span className="fa fa-instagram"/></a></li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md pt-3 border-left">
-								<div className="ftco-footer-widget pt-md-3 mb-4 ml-md-5">
-									<strong style={{fontSize: "1rem"}}>Company</strong>
-									<ul className="list-unstyled">
-									    <li><a href='/gallery'  className="py-2 d-block">Gallery</a></li>
-										<li><a href='/contact'  className="py-2 d-block">Quick Inquery</a></li>
-										<li><a href='/booking-info' className="py-2 d-block">Booking Info</a></li>
-										<li><a href='/privacy-policy' className="py-2 d-block">Privacy policy</a></li>
-										<li><a href='/faqs' className="py-2 d-block">FAQs</a></li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md pt-3 border-left">
-								<div className="ftco-footer-widget pt-md-3 mb-4">
-									<strong style={{fontSize: "1rem"}}>Blog</strong>
-									<ul className="list-unstyled">
-										<li><a href="/posts/about-morocco" className="py-2 d-block">Morocco</a></li>
-										<li><a href="/posts/high-atlas-mountains" className="py-2 d-block">High Atlas</a></li>
-										<li><a href="/posts/sahara-desert" className="py-2 d-block">Sahara Desert</a></li>
-										<li><a href="/posts/culture" className="py-2 d-block">Culture</a></li>
-										<li><a href="/posts/attractions" className="py-2 d-block">Attractions</a></li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-md pt-3 border-left">
-								<div className="ftco-footer-widget pt-md-3 mb-4">
-									<strong style={{fontSize: "1rem"}}>Have a question?</strong>
-									<div className="block-23 mb-3 mt-3">
-										<ul>
-											<li><span className="icon fa fa-map-marker"/><span className="text">App 5-L. Elharti. Massira-2. Marrakech. Morocco</span></li>
-											<li><span className="icon fa fa-map-marker"/><span className="text">Dr Ait Tajer, Taftechna, Zagora. Morocco</span></li>
-											<li><a href="tel:+212623668013"><span className="icon fa fa-phone"/><span className="text">+212 6 23 66 80 13</span></a></li>
-											<li><a href="mailto:info@escortedmoroccotours.com"><span className="icon fa fa-paper-plane"/><span className="text">Info@escortedmoroccotours.com</span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-				</div>
-				<div className="row">
-					<div className="col-md-12 text-center">
-						<p>Copyright &copy;2022 All rights reserved | Escorted Morocco Tours</p>
-					</div>
-				</div>
-				<a href="https://wa.me/+212623668013" aria-label="Whatsapp Floating Button" className="icon-video d-flex align-items-center justify-content-center mb-4" style={{borderWidth: 1, borderBlockStyle:"solid", borderColor: "#25D366", position:"fixed",
-right:20,
-bottom:0,
-zIndex: 999}}>
-          <span className="fa fa-whatsapp" style={{color:"#25D366"}}></span>
-        </a>
-			</div>
-		</footer>		
-    </>
-    
+    <footer className="site-footer">
+      {/* Main footer */}
+      <div className="site-footer__main">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col-md-6 site-footer__col site-footer__col--brand">
+              <a href="/" className="site-footer__logo" aria-label="Escorted Morocco Tours home">
+                <Image src="/images/logo-white-01.png" alt="Escorted Morocco Tours" width={150} height={85} />
+              </a>
+              <p>
+                Our team of experienced local guides is committed to the highest level of service — from
+                your first message to the end of your trip.
+              </p>
+              <ul className="site-footer__social">
+                <li>
+                  <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <span className="fa fa-whatsapp" />
+                  </a>
+                </li>
+                <li>
+                  <a href={TRIPADVISOR} target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor">
+                    <span className="fa fa-tripadvisor" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.facebook.com/helloescortedmoroccotours"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <span className="fa fa-facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/escortedmoroccotours_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <span className="fa fa-instagram" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-2 col-md-6 col-6 site-footer__col">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="/tours">All Tours</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/booking-info">Booking Info</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+            <div className="col-lg-2 col-md-6 col-6 site-footer__col">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="/blog">Travel Blog</a></li>
+                <li><a href="/posts/about-morocco">About Morocco</a></li>
+                <li><a href="/posts/high-atlas-mountains">High Atlas</a></li>
+                <li><a href="/posts/sahara-desert">Sahara Desert</a></li>
+                <li><a href="/posts/culture">Culture</a></li>
+                <li><a href="/about">About Us</a></li>
+              </ul>
+            </div>
+
+            <div className="col-lg-4 col-md-6 site-footer__col">
+              <h3>Get in touch</h3>
+              <ul className="site-footer__contact">
+                <li>
+                  <span className="fa fa-map-marker" aria-hidden="true" />
+                  App 5-L. Elharti, Massira 2, Marrakech, Morocco
+                </li>
+                <li>
+                  <span className="fa fa-map-marker" aria-hidden="true" />
+                  Dr Ait Tajer, Taftechna, Zagora, Morocco
+                </li>
+                <li>
+                  <a href="tel:+212623668013">
+                    <span className="fa fa-phone" aria-hidden="true" /> +212 6 23 66 80 13
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@escortedmoroccotours.com">
+                    <span className="fa fa-paper-plane" aria-hidden="true" /> info@escortedmoroccotours.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="site-footer__bottom">
+        <div className="container">
+          <p>© {year} Escorted Morocco Tours. All rights reserved.</p>
+          <p className="site-footer__legal">ICE: 003967997000096 &nbsp;·&nbsp; RC: 4865</p>
+        </div>
+      </div>
+
+      {/* Floating WhatsApp */}
+      <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="site-footer__wa">
+        <span className="fa fa-whatsapp" aria-hidden="true" />
+      </a>
+    </footer>
   )
 }
 

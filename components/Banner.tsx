@@ -2,20 +2,31 @@ import React from 'react'
 
 function Banner() {
   return (
-    <section className="ftco-intro ftco-section" style={{padding:"0.5rem"}}>
-			<div className="container">
-				<div className="row justify-content-center">
-					<div className="col-md-12 text-center">
-						<div className="img"  style={{backgroundImage: `url("/images/service-bgs/s1.jpg")`}}>
-							<div className="overlay"></div>
-							<h4>Tailor Your Dream Morocco Vacation with Our Expert Team</h4>
-							<p>Whether you're interested in exploring the imperial cities, the Sahara desert, or the picturesque coastal towns, we can help you plan a customized itinerary that meets your unique preferences and interests.</p>
-							<p className="mb-0"><a href="https://wa.me/+212623668013" className="btn btn-secondary px-4 py-3"><span className='fa fa-whatsapp mr-2'></span>Quick Inquery</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
+    <section className="cta-banner">
+      <div
+        className="cta-banner__bg"
+        style={{ backgroundImage: 'url("/cms/21b97a43bc01a80f83acc204029f580c03013c6b.jpg")' }}
+      />
+      <div className="cta-banner__scrim" />
+      <div className="container">
+        <div className="cta-banner__inner">
+          <span className="subheading">Your trip, your way</span>
+          <h2>Tailor your dream Morocco vacation with our expert team</h2>
+          <p>
+            Imperial cities, the Sahara desert, or the coast — tell us what you have in mind and we&apos;ll
+            build a private itinerary around your dates, pace and interests.
+          </p>
+          <a
+            href="https://wa.me/212623668013"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn px-4 py-3 cta-banner__wa"
+          >
+            <span className="fa fa-whatsapp mr-2" aria-hidden="true" /> Quick inquiry
+          </a>
+        </div>
+      </div>
+    </section>
   )
 }
 

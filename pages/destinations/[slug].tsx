@@ -46,7 +46,7 @@ function destinationDetails({ destination, destinations, relatedTours}:any) {
        schema={combinedSchema}
      />
   <section className="hero-wrap hero-wrap-2 " >
-  <Image  src={urlFor(destination.coverImage).url()!} alt={destination.title} layout='fill' objectFit="cover" blurDataURL={urlFor(destination.coverImage).url()!} placeholder="blur" priority/>
+  <Image  src={urlFor(destination.mainImage).url()!} alt={destination.title} layout='fill' objectFit="cover" blurDataURL={urlFor(destination.mainImage).url()!} placeholder="blur" priority/>
   {/* <div className="overlay"></div> */}
   <div className="container">
     <div className="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -61,9 +61,6 @@ function destinationDetails({ destination, destinations, relatedTours}:any) {
   <div className="container">
     <div className="row">
       <div className="col-lg-8 ftco-animate py-md-5 mt-md-5">
-        <p>
-          <img src={urlFor(destination.mainImage).url()!} alt={destination.city} className="img-fluid" />
-        </p>
         <h2 className="mb-3">About {destination.city}</h2>
         <PortableText value={destination.body} components={bodyComponents} />
         

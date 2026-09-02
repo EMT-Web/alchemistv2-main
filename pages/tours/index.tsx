@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 
 import { useRouter } from "next/router";
 import PageHero from '../../components/PageHero';
-import ToursSection from '../../components/ToursSection';
+import TourCard from '../../components/TourCard';
+import ToursFilter from '../../components/ToursFilter';
 import { sanityClient } from '../../sanity';
 import Head from 'next/head';
 import React, { useEffect, useState } from "react";
@@ -85,45 +86,9 @@ export default function  NextPage({tours}:any) {
       keywords="Escorted Morocco tours, Morocco Escorted Tours, Travel packages, vacation, guided tours, Morocco, culture, history, adventure, luxury, holiday, expert guides, tailored experience, hidden gems, immersive journey, personalized service, authentic experiences"
       schema={combinedSchema}
     />
-    <PageHero title='Discover the Best of Morocco with our Escorted Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/images/hero-bgs/all-tours.jpg'/>
-    
-    <section className="ftco-section" id="toursection">
-    <div className="container">
-        <div className="row justify-content-center">
-            <div className="col-md-12 heading-section text-center ftco-animate">
-                <span className="subheading">Make the Most of Your Time in Morocco with a Well-Planned Immersion Tours</span>
-                <h2 >Morocco Guided Tours</h2>
-                <p className="mb-4">Whether you're looking for a private tour or a group excursion, our experienced guides can tailor your itinerary to your liking</p>
-               
-            </div>
-        </div>
-       
-        <div className="row">
-                {tours.map((tour:any, index:any)=> <div key={index} className="col-md-4 ftco-animate">
-                <div className="project-wrap">
-                    <a href={`/tours/${tour.slug.current}`} className="img" >
-                    <Image src={urlFor(tour.mainImage).url()!}  alt={tour.title} layout='fill' objectFit="cover" blurDataURL={rgbDataURL(237, 181, 6)} placeholder="blur"/>
-                        <span className="price">{tour.duration} Days Tour</span>
-                    </a>
-                    <div className="text p-4">
-                        <span>Starts From </span><span className="days">{tour.destinations?.[0]?.city}</span>
-                        <h3 className='my-2'><a href={`/tours/${tour.slug.current}`}>{tour.title}</a></h3>
-                        <p className="location my-3"><span className="fa fa-map-marker mr-2"></span>{tour.destinations?.slice(1).filter((d:any)=>d?.slug?.current).map((d:any, index:any)=> <a key={index} href={`/destinations/${d.slug.current}`} target="_blank">{d.city}, </a>)}...</p>
-                        <hr />
-                        <ul>
-                            {tour.amenities! && tour.amenities.map((a:any, index:any) =>
-                            <li key={index}><div style={{display:"flex",  alignItems: "center"}}>&#10029; <em style={{display:"inline"}}>{a.title}</em></div></li>
-                            )}
-                        </ul>
-                    </div>
-                </div>
-            </div>)
-            }
-            
-        </div>
-        {/* <div className="row"><div className="col text-center"><button onClick={handleClick}>Load More</button></div></div> */}
-    </div>
-</section>
+    <PageHero title='Discover the Best of Morocco with our Escorted Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/cms/ea329707ee6a76072f888eaac2ea74174bc8b105.jpg'/>
+
+    <ToursFilter tours={tours} />
   </>
   )
 }
@@ -144,11 +109,9 @@ export async function getServerSideProps({req, res}:any) {
       title,
       duration,
       slug,
-      "amenities": amenities[][0..2]->{
-        title,
-        slug
-      },
-      "destinations": destinations[][0..2]->{
+      herotag,
+      seodescription,
+      "destinations": destinations[]->{
         slug,
         city
       },

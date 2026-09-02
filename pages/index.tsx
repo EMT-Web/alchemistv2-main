@@ -10,14 +10,17 @@ import Testemonials from '../components/Testemonials';
 import HomeDestinations from '../components/HomeDestinations';
 
 import {sanityClient, urlFor} from '../sanity'
-import PageHero from '../components/PageHero';
+import HomeHero from '../components/HomeHero';
 import Head from 'next/head';
 import Action1 from '../components/Action1';
-import FilterForm from '../components/FilterForm';
+import HowItWorks from '../components/HowItWorks';
+import HomeBlog from '../components/HomeBlog';
+import HomeFaq from '../components/HomeFaq';
+import { localBlogPosts } from '../data/localBlogPosts';
 import SEO, { createAggregateRatingSchema } from '../components/SEO';
 
 
-export default function  NextPage({about, destinations, tours, categories}:any) {
+export default function  NextPage({about, destinations, tours, categories, faqs, posts}:any) {
 
   const homeSchema = {
     "@context": "https://schema.org",
@@ -60,15 +63,15 @@ export default function  NextPage({about, destinations, tours, categories}:any) 
       keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides, culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"
       schema={combinedSchema}
     />
-          <PageHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best Out of your vacation in Morocco with our guided tours. Join Our Exciting Escorted Immersion Tours and Uncover the Best of Morocco." img='/images/hero-bgs/main-hero.jpg'/>
+          <HomeHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Join our escorted immersion tours and uncover the best of Morocco." />
           {about?.mainabout && <InfoAbout about={about.mainabout}/>}
           <HomeDestinations destinations={destinations} />
-          <ToursSection tours={tours}/>   
-          <Action1/>
+          <ToursSection tours={tours}/>
+          <HowItWorks/>
+          <HomeBlog posts={posts}/>
           <Testemonials/>
+          <HomeFaq faqs={faqs}/>
           <Banner/>
-          {/* <Testemonials />
-          <Banner /> */}
 
     </>
   )
@@ -90,17 +93,13 @@ export async function getServerSideProps({ req, res }:any) {
       featured,
       slug,
       duration,
-      featured,
+      herotag,
+      seodescription,
       mainImage,
-      "destinations": destinations[][0..2]->{
+      "destinations": destinations[]->{
         title,
         city,
         slug
-      },
-      "amenities": amenities[][0..2]->{
-        title,
-        slug, 
-        icon
       }
     }
   `
@@ -131,18 +130,37 @@ export async function getServerSideProps({ req, res }:any) {
       mainabout
     }
   `
-  
+  const query5 = `*[_type == 'faq'][0..7]{ _id, question, answer }`
+  const query6 = `*[_type == 'post'] | order(_createdAt desc)[0..5]{ _id, _createdAt, title, slug, seodescription, mainImage }`
+
   const tours = await sanityClient.fetch(query1)
   const destinations = await sanityClient.fetch(query2)
   const categories = await sanityClient.fetch(query3)
   const about = await sanityClient.fetch(query4)
+  const faqs = await sanityClient.fetch(query5)
+  const sanityPosts = await sanityClient.fetch(query6)
+
+  const localAsPosts = (localBlogPosts || []).map((p: any) => ({
+    _id: `local-${p.slug}`,
+    _createdAt: p.publishedAt,
+    title: p.title,
+    slug: { current: p.slug },
+    seodescription: p.seodescription,
+    mainImage: null,
+    localImage: p.image,
+  }))
+  const posts = [...(sanityPosts || []), ...localAsPosts]
+    .sort((a: any, b: any) => new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime())
+    .slice(0, 3)
 
   return {
     props: {
       about,
       tours,
       destinations,
-      categories
+      categories,
+      faqs,
+      posts,
     },
   };
 }

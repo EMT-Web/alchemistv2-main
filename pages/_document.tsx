@@ -39,6 +39,7 @@ class MyDocument extends Document {
               2542 rule blocks in, 2542 out) to cut parse/transfer weight safely. */}
           <link rel="stylesheet" href="/css/style.min.css" />
           <link rel="stylesheet" href="/css/perf-fix.css" />
+          <link rel="stylesheet" href="/css/redesign.css" />
 
           {/* Component-specific library CSS (icon fonts, carousel, popup, scroll animations,
               booking-form date/time pickers) - deferred via preload, swapped to a real

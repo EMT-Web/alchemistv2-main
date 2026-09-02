@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Action1 from "../components/Action1";
 import Banner from "../components/Banner";
 import InfoAbout from "../components/InfoAbout";
-import InfoAbout2 from "../components/InfoAbout2";
+import { AboutStory, AboutMissionVision, AboutTeam } from "../components/AboutSections";
 import PageHero from "../components/PageHero";
 import Testemonials from "../components/Testemonials";
 import { sanityClient, urlFor } from "../sanity";
@@ -68,10 +67,14 @@ export default function  About({about}:any) {
       p={aboutData.heroquote ? `"${aboutData.heroquote}"${aboutData.herotag ? ` — ${aboutData.herotag}` : ''}` : aboutData.herotag}
       img={about?.coverImage ? urlFor(aboutData.coverImage).url()! : '/images/hero-bgs/about-us.jpg'}
     />
-    {aboutData.mainabout && <InfoAbout about={aboutData.mainabout} />}
-    {aboutData.team && <InfoAbout2 team={aboutData.team} missionvision={aboutData.missionvision}/>}
+    <AboutStory about={aboutData} />
+    {aboutData.mainabout && typeof aboutData.mainabout !== 'string' && (
+      <InfoAbout about={aboutData.mainabout} />
+    )}
+    <AboutMissionVision about={aboutData} />
+    <AboutTeam about={aboutData} />
     <Testemonials />
-    <Action1 />
+    <Banner />
     </>
   )
 }

@@ -1,100 +1,61 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import React from 'react'
-import { urlFor } from '../sanity';
-import Image from 'next/image';
 
-function InfoAbout({about}:any) {
-    const keyStr =
-  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
-    const triplet = (e1: number, e2: number, e3: number) =>
-    keyStr.charAt(e1 >> 2) +
-    keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
-    keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
-    keyStr.charAt(e3 & 63)
+const DEFAULT_SERVICE = { title: 'Explore Morocco', paragraph: 'Discover the beauty of Morocco' }
+const ICONS = ['flaticon-route', 'flaticon-mountains', 'flaticon-paragliding', 'flaticon-map']
 
-  const rgbDataURL = (r: number, g: number, b: number) =>
-    `data:image/gif;base64,R0lGODlhAQABAPAA${
-      triplet(0, r, g) + triplet(b, 255, 255)
-    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
-  const router = useRouter();
+function InfoAbout({ about }: any) {
+  const router = useRouter()
 
-  // Return null if about data is missing or incomplete
-  if (!about || typeof about === 'string') {
-    return null;
-  }
+  if (!about || typeof about === 'string') return null
 
-  // Default fallback values
-  const defaultService = {
-    title: "Explore Morocco",
-    paragraph: "Discover the beauty of Morocco",
-    mainImage: null
-  };
-
-  const service1 = about.service1 || defaultService;
-  const service2 = about.service2 || defaultService;
-  const service3 = about.service3 || defaultService;
-  const service4 = about.service4 || defaultService;
+  const services = [
+    about.service1 || DEFAULT_SERVICE,
+    about.service2 || DEFAULT_SERVICE,
+    about.service3 || DEFAULT_SERVICE,
+    about.service4 || DEFAULT_SERVICE,
+  ]
+  const isHome = router.asPath === '/'
+  const isAbout = router.asPath === '/about'
 
   return (
     <section className="ftco-section services-section">
-			<div className="container">
-				<div className="row d-flex">
-					<div className="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-						<div className="w-100">
-						{about.abouttagline && <span className="subheading">{about.abouttagline}</span>}
-						<h2 className="mb-4">{about.abouttitle || "Welcome to Escorted Morocco Tours"}</h2>
-							<p>{about.abouttext || "Discover the magic of Morocco with our expert-guided tours."}</p>
-							{router.asPath === `/` && <p><a href="/about" className="btn btn-primary py-3 px-4">More About Us</a></p> }
-							{router.asPath === `/about` && <p><a href="/gallery" target="_blank" className="btn btn-primary py-3 px-4">See the Sights of Morocco</a></p> }
-						</div>
-					</div>
-					<div className="col-md-6">
-						<div className="row">
-							<div className="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div className="services services-1 color-2 d-block img" style={{backgroundImage: service1.mainImage ? `url(${urlFor(service1.mainImage).url()})` : 'url(/images/service-bgs/1.jpg)'}} >
-									<div className="icon d-flex align-items-center justify-content-center"><span className="flaticon-route"></span></div>
-									<div className="media-body" style={{position: "relative"}}>
-										<h3 className="heading mb-3">{service1.title}</h3>
-										<p>{service1.paragraph}</p>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div className="services services-1 color-3 d-block img" style={{backgroundImage: service2.mainImage ? `url(${urlFor(service2.mainImage).url()})` : 'url(/images/service-bgs/2.jpg)'}}>
+      <div className="container">
+        <div className="row justify-content-center text-center">
+          <div className="col-lg-8 heading-section ftco-animate">
+            <span className="subheading">{isAbout ? 'What we offer' : about.abouttagline || 'What we offer'}</span>
+            <h2 className="mb-3">{isAbout ? 'Ways to travel with us' : about.abouttitle || 'Escorted Morocco Tours'}</h2>
+            <p className={`services-intro__text${isHome ? ' services-intro__text--clamp' : ''}`}>
+              {isAbout
+                ? 'Every trip is private and shaped around you. Choose the style that fits — or blend them — and our team tailors the itinerary, pace and budget to match.'
+                : about.abouttext ||
+                  'We offer customizable tours for every kind of traveller — cultural immersion, adventure, and luxury — led by an experienced local team.'}
+            </p>
+          </div>
+        </div>
 
-									<div className="icon d-flex align-items-center justify-content-center"><span className="flaticon-mountains"></span></div>
-									<div className="media-body" style={{position: "relative"}}>
-										<h3 className="heading mb-3">{service2.title}</h3>
-										<p>{service2.paragraph}</p>
-									</div>
+        <div className="row services-grid">
+          {services.map((service: any, i: number) => (
+            <div key={i} className="col-lg-3 col-md-6 d-flex ftco-animate">
+              <div className="service-card">
+                <div className="service-card__icon">
+                  <span className={ICONS[i]} aria-hidden="true" />
+                </div>
+                <h3 className="service-card__title">{service.title}</h3>
+                <p className="service-card__text">{service.paragraph}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-								</div>
-							</div>
-							<div className="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div className="services services-1 color-1 d-block img"  style={{backgroundImage: service3.mainImage ? `url(${urlFor(service3.mainImage).url()})` : 'url(/images/service-bgs/3.jpg)'}}>
-
-									<div className="icon d-flex align-items-center justify-content-center"><span className="flaticon-paragliding"></span></div>
-									<div className="media-body" style={{position: "relative"}}>
-										<h3 className="heading mb-3">{service3.title}</h3>
-										<p>{service3.paragraph}</p>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div className="services services-1 color-4 d-block img"  style={{backgroundImage: service4.mainImage ? `url(${urlFor(service4.mainImage).url()})` : 'url(/images/service-bgs/4.jpg)'}}>
-
-									<div className="icon d-flex align-items-center justify-content-center"><span className="flaticon-map"></span></div>
-									<div className="media-body" style={{position: "relative"}}>
-										<h3 className="heading mb-3">{service4.title}</h3>
-										<p>{service4.paragraph}</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div className="text-center mt-2 ftco-animate">
+          {isHome && <a href="/about" className="btn btn-primary py-3 px-5">More about us</a>}
+          {router.asPath === '/about' && (
+            <a href="/gallery" className="btn btn-primary py-3 px-5">See the sights of Morocco</a>
+          )}
+        </div>
+      </div>
+    </section>
   )
 }
 

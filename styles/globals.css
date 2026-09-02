@@ -1,5 +1,17 @@
+/* Global CSS bundled by Next via _app.tsx.
 
-@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900';
+   IMPORTANT: do NOT @import '../public/css/style.css' here. pages/_document.tsx
+   already loads the template stylesheet (as style.min.css, render-blocking).
+   Importing it here too loaded the whole ~269KB template CSS a SECOND time,
+   bundled AFTER redesign.css — so same-specificity template rules silently
+   overrode the redesign layer (e.g. .heading-section h2 stayed 40px on mobile).
+
+   The component libraries below are also loaded by _document (deferred, via
+   <link rel="preload">). They're kept here as a small render-blocking copy so
+   above-the-fold icons/animations don't flash; style.css is the only one whose
+   duplication actually mattered. */
+
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Arizonia&display=swap';
 @import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 @import '../public/css/font-awesome.min.css';
@@ -10,4 +22,3 @@
 @import '../public/css/bootstrap-datepicker.css';
 @import '../public/css/jquery.timepicker.css';
 @import '../public/css/flaticon.css';
-@import '../public/css/style.css';

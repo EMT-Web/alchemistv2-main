@@ -19,7 +19,7 @@ export default function  NextPage({ destinations}:any) {
         description="Places to Visit in Morocco, Discover the rich history, vibrant culture, and breathtaking natural landscapes of Morocco's top destinations. From the bustling cities of Marrakech and Fez to the tranquil Sahara desert and the stunning Atlas Mountains, there is something for every traveler to enjoy. Explore ancient ruins, sample delicious cuisine, and experience the warm hospitality of the Moroccan people on a journey you won't forget."
         keywords="Morocco, best places, Morocco destinations, Places to Visit in Morocco"
       />
-    <PageHero title='Places to Visit in Morocco' tag="Explore the Best Moroccan Destinations" p="Discover the rich history, vibrant culture, and breathtaking natural landscapes of Morocco's top destinations. From the bustling cities of Marrakech and Fez to the tranquil Sahara desert and the stunning Atlas Mountains, there is something for every traveler to enjoy. Explore ancient ruins, sample delicious cuisine, and experience the warm hospitality of the Moroccan people on a journey you won't forget."  img='/images/hero-bgs/all-tours.jpg'/>
+    <PageHero title='Places to Visit in Morocco' tag="Explore the Best Moroccan Destinations" p="Discover the rich history, vibrant culture, and breathtaking natural landscapes of Morocco's top destinations. From the bustling cities of Marrakech and Fez to the tranquil Sahara desert and the stunning Atlas Mountains, there is something for every traveler to enjoy. Explore ancient ruins, sample delicious cuisine, and experience the warm hospitality of the Moroccan people on a journey you won't forget."  img='/cms/ea4c833e52b16d88aa6b67dcfb5318e49ba3402e.jpg'/>
     {/* <section className="ftco-section ftco-no-pb">
    <div className="container">
       <div className="row">
@@ -104,36 +104,45 @@ export default function  NextPage({ destinations}:any) {
             </div>
         </div>
        
-    <div className="row">
+    <div className="row dcard-grid">
 {
-  destinations.map((destination:any) => <div className="col-md-4 d-flex ftco-animate">
-  <div className="blog-entry justify-content-end">
-   <a href={`/destinations/${destination.slug.current}`} className="block-20" style={{backgroundImage: `url(${urlFor(destination.mainImage).url()!})`}}>
-   </a>
-   <div className="text">
-    <div className="d-flex align-items-center mb-4 topp">
-     <div className="one">
-      <span className="day">{destination.count}</span>
-    </div>
-    <div className="two">
-      <span className="yr">Tours</span>
-      <span className="mos">Via <strong>{destination.city}</strong></span>
-    </div>
-  </div>
-  <h3 className="heading"><a href={`/destinations/${destination.slug.current}`}>{destination.title}</a></h3>
-  <p style={{ overflow: "hidden",
-   textOverflow: "ellipsis",
-   display: "-webkit-box",
-   wordWrap: "break-word",
-  maxHeight: "3.6em",
-  lineHeight: "1.8em"}}>{`${destination.seodescription}..`}</p>
-  <p><a href={`/destinations/${destination.slug.current}`} className="btn btn-primary">Read more</a></p>
-  
-</div>
-</div>
-</div>)
+  destinations
+    .filter((destination:any) => destination?.slug?.current)
+    .map((destination:any) => {
+      const href = `/destinations/${destination.slug.current}`
+      const img = destination?.mainImage ? urlFor(destination.mainImage).url() : ''
+      return (
+        <div className="col-sm-6 col-lg-4 d-flex ftco-animate" key={destination._id}>
+          <article className="dcard">
+            <a
+              href={href}
+              className="dcard__media"
+              style={img ? { backgroundImage: `url(${img})` } : undefined}
+              aria-label={destination.city}
+            >
+              {typeof destination.count === 'number' && (
+                <span className="dcard__badge">
+                  {destination.count} {destination.count === 1 ? 'tour' : 'tours'}
+                </span>
+              )}
+              <span className="dcard__city">{destination.city}</span>
+            </a>
+            <div className="dcard__body">
+              <h3 className="dcard__title">
+                <a href={href}>{destination.title}</a>
+              </h3>
+              {destination.seodescription && (
+                <p className="dcard__desc">{destination.seodescription}</p>
+              )}
+              <a href={href} className="dcard__link">
+                Explore {destination.city} <span className="fa fa-arrow-right" />
+              </a>
+            </div>
+          </article>
+        </div>
+      )
+    })
 }
-
 </div>
 {/* <div className="row mt-5">
   <div className="col text-center">

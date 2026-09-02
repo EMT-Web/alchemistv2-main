@@ -61,7 +61,7 @@ export default function  NextPage({ posts: sanityPosts}:any) {
       keywords="Escorted Morocco tours, Morocco travel, immersion tours, Morocco blog, guided tours, desert tours, cultural experiences, Marrakech, Essaouira, Chefchaouen, travel tips"
       schema={combinedSchema}
     />
-    <PageHero title="Discover the Best Escorted Morocco Tours" tag="From cultural experiences to adventure activities," p="Follow us on our journey through Morocco and get a taste of the Morocco's diverse landscapes, history and culture" img='/images/hero-bgs/blog.jpg'/>
+    <PageHero title="Discover the Best Escorted Morocco Tours" tag="From cultural experiences to adventure activities," p="Follow us on our journey through Morocco and get a taste of the Morocco's diverse landscapes, history and culture" img='/cms/cda86cc3fcae2c4cafabc0ed0d6f62e86cc056cb.jpg'/>
     <section className="ftco-section">
    <div className="container">
     <div className="row">
@@ -72,15 +72,9 @@ export default function  NextPage({ posts: sanityPosts}:any) {
     <Image src={post.mainImage ? urlFor(post.mainImage).url()! : post.localImage} alt={post.title} layout='fill' objectFit="cover" placeholder="empty"/>
    </a>
    <div className="text">
-    <div className="d-flex align-items-center mb-4 topp">
-     <div className="one">
-      <span className="day">{new Date(post._createdAt).getDay()}</span>
-    </div>
-    <div className="two">
-      <span className="yr">{new Date(post._createdAt).toLocaleString('default', { month: 'long' })}</span>
-      <span className="mos">{new Date(post._createdAt).getFullYear()}</span>
-    </div>
-  </div>
+    <span className="blog-entry__date">
+      {new Date(post._createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+    </span>
   <h3 className="heading"><a href={`/blog/${post.slug.current}`}>{post.title}</a></h3>
   <p style={{ overflow: "hidden",
    textOverflow: "ellipsis",
