@@ -38,10 +38,25 @@ export default function SEO({
   const siteUrl = 'https://www.escortedmoroccotours.com'
   const canonicalUrl = `${siteUrl}${router.asPath.split('?')[0]}`
   const brand = 'Escorted Morocco Tours'
+  // Google truncates <title> around 60-70 chars, so keep the rendered title
+  // under MAX_TITLE_LENGTH: drop the brand suffix before trimming any words.
+  const MAX_TITLE_LENGTH = 69
   const cleanTitle = (title || '').replace(/\s*\|\s*/g, ' | ').trim()
-  const fullTitle = cleanTitle.toLowerCase().includes(brand.toLowerCase())
+  const titleWithBrand = cleanTitle.toLowerCase().includes(brand.toLowerCase())
     ? cleanTitle
     : `${cleanTitle} | ${brand}`
+  const trimToWord = (value: string, max: number) => {
+    if (value.length <= max) return value
+    const cut = value.slice(0, max)
+    const lastSpace = cut.lastIndexOf(' ')
+    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).replace(/[\s|,;:\-–—]+$/, '')
+  }
+  const fullTitle =
+    titleWithBrand.length < MAX_TITLE_LENGTH
+      ? titleWithBrand
+      : cleanTitle.length < MAX_TITLE_LENGTH
+      ? cleanTitle
+      : trimToWord(cleanTitle, MAX_TITLE_LENGTH - 1)
   const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
 
   return (

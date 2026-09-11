@@ -12,25 +12,34 @@ import { urlFor } from '../sanity'
  * So every body heading is demoted one level: h1->h3, h2->h3, h3->h4, h4->h5.
  * (Merged with @portabletext/react's defaults, so normal/blockquote/lists are
  * still handled.)
+ *
+ * `fallbackAlt` is used for inline CMS images that have no `alt` set in Sanity,
+ * so body images never render an empty alt attribute. Pass the page title.
  */
-export const bodyComponents: PortableTextComponents = {
-  types: {
-    image: ({ value }: any) => {
-      const url = urlFor(value).url()
-      return url ? <img src={url} alt={value?.alt || ''} loading="lazy" /> : null
+export function createBodyComponents(fallbackAlt = ''): PortableTextComponents {
+  return {
+    types: {
+      image: ({ value }: any) => {
+        const url = urlFor(value).url()
+        const alt = (value?.alt || '').trim() || fallbackAlt
+        return url ? <img src={url} alt={alt} loading="lazy" /> : null
+      },
     },
-  },
-  marks: {
-    link: ({ value, children }: any) => (
-      <a href={value?.href} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    ),
-  },
-  block: {
-    h1: ({ children }: any) => <h3>{children}</h3>,
-    h2: ({ children }: any) => <h3>{children}</h3>,
-    h3: ({ children }: any) => <h4>{children}</h4>,
-    h4: ({ children }: any) => <h5>{children}</h5>,
-  },
+    marks: {
+      link: ({ value, children }: any) => (
+        <a href={value?.href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      ),
+    },
+    block: {
+      h1: ({ children }: any) => <h3>{children}</h3>,
+      h2: ({ children }: any) => <h3>{children}</h3>,
+      h3: ({ children }: any) => <h4>{children}</h4>,
+      h4: ({ children }: any) => <h5>{children}</h5>,
+    },
+  }
 }
+
+/** Default config, kept for callers with no page-level alt fallback. */
+export const bodyComponents: PortableTextComponents = createBodyComponents()
