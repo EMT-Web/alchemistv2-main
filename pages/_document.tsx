@@ -105,8 +105,13 @@ class MyDocument extends Document {
                   "email": "info@escortedmoroccotours.com",
                   "availableLanguage": ["English", "French", "Arabic", "Spanish"]
                 },
+                // Entity identity for search and answer engines. The previous
+                // TripAdvisor URL (g293734-d26650886) no longer resolves to a
+                // listing; the live one with the review history is below.
                 "sameAs": [
-                  "https://www.tripadvisor.com/Attraction_Review-g293734-d26650886-Reviews-Escorted_Morocco_Tours-Marrakech_Marrakech_Safi.html"
+                  "https://www.tripadvisor.com/Attraction_Review-g293732-d18453425-Reviews-Escorted_Morocco_Tours-Casablanca_Casablanca_Settat.html",
+                  "https://web.facebook.com/helloescortedmoroccotours",
+                  "https://www.instagram.com/escortedmoroccotours_/"
                 ],
                 "priceRange": "$$",
                 "areaServed": {
