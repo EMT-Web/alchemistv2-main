@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { sanityClient, urlFor } from '../../sanity'
 import { PortableText } from '@portabletext/react'
-import { bodyComponents } from '../../components/portableTextComponents'
+import { createBodyComponents } from '../../components/portableTextComponents'
 import { parseTourBody } from '../../components/tourBody'
 import PageHero from '../../components/PageHero'
 import TourCard from '../../components/TourCard'
@@ -79,6 +79,8 @@ function buildTourFaqs(tour: any): TourFaq[] {
 }
 
 function tourDetails({ tour, destinations, relatedTours }: any) {
+  // Inline CMS body images fall back to the page title when Sanity has no alt.
+  const bodyComponents = React.useMemo(() => createBodyComponents(tour?.title || ''), [tour?.title])
   const [isError, setIsError] = useState<boolean | null>(null)
   const { register, handleSubmit } = useForm<FormValues>()
   // Itinerary days are all expanded by default; clicking a day toggles just that day.
