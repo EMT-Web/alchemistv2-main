@@ -2,13 +2,16 @@ import { GetStaticProps } from 'next';
 import Router, { useRouter } from 'next/router';
 import React from 'react'
 import { PortableText } from '@portabletext/react';
-import { bodyComponents } from '../../components/portableTextComponents';
+import { createBodyComponents } from '../../components/portableTextComponents';
 import { sanityClient, urlFor } from '../../sanity';
 import Image from 'next/image'
 import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
 import SEO, { createBreadcrumbSchema } from '../../components/SEO';
 
 function destinationDetails({ destination, destinations, relatedTours}:any) {
+
+  // Inline CMS body images fall back to the page title when Sanity has no alt.
+  const bodyComponents = React.useMemo(() => createBodyComponents(destination?.title || ''), [destination?.title]);
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: '/' },
