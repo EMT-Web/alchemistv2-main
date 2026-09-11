@@ -1,26 +1,24 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
 import React from 'react'
 import PageHero from '../../components/PageHero';
 import { sanityClient, urlFor } from '../../sanity';
 import Image from 'next/image'
+import SEO from '../../components/SEO';
 const capitalize = (s:any) => (s && s[0].toUpperCase() + s.slice(1)) || ""
 
 function categoryBlog({posts, category}:any) {
- 
+
   return (
    <>
-     <Head>
-           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content={category.seodescription}></meta>
-           <meta name="keywords" content={category.seokeywords}></meta>
-           <title>{category.seotitle}</title>
-           <meta property='og:image' content={urlFor(category.mainImage).url()!} />
-<meta property='og:title' content={category.seotitle} />
-<meta property='og:description' content={category.heroparagraph} />
+     {/* Use the shared SEO component so this route gets the same title-length
+         guard, canonical URL and Twitter/OG tags as every other page. */}
+     <SEO
+       title={category.seotitle || category.title}
+       description={category.seodescription || category.heroparagraph || category.title}
+       keywords={category.seokeywords}
+       image={category.mainImage ? urlFor(category.mainImage).url()! : undefined}
+     />
 
-    </Head>
-    
     <PageHero title={category.title} tag="Category:" p={category.seodescription} img={urlFor(category.mainImage).url()!}/>
      
 <section className="ftco-section">
