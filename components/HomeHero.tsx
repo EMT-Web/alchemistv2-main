@@ -6,9 +6,16 @@ const SLIDES = [
   '/images/hero-bgs/chefchaouen2.jpg', // Rif / Atlas mountains
   '/images/hero-bgs/testemo.jpg', // desert camp at dusk
 ]
+// Descriptive alt text per slide. These are content photos, not decoration, so an
+// empty alt costs both accessibility and image search visibility.
+const SLIDE_ALTS = [
+  'Camel caravan crossing the Sahara dunes on a guided Morocco desert tour',
+  'Green hills and cloud-covered peaks of the Rif Mountains near Chefchaouen, Morocco',
+  'Desert camp lit by lanterns at dusk in the Moroccan Sahara',
+]
 const AUTOPLAY_MS = 6000
 
-function HomeHero({ title, tag, p, slides = SLIDES }: any) {
+function HomeHero({ title, tag, p, slides = SLIDES, slideAlts = SLIDE_ALTS }: any) {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
   const timer = useRef<ReturnType<typeof setInterval> | null>(null)
@@ -44,7 +51,14 @@ function HomeHero({ title, tag, p, slides = SLIDES }: any) {
     >
       {slides.map((src: string, i: number) => (
         <div key={src} className={`hero-slider__slide${i === index ? ' is-active' : ''}`} aria-hidden={i !== index}>
-          <Image src={src} alt="" fill sizes="100vw" priority={i === 0} style={{ objectFit: 'cover' }} />
+          <Image
+            src={src}
+            alt={slideAlts?.[i] || 'Morocco landscape on an Escorted Morocco Tours trip'}
+            fill
+            sizes="100vw"
+            priority={i === 0}
+            style={{ objectFit: 'cover' }}
+          />
         </div>
       ))}
       <div className="hero-wrap__scrim" />
