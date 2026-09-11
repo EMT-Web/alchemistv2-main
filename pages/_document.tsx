@@ -13,6 +13,7 @@ class MyDocument extends Document {
           {/* Charset and IE compatibility */}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="google-site-verification" content="U4a4h0xAJWrZnwGGPHZAddOpKGzuCPmqEoXM9ZWXMA8" />
           
           {/* Favicon */}
           <link rel="icon" href="/images/fav.png" />
