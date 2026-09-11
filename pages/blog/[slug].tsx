@@ -4,11 +4,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { PortableText } from '@portabletext/react';
-import { bodyComponents } from '../../components/portableTextComponents';
+import { createBodyComponents } from '../../components/portableTextComponents';
 import { sanityClient, urlFor } from '../../sanity';
 import SEO, { createArticleSchema, createBreadcrumbSchema } from '../../components/SEO';
 
 function post({ post, destinations, relatedPosts}:any) {
+
+  // Inline CMS body images fall back to the page title when Sanity has no alt.
+  const bodyComponents = React.useMemo(() => createBodyComponents(post?.title || ''), [post?.title]);
 
   // View counter disabled during build - requires write permissions
   // TODO: Move to client-side useEffect if needed
