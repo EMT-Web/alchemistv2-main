@@ -1,0 +1,180 @@
+From 9753a5e5316596a636d2d009205e4cd6865366e9 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 11 Sep 2026 17:37:11 +0000
+Subject: [PATCH] Fix SEO title length and missing image alt text
+
+- SEO.tsx: only append the "| Escorted Morocco Tours" brand suffix when the
+  result stays under 69 characters; otherwise render the bare page title, with
+  a word-boundary trim as a last resort for over-long titles.
+- portableTextComponents.tsx: add createBodyComponents(fallbackAlt) so inline
+  CMS body images fall back to the page title instead of an empty alt
+  attribute. Wired into tour, blog and destination detail pages.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01XzL7rbhsSnvdCR5PwvQvnK
+---
+ components/SEO.tsx                    | 17 +++++++++-
+ components/portableTextComponents.tsx | 47 ++++++++++++++++-----------
+ pages/blog/[slug].tsx                 |  5 ++-
+ pages/destinations/[slug].tsx         |  5 ++-
+ pages/tours/[slug].tsx                |  4 ++-
+ 5 files changed, 55 insertions(+), 23 deletions(-)
+
+diff --git a/components/SEO.tsx b/components/SEO.tsx
+index d296e20..661c64d 100644
+--- a/components/SEO.tsx
++++ b/components/SEO.tsx
+@@ -38,10 +38,25 @@ export default function SEO({
+   const siteUrl = 'https://www.escortedmoroccotours.com'
+   const canonicalUrl = `${siteUrl}${router.asPath.split('?')[0]}`
+   const brand = 'Escorted Morocco Tours'
++  // Google truncates <title> around 60-70 chars, so keep the rendered title
++  // under MAX_TITLE_LENGTH: drop the brand suffix before trimming any words.
++  const MAX_TITLE_LENGTH = 69
+   const cleanTitle = (title || '').replace(/\s*\|\s*/g, ' | ').trim()
+-  const fullTitle = cleanTitle.toLowerCase().includes(brand.toLowerCase())
++  const titleWithBrand = cleanTitle.toLowerCase().includes(brand.toLowerCase())
+     ? cleanTitle
+     : `${cleanTitle} | ${brand}`
++  const trimToWord = (value: string, max: number) => {
++    if (value.length <= max) return value
++    const cut = value.slice(0, max)
++    const lastSpace = cut.lastIndexOf(' ')
++    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).replace(/[\s|,;:\-–—]+$/, '')
++  }
++  const fullTitle =
++    titleWithBrand.length < MAX_TITLE_LENGTH
++      ? titleWithBrand
++      : cleanTitle.length < MAX_TITLE_LENGTH
++      ? cleanTitle
++      : trimToWord(cleanTitle, MAX_TITLE_LENGTH - 1)
+   const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
+ 
+   return (
+diff --git a/components/portableTextComponents.tsx b/components/portableTextComponents.tsx
+index 8618897..9dfba05 100644
+--- a/components/portableTextComponents.tsx
++++ b/components/portableTextComponents.tsx
+@@ -12,25 +12,34 @@ import { urlFor } from '../sanity'
+  * So every body heading is demoted one level: h1->h3, h2->h3, h3->h4, h4->h5.
+  * (Merged with @portabletext/react's defaults, so normal/blockquote/lists are
+  * still handled.)
++ *
++ * `fallbackAlt` is used for inline CMS images that have no `alt` set in Sanity,
++ * so body images never render an empty alt attribute. Pass the page title.
+  */
+-export const bodyComponents: PortableTextComponents = {
+-  types: {
+-    image: ({ value }: any) => {
+-      const url = urlFor(value).url()
+-      return url ? <img src={url} alt={value?.alt || ''} loading="lazy" /> : null
++export function createBodyComponents(fallbackAlt = ''): PortableTextComponents {
++  return {
++    types: {
++      image: ({ value }: any) => {
++        const url = urlFor(value).url()
++        const alt = (value?.alt || '').trim() || fallbackAlt
++        return url ? <img src={url} alt={alt} loading="lazy" /> : null
++      },
++    },
++    marks: {
++      link: ({ value, children }: any) => (
++        <a href={value?.href} target="_blank" rel="noopener noreferrer">
++          {children}
++        </a>
++      ),
+     },
+-  },
+-  marks: {
+-    link: ({ value, children }: any) => (
+-      <a href={value?.href} target="_blank" rel="noopener noreferrer">
+-        {children}
+-      </a>
+-    ),
+-  },
+-  block: {
+-    h1: ({ children }: any) => <h3>{children}</h3>,
+-    h2: ({ children }: any) => <h3>{children}</h3>,
+-    h3: ({ children }: any) => <h4>{children}</h4>,
+-    h4: ({ children }: any) => <h5>{children}</h5>,
+-  },
++    block: {
++      h1: ({ children }: any) => <h3>{children}</h3>,
++      h2: ({ children }: any) => <h3>{children}</h3>,
++      h3: ({ children }: any) => <h4>{children}</h4>,
++      h4: ({ children }: any) => <h5>{children}</h5>,
++    },
++  }
+ }
++
++/** Default config, kept for callers with no page-level alt fallback. */
++export const bodyComponents: PortableTextComponents = createBodyComponents()
+diff --git a/pages/blog/[slug].tsx b/pages/blog/[slug].tsx
+index ec4333f..908c50a 100644
+--- a/pages/blog/[slug].tsx
++++ b/pages/blog/[slug].tsx
+@@ -4,12 +4,15 @@ import Head from 'next/head'
+ import Image from 'next/image'
+ import React from 'react'
+ import { PortableText } from '@portabletext/react';
+-import { bodyComponents } from '../../components/portableTextComponents';
++import { createBodyComponents } from '../../components/portableTextComponents';
+ import { sanityClient, urlFor } from '../../sanity';
+ import SEO, { createArticleSchema, createBreadcrumbSchema } from '../../components/SEO';
+ 
+ function post({ post, destinations, relatedPosts}:any) {
+ 
++  // Inline CMS body images fall back to the page title when Sanity has no alt.
++  const bodyComponents = React.useMemo(() => createBodyComponents(post?.title || ''), [post?.title]);
++
+   // View counter disabled during build - requires write permissions
+   // TODO: Move to client-side useEffect if needed
+   // sanityClient
+diff --git a/pages/destinations/[slug].tsx b/pages/destinations/[slug].tsx
+index a4cc37c..87977b6 100644
+--- a/pages/destinations/[slug].tsx
++++ b/pages/destinations/[slug].tsx
+@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
+ import Router, { useRouter } from 'next/router';
+ import React from 'react'
+ import { PortableText } from '@portabletext/react';
+-import { bodyComponents } from '../../components/portableTextComponents';
++import { createBodyComponents } from '../../components/portableTextComponents';
+ import { sanityClient, urlFor } from '../../sanity';
+ import Image from 'next/image'
+ import { FacebookIcon, FacebookShareButton, WhatsappIcon, WhatsappShareButton } from 'next-share';
+@@ -10,6 +10,9 @@ import SEO, { createBreadcrumbSchema } from '../../components/SEO';
+ 
+ function destinationDetails({ destination, destinations, relatedTours}:any) {
+ 
++  // Inline CMS body images fall back to the page title when Sanity has no alt.
++  const bodyComponents = React.useMemo(() => createBodyComponents(destination?.title || ''), [destination?.title]);
++
+   const breadcrumbSchema = createBreadcrumbSchema([
+     { name: 'Home', url: '/' },
+     { name: 'Destinations', url: '/destinations' },
+diff --git a/pages/tours/[slug].tsx b/pages/tours/[slug].tsx
+index 487e261..6464c82 100644
+--- a/pages/tours/[slug].tsx
++++ b/pages/tours/[slug].tsx
+@@ -4,7 +4,7 @@ import Image from 'next/image'
+ import { SubmitHandler, useForm } from 'react-hook-form'
+ import { sanityClient, urlFor } from '../../sanity'
+ import { PortableText } from '@portabletext/react'
+-import { bodyComponents } from '../../components/portableTextComponents'
++import { createBodyComponents } from '../../components/portableTextComponents'
+ import { parseTourBody } from '../../components/tourBody'
+ import PageHero from '../../components/PageHero'
+ import TourCard from '../../components/TourCard'
+@@ -79,6 +79,8 @@ function buildTourFaqs(tour: any): TourFaq[] {
+ }
+ 
+ function tourDetails({ tour, destinations, relatedTours }: any) {
++  // Inline CMS body images fall back to the page title when Sanity has no alt.
++  const bodyComponents = React.useMemo(() => createBodyComponents(tour?.title || ''), [tour?.title])
+   const [isError, setIsError] = useState<boolean | null>(null)
+   const { register, handleSubmit } = useForm<FormValues>()
+   // Itinerary days are all expanded by default; clicking a day toggles just that day.
+-- 
+2.43.0
+
