@@ -9,6 +9,7 @@ import { parseTourBody } from '../../components/tourBody'
 import PageHero from '../../components/PageHero'
 import TourCard from '../../components/TourCard'
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO'
+import { TRIPADVISOR_URL, TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from '../../components/tripadvisor'
 
 const WHATSAPP = 'https://wa.me/212623668013'
 
@@ -160,7 +161,10 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
               </li>
             ))}
             <li className="tourx-facts__rating">
-              <span className="fa fa-tripadvisor" aria-hidden="true" /> 5.0 on TripAdvisor
+              <a href={TRIPADVISOR_URL} target="_blank" rel="noopener noreferrer">
+                <span className="fa fa-tripadvisor" aria-hidden="true" />{' '}
+                {TRIPADVISOR_RATING} from {TRIPADVISOR_REVIEW_COUNT} reviews on TripAdvisor
+              </a>
             </li>
           </ul>
         </div>
