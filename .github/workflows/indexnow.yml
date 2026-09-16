@@ -1,0 +1,24 @@
+name: IndexNow submission
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch: {}
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch live sitemap URLs
+        id: urls
+        run: |
+          curl -s https://www.escortedmoroccotours.com/sitemap-0.xml \
+            | grep -oE '<loc>[^<]+</loc>' \
+            | sed -E 's#</?loc>##g' > urls.txt
+          echo "count=$(wc -l < urls.txt)" >> "$GITHUB_OUTPUT"
+      - name: Submit to IndexNow
+        run: node scripts/submit-indexnow.mjs $(cat urls.txt)
