@@ -63,7 +63,7 @@ export default function  NextPage({about, destinations, tours, categories, faqs,
       keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides, culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"
       schema={combinedSchema}
     />
-          <HomeHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Join our escorted immersion tours and uncover the best of Morocco." />
+          <HomeHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Whether you're searching for escorted tours to Morocco or Morocco escorted tours, our small-group itineraries help you uncover the best of Morocco, from the Sahara Desert to the Atlas Mountains." />
           {about?.mainabout && <InfoAbout about={about.mainabout}/>}
           <HomeDestinations destinations={destinations} />
           <ToursSection tours={tours}/>
