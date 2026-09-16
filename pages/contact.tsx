@@ -63,13 +63,15 @@ function contact() {
         '@type': 'PostalAddress',
         streetAddress: 'App 5-L. Elharti. Massira-2',
         addressLocality: 'Marrakech',
-        addressCountry: 'Morocco',
+        postalCode: '40140',
+        addressCountry: 'MA',
       },
       {
         '@type': 'PostalAddress',
         streetAddress: 'Dr Ait Tajer, Taftechna',
         addressLocality: 'Zagora',
-        addressCountry: 'Morocco',
+        postalCode: '47900',
+        addressCountry: 'MA',
       },
     ],
   }
