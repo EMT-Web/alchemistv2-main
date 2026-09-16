@@ -26,7 +26,8 @@ function HomeDestinations({ destinations }: any) {
             <h2 className="mb-4">Escorted Morocco Tours Destinations</h2>
             <p className="mb-4">
               From bustling cities to the Sahara Desert, majestic Atlas Mountains to exotic beaches — our
-              escorted tours cover it all.
+              escorted tours Morocco-wide cover it all, and every escorted tour Morocco travelers book with
+              us is fully customizable to your pace and interests.
             </p>
           </div>
         </div>
