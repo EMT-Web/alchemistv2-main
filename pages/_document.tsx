@@ -14,27 +14,27 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="google-site-verification" content="U4a4h0xAJWrZnwGGPHZAddOpKGzuCPmqEoXM9ZWXMA8" />
-          
+
           {/* Favicon */}
           <link rel="icon" href="/images/fav.png" />
           <link rel="shortcut icon" href="/images/fav.png" />
           <link rel="apple-touch-icon" href="/images/fav.png" />
-          
+
           {/* Preconnect to external domains */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
-          
+
           {/* DNS Prefetch */}
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-          
+
           {/* Theme color */}
           <meta name="theme-color" content="#f15d30" />
-          
+
           {/* Fonts */}
           <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet" />
-          
+
           {/* Critical CSS - blocking (needed for above-the-fold layout). Minified with
               clean-css level:1 (whitespace/comments only, zero rule changes - verified
               2542 rule blocks in, 2542 out) to cut parse/transfer weight safely. */}
@@ -71,7 +71,7 @@ class MyDocument extends Document {
             <link rel="stylesheet" href="/css/jquery.timepicker.css" />
             <link rel="stylesheet" href="/css/flaticon.css" />
           </noscript>
-          
+
           {/* Organization Schema - Global */}
           <script
             type="application/ld+json"
@@ -84,18 +84,21 @@ class MyDocument extends Document {
                 "logo": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
                 "image": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
                 "description": "Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides.",
+                "telephone": "+212623668013",
                 "address": [
                   {
                     "@type": "PostalAddress",
                     "streetAddress": "App 5-L. Elharti. Massira-2",
                     "addressLocality": "Marrakech",
-                    "addressCountry": "Morocco"
+                    "postalCode": "40140",
+                    "addressCountry": "MA"
                   },
                   {
                     "@type": "PostalAddress",
                     "streetAddress": "Dr Ait Tajer, Taftechna",
                     "addressLocality": "Zagora",
-                    "addressCountry": "Morocco"
+                    "postalCode": "47900",
+                    "addressCountry": "MA"
                   }
                 ],
                 "contactPoint": {
@@ -142,7 +145,7 @@ class MyDocument extends Document {
               })
             }}
           />
-          
+
           {/* Website Schema */}
           <script
             type="application/ld+json"
@@ -171,4 +174,3 @@ class MyDocument extends Document {
 }
 
 export default MyDocument
-
