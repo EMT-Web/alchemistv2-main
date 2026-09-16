@@ -18,6 +18,8 @@ function categoryTours({tours, category}:any) {
 
   const categoryData = category || defaultCategory;
 
+  const heroIntro = categoryData.seodescription || `Join us on an adventure of a lifetime with our guided Morocco tours in ${categoryData.title}. Our experienced local guides lead comprehensive, immersive journeys through the culture, history and natural wonders of this part of Morocco, from historic medinas to mountain passes and desert dunes.`
+
   return (
    <>
      <SEO
@@ -26,8 +28,8 @@ function categoryTours({tours, category}:any) {
        keywords={categoryData.seokeywords}
        image="/images/hero-bgs/all-tours.jpg"
      />
-    <PageHero title={categoryData.title} tag="Category:" p='Join us on an adventure of a lifetime with our guided morocco tours. From the bustling cities of Marrakech, Fes, Meknes, Tangier, Rabat and Casablanca to the tranquil beauty the blue city Chefchaouen, the windy city Essaouira, the Sahara Desert and the stunning Atlas Mountains, our escorted tours offer a comprehensive and immersive journeys through the culture, history, and natural wonders of Morocco.' img={category?.mainImage ? urlFor(categoryData.mainImage).url()! : '/images/hero-bgs/all-tours.jpg'} />
-    <ToursSection tours={tours || []}/>
+      <PageHero title={categoryData.title} tag="Category:" p={heroIntro} img={category?.mainImage ? urlFor(categoryData.mainImage).url()! : '/images/hero-bgs/all-tours.jpg'} />
+     <ToursSection tours={tours || []}/>
    </>
   )
 }
