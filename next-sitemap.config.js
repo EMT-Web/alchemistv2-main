@@ -2,7 +2,7 @@ const config = {
   siteUrl: "https://www.escortedmoroccotours.com",
   generateRobotsTxt: true,
   generateIndexSitemap: true,
-  exclude: ['/api/*', '/studio/*', '/_next/*', '/404', '/500'],
+  exclude: ['/api/*', '/studio/*', '/_next/*', '/404', '/500', '/blog-search'],
   robotsTxtOptions: {
     policies: [
       {
@@ -10,25 +10,20 @@ const config = {
         allow: '/',
         disallow: ['/api/', '/studio/', '/_next/', '/admin/']
       },
-      // Explicit allow for AI answer-engine crawlers, so citation/inclusion
-      // is a deliberate policy rather than an implicit side effect of the
-      // wildcard rule above.
       { userAgent: 'GPTBot', allow: '/' },
       { userAgent: 'ChatGPT-User', allow: '/' },
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'anthropic-ai', allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
       { userAgent: 'PerplexityBot', allow: '/' }
-    ]
+      ]
   },
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
   transform: async (config, path) => {
-    // Custom priority and changefreq for different page types
     let priority = 0.7
     let changefreq = 'daily'
-    
     if (path === '/') {
       priority = 1.0
       changefreq = 'daily'
@@ -45,7 +40,6 @@ const config = {
       priority = 0.6
       changefreq = 'weekly'
     }
-    
     return {
       loc: path,
       changefreq,
@@ -56,18 +50,15 @@ const config = {
   },
   additionalPaths: async (config) => {
     const result = []
-    
-    // Add custom paths that need to be included
-    const customPaths = [
-      '/contact',
-      '/about',
-      '/tours',
-      '/destinations',
-      '/blog',
-      '/privacy-policy',
-      '/booking-info'
-    ]
-    
+      const customPaths = [
+        '/contact',
+        '/about',
+        '/tours',
+        '/destinations',
+        '/blog',
+        '/privacy-policy',
+        '/booking-info'
+        ]
     customPaths.forEach((path) => {
       result.push({
         loc: path,
@@ -76,9 +67,7 @@ const config = {
         lastmod: new Date().toISOString()
       })
     })
-    
     return result
   }
 };
-
 module.exports = config;
