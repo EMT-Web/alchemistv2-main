@@ -17,6 +17,7 @@ function categoryBlog({posts, category}:any) {
        description={category.seodescription || category.heroparagraph || category.title}
        keywords={category.seokeywords}
        image={category.mainImage ? urlFor(category.mainImage).url()! : undefined}
+       noindex={!posts || posts.length < 3}
      />
 
     <PageHero title={category.title} tag="Category:" p={category.seodescription} img={urlFor(category.mainImage).url()!}/>
