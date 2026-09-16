@@ -58,8 +58,8 @@ export default function  NextPage({about, destinations, tours, categories, faqs,
   return (
     <>
     <SEO
-      title="Guided Immersion Tours & Travel Guides"
-      description="Escorted Morocco Tours - Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides."
+        title="Guided Tours & Travel Guides"   
+              description="Escorted Morocco tours with expert local guides: Sahara desert, Marrakech, Fes, Atlas Mountains. Custom itineraries for small groups. Book today."
       keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides, culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"
       schema={combinedSchema}
     />
