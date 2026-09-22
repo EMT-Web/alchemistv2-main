@@ -28,8 +28,12 @@ function contact() {
   const [sending, setSending] = useState(false)
   const { register, handleSubmit } = useForm<FormValues>()
   const startedAt = useRef(0)
+  // Earliest selectable travel date; set after mount so the static HTML never goes stale.
+  const [today, setToday] = useState<string>()
   useEffect(() => {
     startedAt.current = Date.now()
+    const d = new Date()
+    setToday(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`)
   }, [])
 
   const onSubmit: SubmitHandler<FormValues> = async (data, e: any) => {
@@ -213,6 +217,7 @@ function contact() {
                       type="date"
                       id="arrivalDate"
                       className="form-control"
+                      min={today}
                       {...register('arrivalDate')}
                     />
                   </div>
@@ -222,6 +227,7 @@ function contact() {
                       type="date"
                       id="departureDate"
                       className="form-control"
+                      min={today}
                       {...register('departureDate')}
                     />
                   </div>

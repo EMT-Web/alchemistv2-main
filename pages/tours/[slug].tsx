@@ -88,8 +88,12 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   const [sending, setSending] = useState(false)
   const { register, handleSubmit } = useForm<FormValues>()
   const startedAt = useRef(0)
+  // Earliest selectable travel date; set after mount so the static HTML never goes stale.
+  const [today, setToday] = useState<string>()
   useEffect(() => {
     startedAt.current = Date.now()
+    const d = new Date()
+    setToday(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`)
   }, [])
   // Itinerary days are all expanded by default; clicking a day toggles just that day.
   const [closedDays, setClosedDays] = useState<Set<number>>(new Set())
@@ -340,9 +344,9 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                   <input type="text" placeholder="Your name" {...register('name', { required: true })} />
                   <input type="email" placeholder="Your email" {...register('email', { required: true })} />
                   <label>Arrival date</label>
-                  <input type="date" {...register('arrivalDate')} />
+                  <input type="date" min={today} {...register('arrivalDate')} />
                   <label>Departure date</label>
-                  <input type="date" {...register('departureDate')} />
+                  <input type="date" min={today} {...register('departureDate')} />
                   <input type="number" placeholder="Number of travellers" min={1} max={40} {...register('travelers')} />
                   <textarea rows={4} placeholder="Anything you'd like to change or ask?" {...register('message', { required: true })} />
                   {/* Spam trap: hidden from people, often filled in by bots. */}

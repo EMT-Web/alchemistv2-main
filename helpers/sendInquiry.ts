@@ -7,6 +7,7 @@ import { clientIp, emailDomainAcceptsMail, isDisposableEmail, isRateLimited, loo
 
 const TO_ADDRESS = 'info@escortedmoroccotours.com'
 const FROM_ADDRESS = 'onboarding@resend.dev'
+const SEND_FAILED = "Sorry, we couldn't send your message right now. Please try again in a few minutes."
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[^\s@<>()[\]\\,;:"]{2,}$/
 
 const escapeHtml = (value: unknown): string =>
@@ -75,7 +76,7 @@ export default async function sendInquiry(req: any, res: any) {
   const RESEND_API_KEY = process.env.RESEND_API_KEY
   if (!RESEND_API_KEY) {
     console.error('[inquiry] RESEND_API_KEY is not set')
-    return res.status(500).json({ success: false, message: 'Sorry, we could not send your message. Please email us directly.' })
+    return res.status(500).json({ success: false, message: SEND_FAILED })
   }
 
   const html = `<!doctype html>
@@ -107,12 +108,12 @@ export default async function sendInquiry(req: any, res: any) {
 
     if (!resp.ok) {
       console.error('[inquiry] Resend API error', resp.status, await resp.text())
-      return res.status(502).json({ success: false, message: 'Sorry, we could not send your message. Please email us directly.' })
+      return res.status(502).json({ success: false, message: SEND_FAILED })
     }
 
     return res.status(200).json({ success: true, message: 'Email sent successfully' })
   } catch (error: any) {
     console.error('[inquiry] Failed to send email', error)
-    return res.status(500).json({ success: false, message: 'Sorry, we could not send your message. Please email us directly.' })
+    return res.status(500).json({ success: false, message: SEND_FAILED })
   }
 }
