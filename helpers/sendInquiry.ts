@@ -1,6 +1,9 @@
 // Shared handler for the contact and tour-inquiry forms.
 // Escapes all visitor input before it goes into the email HTML and never
-// returns internal error details to the browser.
+// returns internal error details to the browser. Spam checks live in
+// inquiryGuards.ts.
+
+import { clientIp, emailDomainAcceptsMail, isDisposableEmail, isRateLimited, looksLikeBot } from './inquiryGuards'
 
 const TO_ADDRESS = 'info@escortedmoroccotours.com'
 const FROM_ADDRESS = 'onboarding@resend.dev'
@@ -31,6 +34,20 @@ export default async function sendInquiry(req: any, res: any) {
   }
 
   const body = req.body && typeof req.body === 'object' ? req.body : {}
+
+  // Bots get a normal-looking success so they don't retry, but nothing is sent.
+  if (looksLikeBot(body)) {
+    console.warn('[inquiry] Dropped likely bot submission')
+    return res.status(200).json({ success: true, message: 'Email sent successfully' })
+  }
+
+  if (isRateLimited(clientIp(req))) {
+    return res.status(429).json({
+      success: false,
+      message: 'Too many messages in a short time. Please wait a few minutes or email us directly.',
+    })
+  }
+
   const name = clean(body.name, 100)
   const email = clean(body.email, 254)
   const arrivalDate = clean(body.arrivalDate, 40)
@@ -41,6 +58,18 @@ export default async function sendInquiry(req: any, res: any) {
 
   if (!name || !email || !EMAIL_RE.test(email)) {
     return res.status(400).json({ success: false, message: 'Please provide your name and a valid email address.' })
+  }
+  if (isDisposableEmail(email)) {
+    return res.status(400).json({
+      success: false,
+      message: 'Please use a permanent email address so we can reply to you.',
+    })
+  }
+  if (!(await emailDomainAcceptsMail(email))) {
+    return res.status(400).json({
+      success: false,
+      message: 'That email address does not seem to exist. Please check it for typos.',
+    })
   }
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY

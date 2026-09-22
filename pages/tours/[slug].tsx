@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { sanityClient, urlFor } from '../../sanity'
@@ -21,6 +21,7 @@ type FormValues = {
   travelers: number
   subject: string
   message: string
+  website: string
 }
 
 type TourFaq = { question: string; answer: string; link?: { text: string; href: string } }
@@ -83,7 +84,13 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   // Inline CMS body images fall back to the page title when Sanity has no alt.
   const bodyComponents = React.useMemo(() => createBodyComponents(tour?.title || ''), [tour?.title])
   const [isError, setIsError] = useState<boolean | null>(null)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [sending, setSending] = useState(false)
   const { register, handleSubmit } = useForm<FormValues>()
+  const startedAt = useRef(0)
+  useEffect(() => {
+    startedAt.current = Date.now()
+  }, [])
   // Itinerary days are all expanded by default; clicking a day toggles just that day.
   const [closedDays, setClosedDays] = useState<Set<number>>(new Set())
   const toggleDay = (i: number) =>
@@ -96,15 +103,25 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
 
   const onSubmit: SubmitHandler<FormValues> = async (data, e: any) => {
     e.preventDefault()
+    setSending(true)
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, subject: `Inquiry: ${tour.title}` }),
+        body: JSON.stringify({
+          ...data,
+          subject: `Inquiry: ${tour.title}`,
+          elapsedMs: Date.now() - startedAt.current,
+        }),
       })
+      const json = await res.json().catch(() => ({}))
+      setErrorMessage(res.ok ? '' : json?.message || '')
       setIsError(!res.ok)
     } catch {
+      setErrorMessage('')
       setIsError(true)
+    } finally {
+      setSending(false)
     }
   }
 
@@ -328,6 +345,11 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                   <input type="date" {...register('departureDate')} />
                   <input type="number" placeholder="Number of travellers" min={1} max={40} {...register('travelers')} />
                   <textarea rows={4} placeholder="Anything you'd like to change or ask?" {...register('message', { required: true })} />
+                  {/* Spam trap: hidden from people, often filled in by bots. */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+                    <label htmlFor="tf-website">Leave this field empty</label>
+                    <input id="tf-website" type="text" tabIndex={-1} autoComplete="off" {...register('website')} />
+                  </div>
                   {isError === false && (
                     <div className="tourx-inquiry__ok">
                       <strong>Thank you!</strong> Your message has been sent — we&apos;ll be in touch shortly.
@@ -335,11 +357,13 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                   )}
                   {isError === true && (
                     <div className="tourx-inquiry__err">
-                      Something went wrong. Please try again or email{' '}
+                      {errorMessage || 'Something went wrong. Please try again.'} You can also email{' '}
                       <a href="mailto:info@escortedmoroccotours.com">info@escortedmoroccotours.com</a>.
                     </div>
                   )}
-                  <button type="submit" className="btn btn-primary">Send inquiry →</button>
+                  <button type="submit" className="btn btn-primary" disabled={sending}>
+                    {sending ? 'Sending…' : 'Send inquiry →'}
+                  </button>
                 </form>
                 <a href={`${WHATSAPP}?text=${encodeURIComponent(`Hi, I'd like to inquire about the "${tour.title}" tour.`)}`}
                    target="_blank" rel="noopener noreferrer" className="tourx-inquiry__wa">
