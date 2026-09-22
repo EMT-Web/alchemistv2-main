@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import PageHero from '../components/PageHero'
 import SEO, { createBreadcrumbSchema } from '../components/SEO'
@@ -11,6 +11,7 @@ type FormValues = {
   travelers: number
   subject: string
   message: string
+  website: string
 }
 
 const WHATSAPP = 'https://wa.me/212623668013'
@@ -23,8 +24,17 @@ const TRIPADVISOR =
 
 function contact() {
   const [isError, setIsError] = useState(null as any)
+  const [errorMessage, setErrorMessage] = useState('')
   const [sending, setSending] = useState(false)
   const { register, handleSubmit } = useForm<FormValues>()
+  const startedAt = useRef(0)
+  // Earliest selectable travel date; set after mount so the static HTML never goes stale.
+  const [today, setToday] = useState<string>()
+  useEffect(() => {
+    startedAt.current = Date.now()
+    const d = new Date()
+    setToday(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`)
+  }, [])
 
   const onSubmit: SubmitHandler<FormValues> = async (data, e: any) => {
     e.preventDefault()
@@ -36,10 +46,13 @@ function contact() {
           Accept: 'application/json, text/plain, */*',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, elapsedMs: Date.now() - startedAt.current }),
       })
+      const json = await res.json().catch(() => ({}))
+      setErrorMessage(res.ok ? '' : json?.message || '')
       setIsError(!res.ok)
     } catch (err) {
+      setErrorMessage('')
       setIsError(true)
     } finally {
       setSending(false)
@@ -204,6 +217,7 @@ function contact() {
                       type="date"
                       id="arrivalDate"
                       className="form-control"
+                      min={today}
                       {...register('arrivalDate')}
                     />
                   </div>
@@ -213,6 +227,7 @@ function contact() {
                       type="date"
                       id="departureDate"
                       className="form-control"
+                      min={today}
                       {...register('departureDate')}
                     />
                   </div>
@@ -232,6 +247,12 @@ function contact() {
                 </div>
 
                 <input type="hidden" value="Main Contact Form" {...register('subject')} />
+
+                {/* Spam trap: hidden from people, often filled in by bots. */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+                  <label htmlFor="cf-website">Leave this field empty</label>
+                  <input id="cf-website" type="text" tabIndex={-1} autoComplete="off" {...register('website')} />
+                </div>
 
                 <div className="form-group">
                   <label htmlFor="cf-message">Message</label>
@@ -253,8 +274,9 @@ function contact() {
                 )}
                 {isError === true && (
                   <div className="contactx-form__note contactx-form__note--err">
-                    <strong>Something went wrong.</strong> Please check your details and try again, or
-                    email us directly at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+                    <strong>Something went wrong.</strong>{' '}
+                    {errorMessage || 'Please check your details and try again.'} You can also email us
+                    directly at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
                   </div>
                 )}
 
