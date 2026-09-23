@@ -58,7 +58,7 @@ export default function StaticBlogPost({ post }: { post: LocalBlogPost }) {
                   </a>
                 </span>{' '}
                 <span className="mr-2">
-                  <a href="/blog/">
+                  <a href="/blog">
                     Blog<i className="fa fa-chevron-right" />
                   </a>
                 </span>

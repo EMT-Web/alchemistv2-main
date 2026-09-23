@@ -1,19 +1,15 @@
-import Head from 'next/head'
 import React from 'react'
 import PageHero from '../components/PageHero'
+import SEO from '../components/SEO'
 
 function bookingInfo() {
   return (
     <>
-     <Head>
-           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content="Our aim is to ensure a smooth and enjoyable escorted tours and experiences in Morocco for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions..."></meta>
-           <meta name="keywords" content="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, immersions morocco"></meta>
-           <title>Escorted Morocco Tours - Booking Conditions</title>
-           <meta property="og:image" content="/images/escorted-morocco-tours.png" />
-           <meta property="og:title" content="Escorted Morocco Tours - Booking Conditions" />
-           <meta property='og:description' content="Our aim is to ensure a smooth and enjoyable escorted tours and experiences in Morocco for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions..." />
-    </Head>
+     <SEO
+       title="Booking Conditions"
+       description="Our aim is to ensure a smooth and enjoyable escorted tours and experiences in Morocco for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions..."
+       keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco tours, booking conditions"
+     />
     <PageHero title="Booking Terms and Conditions"  tag="Escorted Morocco Tours "  p="Our aim is to ensure a smooth and enjoyable experience for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions or concerns regarding our booking conditions."   img='/images/hero-bgs/about-us.jpg'/>
     <section className="ftco-section services-section">
 			<div className="container">

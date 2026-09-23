@@ -1,8 +1,23 @@
+const fs = require('fs')
+const path = require('path')
+
+// Pages that render <meta name="robots" content="noindex"> must not be listed in the
+// sitemap: Google reports them as "Submitted URL marked noindex". Checked against the
+// prerendered HTML, so it follows each page's own noindex logic automatically.
+const isNoindex = (route) => {
+  const file = path.join(__dirname, '.next/server/pages', `${route === '/' ? '/index' : route}.html`)
+  try {
+    return /<meta[^>]+name="robots"[^>]+noindex/i.test(fs.readFileSync(file, 'utf8'))
+  } catch {
+    return false
+  }
+}
+
 const config = {
   siteUrl: "https://www.escortedmoroccotours.com",
   generateRobotsTxt: true,
   generateIndexSitemap: true,
-  exclude: ['/api/*', '/studio/*', '/_next/*', '/404', '/500', '/blog-search'],
+  exclude: ['/api/*', '/studio/*', '/_next/*', '/404', '/500', '/blog-search', '/search'],
   robotsTxtOptions: {
     policies: [
       {
@@ -22,6 +37,7 @@ const config = {
   priority: 0.7,
   sitemapSize: 5000,
   transform: async (config, path) => {
+    if (isNoindex(path)) return null
     let priority = 0.7
     let changefreq = 'daily'
     if (path === '/') {
