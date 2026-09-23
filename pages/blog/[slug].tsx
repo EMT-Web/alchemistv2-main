@@ -55,7 +55,7 @@ function post({ post, destinations, relatedPosts}:any) {
   <div className="container">
     <div className="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
       <div className="col-md-9 ftco-animate pb-5 text-center">
-       <p className="breadcrumbs"><span className="mr-2"><a href="/">Home <i className="fa fa-chevron-right"></i></a></span> <span className="mr-2"><a href="/blog/">Blog<i className="fa fa-chevron-right"/></a></span></p>
+       <p className="breadcrumbs"><span className="mr-2"><a href="/">Home <i className="fa fa-chevron-right"></i></a></span> <span className="mr-2"><a href="/blog">Blog<i className="fa fa-chevron-right"/></a></span></p>
        <h1 className="mb-0 bread">{post.title}</h1>
      </div>
    </div>
