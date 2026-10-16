@@ -26,9 +26,8 @@ type FormValues = {
 
 type TourFaq = { question: string; answer: string; link?: { text: string; href: string } }
 
-function buildTourFaqs(tour: any): TourFaq[] {
+function buildTourFaqs(tour: any, included: string[] = []): TourFaq[] {
   const destinationNames = (tour.destinations || []).map((d: any) => d?.city).filter(Boolean).join(', ')
-  const amenityNames = (tour.amenities || []).map((a: any) => a?.title).filter(Boolean).join(', ')
   const isSaharaTour = (tour.destinations || []).some((d: any) =>
     /merzouga|zagora|sahara|erg chebbi|erg chigaga/i.test(d?.city || '')
   )
@@ -41,10 +40,13 @@ function buildTourFaqs(tour: any): TourFaq[] {
         : `This tour runs for ${tour.duration || 0} days.`,
     },
   ]
-  if (amenityNames) {
+  // Answer from the itinerary's own Inclusions list (the same items shown on the
+  // page), never from the amenity tags, which are themes rather than inclusions.
+  const includedItems = included.map((t) => t.replace(/\s+/g, ' ').trim()).filter(Boolean)
+  if (includedItems.length) {
     faqs.push({
       question: "What's included in this tour?",
-      answer: `This tour includes: ${amenityNames}. For anything not listed — flights, travel insurance, personal expenses — get in touch and we'll confirm exactly what's covered before you book.`,
+      answer: `The tour price includes: ${includedItems.join('; ')}. Flights, travel insurance and personal expenses are not included. Ask us if you want anything confirmed before you book.`,
     })
   }
   faqs.push(
@@ -133,7 +135,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   const from = dests[0]?.city
   const to = dests[dests.length - 1]?.city
   const parsed = parseTourBody(tour.body)
-  const tourFaqs = buildTourFaqs(tour)
+  const tourFaqs = buildTourFaqs(tour, parsed.included)
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -159,7 +161,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
         description={tour.seodescription || tour.heroparagraph || tour.title}
         keywords={tour.seokeywords || 'Morocco tours, Morocco travel, escorted tours Morocco, guided tours'}
         image={tour.mainImage ? urlFor(tour.mainImage).url()! : undefined}
-        type="product"
+        type="website"
         schema={combinedSchema}
       />
 

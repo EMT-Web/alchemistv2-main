@@ -5,7 +5,7 @@ import { AboutStory, AboutMissionVision, AboutTeam } from "../components/AboutSe
 import PageHero from "../components/PageHero";
 import Testemonials from "../components/Testemonials";
 import { sanityClient, urlFor } from "../sanity";
-import SEO, { createBreadcrumbSchema, createAggregateRatingSchema } from "../components/SEO";
+import SEO, { createBreadcrumbSchema } from "../components/SEO";
 
 
 export default function  About({about}:any) {
@@ -37,20 +37,12 @@ export default function  About({about}:any) {
     "name": "About Escorted Morocco Tours",
     "url": "https://www.escortedmoroccotours.com/about",
     "description": "Learn about Escorted Morocco Tours - Expert guided tours and packages with experienced guides offering cultural immersion, adventure, and luxury experiences.",
-    "mainEntity": {
-      "@type": "TravelAgency",
-      "name": "Escorted Morocco Tours",
-      "description": "We offer a range of customizable tours that cater to all types of travelers, from cultural immersion tours to adventure and luxury.",
-      "url": "https://www.escortedmoroccotours.com"
-    }
+    "mainEntity": { "@id": "https://www.escortedmoroccotours.com/#organization" }
   };
-
-  // 8 real, attributed 5-star TripAdvisor reviews are rendered in <Testemonials/> below
-  const ratingSchema = createAggregateRatingSchema(5, 8, "Escorted Morocco Tours");
 
   const combinedSchema = {
     "@context": "https://schema.org",
-    "@graph": [breadcrumbSchema, aboutPageSchema, ratingSchema]
+    "@graph": [breadcrumbSchema, aboutPageSchema]
   };
 
   return (

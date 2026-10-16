@@ -17,7 +17,9 @@ function categoryBlog({posts, category}:any) {
        description={category.seodescription || category.heroparagraph || category.title}
        keywords={category.seokeywords}
        image={category.mainImage ? urlFor(category.mainImage).url()! : undefined}
-       noindex={!posts || posts.length < 3}
+       // Topic listing pages hold no content of their own, so keep them out of the
+       // index; the posts they list are indexed individually.
+       noindex
      />
 
     <PageHero title={category.title} tag="Category:" p={category.seodescription} img={urlFor(category.mainImage).url()!}/>

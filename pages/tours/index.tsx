@@ -81,12 +81,11 @@ export default function  NextPage({tours}:any) {
   return (
     <>
     <SEO
-      title="All Morocco Tours & Travel Packages"
-      description="Make the Most of Your Vacation in Morocco with a Well-Planned Guided Immersion tour. Browse our complete collection of Morocco escorted tours and travel packages."
-      keywords="Escorted Morocco tours, Morocco Escorted Tours, Travel packages, vacation, guided tours, Morocco, culture, history, adventure, luxury, holiday, expert guides, tailored experience, hidden gems, immersive journey, personalized service, authentic experiences"
+      title="Morocco Tours: 2 to 13 Day Private Itineraries"
+      description={`Compare ${tours.length} private Morocco tours from Marrakech, Fes, Casablanca and Tangier, from 2 day Sahara trips to 13 day grand tours. Every route can be adjusted.`}
       schema={combinedSchema}
     />
-    <PageHero title='Discover the Best of Morocco with our Escorted Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/cms/ea329707ee6a76072f888eaac2ea74174bc8b105.jpg'/>
+    <PageHero title='All Morocco Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/cms/ea329707ee6a76072f888eaac2ea74174bc8b105.jpg'/>
 
     <ToursFilter tours={tours} />
   </>

@@ -79,7 +79,15 @@ class MyDocument extends Document {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "TravelAgency",
+                "@id": "https://www.escortedmoroccotours.com/#organization",
                 "name": "Escorted Morocco Tours",
+                "legalName": "Escorted Morocco Tours SARLAU",
+                "identifier": {
+                  "@type": "PropertyValue",
+                  "propertyID": "ICE",
+                  "value": "003967997000096"
+                },
+                "email": "info@escortedmoroccotours.com",
                 "url": "https://www.escortedmoroccotours.com",
                 "logo": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
                 "image": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
@@ -153,13 +161,13 @@ class MyDocument extends Document {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
+                "@id": "https://www.escortedmoroccotours.com/#website",
                 "name": "Escorted Morocco Tours",
                 "url": "https://www.escortedmoroccotours.com",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": "https://www.escortedmoroccotours.com/blog-search?q={search_term_string}",
-                  "query-input": "required name=search_term_string"
-                }
+                "inLanguage": "en",
+                // No SearchAction: Google retired the sitelinks search box and
+                // /blog-search is noindex.
+                "publisher": { "@id": "https://www.escortedmoroccotours.com/#organization" }
               })
             }}
           />

@@ -17,7 +17,7 @@ import HowItWorks from '../components/HowItWorks';
 import HomeBlog from '../components/HomeBlog';
 import HomeFaq from '../components/HomeFaq';
 import { localBlogPosts } from '../data/localBlogPosts';
-import SEO, { createAggregateRatingSchema } from '../components/SEO';
+import SEO from '../components/SEO';
 
 
 export default function  NextPage({about, destinations, tours, categories, faqs, posts}:any) {
@@ -47,23 +47,22 @@ export default function  NextPage({about, destinations, tours, categories, faqs,
     }
   };
 
-  // 8 real, attributed 5-star TripAdvisor reviews are rendered in <Testemonials/> below
-  const ratingSchema = createAggregateRatingSchema(5, 8, "Escorted Morocco Tours");
-
+  // No aggregateRating here on purpose: Google's review snippet rules forbid
+  // marking up a business's own rating on its own pages and ratings taken from
+  // other sites (TripAdvisor). The reviews stay visible in <Testemonials/>.
   const combinedSchema = {
     "@context": "https://schema.org",
-    "@graph": [homeSchema, ratingSchema]
+    "@graph": [homeSchema]
   };
 
   return (
     <>
     <SEO
-        title="Guided Tours & Travel Guides"   
-              description="Escorted Morocco tours with expert local guides: Sahara desert, Marrakech, Fes, Atlas Mountains. Custom itineraries for small groups. Book today."
-      keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco, Visit Morocco, Morocco tours, Travel Guides, culture, history, adventure, guided tours, accommodations, cultural activities, adventure activities, immersive experience, morocco immersion tours"
+      title="Private Morocco Tours with Local Guides"
+      description="Private Morocco tours with your own driver guide: Sahara nights in Merzouga, Fes, Marrakech, Chefchaouen and the Atlas. Rated 5.0 on TripAdvisor."
       schema={combinedSchema}
     />
-          <HomeHero title="Best Escorted Morocco Tours, Guided Tours" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Whether you're searching for escorted tours to Morocco or Morocco escorted tours, our small-group itineraries help you uncover the best of Morocco, from the Sahara Desert to the Atlas Mountains." />
+          <HomeHero title="Private Morocco Tours with Local Driver Guides" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Whether you're searching for escorted tours to Morocco or Morocco escorted tours, our small-group itineraries help you uncover the best of Morocco, from the Sahara Desert to the Atlas Mountains." />
           {about?.mainabout && <InfoAbout about={about.mainabout}/>}
           <HomeDestinations destinations={destinations} />
           <ToursSection tours={tours}/>

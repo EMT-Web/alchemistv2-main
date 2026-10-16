@@ -64,7 +64,6 @@ export default function SEO({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
       {!noindex && <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
       
@@ -133,11 +132,7 @@ export function createTourSchema(tour: any) {
     "description": tour.seodescription || tour.heroparagraph,
     "image": absImg(tour.coverImage || tour.mainImage),
     "url": `${siteUrl}/tours/${tour.slug?.current}`,
-    "provider": {
-      "@type": "TravelAgency",
-      "name": "Escorted Morocco Tours",
-      "url": siteUrl
-    },
+    "provider": { "@id": `${siteUrl}/#organization` },
     "touristType": "International Travelers",
     "itinerary": tour.itinerary ? {
       "@type": "ItemList",
@@ -175,14 +170,7 @@ export function createArticleSchema(post: any, author?: string) {
       "@type": "Person",
       "name": author || "Escorted Morocco Tours"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Escorted Morocco Tours",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${siteUrl}/images/escorted-morocco-tours.png`
-      }
-    },
+    "publisher": { "@id": `${siteUrl}/#organization` },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `${siteUrl}/blog/${post.slug?.current}`
@@ -205,20 +193,3 @@ export function createFAQSchema(faqs: Array<{ question: string; answer: string }
     }))
   }
 }
-
-// Utility function to create review/rating schema
-export function createAggregateRatingSchema(rating: number, reviewCount: number, name: string) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": name,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": rating.toString(),
-      "reviewCount": reviewCount.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    }
-  }
-}
-
