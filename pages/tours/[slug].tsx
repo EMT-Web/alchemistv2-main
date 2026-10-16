@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { sanityClient, urlFor } from '../../sanity'
 import { PortableText } from '@portabletext/react'
 import { createBodyComponents } from '../../components/portableTextComponents'
-import { parseTourBody } from '../../components/tourBody'
+import { parseTourBody, findIncludedList } from '../../components/tourBody'
 import PageHero from '../../components/PageHero'
 import TourCard from '../../components/TourCard'
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO'
@@ -135,7 +135,10 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   const from = dests[0]?.city
   const to = dests[dests.length - 1]?.city
   const parsed = parseTourBody(tour.body)
-  const tourFaqs = buildTourFaqs(tour, parsed.included)
+  const tourFaqs = buildTourFaqs(
+    tour,
+    parsed.included.length ? parsed.included : findIncludedList(tour.body)
+  )
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: '/' },

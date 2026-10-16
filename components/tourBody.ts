@@ -83,3 +83,23 @@ export function parseTourBody(body: Block[] | undefined): ParsedTourBody {
     raw,
   }
 }
+
+/**
+ * Inclusions written as a plain "Inclusions:" line followed by a bullet list
+ * (no heading style) are not seen by parseTourBody. This reads that list so the
+ * tour FAQ can answer "What's included?" from the same items shown on the page.
+ */
+export function findIncludedList(body: Block[] | undefined): string[] {
+  const raw = Array.isArray(body) ? body : []
+  for (let i = 0; i < raw.length; i++) {
+    if (/^\s*(inclusions?|included|what.?s included)\s*:?\s*$/i.test(text(raw[i]))) {
+      const items: string[] = []
+      for (let j = i + 1; j < raw.length && raw[j]?.listItem; j++) {
+        const t = text(raw[j]).replace(/\s+/g, ' ').trim()
+        if (t) items.push(t)
+      }
+      return items
+    }
+  }
+  return []
+}
