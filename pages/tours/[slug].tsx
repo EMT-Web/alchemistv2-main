@@ -258,7 +258,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                               const drive = formatDrive(tour.driveTimes?.[i])
                               if (!drive) return <PortableText value={day.content} components={bodyComponents} />
                               const cut = day.content.findIndex((b: any) =>
-                                /^\s*overnight/i.test((b?.children || []).map((c: any) => c?.text || '').join(''))
+                                /^\s*(overnight|inclusions?\s*:?\s*$|what.?s included\s*:?\s*$)/i.test((b?.children || []).map((c: any) => c?.text || '').join(''))
                               )
                               const at = cut === -1 ? day.content.length : cut
                               return (
