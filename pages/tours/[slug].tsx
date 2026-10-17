@@ -155,6 +155,9 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
     { icon: 'fa-user', label: 'Tour type', value: 'Private & small-group' },
     { icon: 'fa-map-marker', label: 'Route', value: from ? `${from}${to && to !== from ? ` → ${to}` : ''}` : 'Morocco' },
     { icon: 'fa-calendar', label: 'Availability', value: 'Year-round' },
+    ...(tour.priceFrom
+      ? [{ icon: 'fa-tag', label: 'Price from', value: `US$${Number(tour.priceFrom).toLocaleString('en-US')} per person` }]
+      : []),
   ]
 
   return (
@@ -282,6 +285,9 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                 <table className="tourx-table">
                   <tbody>
                     <tr><th>Duration</th><td>{tour.duration || 0} days</td></tr>
+                    {tour.priceFrom && (
+                      <tr><th>Price from</th><td>US${Number(tour.priceFrom).toLocaleString('en-US')} per person, based on 2 travellers sharing a double room</td></tr>
+                    )}
                     {from && <tr><th>Starts</th><td>{from}</td></tr>}
                     {to && <tr><th>Ends</th><td>{to}</td></tr>}
                     <tr><th>Tour type</th><td>Private &amp; small-group</td></tr>
@@ -432,12 +438,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `
   *[_type == 'tour' && slug.current == $slug][0]{
       _id, _createdAt, seotitle, seodescription, seokeywords, herotag, heroparagraph,
-      title, duration, slug, mainImage, coverImage,
+      title, duration, priceFrom, slug, mainImage, coverImage,
       "amenities": amenities[]->{ _createdAt, slug, title, icon },
       "destinations": destinations[]->{ _createdAt, city, slug, title },
       body,
      "related": *[_type == "tour" && count(categories[@._ref in ^.^.categories[]._ref]) > 0] | order(duration asc)[0..4] {
-        _id, _createdAt, title, duration, slug, herotag, seodescription, mainImage,
+        _id, _createdAt, title, duration, priceFrom, slug, herotag, seodescription, mainImage,
         "destinations": destinations[]->{ city, slug }
       }
     }

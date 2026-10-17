@@ -144,13 +144,15 @@ export function createTourSchema(tour: any) {
       }))
     } : undefined,
     "duration": tour.duration ? `P${tour.duration}D` : undefined,
-    "offers": {
+    // An Offer is only valid with a price, so tours without one carry none.
+    "offers": tour.priceFrom ? {
       "@type": "Offer",
+      "price": Number(tour.priceFrom),
+      "priceCurrency": tour.priceCurrency || "USD",
       "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD",
       "url": `${siteUrl}/tours/${tour.slug?.current}`,
-      "validFrom": new Date().toISOString()
-    }
+      "description": "Starting price per person, based on 2 travellers sharing a double room"
+    } : undefined
   }
 }
 

@@ -866,6 +866,8 @@ a { transition: color .15s ease; }
 }
 .tcard__route .fa-map-marker { color: var(--r-gold); font-size: 14px; }
 .tcard__route .tcard__arrow { color: var(--r-gold); font-weight: 700; }
+.tcard__price { margin: 0 0 8px; font-size: 14px; }
+.tcard__price strong { color: var(--r-gold); font-size: 16px; }
 .tcard__desc {
   color: var(--r-muted); font-size: .94rem; line-height: 1.62; margin: 0 0 17px;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;

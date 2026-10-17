@@ -65,6 +65,12 @@ export default function TourCard({ tour }: any) {
           </p>
         )}
 
+        {tour?.priceFrom && (
+          <p className="tcard__price">
+            From <strong>US${Number(tour.priceFrom).toLocaleString('en-US')}</strong> per person
+          </p>
+        )}
+
         {desc && <p className="tcard__desc">{desc}</p>}
 
         <div className="tcard__actions">

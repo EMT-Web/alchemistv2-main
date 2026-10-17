@@ -6201,7 +6201,10 @@
       "current": "explore-merzouga-desert-a-3-day-2-night-adventure"
     },
     "title": "Discover the Merzouga Desert on a 3-Day, 2-Night Adventure from Fes",
-    "tourid": 270990
+    "tourid": 270990,
+    "priceFrom": 829,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270990, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-11-25T20:37:45Z",
@@ -16927,7 +16930,10 @@
       "current": "13-days-supreme-guided-tour-from-casablanca-morocco"
     },
     "title": "Supreme Guided Tour - Chefchaouen - Fes - Desert -Essaouira",
-    "tourid": 271098
+    "tourid": 271098,
+    "priceFrom": 3526,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271098, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-03T21:38:00Z",
@@ -18421,7 +18427,10 @@
       "current": "6-days-sahara-desert-tour-from-fes-to-marrakesh-morocco"
     },
     "title": "6 Days Sahara Desert Tour From Fes to Marrakesh",
-    "tourid": 270991
+    "tourid": 270991,
+    "priceFrom": 1711,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270991, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-03T21:36:42Z",
@@ -19738,7 +19747,10 @@
       "current": "4-days-tour-from-fes-to-marrakech-via-merzouga-morocco"
     },
     "title": "4 Days Tour from Fes to Marrakech via Merzouga",
-    "tourid": 270988
+    "tourid": 270988,
+    "priceFrom": 941,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270988, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-03T19:50:57Z",
@@ -21399,7 +21411,10 @@
       "current": "11-days-ideal-guided-tour-casablanca-to-marrakech"
     },
     "title": "Ideal Escorted Tour to Marrakesh via Chefchaouen - Fes - Desert",
-    "tourid": 271095
+    "tourid": 271095,
+    "priceFrom": 2980,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271095, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-03T19:43:25Z",
@@ -24591,7 +24606,10 @@
       "current": "5-days-morocco-tour-via-tangier-chefchaouen-fes-rabat"
     },
     "title": "5 Days Tour from and back to Tangier via Chefchaouen and Fes",
-    "tourid": 271101
+    "tourid": 271101,
+    "priceFrom": 1063,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271101, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-24T20:19:59Z",
@@ -27615,7 +27633,10 @@
       "current": "6-days-special-morocco-tour-from-casablanca"
     },
     "title": "6 Days Special Morocco Tour from Casablanca",
-    "tourid": 243833
+    "tourid": 243833,
+    "priceFrom": 1807,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 243833, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-19T13:04:08Z",
@@ -29118,7 +29139,10 @@
       "current": "8-days-imperial-sahara-desert-tour-from-marrakesh-to-tangier"
     },
     "title": "8 Day Tour from Marrakech to Tangier via the Sahara",
-    "tourid": 270694
+    "tourid": 270694,
+    "priceFrom": 2249,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270694, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-17T20:45:32Z",
@@ -30349,7 +30373,10 @@
       "current": "7-days-morocco-desert-tour-from-casablanca-to-marrakesh"
     },
     "title": "7 Days Morocco Desert Tour from Casablanca to Marrakesh",
-    "tourid": 271096
+    "tourid": 271096,
+    "priceFrom": 2009,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271096, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-17T00:07:34Z",
@@ -34291,7 +34318,10 @@
       "current": "7-days-adventure-through-time-and-culture-morocco"
     },
     "title": "7 Days Adventure through time and Culture Morocco",
-    "tourid": 270690
+    "tourid": 270690,
+    "priceFrom": 1882,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270690, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-15T19:56:17Z",
@@ -35332,7 +35362,10 @@
       "current": "5-days-sahara-desert-tour"
     },
     "title": "5 Days Sahara Desert Tour From Marrakesh to Fes",
-    "tourid": 243836
+    "tourid": 243836,
+    "priceFrom": 1151,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270704, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-13T21:03:54Z",
@@ -36305,7 +36338,10 @@
       "current": "3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco"
     },
     "title": "3 Day Sahara Desert Tour from Marrakech to Fes",
-    "tourid": 270692
+    "tourid": 270692,
+    "priceFrom": 762,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270692, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-01T19:01:30Z",
