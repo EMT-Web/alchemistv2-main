@@ -471,7 +471,31 @@
     "priceFrom": 1500,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 6,
+        "minutes": 15
+      },
+      null,
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 370,
+        "minutes": 360
+      },
+      {
+        "km": 200,
+        "minutes": 240
+      }
+    ]
   },
   {
     "_createdAt": "2024-02-28T13:21:04Z",
@@ -703,7 +727,14 @@
     "priceFrom": 2300,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 60,
+        "minutes": 75
+      },
+      null
+    ]
   },
   {
     "_createdAt": "2023-12-10T11:14:22Z",
@@ -2311,7 +2342,36 @@
     "priceFrom": 1760,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 25,
+        "minutes": 30
+      },
+      null,
+      {
+        "km": 370,
+        "minutes": 330
+      },
+      {
+        "km": 370,
+        "minutes": 360
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 6,
+        "minutes": 15
+      }
+    ]
   },
   {
     "_createdAt": "2023-12-08T12:27:56Z",
@@ -4737,7 +4797,41 @@
     "tourid": 271102,
     "priceFrom": 2025,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271102, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271102, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 15,
+        "minutes": 25
+      },
+      {
+        "km": 115,
+        "minutes": 120
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 6,
+        "minutes": 15
+      }
+    ]
   },
   {
     "_createdAt": "2023-12-06T11:02:17Z",
@@ -5430,7 +5524,18 @@
     "priceFrom": 850,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 560,
+        "minutes": 540
+      }
+    ]
   },
   {
     "_createdAt": "2023-12-05T11:14:32Z",
@@ -6223,7 +6328,18 @@
     "tourid": 270990,
     "priceFrom": 829,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270990, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270990, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-11-25T20:37:45Z",
@@ -6899,7 +7015,17 @@
     "priceFrom": 540,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-11-25T19:41:31Z",
@@ -7614,7 +7740,17 @@
     "priceFrom": 580,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 560,
+        "minutes": 540
+      }
+    ]
   },
   {
     "_createdAt": "2023-11-25T18:50:05Z",
@@ -8212,7 +8348,17 @@
     "priceFrom": 580,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 560,
+        "minutes": 540
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-11-25T16:40:37Z",
@@ -8871,7 +9017,17 @@
     "priceFrom": 580,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 560,
+        "minutes": 540
+      },
+      {
+        "km": 560,
+        "minutes": 540
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-28T17:32:16Z",
@@ -10540,7 +10696,31 @@
     "tourid": 271103,
     "priceFrom": 1389,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271103, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271103, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 115,
+        "minutes": 120
+      },
+      {
+        "km": 200,
+        "minutes": 225
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-28T17:23:49Z",
@@ -12911,7 +13091,48 @@
     "tourid": 270992,
     "priceFrom": 3316,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270992, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270992, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 15,
+        "minutes": 25
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 190,
+        "minutes": 165
+      },
+      {
+        "km": 380,
+        "minutes": 300
+      },
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 120,
+        "minutes": 135
+      },
+      {
+        "km": 15,
+        "minutes": 25
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-28T16:36:58Z",
@@ -14685,7 +14906,35 @@
     "priceFrom": 1720,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 190,
+        "minutes": 165
+      },
+      {
+        "km": 380,
+        "minutes": 300
+      },
+      {
+        "km": 30,
+        "minutes": 40
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-28T13:40:17Z",
@@ -16978,7 +17227,53 @@
     "tourid": 271098,
     "priceFrom": 3526,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271098, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271098, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 30,
+        "minutes": 40
+      },
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 70,
+        "minutes": 180,
+        "mode": "off-road 4x4"
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 190,
+        "minutes": 165
+      },
+      {
+        "km": 380,
+        "minutes": 300
+      },
+      {
+        "km": 30,
+        "minutes": 40
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-03T21:38:00Z",
@@ -18475,7 +18770,27 @@
     "tourid": 270991,
     "priceFrom": 1711,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270991, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270991, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 6,
+        "minutes": 15
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-03T21:36:42Z",
@@ -19795,7 +20110,22 @@
     "tourid": 270988,
     "priceFrom": 941,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270988, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270988, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-03T19:50:57Z",
@@ -21459,7 +21789,45 @@
     "tourid": 271095,
     "priceFrom": 2980,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271095, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271095, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 30,
+        "minutes": 40
+      },
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 70,
+        "minutes": 180,
+        "mode": "off-road 4x4"
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 210,
+        "minutes": 150
+      }
+    ]
   },
   {
     "_createdAt": "2023-03-03T19:43:25Z",
@@ -23476,7 +23844,36 @@
     "tourid": 271099,
     "priceFrom": 1759,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271099, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271099, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 30,
+        "minutes": 40
+      },
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-24T20:25:19Z",
@@ -24657,7 +25054,26 @@
     "tourid": 271101,
     "priceFrom": 1063,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271101, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271101, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 120,
+        "minutes": 135
+      },
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 200,
+        "minutes": 150
+      },
+      {
+        "km": 250,
+        "minutes": 180
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-24T20:19:59Z",
@@ -25895,7 +26311,21 @@
     "tourid": 270989,
     "priceFrom": 762,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270989, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270989, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-24T18:04:49Z",
@@ -27687,7 +28117,30 @@
     "tourid": 243833,
     "priceFrom": 1807,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 243833, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 243833, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-19T13:04:08Z",
@@ -29193,7 +29646,35 @@
     "tourid": 270694,
     "priceFrom": 2249,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270694, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270694, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      {
+        "km": 120,
+        "minutes": 135
+      },
+      {
+        "km": 15,
+        "minutes": 25
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-17T20:45:32Z",
@@ -30427,7 +30908,31 @@
     "tourid": 271096,
     "priceFrom": 2009,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271096, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271096, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-17T00:07:34Z",
@@ -31462,7 +31967,27 @@
     "tourid": 271100,
     "priceFrom": 1139,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 271100, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 271100, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 30,
+        "minutes": 40
+      },
+      {
+        "km": 330,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 300,
+        "minutes": 210
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-16T09:35:47Z",
@@ -32820,7 +33345,23 @@
     "tourid": 270993,
     "priceFrom": 1172,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270993, regular price (sale price 938 shown), checked 2026-10-17"
+    "priceSource": "TourRadar listing 270993, regular price (sale price 938 shown), checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      null
+    ]
   },
   {
     "_createdAt": "2023-02-15T22:38:42Z",
@@ -34364,7 +34905,36 @@
     "tourid": 270690,
     "priceFrom": 1882,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270690, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270690, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 70,
+        "minutes": 180,
+        "mode": "off-road 4x4"
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null,
+      {
+        "km": 260,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 330,
+        "minutes": 270
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-15T19:56:17Z",
@@ -35408,7 +35978,27 @@
     "tourid": 243836,
     "priceFrom": 1151,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270704, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270704, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 70,
+        "minutes": 180,
+        "mode": "off-road 4x4"
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      },
+      null
+    ]
   },
   {
     "_createdAt": "2023-02-13T21:03:54Z",
@@ -36384,7 +36974,21 @@
     "tourid": 270692,
     "priceFrom": 762,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270692, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270692, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      {
+        "km": 470,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-02-01T19:01:30Z",
@@ -36886,7 +37490,17 @@
     "priceFrom": 450,
     "priceCurrency": "USD",
     "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
-    "priceEstimated": true
+    "priceEstimated": true,
+    "driveTimes": [
+      {
+        "km": 360,
+        "minutes": 360
+      },
+      {
+        "km": 375,
+        "minutes": 390
+      }
+    ]
   },
   {
     "_createdAt": "2023-01-30T18:15:17Z",
@@ -37868,6 +38482,21 @@
     "tourid": 270490,
     "priceFrom": 941,
     "priceCurrency": "USD",
-    "priceSource": "TourRadar listing 270490, per person in a private double room, checked 2026-10-17"
+    "priceSource": "TourRadar listing 270490, per person in a private double room, checked 2026-10-17",
+    "driveTimes": [
+      {
+        "km": 330,
+        "minutes": 390
+      },
+      {
+        "km": 280,
+        "minutes": 270
+      },
+      null,
+      {
+        "km": 470,
+        "minutes": 390
+      }
+    ]
   }
 ]

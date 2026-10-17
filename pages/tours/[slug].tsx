@@ -24,6 +24,18 @@ type FormValues = {
   website: string
 }
 
+type DriveTime = { km: number; minutes: number; mode?: string } | null | undefined
+
+// "~315 km / 196 mi · approx. 4h15 drive", the line used on Morocco Boutique Tours.
+function formatDrive(d: DriveTime): string | null {
+  if (!d || !d.km || !d.minutes) return null
+  const mi = Math.round(d.km * 0.621371)
+  const h = Math.floor(d.minutes / 60)
+  const m = d.minutes % 60
+  const time = h === 0 ? `${m} min` : m === 0 ? `${h}h` : `${h}h${String(m).padStart(2, '0')}`
+  return `~${d.km} km / ${mi} mi · approx. ${time}${d.mode ? ` (${d.mode})` : ''} drive`
+}
+
 type TourFaq = { question: string; answer: string; link?: { text: string; href: string } }
 
 function buildTourFaqs(tour: any, included: string[] = []): TourFaq[] {
@@ -240,7 +252,27 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                             <span className="tourx-acc__toggle" aria-hidden="true" />
                           </button>
                           <div className="tourx-acc__body">
-                            <PortableText value={day.content} components={bodyComponents} />
+                            {(() => {
+                              // Same format as Morocco Boutique Tours: one plain line inside the
+                              // day, after the description and before the overnight line.
+                              const drive = formatDrive(tour.driveTimes?.[i])
+                              if (!drive) return <PortableText value={day.content} components={bodyComponents} />
+                              const cut = day.content.findIndex((b: any) =>
+                                /^\s*overnight/i.test((b?.children || []).map((c: any) => c?.text || '').join(''))
+                              )
+                              const at = cut === -1 ? day.content.length : cut
+                              return (
+                                <>
+                                  <PortableText value={day.content.slice(0, at)} components={bodyComponents} />
+                                  <p className="tourx-drive">
+                                    <span className="fa fa-car" aria-hidden="true" /> {drive}
+                                  </p>
+                                  {at < day.content.length && (
+                                    <PortableText value={day.content.slice(at)} components={bodyComponents} />
+                                  )}
+                                </>
+                              )
+                            })()}
                           </div>
                         </div>
                       )
@@ -438,7 +470,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `
   *[_type == 'tour' && slug.current == $slug][0]{
       _id, _createdAt, seotitle, seodescription, seokeywords, herotag, heroparagraph,
-      title, duration, priceFrom, slug, mainImage, coverImage,
+      title, duration, priceFrom, driveTimes, slug, mainImage, coverImage,
       "amenities": amenities[]->{ _createdAt, slug, title, icon },
       "destinations": destinations[]->{ _createdAt, city, slug, title },
       body,
