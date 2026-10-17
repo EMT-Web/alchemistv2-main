@@ -9,7 +9,7 @@ function gallery({gallery}:any) {
     <>
     <SEO
       title="Our Escorted Morocco Tours Gallery"
-      description="Browse through stunning images of Morocco from our escorted tours gallery. Get inspired for your next adventure and discover the beauty of this enchanting destination."
+      description="Photos from our private Morocco tours: the Sahara dunes of Merzouga, Marrakech, Fes, Chefchaouen, the Atlas Mountains and our desert camps."
       keywords="Escorted Morocco tours, gallery, images, photos, travel inspiration, adventure, destinations, culture, history, landmarks, beautiful scenery."
     />
     <PageHero title="Our Escorted Tours Gallery" tag="Experience the Beauty of Morocco:" p="Get inspired for your next adventure and discover the beauty of this enchanting destination."  img="/images/hero-bgs/gallery2.jpg"/>

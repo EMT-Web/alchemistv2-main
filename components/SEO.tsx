@@ -9,6 +9,17 @@ const absImg = (source: any, fallback = `${SITE_URL}/images/escorted-morocco-tou
   return u.startsWith('http') ? u : `${SITE_URL}${u}`
 }
 
+// Items inside an @graph inherit the top level @context, so drop their own copy.
+const cleanSchema = (schema: any) =>
+  schema && Array.isArray(schema['@graph'])
+    ? {
+        ...schema,
+        '@graph': schema['@graph']
+          .filter(Boolean)
+          .map(({ ['@context']: _ctx, ...rest }: any) => rest),
+      }
+    : schema
+
 interface SEOProps {
   title: string
   description: string
@@ -100,7 +111,7 @@ export default function SEO({
       {schema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cleanSchema(schema)) }}
         />
       )}
     </Head>

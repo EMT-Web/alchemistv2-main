@@ -7,7 +7,7 @@ function bookingInfo() {
     <>
      <SEO
        title="Booking Conditions"
-       description="Our aim is to ensure a smooth and enjoyable escorted tours and experiences in Morocco for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions..."
+       description="How booking a private Morocco tour works with Escorted Morocco Tours: deposit, payment of the balance, cancellations and what to know before you travel."
        keywords="Escorted Morocco tours, Morocco Escorted tours, Guided Tours Morocco, Morocco tours, booking conditions"
      />
     <PageHero title="Booking Terms and Conditions"  tag="Escorted Morocco Tours "  p="Our aim is to ensure a smooth and enjoyable experience for all clients, and these conditions help us to achieve that goal. Please feel free to contact us if you have any questions or concerns regarding our booking conditions."   img='/images/hero-bgs/about-us.jpg'/>

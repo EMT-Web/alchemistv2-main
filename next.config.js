@@ -25,6 +25,18 @@ module.exports = {
         destination: "https://www.escortedmoroccotours.com/:path*",
         permanent: true,
       },
+      // Tour URLs renamed on 2026-10-17 when their day counts were corrected
+      // (the itineraries were 6 and 9 days, the old URLs said 5 and 8).
+      {
+        source: "/tours/5-days-moroccan-imperial-tour-from-casablanca-to-fes",
+        destination: "/tours/6-days-imperial-cities-tour-from-casablanca",
+        statusCode: 301,
+      },
+      {
+        source: "/tours/8-days-desert-imperial-tour-casablanca-to-marrakesh-morocco",
+        destination: "/tours/9-days-desert-tour-casablanca-to-marrakech-via-chefchaouen",
+        statusCode: 301,
+      },
       {
         source: "/destination/:slug",
         destination: "/destinations/:slug",

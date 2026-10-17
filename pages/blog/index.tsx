@@ -57,7 +57,7 @@ export default function  NextPage({ posts: sanityPosts}:any) {
     <>
     <SEO
       title="Morocco Travel Blog | Expert Guides & Tips"
-      description="Uncover the beauty and mystery of Morocco with our expertly crafted travel guides. Read about Morocco tours, destinations, culture, and travel tips from expert guides."
+      description="Morocco travel guides from local tour guides: Sahara trip planning, itineraries, destinations, culture and practical tips for your visit."
       keywords="Escorted Morocco tours, Morocco travel, immersion tours, Morocco blog, guided tours, desert tours, cultural experiences, Marrakech, Essaouira, Chefchaouen, travel tips"
       schema={combinedSchema}
     />

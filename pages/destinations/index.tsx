@@ -16,7 +16,7 @@ export default function  NextPage({ destinations}:any) {
     <>
       <SEO
         title="Morocco Travel Guide | Places to Visit"
-        description="Places to Visit in Morocco, Discover the rich history, vibrant culture, and breathtaking natural landscapes of Morocco's top destinations. From the bustling cities of Marrakech and Fez to the tranquil Sahara desert and the stunning Atlas Mountains, there is something for every traveler to enjoy. Explore ancient ruins, sample delicious cuisine, and experience the warm hospitality of the Moroccan people on a journey you won't forget."
+        description="Morocco's top destinations: Marrakech, Fes, the Merzouga dunes, Chefchaouen, Ait Ben Haddou, the Atlas and the coast, and the tours that visit them."
         keywords="Morocco, best places, Morocco destinations, Places to Visit in Morocco"
       />
     <PageHero title='Places to Visit in Morocco' tag="Explore the Best Moroccan Destinations" p="Discover the rich history, vibrant culture, and breathtaking natural landscapes of Morocco's top destinations. From the bustling cities of Marrakech and Fez to the tranquil Sahara desert and the stunning Atlas Mountains, there is something for every traveler to enjoy. Explore ancient ruins, sample delicious cuisine, and experience the warm hospitality of the Moroccan people on a journey you won't forget."  img='/cms/ea4c833e52b16d88aa6b67dcfb5318e49ba3402e.jpg'/>
