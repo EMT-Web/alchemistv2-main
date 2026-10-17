@@ -24,16 +24,23 @@ type FormValues = {
   website: string
 }
 
-type DriveTime = { km: number; minutes: number; mode?: string } | null | undefined
+type DriveTime = { km: number; minutes: number; mode?: string; from?: string; to?: string; via?: string; label?: string } | null | undefined
 
 // "~315 km / 196 mi · approx. 4h15 drive", the line used on Morocco Boutique Tours.
+const toMiles = (km: number) => Math.round(km * 0.621371)
+function formatHours(minutes: number): string {
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  return h === 0 ? `${m} min` : m === 0 ? `${h}h` : `${h}h${String(m).padStart(2, '0')}`
+}
+function routeName(d: NonNullable<DriveTime>): string {
+  if (d.label) return d.label
+  return `${d.from} to ${d.to}${d.via ? ` via ${d.via}` : ''}`
+}
+
 function formatDrive(d: DriveTime): string | null {
   if (!d || !d.km || !d.minutes) return null
-  const mi = Math.round(d.km * 0.621371)
-  const h = Math.floor(d.minutes / 60)
-  const m = d.minutes % 60
-  const time = h === 0 ? `${m} min` : m === 0 ? `${h}h` : `${h}h${String(m).padStart(2, '0')}`
-  return `~${d.km} km / ${mi} mi · approx. ${time}${d.mode ? ` (${d.mode})` : ''} drive`
+  return `~${d.km} km / ${toMiles(d.km)} mi · approx. ${formatHours(d.minutes)}${d.mode ? ` (${d.mode})` : ''} drive`
 }
 
 type TourFaq = { question: string; answer: string; link?: { text: string; href: string } }
@@ -83,6 +90,17 @@ function buildTourFaqs(tour: any, included: string[] = []): TourFaq[] {
         'We run private and small-group departures to keep the experience personal rather than large coach-tour groups. Group size can vary by date, so ask us when you inquire.',
     }
   )
+  const drives = (tour.driveTimes || [])
+    .map((d: DriveTime, i: number) => (d && d.km && !d.mode ? { ...d, day: i + 1 } : null))
+    .filter(Boolean) as any[]
+  if (drives.length) {
+    const totalKm = drives.reduce((a, d) => a + d.km, 0)
+    const longest = drives.reduce((a, d) => (d.minutes > a.minutes ? d : a), drives[0])
+    faqs.push({
+      question: 'How long are the drives on this tour?',
+      answer: `The tour covers about ${totalKm.toLocaleString('en-US')} km (${toMiles(totalKm).toLocaleString('en-US')} miles) of driving over ${drives.length} ${drives.length === 1 ? 'day' : 'days'}. The longest is Day ${longest.day}, ${routeName(longest)}: about ${longest.km} km (${toMiles(longest.km)} miles), roughly ${formatHours(longest.minutes)} of driving before stops for sightseeing, photos and meals. You travel in a private air-conditioned vehicle and can ask your driver to stop whenever you like.`,
+    })
+  }
   if (isSaharaTour) {
     faqs.push({
       question: 'What should I pack for the Sahara portion of this tour?',
@@ -147,6 +165,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   const from = dests[0]?.city
   const to = dests[dests.length - 1]?.city
   const parsed = parseTourBody(tour.body)
+  const totalDriveKm = (tour.driveTimes || []).reduce((a: number, d: DriveTime) => a + (d && d.km && !d.mode ? d.km : 0), 0)
   const tourFaqs = buildTourFaqs(
     tour,
     parsed.included.length ? parsed.included : findIncludedList(tour.body)
@@ -285,6 +304,31 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                 )}
               </div>
 
+              {/* Driving times by day */}
+              {(tour.driveTimes || []).some((d: DriveTime) => d && d.km) && (
+                <div className="tourx-block">
+                  <h2>Driving times by day</h2>
+                  <table className="tourx-table tourx-drives">
+                    <thead>
+                      <tr><th scope="col">Day</th><th scope="col">Route</th><th scope="col">Distance</th><th scope="col">Driving time</th></tr>
+                    </thead>
+                    <tbody>
+                      {(tour.driveTimes as DriveTime[]).map((d, i) =>
+                        d && d.km ? (
+                          <tr key={i}>
+                            <th scope="row">Day {i + 1}</th>
+                            <td>{routeName(d)}</td>
+                            <td>{d.km} km / {toMiles(d.km)} mi</td>
+                            <td>approx. {formatHours(d.minutes)}{d.mode ? ` (${d.mode})` : ''}</td>
+                          </tr>
+                        ) : null
+                      )}
+                    </tbody>
+                  </table>
+                  <p className="tourx-note">Distances are approximate road distances. Driving times are without stops for sightseeing, photos and meals.</p>
+                </div>
+              )}
+
               {/* Included / Excluded */}
               {(parsed.included.length > 0 || parsed.excluded.length > 0) && (
                 <div className="tourx-block">
@@ -323,6 +367,9 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                     {from && <tr><th>Starts</th><td>{from}</td></tr>}
                     {to && <tr><th>Ends</th><td>{to}</td></tr>}
                     <tr><th>Tour type</th><td>Private &amp; small-group</td></tr>
+                    {totalDriveKm > 0 && (
+                      <tr><th>Total driving</th><td>about {totalDriveKm.toLocaleString('en-US')} km / {toMiles(totalDriveKm).toLocaleString('en-US')} mi</td></tr>
+                    )}
                     <tr><th>Transport</th><td>Private air-conditioned vehicle</td></tr>
                     <tr><th>Languages</th><td>English, French, Spanish, Arabic</td></tr>
                     <tr><th>Availability</th><td>Year-round, on your dates</td></tr>

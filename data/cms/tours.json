@@ -475,25 +475,39 @@
     "driveTimes": [
       {
         "km": 6,
-        "minutes": 15
+        "minutes": 15,
+        "from": "Marrakech airport",
+        "to": "Marrakech"
       },
       null,
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       null,
       {
         "km": 370,
-        "minutes": 360
+        "minutes": 360,
+        "from": "Merzouga",
+        "to": "Ouarzazate",
+        "via": "the Draa Valley"
       },
       {
         "km": 200,
-        "minutes": 240
+        "minutes": 240,
+        "from": "Ouarzazate",
+        "to": "Marrakech",
+        "via": "the Tizi n'Tichka pass"
       }
     ]
   },
@@ -731,7 +745,9 @@
     "driveTimes": [
       {
         "km": 60,
-        "minutes": 75
+        "minutes": 75,
+        "from": "Marrakech",
+        "to": "Ouirgane"
       },
       null
     ]
@@ -2346,30 +2362,46 @@
     "driveTimes": [
       {
         "km": 25,
-        "minutes": 30
+        "minutes": 30,
+        "from": "Agadir airport",
+        "to": "Agadir"
       },
       null,
       {
         "km": 370,
-        "minutes": 330
+        "minutes": 330,
+        "from": "Agadir",
+        "to": "Ouarzazate",
+        "via": "Taroudant"
       },
       {
         "km": 370,
-        "minutes": 360
+        "minutes": 360,
+        "from": "Ouarzazate",
+        "to": "Merzouga",
+        "via": "the Draa Valley and Rissani"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 6,
-        "minutes": 15
+        "minutes": 15,
+        "from": "Marrakech",
+        "to": "Marrakech airport"
       }
     ]
   },
@@ -4801,35 +4833,53 @@
     "driveTimes": [
       {
         "km": 15,
-        "minutes": 25
+        "minutes": 25,
+        "from": "Tangier airport",
+        "to": "Tangier"
       },
       {
         "km": 115,
-        "minutes": 120
+        "minutes": 120,
+        "from": "Tangier",
+        "to": "Chefchaouen"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 6,
-        "minutes": 15
+        "minutes": 15,
+        "from": "Marrakech",
+        "to": "Marrakech airport"
       }
     ]
   },
@@ -5528,12 +5578,18 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 560,
-        "minutes": 540
+        "minutes": 540,
+        "from": "Merzouga",
+        "to": "Marrakech",
+        "via": "Todra Gorge and the Tizi n'Tichka pass"
       }
     ]
   },
@@ -6332,12 +6388,18 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       }
     ]
   },
@@ -7019,11 +7081,17 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       }
     ]
   },
@@ -7744,11 +7812,17 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 560,
-        "minutes": 540
+        "minutes": 540,
+        "from": "Merzouga",
+        "to": "Marrakech",
+        "via": "Todra Gorge and the Tizi n'Tichka pass"
       }
     ]
   },
@@ -8352,11 +8426,17 @@
     "driveTimes": [
       {
         "km": 560,
-        "minutes": 540
+        "minutes": 540,
+        "from": "Marrakech",
+        "to": "Merzouga",
+        "via": "the Tizi n'Tichka pass and Todra Gorge"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       }
     ]
   },
@@ -9021,11 +9101,17 @@
     "driveTimes": [
       {
         "km": 560,
-        "minutes": 540
+        "minutes": 540,
+        "from": "Marrakech",
+        "to": "Merzouga",
+        "via": "the Tizi n'Tichka pass and Todra Gorge"
       },
       {
         "km": 560,
-        "minutes": 540
+        "minutes": 540,
+        "from": "Merzouga",
+        "to": "Marrakech",
+        "via": "Todra Gorge and the Tizi n'Tichka pass"
       }
     ]
   },
@@ -10700,25 +10786,38 @@
     "driveTimes": [
       {
         "km": 115,
-        "minutes": 120
+        "minutes": 120,
+        "from": "Tangier",
+        "to": "Chefchaouen"
       },
       {
         "km": 200,
-        "minutes": 225
+        "minutes": 225,
+        "from": "Chefchaouen",
+        "to": "Fes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -13095,42 +13194,66 @@
     "driveTimes": [
       {
         "km": 15,
-        "minutes": 25
+        "minutes": 25,
+        "from": "Fes airport",
+        "to": "Fes"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 190,
-        "minutes": 165
+        "minutes": 165,
+        "from": "Marrakech",
+        "to": "Essaouira"
       },
       {
         "km": 380,
-        "minutes": 300
+        "minutes": 300,
+        "from": "Essaouira",
+        "to": "Casablanca",
+        "via": "El Jadida"
       },
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 120,
-        "minutes": 135
+        "minutes": 135,
+        "from": "Chefchaouen",
+        "to": "Tangier",
+        "via": "Tetouan"
       },
       {
         "km": 15,
-        "minutes": 25
+        "minutes": 25,
+        "from": "Tangier",
+        "to": "Tangier airport"
       }
     ]
   },
@@ -14910,29 +15033,45 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 190,
-        "minutes": 165
+        "minutes": 165,
+        "from": "Marrakech",
+        "to": "Essaouira"
       },
       {
         "km": 380,
-        "minutes": 300
+        "minutes": 300,
+        "from": "Essaouira",
+        "to": "Casablanca",
+        "via": "El Jadida"
       },
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca",
+        "to": "Casablanca airport"
       }
     ]
   },
@@ -17231,47 +17370,74 @@
     "driveTimes": [
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca airport",
+        "to": "Casablanca"
       },
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 70,
         "minutes": 180,
-        "mode": "off-road 4x4"
+        "mode": "off-road 4x4",
+        "from": "Merzouga",
+        "to": "Merzouga",
+        "label": "4x4 tour around the Erg Chebbi dunes"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 190,
-        "minutes": 165
+        "minutes": 165,
+        "from": "Marrakech",
+        "to": "Essaouira"
       },
       {
         "km": 380,
-        "minutes": 300
+        "minutes": 300,
+        "from": "Essaouira",
+        "to": "Casablanca",
+        "via": "El Jadida"
       },
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca",
+        "to": "Casablanca airport"
       }
     ]
   },
@@ -18774,21 +18940,32 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 6,
-        "minutes": 15
+        "minutes": 15,
+        "from": "Marrakech",
+        "to": "Marrakech airport"
       }
     ]
   },
@@ -20114,16 +20291,25 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -21793,39 +21979,61 @@
     "driveTimes": [
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca airport",
+        "to": "Casablanca"
       },
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 70,
         "minutes": 180,
-        "mode": "off-road 4x4"
+        "mode": "off-road 4x4",
+        "from": "Merzouga",
+        "to": "Merzouga",
+        "label": "4x4 tour around the Erg Chebbi dunes"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null,
       {
         "km": 210,
-        "minutes": 150
+        "minutes": 150,
+        "from": "Marrakech",
+        "to": "Casablanca airport"
       }
     ]
   },
@@ -23848,30 +24056,47 @@
     "driveTimes": [
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca airport",
+        "to": "Casablanca"
       },
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -25058,20 +25283,31 @@
     "driveTimes": [
       {
         "km": 120,
-        "minutes": 135
+        "minutes": 135,
+        "from": "Tangier",
+        "to": "Chefchaouen",
+        "via": "Tetouan"
       },
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 200,
-        "minutes": 150
+        "minutes": 150,
+        "from": "Fes",
+        "to": "Rabat"
       },
       {
         "km": 250,
-        "minutes": 180
+        "minutes": 180,
+        "from": "Rabat",
+        "to": "Tangier",
+        "via": "Asilah"
       }
     ]
   },
@@ -26315,15 +26551,24 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -28121,24 +28366,39 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -29650,29 +29910,46 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Fes",
+        "to": "Chefchaouen",
+        "via": "Meknes and Volubilis"
       },
       {
         "km": 120,
-        "minutes": 135
+        "minutes": 135,
+        "from": "Chefchaouen",
+        "to": "Tangier",
+        "via": "Tetouan"
       },
       {
         "km": 15,
-        "minutes": 25
+        "minutes": 25,
+        "from": "Tangier",
+        "to": "Tangier airport"
       }
     ]
   },
@@ -30912,25 +31189,40 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       }
     ]
   },
@@ -31971,21 +32263,32 @@
     "driveTimes": [
       {
         "km": 30,
-        "minutes": 40
+        "minutes": 40,
+        "from": "Casablanca airport",
+        "to": "Casablanca"
       },
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Casablanca",
+        "to": "Chefchaouen",
+        "via": "Rabat"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Fes",
+        "via": "Volubilis and Meknes"
       },
       null,
       {
         "km": 300,
-        "minutes": 210
+        "minutes": 210,
+        "from": "Fes",
+        "to": "Casablanca",
+        "via": "Rabat"
       }
     ]
   },
@@ -33349,16 +33652,25 @@
     "driveTimes": [
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Fes",
+        "to": "Merzouga",
+        "via": "Ifrane and Midelt"
       },
       null,
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Merzouga",
+        "to": "Dades Valley",
+        "via": "Todra Gorge"
       },
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Dades Valley",
+        "to": "Marrakech",
+        "via": "Ouarzazate and Ait Ben Haddou"
       },
       null
     ]
@@ -34909,30 +35221,48 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       {
         "km": 70,
         "minutes": 180,
-        "mode": "off-road 4x4"
+        "mode": "off-road 4x4",
+        "from": "Merzouga",
+        "to": "Merzouga",
+        "label": "4x4 tour around the Erg Chebbi dunes"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       },
       null,
       {
         "km": 260,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Fes",
+        "to": "Chefchaouen",
+        "via": "Meknes and Volubilis"
       },
       null,
       {
         "km": 330,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Chefchaouen",
+        "to": "Casablanca",
+        "via": "Rabat"
       }
     ]
   },
@@ -35982,20 +36312,32 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       {
         "km": 70,
         "minutes": 180,
-        "mode": "off-road 4x4"
+        "mode": "off-road 4x4",
+        "from": "Merzouga",
+        "to": "Merzouga",
+        "label": "4x4 tour around the Erg Chebbi dunes"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       },
       null
     ]
@@ -36978,15 +37320,24 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       }
     ]
   },
@@ -37494,11 +37845,17 @@
     "driveTimes": [
       {
         "km": 360,
-        "minutes": 360
+        "minutes": 360,
+        "from": "Marrakech",
+        "to": "Zagora",
+        "via": "Ouarzazate and the Draa Valley"
       },
       {
         "km": 375,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Zagora",
+        "to": "Marrakech",
+        "via": "Ait Ben Haddou"
       }
     ]
   },
@@ -38486,16 +38843,25 @@
     "driveTimes": [
       {
         "km": 330,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Marrakech",
+        "to": "Dades Valley",
+        "via": "Ait Ben Haddou and Ouarzazate"
       },
       {
         "km": 280,
-        "minutes": 270
+        "minutes": 270,
+        "from": "Dades Valley",
+        "to": "Merzouga",
+        "via": "Todra Gorge"
       },
       null,
       {
         "km": 470,
-        "minutes": 390
+        "minutes": 390,
+        "from": "Merzouga",
+        "to": "Fes",
+        "via": "Midelt and Ifrane"
       }
     ]
   }

@@ -145,14 +145,22 @@ export function createTourSchema(tour: any) {
     "url": `${siteUrl}/tours/${tour.slug?.current}`,
     "provider": { "@id": `${siteUrl}/#organization` },
     "touristType": "International Travelers",
-    "itinerary": tour.itinerary ? {
+    // One entry per driving day: route, distance in km and miles, driving time.
+    "itinerary": Array.isArray(tour.driveTimes) && tour.driveTimes.some((d: any) => d && d.km) ? {
       "@type": "ItemList",
-      "numberOfItems": tour.itinerary.length,
-      "itemListElement": tour.itinerary.map((day: any, index: number) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": day.title || `Day ${index + 1}`
-      }))
+      "name": "Driving times by day",
+      "itemListElement": tour.driveTimes
+        .map((d: any, i: number) => d && d.km ? {
+          "@type": "ListItem",
+          "position": i + 1,
+          "item": {
+            "@type": "TouristTrip",
+            "name": d.label ? `Day ${i + 1}: ${d.label}` : `Day ${i + 1}: ${d.from} to ${d.to}`,
+            "description": `${d.label || `${d.from} to ${d.to}${d.via ? ` via ${d.via}` : ''}`}: about ${d.km} km (${Math.round(d.km * 0.621371)} miles), approx. ${Math.floor(d.minutes / 60) ? `${Math.floor(d.minutes / 60)} h ` : ''}${d.minutes % 60 ? `${d.minutes % 60} min ` : ''}${d.mode ? `${d.mode} ` : ''}driving`,
+            ...(d.from && d.to && !d.mode ? { "itinerary": [{ "@type": "Place", "name": d.from }, { "@type": "Place", "name": d.to }] } : {})
+          }
+        } : null)
+        .filter(Boolean)
     } : undefined,
     "duration": tour.duration ? `P${tour.duration}D` : undefined,
     // An Offer is only valid with a price, so tours without one carry none.

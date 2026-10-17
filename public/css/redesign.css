@@ -1608,3 +1608,7 @@ a.btn.cta-banner__wa:hover,
 /* Driving time line inside each itinerary day */
 .tourx-drive { margin: 4px 0 12px; font-size: 14px; font-weight: 600; color: var(--r-ink); }
 .tourx-drive .fa-car { color: var(--r-gold); margin-right: 6px; }
+.tourx-drives th[scope="row"] { white-space: nowrap; }
+.tourx-note { font-size: 13px; color: var(--r-muted); margin: 8px 0 0; }
+.tourx-drives th, .tourx-drives td { width: auto; padding: 10px 10px; vertical-align: top; }
+.tourx-drives thead th { color: var(--r-ink); }
