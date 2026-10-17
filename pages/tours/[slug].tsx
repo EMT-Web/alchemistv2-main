@@ -329,6 +329,21 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                 </div>
               )}
 
+              {/* Travel guides for this tour (hub links) */}
+              <div className="tourx-block">
+                <h2>Plan your trip</h2>
+                <ul className="guide__links">
+                  <li><a href="/best-time-to-visit-morocco">Best time to visit Morocco: month by month weather</a></li>
+                  {(tour.driveTimes || []).some(
+                    (d: DriveTime) =>
+                      d && ((d.from === 'Marrakech' && (d.to === 'Merzouga' || d.to === 'Dades Valley')) ||
+                        (d.to === 'Marrakech' && (d.from === 'Merzouga' || d.from === 'Dades Valley')))
+                  ) && (
+                    <li><a href="/marrakech-to-merzouga">Marrakech to Merzouga: route, distance and driving times</a></li>
+                  )}
+                </ul>
+              </div>
+
               {/* Included / Excluded */}
               {(parsed.included.length > 0 || parsed.excluded.length > 0) && (
                 <div className="tourx-block">

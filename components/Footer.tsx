@@ -19,7 +19,7 @@ function Footer() {
                 <Image src="/images/logo-white-01.png" alt="Escorted Morocco Tours" width={150} height={85} />
               </a>
               <p>
-                Our team of experienced local guides is committed to the highest level of service — from
+                Our team of experienced local guides is committed to the highest level of service, from
                 your first message to the end of your trip.
               </p>
               <ul className="site-footer__social">
@@ -72,8 +72,8 @@ function Footer() {
               <h3>Explore</h3>
               <ul>
                 <li><a href="/blog">Travel Blog</a></li>
-                <li><a href="/posts/about-morocco">About Morocco</a></li>
-                <li><a href="/posts/high-atlas-mountains">High Atlas</a></li>
+                <li><a href="/best-time-to-visit-morocco">Best Time to Visit Morocco</a></li>
+                <li><a href="/marrakech-to-merzouga">Marrakech to Merzouga</a></li>
                 <li><a href="/posts/sahara-desert">Sahara Desert</a></li>
                 <li><a href="/posts/culture">Culture</a></li>
                 <li><a href="/about">About Us</a></li>
