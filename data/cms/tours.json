@@ -36,7 +36,7 @@
             "_key": "be3dea04926f",
             "_type": "span",
             "marks": [],
-            "text": "Day 2: Arrival at Marrakech Airport - Overnight in Marrakech:"
+            "text": "Day 1: Arrival at Marrakech Airport - Overnight in Marrakech:"
           }
         ],
         "markDefs": [],
@@ -467,7 +467,11 @@
       "current": "7-days-marrakech-desert-tour"
     },
     "title": "7 Day Sahara and Atlas Tour from Marrakech",
-    "tourid": 270991
+    "tourid": 270991,
+    "priceFrom": 1500,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2024-02-28T13:21:04Z",
@@ -695,7 +699,11 @@
       "current": "10-days-journey-of-culinary-exploration"
     },
     "title": "Moroccan Odyssey: A 10-Day Journey of Culinary Exploration, Trekking Adventures, and Cultural Immersion",
-    "tourid": 271095
+    "tourid": 271095,
+    "priceFrom": 2300,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-12-10T11:14:22Z",
@@ -2279,7 +2287,7 @@
         "_key": "37a87ef76a70"
       }
     ],
-    "duration": 11,
+    "duration": 9,
     "featured": true,
     "heroparagraph": "Join us on an extraordinary 9-day Morocco Desert Tour, beginning in the coastal haven of Agadir and winding through the mesmerizing landscapes to the cultural heart of Marrakech. This immersive journey promises a blend of adventure and cultural discovery as you traverse vast desert expanses, witness golden dunes, and explore historic oases. Each day unfolds a new chapter of exploration, offering a tapestry of experiences that showcase the rich heritage and natural beauty of Morocco. Join us on this carefully curated odyssey, where the allure of the desert meets the vibrant energy of Marrakech, creating a tapestry of memories that will last a lifetime.\n",
     "herotag": "Morocco Tours from Agadir",
@@ -2299,7 +2307,11 @@
       "current": "9-days-morocco-desert-tour-from-agadir-to-marrakech"
     },
     "title": "9 Days Morocco Desert Tour from Agadir to Marrakech",
-    "tourid": 270694
+    "tourid": 270694,
+    "priceFrom": 1760,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-12-08T12:27:56Z",
@@ -4722,7 +4734,10 @@
       "current": "11-days-special-morocco-tour-from-tangier-to-marrakech"
     },
     "title": "11 Days Special Morocco Tour from Tangier to Marrakech",
-    "tourid": 271102
+    "tourid": 271102,
+    "priceFrom": 2025,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271102, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-12-06T11:02:17Z",
@@ -5411,7 +5426,11 @@
       "current": "3-day-2-night-camp-adventure-from-fes-to-marrakech"
     },
     "title": "3 Day Fes to Marrakech Tour with 2 Desert Nights",
-    "tourid": 270990
+    "tourid": 270990,
+    "priceFrom": 850,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-12-05T11:14:32Z",
@@ -6876,7 +6895,11 @@
       "current": "discover-morocco-2-day-fes-to-fes-merzouga-desert-adventure"
     },
     "title": "Fes to Fes: 2-Day Merzouga Desert Tour in Morocco",
-    "tourid": 270994
+    "tourid": 270994,
+    "priceFrom": 540,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-11-25T19:41:31Z",
@@ -7587,7 +7610,11 @@
       "current": "2-day-tour-from-fes-to-marrakech-through-morocco-s-desert"
     },
     "title": "2 Days Morocco Sahara Desert Tour from Fes to Marrakech",
-    "tourid": 270705
+    "tourid": 270705,
+    "priceFrom": 580,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-11-25T18:50:05Z",
@@ -8181,7 +8208,11 @@
       "current": "2-day-morocco-desert-tour-from-marrakech-to-fes"
     },
     "title": "2 Days Morocco Desert Tour from Marrakech to Fes",
-    "tourid": 270706
+    "tourid": 270706,
+    "priceFrom": 580,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-11-25T16:40:37Z",
@@ -8836,7 +8867,11 @@
       "current": "marrakech-to-merzouga-2-day-desert-adventure-in-morocco"
     },
     "title": "2 Day Desert Tour from Marrakech to Merzouga",
-    "tourid": 270693
+    "tourid": 270693,
+    "priceFrom": 580,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-03-28T17:32:16Z",
@@ -10502,7 +10537,10 @@
       "current": "7-days-morocco-sahara-desert-tour-from-tangier-to-marrakesh"
     },
     "title": "7 Days Sahara - Chefchaouen Tour From Tangier to Marrakech ",
-    "tourid": 271103
+    "tourid": 271103,
+    "priceFrom": 1389,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271103, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-28T17:23:49Z",
@@ -12870,7 +12908,10 @@
       "current": "12-days-ultimate-guided-tour-fes-to-tangier-morocco-desert"
     },
     "title": "Ultimate Morocco Escorted Tour via Chefchaouen - Fes - Desert - Essaouira",
-    "tourid": 270992
+    "tourid": 270992,
+    "priceFrom": 3316,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270992, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-03-28T16:36:58Z",
@@ -14640,7 +14681,11 @@
       "current": "8-days-desert-coastal-guided-tour-fes-to-casablanca"
     },
     "title": "8 Days guided Tour Fes to Casablanca via Desert and Essaouira",
-    "tourid": 270690
+    "tourid": 270690,
+    "priceFrom": 1720,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-03-28T13:40:17Z",
@@ -22323,7 +22368,7 @@
             "_key": "34537fc5c7610",
             "_type": "span",
             "marks": [],
-            "text": "Day 5: From Fes to the Sahara Desert Merzouga via Ifrane, Azrou forest, Midelt and Erfoud"
+            "text": "Day 6: From Fes to the Sahara Desert Merzouga via Ifrane, Azrou forest, Midelt and Erfoud"
           }
         ],
         "markDefs": [],
@@ -22506,7 +22551,7 @@
             "_key": "0dd886e62acf0",
             "_type": "span",
             "marks": [],
-            "text": "Day 6: Merzouga Desert excursions & Tea with Nomads"
+            "text": "Day 7: Merzouga Desert excursions & Tea with Nomads"
           }
         ],
         "markDefs": [],
@@ -22667,7 +22712,7 @@
             "_key": "ae26779402d5",
             "_type": "span",
             "marks": [],
-            "text": "Day 7: From Merzouga Desert to Dades Valley via Rissani, Todgha Gorges and Tinghir"
+            "text": "Day 8: From Merzouga Desert to Dades Valley via Rissani, Todgha Gorges and Tinghir"
           }
         ],
         "markDefs": [],
@@ -22906,7 +22951,7 @@
             "_key": "860a0ed5a73f0",
             "_type": "span",
             "marks": [],
-            "text": "Day 8: From Dades Valley to Marrakech via Roses Valley, Ouarzazate and Ait-Benhaddou"
+            "text": "Day 9: From Dades Valley to Marrakech via Roses Valley, Ouarzazate and Ait-Benhaddou"
           }
         ],
         "markDefs": [],
@@ -23409,7 +23454,7 @@
         "_key": "9dab3f8eabd6"
       }
     ],
-    "duration": 8,
+    "duration": 9,
     "heroparagraph": "An epic 8 days guided tour of Morocco from Casablanca. Discover the rich cultural heritage of this enchanting country as you explore its bustling cities, ancient medinas, and stunning landscapes. From the economic city Casablanca to the vibrant red city Marrakesh, you'll be transported back in time as you wander through the outstanding  streets of Chefchaouen and bazaars of Fes, and marvel at the intricate architecture of mosques and palaces. Enriching our Tour by visiting the Sahara desert and Berber ancient villages and kasbahs.",
     "herotag": "Tour from Casablanca",
     "inqueryviatourradar": "https://escorted-morocco-tours-1.secure.tourradar.com/question?tour_id=271099",
@@ -23420,15 +23465,18 @@
       "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUH/8QAIxAAAgEEAQMFAAAAAAAAAAAAAQIDAAQFESEGEhQTIiMxQf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGhEAAwEBAQEAAAAAAAAAAAAAAQIRAAMSIf/aAAwDAQACEQMRAD8A5n2paStNOS3t5Cj64pgxfTlveYuO4R5fnOlKrul7KXLQxKwUEEaIP7WtjJJvAgeOeSNVBKop0AaN0HM/Rcg6F4bNQymNtbe8eJvXJXjbDRoqZY/JkaSV3ZyeSTRUDvWJGrV2Anrf/9k=",
       "alt": "8 Days Desert Imperial Tour from Casablanca to Marrakesh"
     },
-    "seodescription": "Eight days from Casablanca through Chefchaouen, Fes and the Sahara. Imperial cities, Rif mountains, Erg Chebbi dunes and Berber hospitality.",
+    "seodescription": "Nine days from Casablanca through Chefchaouen, Fes and the Sahara. Imperial cities, Rif mountains, Erg Chebbi dunes and Berber hospitality.",
     "seokeywords": "8-day desert tour, Casablanca, Sahara Desert, ancient cities, Berber culture, Morocco, Marrakesh, Desert, Guided tour, holidays",
-    "seotitle": "8 Days Desert Imperial Tour Casablanca to Marrakesh, Morocco",
+    "seotitle": "9 Day Desert and Imperial Tour, Casablanca to Marrakesh",
     "slug": {
       "_type": "slug",
       "current": "8-days-desert-imperial-tour-casablanca-to-marrakesh-morocco"
     },
-    "title": "8 Days Desert Tour from Casablanca via Chefchaouen",
-    "tourid": 271099
+    "title": "9 Days Desert Tour from Casablanca via Chefchaouen",
+    "tourid": 271099,
+    "priceFrom": 1759,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271099, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-24T20:25:19Z",
@@ -25844,7 +25892,10 @@
       "current": "3-days-sahara-desert-tour-from-fes-to-marrakech-morocco"
     },
     "title": "3 Day Sahara Desert Tour from Fes to Marrakech",
-    "tourid": 270989
+    "tourid": 270989,
+    "priceFrom": 762,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270989, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-24T18:04:49Z",
@@ -31402,7 +31453,7 @@
         "_key": "ad8fed253581"
       }
     ],
-    "duration": 5,
+    "duration": 6,
     "featured": true,
     "heroparagraph": "Immerse yourself in the rich history and culture of Morocco with our 5 days Imperial Cities tour from Casablanca. Visit Rabat, Meknes, Fez, and Marrakech and discover the beauty and diversity of this fascinating country.",
     "herotag": "Tour From Casablanca",
@@ -31414,15 +31465,18 @@
       "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAX/xAAhEAACAgICAgMBAAAAAAAAAAABAwIEABEFEjFBExQhUf/EABUBAQEAAAAAAAAAAAAAAAAAAAQD/8QAHBEAAgIDAQEAAAAAAAAAAAAAAQIABQMRMRKR/9oADAMBAAIRAxEAPwB1qiuqUpmuLVskQD7jmfz/AAMPrRcIDUSDv35wqX13UKchzBEjcew8Yq4bNyPWLu8Iy3o7GtYhLrJ6Ytwj5JtXAKvnold/CEtkYKOjhk7DLHyyO2/v8Zhjlv1AA1DGtyb7P//Z",
       "alt": " 5 Days Imperial Cities Tour from Casablanca"
     },
-    "seodescription": "Five days through Morocco's imperial cities: Rabat, Meknes, Fes and Marrakech. Medinas, palaces and Roman ruins with an expert local guide.",
+    "seodescription": "Six days from Casablanca through Rabat, Chefchaouen, Volubilis, Meknes and Fes, returning to Casablanca, with local guides in Chefchaouen and Fes.",
     "seokeywords": "Casablanca, Morocco, Imperial Cities tour, Rabat, Meknes, Fez, Marrakech, historical landmarks, cultural heritage, traditional cuisine, guided tours.",
-    "seotitle": "5 Days Moroccan Imperial Tour from Casablanca to Fes",
+    "seotitle": "6 Day Imperial Cities Tour from Casablanca",
     "slug": {
       "_type": "slug",
       "current": "5-days-moroccan-imperial-tour-from-casablanca-to-fes"
     },
-    "title": " 5 Days Imperial Cities Tour ",
-    "tourid": 271100
+    "title": "6 Days Imperial Cities Tour from Casablanca",
+    "tourid": 271100,
+    "priceFrom": 1139,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 271100, per person in a private double room, checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-16T09:35:47Z",
@@ -32777,7 +32831,10 @@
       "current": "5-days-morocco-desert-tour-from-fes-to-marrakesh-morocco"
     },
     "title": "5 Days Morocco Desert Tour from Fes to Marrakesh",
-    "tourid": 270993
+    "tourid": 270993,
+    "priceFrom": 1172,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270993, regular price (sale price 938 shown), checked 2026-10-17"
   },
   {
     "_createdAt": "2023-02-15T22:38:42Z",
@@ -36839,7 +36896,11 @@
       "current": "2-days-sahara-desert-tour-marrakech-to-zagora-morocco"
     },
     "title": "2 Days Sahara Desert Tour from Marrakech to Zagora ",
-    "tourid": 270691
+    "tourid": 270691,
+    "priceFrom": 450,
+    "priceCurrency": "USD",
+    "priceSource": "Estimate from comparable Escorted Morocco Tours TourRadar prices, 2026-10-17; replace with your own price",
+    "priceEstimated": true
   },
   {
     "_createdAt": "2023-01-30T18:15:17Z",
@@ -37818,6 +37879,9 @@
       "current": "4-days-tour-from-marrakech-to-fes-via-merzouga-morocco"
     },
     "title": "4 Days Tour from Marrakech to Fes via Merzouga",
-    "tourid": 270490
+    "tourid": 270490,
+    "priceFrom": 941,
+    "priceCurrency": "USD",
+    "priceSource": "TourRadar listing 270490, per person in a private double room, checked 2026-10-17"
   }
 ]
