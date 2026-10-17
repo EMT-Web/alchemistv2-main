@@ -52,7 +52,7 @@ const config = {
     } else if (path.includes('/blog/')) {
       priority = 0.7
       changefreq = 'monthly'
-    } else if (path === '/best-time-to-visit-morocco' || path === '/marrakech-to-merzouga') {
+    } else if (path === '/best-time-to-visit-morocco' || path === '/marrakech-to-merzouga' || path === '/imperial-cities-of-morocco') {
       priority = 0.8
       changefreq = 'monthly'
     } else if (path.includes('/category/')) {

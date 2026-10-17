@@ -341,6 +341,9 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                   ) && (
                     <li><a href="/marrakech-to-merzouga">Marrakech to Merzouga: route, distance and driving times</a></li>
                   )}
+                  {dests.some((d: any) => /^(fes|meknes|rabat|chefchaouen|tangier)/i.test((d?.city || '').trim())) && (
+                    <li><a href="/imperial-cities-of-morocco">Imperial cities of Morocco and the north: Fes, Meknes, Rabat, Chefchaouen and Tangier</a></li>
+                  )}
                 </ul>
               </div>
 

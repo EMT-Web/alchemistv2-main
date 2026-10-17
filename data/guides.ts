@@ -160,6 +160,7 @@ export const guides: Guide[] = [
     ],
     related: [
       { text: 'Best Time to Visit the Sahara Desert', href: '/blog/best-time-to-visit-sahara-desert' },
+      { text: 'Imperial Cities of Morocco and the North', href: '/imperial-cities-of-morocco' },
       { text: 'Marrakech to Merzouga: Route Guide and Driving Times', href: '/marrakech-to-merzouga' },
       { text: 'What to Pack for a Sahara Desert Tour', href: '/blog/what-to-pack-sahara-desert-tour' },
       { text: '7 Day Morocco Itinerary: Marrakech to the Sahara', href: '/blog/7-day-morocco-itinerary-marrakech-to-sahara' },
@@ -285,6 +286,7 @@ export const guides: Guide[] = [
     related: [
       { text: 'Best Time to Visit Morocco: Month by Month', href: '/best-time-to-visit-morocco' },
       { text: 'Merzouga vs Zagora: Which Sahara Desert Tour?', href: '/blog/merzouga-vs-zagora-sahara-desert-tour' },
+      { text: 'Imperial Cities of Morocco and the North', href: '/imperial-cities-of-morocco' },
       { text: 'Ait Benhaddou and Ouarzazate Guide', href: '/blog/ait-benhaddou-ouarzazate-guide' },
       { text: 'Luxury vs Standard Desert Camps in Merzouga', href: '/blog/luxury-vs-standard-desert-camps-merzouga' },
     ],
@@ -300,6 +302,158 @@ export const guides: Guide[] = [
       { name: 'Aït Benhaddou', type: 'LandmarksOrHistoricalBuildings', sameAs: 'https://en.wikipedia.org/wiki/A%C3%AFt_Benhaddou' },
       { name: 'Todgha Gorge', type: 'Place', sameAs: 'https://en.wikipedia.org/wiki/Todgha_Gorge' },
       { name: 'Erg Chebbi', type: 'Place', sameAs: 'https://en.wikipedia.org/wiki/Erg_Chebbi' },
+    ],
+  },
+  {
+    slug: 'imperial-cities-of-morocco',
+    title: 'Imperial Cities of Morocco and the North: Fes, Meknes, Rabat, Chefchaouen and Tangier',
+    seotitle: 'Imperial Cities of Morocco and the North: Travel Guide',
+    seodescription:
+      'Fes, Meknes, Rabat, Chefchaouen and Tangier: what to see, how many days to stay, driving times between the cities and the best route for the north.',
+    tag: 'Morocco travel guide',
+    heroIntro:
+      'The medinas, palaces and blue streets of northern Morocco: what to see in each city and how to link them on one trip.',
+    image: '/cms/2c630b9895e239daf4aaff6f684ea39be758cf7c.jpg',
+    imageAlt: 'Blue painted streets and stairways of the Chefchaouen medina, northern Morocco',
+    published: '2026-10-17',
+    updated: '2026-10-17',
+    answer:
+      'The imperial cities of Morocco are Fes, Meknes, Rabat and Marrakech, the four cities that have served as royal capitals. In the north they combine naturally with Chefchaouen, the blue city in the Rif Mountains, and Tangier on the Strait of Gibraltar. Plan 5 to 6 days for the north: two nights in Fes, one or two in Chefchaouen, Meknes and the Roman ruins of Volubilis as a stop on the way, and half a day each in Rabat and Tangier.',
+    sections: [
+      {
+        id: 'imperial-cities',
+        h2: 'What are the imperial cities of Morocco?',
+        html:
+          '<p>Four cities have been the capital of Morocco under its different dynasties: <a href="/destinations/fes-fez-imperial-city-in-morocco">Fes</a>, <a href="/destinations/marrakesh-the-red-city-of-morocco">Marrakech</a>, <a href="/destinations/meknes-versailles-city-of-morocco">Meknes</a> and <a href="/destinations/rabat-the-capital-city-of-morocco">Rabat</a>. Each one kept the palaces, gates, mosques and walled medinas of its time as a capital, and all four are UNESCO World Heritage Sites. Three of them sit in the north, within a few hours of each other, which is why a tour of the imperial cities usually means the north of Morocco, with Marrakech visited on its own or at the end of a Sahara trip.</p>',
+        table: {
+          caption: 'The imperial cities at a glance',
+          head: ['City', 'Capital under', 'UNESCO listed', 'Do not miss'],
+          rows: [
+            ['Fes', 'Idrisids from the 9th century, Marinids, Alawites', '1981 (medina)', 'Fes el Bali medina, Chouara tannery, Al Qarawiyyin'],
+            ['Meknes', 'Moulay Ismail, from 1673', '1996', 'Bab Mansour gate, royal granaries'],
+            ['Rabat', 'Alawites, capital since 1956', '2012', 'Kasbah of the Udayas, Hassan Tower'],
+            ['Marrakech', 'Almoravids, Almohads, Saadians', '1985 (medina)', 'Jemaa el Fna, Bahia Palace'],
+          ],
+        },
+      },
+      {
+        id: 'fes',
+        h2: 'Fes: the spiritual and cultural heart',
+        html:
+          '<p>Fes el Bali, founded at the end of the 8th century by Idris I and Idris II, is one of the largest car free urban areas in the world and the most authentic medina in Morocco. Inside its walls you find the Al Qarawiyyin mosque and university, founded in 857 or 859 and described by UNESCO and Guinness World Records as the oldest existing university, the leather dyeing pits of the Chouara tannery, and the carved madrasas of Bou Inania and Al Attarine.</p><p>The medina is a maze of thousands of narrow lanes and it is easy to get lost, so a licensed local guide for the first day is worth it. <strong>Stay:</strong> two nights, with one full day for the medina.</p>',
+      },
+      {
+        id: 'meknes-volubilis',
+        h2: 'Meknes and Volubilis: palaces and Roman ruins',
+        html:
+          '<p>Meknes was the grand capital of Sultan Moulay Ismail, who made it his seat in 1673 and surrounded it with kilometres of walls, gates and granaries, which is why it is often called the Versailles of Morocco. The monumental Bab Mansour gate faces the square of El Hedim. About 30 km away, Volubilis holds the best preserved Roman ruins in Morocco, with mosaic floors still in place, and the holy town of Moulay Idriss sits on the hill beside it.</p><p><strong>Stay:</strong> no need to sleep here. Visit Meknes and Volubilis as a half day stop on the drive between Fes and Chefchaouen or Rabat.</p>',
+      },
+      {
+        id: 'rabat',
+        h2: 'Rabat: the modern capital',
+        html:
+          '<p>Rabat has been the capital of Morocco since independence in 1956 and is the calmest of the imperial cities. The Kasbah of the Udayas looks over the mouth of the Bou Regreg river with its blue and white lanes, and the unfinished Hassan Tower from the 12th century stands beside the Mausoleum of Mohammed V. <strong>Stay:</strong> half a day on the way between Casablanca and the north, or a night if you want a slower pace.</p>',
+      },
+      {
+        id: 'chefchaouen',
+        h2: 'Chefchaouen: the blue city of the Rif',
+        html:
+          '<p><a href="/destinations/chefchaouen-the-blue-pearl-city-of-morocco">Chefchaouen</a> was founded in 1471 as a small fortress in the Rif Mountains and is famous for its blue painted streets. Locals give several reasons for the blue, from keeping mosquitoes away to a symbol of the sky. It is a place to slow down: wander the medina, climb to the Spanish Mosque for the sunset view over the town, and if you have a full day, walk to the Akchour waterfalls in the national park nearby. <strong>Stay:</strong> one night at least, two if you want a day of hiking.</p>',
+      },
+      {
+        id: 'tangier',
+        h2: 'Tangier: the gateway to Africa',
+        html:
+          '<p><a href="/destinations/tangier-the-bride-of-the-north">Tangier</a> faces Spain across the Strait of Gibraltar and is the arrival point for travellers coming by ferry or flying into the north. See the kasbah and the old medina, Cap Spartel where the Atlantic meets the Mediterranean, and the Caves of Hercules. The white medina of Tetouan, a UNESCO site since 1997, is on the road to Chefchaouen. Since 2018 the Al Boraq high speed train has linked Tangier with Rabat and Casablanca, with Tangier to Casablanca in a little over two hours. <strong>Stay:</strong> half a day to one night.</p>',
+      },
+      {
+        id: 'route',
+        h2: 'Driving times between the cities',
+        html:
+          '<p>The cities of the north are close together, so most days have between one and five hours of driving. These are the legs used on our tours.</p>',
+        table: {
+          caption: 'Driving distances and times in northern Morocco',
+          head: ['Route', 'Distance', 'Driving time', 'Stops on the way'],
+          rows: [
+            ['Casablanca to Rabat', '90 km / 56 mi', 'approx. 1h15', 'Hassan II Mosque before leaving'],
+            ['Casablanca to Chefchaouen via Rabat', '330 km / 205 mi', 'approx. 4h30', 'Rabat, Rif Mountains'],
+            ['Tangier to Chefchaouen via Tetouan', '120 km / 75 mi', 'approx. 2h15', 'Tetouan medina'],
+            ['Chefchaouen to Fes via Volubilis and Meknes', '260 km / 162 mi', 'approx. 4h30', 'Volubilis, Moulay Idriss, Meknes'],
+            ['Fes to Meknes', '60 km / 37 mi', 'approx. 1h', 'Bab Mansour, royal granaries'],
+            ['Fes to Rabat', '200 km / 124 mi', 'approx. 2h30', 'Meknes on the way'],
+            ['Fes to Merzouga (Sahara)', '470 km / 292 mi', 'approx. 6h30', 'Ifrane, Middle Atlas cedar forest, Midelt'],
+          ],
+          note: 'Approximate road distances and driving times without stops.',
+        },
+      },
+      {
+        id: 'itinerary',
+        h2: 'How to plan the north: sample routes',
+        html:
+          '<ul><li><strong>From Casablanca (6 days):</strong> Casablanca, Rabat, Chefchaouen (2 nights), Volubilis and Meknes, Fes (2 nights), back to Casablanca. See the <a href="/tours/6-days-imperial-cities-tour-from-casablanca">6 day Imperial Cities tour from Casablanca</a>.</li><li><strong>From Tangier (5 days):</strong> Tangier, Tetouan, Chefchaouen, Volubilis and Meknes, Fes (2 nights), Rabat, back to Tangier via Asilah. See the <a href="/tours/5-days-morocco-tour-via-tangier-chefchaouen-fes-rabat">5 day tour from Tangier</a>.</li><li><strong>The north and the Sahara (7 to 11 days):</strong> after Fes, continue south to the <a href="/marrakech-to-merzouga">Merzouga dunes</a> and finish in Marrakech, a complete crossing of Morocco.</li></ul><p>Spring and autumn are the best seasons for the north. Winter is green but rainy around Chefchaouen and Tangier. See <a href="/best-time-to-visit-morocco">the best time to visit Morocco</a> for each month.</p>',
+      },
+    ],
+    toursHeading: 'Tours of the imperial cities and the north',
+    tourSlugs: [
+      '5-days-morocco-tour-via-tangier-chefchaouen-fes-rabat',
+      '6-days-imperial-cities-tour-from-casablanca',
+      '7-days-morocco-sahara-desert-tour-from-tangier-to-marrakesh',
+      '8-days-imperial-sahara-desert-tour-from-marrakesh-to-tangier',
+      '9-days-desert-tour-casablanca-to-marrakech-via-chefchaouen',
+      '11-days-special-morocco-tour-from-tangier-to-marrakech',
+    ],
+    faqs: [
+      {
+        question: 'What are the four imperial cities of Morocco?',
+        answer:
+          'Fes, Meknes, Rabat and Marrakech. Each has been the royal capital of Morocco under a different dynasty, and each is a UNESCO World Heritage Site.',
+      },
+      {
+        question: 'How many days do you need for the imperial cities?',
+        answer:
+          'Plan 5 to 6 days for Fes, Meknes, Rabat, Chefchaouen and Tangier: two nights in Fes, one or two in Chefchaouen, and Meknes, Volubilis, Rabat and Tangier as half day visits. Add 3 days if you want to include the Sahara and finish in Marrakech.',
+      },
+      {
+        question: 'Is Chefchaouen worth visiting?',
+        answer:
+          'Yes. Chefchaouen is one of the most photographed towns in Morocco for its blue streets, and it is relaxed and easy to walk. Stay at least one night so you see it in the quiet of the morning and evening, after the day visitors leave.',
+      },
+      {
+        question: 'How far is Chefchaouen from Fes?',
+        answer:
+          'About 200 km (124 miles), around 3h45 of driving on the direct road. Via Volubilis and Meknes it is about 260 km (162 miles) and 4h30 of driving, the route most tours take.',
+      },
+      {
+        question: 'Fes or Marrakech: which is better?',
+        answer:
+          'Both are worth it and feel different. Fes has the larger, older and more traditional medina with its craftsmen and tanneries. Marrakech is livelier, with the Jemaa el Fna square, gardens and palaces, and is the starting point for the Atlas and the Sahara. Most tours include both.',
+      },
+      {
+        question: 'Can I start a Morocco tour in Tangier?',
+        answer:
+          'Yes. Tangier is an easy start if you arrive by ferry from Spain or fly into the north. Tours from Tangier go to Chefchaouen, Fes and the Sahara and can finish in Marrakech for your flight home.',
+      },
+    ],
+    related: [
+      { text: 'Best Time to Visit Morocco: Month by Month', href: '/best-time-to-visit-morocco' },
+      { text: 'Marrakech to Merzouga: Route Guide and Driving Times', href: '/marrakech-to-merzouga' },
+      { text: 'Chefchaouen Day Trip from Marrakech', href: '/blog/chefchaouen-day-trip-from-marrakech' },
+      { text: 'Exploring the Rich History of Moroccan Architecture', href: '/blog/exploring-the-rich-history-of-moroccan-architecture' },
+    ],
+    sources: [
+      { text: 'Imperial cities of Morocco (Wikipedia)', href: 'https://en.wikipedia.org/wiki/Imperial_cities_of_Morocco' },
+      { text: 'World Heritage Sites in Morocco (Wikipedia)', href: 'https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Morocco' },
+      { text: 'University of al Qarawiyyin (Wikipedia)', href: 'https://en.wikipedia.org/wiki/University_of_al-Qarawiyyin' },
+      { text: 'Chefchaouen (Wikipedia)', href: 'https://en.wikipedia.org/wiki/Chefchaouen' },
+      { text: 'Al Boraq high speed train (Wikipedia)', href: 'https://en.wikipedia.org/wiki/Al_Boraq' },
+    ],
+    mentions: [
+      { name: 'Fez', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Fez,_Morocco' },
+      { name: 'Meknes', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Meknes' },
+      { name: 'Rabat', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Rabat' },
+      { name: 'Chefchaouen', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Chefchaouen' },
+      { name: 'Tangier', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Tangier' },
+      { name: 'Volubilis', type: 'LandmarksOrHistoricalBuildings', sameAs: 'https://en.wikipedia.org/wiki/Volubilis' },
     ],
   },
 ]
