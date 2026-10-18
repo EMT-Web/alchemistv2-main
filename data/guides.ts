@@ -288,6 +288,7 @@ export const guides: Guide[] = [
       { text: 'Merzouga vs Zagora: Which Sahara Desert Tour?', href: '/blog/merzouga-vs-zagora-sahara-desert-tour' },
       { text: 'Imperial Cities of Morocco and the North', href: '/imperial-cities-of-morocco' },
       { text: 'Ait Benhaddou and Ouarzazate Guide', href: '/blog/ait-benhaddou-ouarzazate-guide' },
+      { text: 'Our Luxury Desert Camps in Merzouga', href: '/merzouga-luxury-desert-camps' },
       { text: 'Luxury vs Standard Desert Camps in Merzouga', href: '/blog/luxury-vs-standard-desert-camps-merzouga' },
     ],
     sources: [
@@ -454,6 +455,156 @@ export const guides: Guide[] = [
       { name: 'Chefchaouen', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Chefchaouen' },
       { name: 'Tangier', type: 'City', sameAs: 'https://en.wikipedia.org/wiki/Tangier' },
       { name: 'Volubilis', type: 'LandmarksOrHistoricalBuildings', sameAs: 'https://en.wikipedia.org/wiki/Volubilis' },
+    ],
+  },
+  {
+    slug: 'merzouga-luxury-desert-camps',
+    title: 'Our Luxury Desert Camps in Merzouga: Tiziri Camp and Sahara Eden Camp',
+    seotitle: 'Luxury Desert Camps in Merzouga: Tents with AC and Heating',
+    seodescription:
+      'Tiziri Camp and Sahara Eden Camp in the Erg Chebbi dunes: luxury tents with en suite toilet and shower, heating in winter and air conditioning in summer.',
+    tag: 'Sahara desert camps',
+    heroIntro:
+      'Where you sleep in the Sahara on our tours: what the tents look like, what is inside them and what a night at camp is like.',
+    image: '/cms/21b97a43bc01a80f83acc204029f580c03013c6b.jpg',
+    imageAlt: 'Camel caravan crossing the Erg Chebbi dunes at Merzouga, Morocco',
+    published: '2026-10-18',
+    updated: '2026-10-18',
+    answer:
+      'On our Merzouga desert tours you sleep in a luxury tent at Tiziri Camp or Sahara Eden Camp, on the edge of the Erg Chebbi dunes. Every tent has its own en suite bathroom with a toilet and a shower, real beds, heating for the cold winter nights and air conditioning for the hot summer months. Dinner and breakfast are included, and the evening ends with music around the fire under the stars.',
+    sections: [
+      {
+        id: 'what-to-expect',
+        h2: 'Not camping: a hotel room made of canvas',
+        html:
+          '<p>The question we hear most before a desert tour is simple: what is the tent really like? The answer surprises many travellers. Our camps are not shared tents with sleeping mats and a shower block down the path. Each tent is a private room for you, with proper beds, rugs and its own en suite bathroom.</p><p>You still get the magic of the Sahara: the camel ride over the dunes at sunset, dinner under the stars, the silence of the desert and a sky full of stars. You simply do it with your own shower, a real toilet and a comfortable temperature in your tent.</p>',
+      },
+      {
+        id: 'inside-the-tent',
+        h2: 'Inside the tent: bathroom, heating and air conditioning',
+        html:
+          '<ul><li><strong>En suite bathroom:</strong> every tent has its own private bathroom inside, with a toilet and a shower. Nothing is shared with other guests.</li><li><strong>Heating:</strong> desert nights in winter drop close to freezing, so the tents are heated. You go to sleep warm, not in a sleeping bag.</li><li><strong>Air conditioning:</strong> in late spring and summer the Sahara is very hot in the day, and the tents are air conditioned so you can rest in comfort.</li><li><strong>Real beds:</strong> comfortable double or twin beds, and family tents with extra beds at Sahara Eden Camp.</li><li><strong>Decoration:</strong> handwoven rugs and a seating area, so the tent feels like a desert suite.</li></ul>',
+      },
+      {
+        id: 'climate',
+        h2: 'Why heating and air conditioning matter in the Sahara',
+        html:
+          '<p>The Sahara has two very different faces. In winter the days are mild and sunny but the nights are cold. In summer the days are very hot. A heated and air conditioned tent means you sleep well in every season, which is why we choose these camps for our travellers.</p>',
+        table: {
+          caption: 'Average daily high / low temperature in Merzouga, °C (°F)',
+          head: ['Months', 'Day', 'Night', 'In your tent'],
+          rows: [
+            ['December and January', '18 °C (64 °F)', '4 to 5 °C (39 to 41 °F)', 'Heating on'],
+            ['March and April', '24 to 29 °C (75 to 84 °F)', '11 to 15 °C (52 to 59 °F)', 'Comfortable, little needed'],
+            ['July and August', '41 to 42 °C (106 to 108 °F)', '27 to 28 °C (81 to 82 °F)', 'Air conditioning on'],
+            ['October and November', '23 to 30 °C (73 to 86 °F)', '10 to 17 °C (50 to 63 °F)', 'Comfortable, little needed'],
+          ],
+          note: 'Approximate averages for Merzouga. See our month by month guide for the rest of Morocco.',
+        },
+      },
+      {
+        id: 'tiziri-camp',
+        h2: 'Tiziri Camp: small, quiet and run on the sun',
+        html:
+          '<p><strong>Tiziri Camp</strong> sits at Takojt, on the edge of the Erg Chebbi dunes near Merzouga. It is a small camp with only eight tents, so it stays calm and personal even in the busy season. The camp runs on 100% solar power and has its own well with a water filtration system.</p><p>Dinner is served under the stars, and the kitchen is happy to cook vegetarian and vegan meals. The stay includes the sunset camel ride and an evening around the fire pit with live traditional music. Because it is so small, the whole camp can be booked privately for a celebration, such as an anniversary, a birthday or a family reunion.</p>',
+      },
+      {
+        id: 'sahara-eden-camp',
+        h2: 'Sahara Eden Camp: spacious tents for couples and families',
+        html:
+          '<p><strong>Sahara Eden Camp</strong> stands in the Erg Chebbi dunes at Merzouga. Its tents are raised on wooden platforms and decorated with handwoven rugs, each with a private bathroom and a seating area. It offers double and twin tents for couples and friends, and triple and quadruple tents for families, which makes it a good choice when you travel with children.</p><p>The camp is built with local materials and uses solar energy. For more adventure in the dunes you can add a quad bike, a buggy ride or a 4x4 excursion, alongside the camel trek.</p>',
+      },
+      {
+        id: 'compare',
+        h2: 'Tiziri Camp and Sahara Eden Camp side by side',
+        html:
+          '<p>Both camps give you the same level of comfort in the tent. The difference is the feel: Tiziri is smaller and more intimate, Sahara Eden has more tent sizes for families and groups.</p>',
+        table: {
+          caption: 'Comparing our two Merzouga camps',
+          head: ['', 'Tiziri Camp', 'Sahara Eden Camp'],
+          rows: [
+            ['Location', 'Takojt, edge of Erg Chebbi', 'Erg Chebbi dunes, Merzouga'],
+            ['Size', 'Small, 8 tents', 'Several tent sizes'],
+            ['Best for', 'Couples, honeymoons, quiet stays', 'Couples and families'],
+            ['En suite toilet and shower', 'Yes, in every tent', 'Yes, in every tent'],
+            ['Heating', 'Yes', 'Yes'],
+            ['Air conditioning', 'Yes', 'Yes'],
+            ['Energy', '100% solar, own filtered well water', 'Solar, local building materials'],
+            ['Meals on our tours', 'Dinner and breakfast', 'Dinner and breakfast'],
+            ['Evening', 'Fire pit with live traditional music', 'Dinner and evening at camp'],
+            ['Extras', 'Whole camp private hire for celebrations', 'Quad, buggy and 4x4 trips'],
+          ],
+        },
+      },
+      {
+        id: 'a-night-at-camp',
+        h2: 'A night at the camp, hour by hour',
+        html:
+          '<ul><li><strong>Late afternoon:</strong> you arrive in Merzouga after the drive through the Todra Gorge or the Ziz Valley.</li><li><strong>Sunset:</strong> the camel ride across the dunes to camp, with time to climb a dune and watch the colours change.</li><li><strong>Evening:</strong> check in to your tent, a shower, then dinner and music by the fire.</li><li><strong>Night:</strong> stargazing far from city lights. Read our <a href="/blog/sahara-desert-stargazing-guide">Sahara stargazing guide</a>.</li><li><strong>Morning:</strong> wake early for the sunrise over the dunes, then breakfast at camp before the journey continues.</li></ul><p>For what to bring, see <a href="/blog/what-to-pack-sahara-desert-tour">what to pack for a Sahara desert tour</a>. A warm layer for the evening is useful in every season except summer.</p>',
+      },
+    ],
+    toursHeading: 'Tours with a night at our Merzouga camps',
+    tourSlugs: [
+      '3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco',
+      'explore-merzouga-desert-a-3-day-2-night-adventure',
+      '4-days-tour-from-fes-to-marrakech-via-merzouga-morocco',
+      '7-days-marrakech-desert-tour',
+      '9-days-desert-tour-casablanca-to-marrakech-via-chefchaouen',
+      '11-days-ideal-guided-tour-casablanca-to-marrakech',
+    ],
+    faqs: [
+      {
+        question: 'Do the desert tents have a private bathroom?',
+        answer:
+          'Yes. At Tiziri Camp and Sahara Eden Camp every tent has its own en suite bathroom with a toilet and a shower. Nothing is shared with other guests.',
+      },
+      {
+        question: 'Is there heating in the tents in winter?',
+        answer:
+          'Yes. The tents are heated, which matters from December to February when desert nights drop to around 4 to 5 °C (39 to 41 °F).',
+      },
+      {
+        question: 'Do the tents have air conditioning?',
+        answer:
+          'Yes. The tents are air conditioned for the hot months. In July and August daytime temperatures in Merzouga reach about 41 to 42 °C (106 to 108 °F).',
+      },
+      {
+        question: 'Can I take a shower at the desert camp?',
+        answer:
+          'Yes. Each tent has its own shower in the private bathroom, so you can wash off the sand after the camel ride.',
+      },
+      {
+        question: 'Which camp will I stay at on my tour?',
+        answer:
+          'On our Merzouga tours we book Tiziri Camp or Sahara Eden Camp, depending on availability and on what suits you best. Your final trip notes confirm the camp before you travel. Families often prefer the larger tents at Sahara Eden, and couples often love the small, quiet Tiziri Camp.',
+      },
+      {
+        question: 'Are meals included at the desert camp?',
+        answer:
+          'Yes. Dinner and breakfast at the camp are included on our tours. Vegetarian, vegan and other dietary needs can be arranged if you tell us before you travel.',
+      },
+      {
+        question: 'Can we book the camp for an anniversary or a private celebration?',
+        answer:
+          'Yes. Tiziri Camp has only eight tents and can be booked privately for celebrations. Tell us your dates and we will arrange it as part of your tour.',
+      },
+    ],
+    related: [
+      { text: 'Luxury vs Standard Desert Camps in Merzouga', href: '/blog/luxury-vs-standard-desert-camps-merzouga' },
+      { text: 'Marrakech to Merzouga: Route Guide and Driving Times', href: '/marrakech-to-merzouga' },
+      { text: 'Best Time to Visit Morocco: Month by Month', href: '/best-time-to-visit-morocco' },
+      { text: 'What to Pack for a Sahara Desert Tour', href: '/blog/what-to-pack-sahara-desert-tour' },
+    ],
+    sources: [
+      { text: 'Tiziri Camp (official website)', href: 'https://tiziricamp.com' },
+      { text: 'Sahara Eden Camp (official website)', href: 'https://saharaedencamp.com' },
+      { text: 'Erg Chebbi (Wikipedia)', href: 'https://en.wikipedia.org/wiki/Erg_Chebbi' },
+    ],
+    mentions: [
+      { name: 'Tiziri Camp', type: 'Campground', sameAs: 'https://tiziricamp.com' },
+      { name: 'Sahara Eden Camp', type: 'Campground', sameAs: 'https://saharaedencamp.com' },
+      { name: 'Erg Chebbi', type: 'Place', sameAs: 'https://en.wikipedia.org/wiki/Erg_Chebbi' },
+      { name: 'Merzouga', type: 'Place', sameAs: 'https://en.wikipedia.org/wiki/Merzouga' },
     ],
   },
 ]
