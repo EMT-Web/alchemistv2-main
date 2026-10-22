@@ -215,7 +215,7 @@ export default function GuidePage({ guide, tours }: { guide: Guide; tours: any[]
 
 export const GUIDE_TOUR_QUERY = `
   *[_type == 'tour' && slug.current in $slugs]{
-    _id, title, duration, priceFrom, driveTimes, slug, herotag, seodescription, mainImage,
+    _id, title, duration, priceFrom, priceCurrency, priceTravellers, driveTimes, slug, herotag, seodescription, mainImage,
     "destinations": destinations[]->{ slug, city }
   }
 `

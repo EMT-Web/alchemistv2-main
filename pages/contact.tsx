@@ -183,7 +183,7 @@ function contact() {
               <form onSubmit={handleSubmit(onSubmit)} className="contactx-form">
                 <h3>Tell us about your trip</h3>
                 <p className="contactx-form__lead">
-                  Share your dates, group size and what you&apos;d like to see. Every field except the
+                  Share your dates, how many of you are travelling and what you&apos;d like to see. Every field except the
                   message is optional.
                 </p>
 

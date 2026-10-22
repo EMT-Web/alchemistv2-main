@@ -9,6 +9,7 @@ import { parseTourBody, findIncludedList } from '../../components/tourBody'
 import PageHero from '../../components/PageHero'
 import TourCard from '../../components/TourCard'
 import { getTourRoute } from '../../components/tourRoute'
+import { tourPrice } from '../../components/price'
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO'
 import { TRIPADVISOR_URL, TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from '../../components/tripadvisor'
 
@@ -62,7 +63,7 @@ function buildTourFaqs(tour: any, included: string[] = []): TourFaq[] {
   ]
   // Answer from the itinerary's own Inclusions list (the same items shown on the
   // page), never from the amenity tags, which are themes rather than inclusions.
-  const includedItems = included.map((t) => t.replace(/\s+/g, ' ').trim()).filter(Boolean)
+  const includedItems = included.map((t) => t.replace(/\s+/g, ' ').trim().replace(/[.;:,\s]+$/, '')).filter(Boolean)
   if (includedItems.length) {
     faqs.push({
       question: "What's included in this tour?",
@@ -86,9 +87,9 @@ function buildTourFaqs(tour: any, included: string[] = []): TourFaq[] {
         'Yes. This itinerary can be adapted to your travel dates, pace and interests — use the inquiry form on this page to tell us what you would like to change.',
     },
     {
-      question: 'What size are the tour groups?',
+      question: 'Is this a private tour?',
       answer:
-        'We run private and small-group departures to keep the experience personal rather than large coach-tour groups. Group size can vary by date, so ask us when you inquire.',
+        'Yes. Every Escorted Morocco Tours trip is private: the vehicle, driver guide and itinerary are for you and the people you travel with, whether that is a couple, a family or friends. We do not run shared departures and never add other travellers. Prices are per person based on 2 travellers; ask us for a quote for your own party size.',
     }
   )
   const drives = (tour.driveTimes || [])
@@ -163,6 +164,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   }
 
   const route = getTourRoute(tour)
+  const price = tourPrice(tour)
   const dests = (tour.destinations || []).filter((d: any) => d?.city)
   const parsed = parseTourBody(tour.body)
   const totalDriveKm = (tour.driveTimes || []).reduce((a: number, d: DriveTime) => a + (d && d.km && !d.mode ? d.km : 0), 0)
@@ -183,11 +185,11 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
 
   const facts = [
     { icon: 'fa-clock-o', label: 'Duration', value: `${tour.duration || 0} days` },
-    { icon: 'fa-user', label: 'Tour type', value: 'Private & small-group' },
+    { icon: 'fa-user', label: 'Tour type', value: 'Private tour' },
     { icon: 'fa-map-marker', label: 'Route', value: route.label || 'Morocco' },
     { icon: 'fa-calendar', label: 'Availability', value: 'Year-round' },
-    ...(tour.priceFrom
-      ? [{ icon: 'fa-tag', label: 'Price from', value: `US$${Number(tour.priceFrom).toLocaleString('en-US')} per person` }]
+    ...(price
+      ? [{ icon: 'fa-tag', label: 'Price from', value: `${price.perPerson} per person (${price.total} for ${price.travellers})` }]
       : []),
   ]
 
@@ -382,12 +384,12 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                 <table className="tourx-table">
                   <tbody>
                     <tr><th>Duration</th><td>{tour.duration || 0} days</td></tr>
-                    {tour.priceFrom && (
-                      <tr><th>Price from</th><td>US${Number(tour.priceFrom).toLocaleString('en-US')} per person, based on 2 travellers sharing a double room</td></tr>
+                    {price && (
+                      <tr><th>Price from</th><td>{price.perPerson} per person, based on {price.travellers} travellers sharing a double room ({price.total} total for {price.travellers})</td></tr>
                     )}
                     {route.start && <tr><th>Starts</th><td>{route.start}</td></tr>}
                     {route.end && <tr><th>Ends</th><td>{route.end}{route.roundTrip ? ' (round trip)' : ''}</td></tr>}
-                    <tr><th>Tour type</th><td>Private &amp; small-group</td></tr>
+                    <tr><th>Tour type</th><td>Private tour, only you and your travelling companions</td></tr>
                     {totalDriveKm > 0 && (
                       <tr><th>Total driving</th><td>about {totalDriveKm.toLocaleString('en-US')} km / {toMiles(totalDriveKm).toLocaleString('en-US')} mi</td></tr>
                     )}
@@ -538,12 +540,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `
   *[_type == 'tour' && slug.current == $slug][0]{
       _id, _createdAt, seotitle, seodescription, seokeywords, herotag, heroparagraph,
-      title, duration, priceFrom, priceCurrency, priceEstimated, driveTimes, slug, mainImage, coverImage,
+      title, duration, priceFrom, priceCurrency, priceTravellers, priceEstimated, driveTimes, slug, mainImage, coverImage,
       "amenities": amenities[]->{ _createdAt, slug, title, icon },
       "destinations": destinations[]->{ _createdAt, city, slug, title },
       body,
      "related": *[_type == "tour" && _id != ^._id && count(categories[@._ref in ^.^.categories[]._ref]) > 0] | order(duration asc)[0..4] {
-        _id, _createdAt, title, duration, priceFrom, driveTimes, slug, herotag, seodescription, mainImage,
+        _id, _createdAt, title, duration, priceFrom, priceCurrency, priceTravellers, driveTimes, slug, herotag, seodescription, mainImage,
         "destinations": destinations[]->{ city, slug }
       }
     }

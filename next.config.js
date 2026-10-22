@@ -37,6 +37,17 @@ module.exports = {
         destination: "/tours/9-days-desert-tour-casablanca-to-marrakech-via-chefchaouen",
         statusCode: 301,
       },
+      // 22 Oct 2026: the tour runs 8 days (its itinerary always had 8 day entries).
+      {
+        source: "/tours/7-days-adventure-through-time-and-culture-morocco",
+        destination: "/tours/8-days-adventure-through-time-and-culture-morocco",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/why-small-group-escorted-tours-morocco",
+        destination: "/blog/why-private-escorted-tours-morocco",
+        statusCode: 301,
+      },
       {
         source: "/destination/:slug",
         destination: "/destinations/:slug",

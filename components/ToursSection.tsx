@@ -7,11 +7,11 @@ function ToursSection({ tours }: any) {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-12 heading-section text-center ftco-animate">
-            <span className="subheading">Well-planned small-group &amp; private tours</span>
+            <span className="subheading">Private tours, planned around you</span>
             <h2>Morocco Immersion Tours</h2>
             <p className="mb-4">
-              Whether you&apos;re looking for a private tour or a group excursion, our experienced guides can
-              tailor your itinerary to your liking
+              Every tour is private: your own vehicle and driver guide, for a couple, a family or friends
+              travelling together. We tailor each itinerary to your dates, pace and interests.
             </p>
             {(!tours || tours.length === 0) && (
               <div>

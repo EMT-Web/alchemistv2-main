@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '../sanity'
 import { getTourRoute } from './tourRoute'
+import { tourPrice } from './price'
 
 const WHATSAPP = '212623668013'
 
@@ -25,6 +26,7 @@ function shortTag(tour: any): string {
 export default function TourCard({ tour }: any) {
   const slug = tour?.slug?.current
   const route = getTourRoute(tour)
+  const price = tourPrice(tour)
   const tag = shortTag(tour)
   const desc = tour?.seodescription || tour?.heroparagraph || ''
   const img = urlFor(tour?.mainImage).url()
@@ -71,9 +73,9 @@ export default function TourCard({ tour }: any) {
           </p>
         )}
 
-        {tour?.priceFrom && (
+        {price && (
           <p className="tcard__price">
-            From <strong>US${Number(tour.priceFrom).toLocaleString('en-US')}</strong> per person
+            From <strong>{price.perPerson}</strong> per person
           </p>
         )}
 

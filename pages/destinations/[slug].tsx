@@ -183,7 +183,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
       mainImage,
       coverImage,
       duration,
-      priceFrom, driveTimes,
+      priceFrom, priceCurrency, priceTravellers, driveTimes,
       author -> {
         name,
         image,
@@ -194,7 +194,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
         title,
         mainImage,
         duration,
-        priceFrom, driveTimes,
+        priceFrom, priceCurrency, priceTravellers, driveTimes,
         "destinations": destinations[]->{
           city, 
           slug,

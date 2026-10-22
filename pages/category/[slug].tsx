@@ -63,7 +63,7 @@ export async function getStaticPaths({context}:any) {
         _createdAt,
         title,
         duration,
-        priceFrom, driveTimes,
+        priceFrom, priceCurrency, priceTravellers, driveTimes,
         slug,
         herotag,
         seodescription,

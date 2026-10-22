@@ -2,7 +2,7 @@
 import { getLocalBlogPost } from '../../data/localBlogPosts'
 import StaticBlogPost from '../../components/StaticBlogPost'
 
-const post = getLocalBlogPost("why-small-group-escorted-tours-morocco")!
+const post = getLocalBlogPost("why-private-escorted-tours-morocco")!
 
 export default function Page() {
   return <StaticBlogPost post={post} />

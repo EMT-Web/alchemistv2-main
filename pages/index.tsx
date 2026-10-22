@@ -27,7 +27,7 @@ export default function  NextPage({about, destinations, tours, categories, faqs,
     "@type": "WebPage",
     "name": "Escorted Morocco Tours - Guided Immersion Tours",
     "url": "https://www.escortedmoroccotours.com",
-    "description": "Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides.",
+    "description": "Private Morocco tours with your own driver guide: Sahara desert nights, imperial cities and the High Atlas, planned around you. Private tours only, never shared departures.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [{
@@ -62,7 +62,7 @@ export default function  NextPage({about, destinations, tours, categories, faqs,
       description="Private Morocco tours with your own driver guide: Sahara nights in Merzouga, Fes, Marrakech, Chefchaouen and the Atlas. Rated 5.0 on TripAdvisor."
       schema={combinedSchema}
     />
-          <HomeHero title="Private Morocco Tours with Local Driver Guides" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Whether you're searching for escorted tours to Morocco or Morocco escorted tours, our small-group itineraries help you uncover the best of Morocco, from the Sahara Desert to the Atlas Mountains." />
+          <HomeHero title="Private Morocco Tours with Local Driver Guides" tag="Journeys through time & Culture" p="Get the best out of your vacation in Morocco with our guided tours. Whether you're searching for escorted tours to Morocco or Morocco escorted tours, our private itineraries help you uncover the best of Morocco, from the Sahara Desert to the Atlas Mountains." />
           {about?.mainabout && <InfoAbout about={about.mainabout}/>}
           <HomeDestinations destinations={destinations} />
           <ToursSection tours={tours}/>
@@ -92,7 +92,7 @@ export async function getServerSideProps({ req, res }:any) {
       featured,
       slug,
       duration,
-      priceFrom, driveTimes,
+      priceFrom, priceCurrency, priceTravellers, driveTimes,
       herotag,
       seodescription,
       mainImage,

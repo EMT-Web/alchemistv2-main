@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <>
            <Head>
            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-           <meta name="description" content="Escorted Morocco Tours, Expert guided Morocco tours and Packages to get the best out of your vacation in Morocco."/>
+           <meta name="description" content="Private Morocco tours with your own driver guide: the Sahara, imperial cities and the High Atlas, planned around you."/>
            <meta httpEquiv="Content-Type" content="text/html" charSet='UTF-8'/>
            <title>Escorted Morocco Tours | Visit Morocco</title>
           <link rel="shortcut icon" href="/images/fav.png" />

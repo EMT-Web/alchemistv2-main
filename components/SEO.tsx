@@ -181,7 +181,7 @@ export function createTourSchema(tour: any) {
       "priceCurrency": tour.priceCurrency || "USD",
       "availability": "https://schema.org/InStock",
       "url": `${siteUrl}/tours/${tour.slug?.current}`,
-      "description": "Starting price per person, based on 2 travellers sharing a double room"
+      "description": `Starting price per person, based on ${Number(tour.priceTravellers) || 2} travellers sharing a double room`
     } : undefined
   }
 }

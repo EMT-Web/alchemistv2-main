@@ -1,3 +1,6 @@
+// NOTE (22 Oct 2026): data/localBlogPosts.ts was edited directly after generation
+// (private-tour wording, article renamed to why-private-escorted-tours-morocco).
+// Port those edits into content/blog-drafts/ before re-running, or they are lost.
 // One-off generator: converts the 10 reviewed markdown drafts in content/blog-drafts/
 // into a single static data file (data/localBlogPosts.ts) plus one thin page per post
 // under pages/blog/<slug>.tsx. Bypasses Sanity entirely — content is baked into the repo.
@@ -37,7 +40,7 @@ const SLUG_IMAGE = {
   'luxury-vs-standard-desert-camps-merzouga': IMAGES.desertCamp,
   'what-to-pack-sahara-desert-tour': IMAGES.cedarForest,
   'ait-benhaddou-ouarzazate-guide': IMAGES.dadesGorge,
-  'why-small-group-escorted-tours-morocco': IMAGES.marrakech,
+  'why-private-escorted-tours-morocco': IMAGES.marrakech,
   'sahara-desert-stargazing-guide': IMAGES.campfireNight,
 }
 

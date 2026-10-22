@@ -91,7 +91,7 @@ class MyDocument extends Document {
                 "url": "https://www.escortedmoroccotours.com",
                 "logo": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
                 "image": "https://www.escortedmoroccotours.com/images/escorted-morocco-tours.png",
-                "description": "Expert guided Morocco tours and packages to get the best out of your vacation in Morocco. Best Morocco immersion tours and travel guides.",
+                "description": "Moroccan tour operator running private tours only: each itinerary is for one traveller, couple, family or party travelling together, with their own vehicle and English speaking driver guide. Routes cover Marrakech, Fes, Casablanca, Tangier, the High Atlas and the Sahara at Merzouga.",
                 "telephone": "+212623668013",
                 "address": [
                   {
