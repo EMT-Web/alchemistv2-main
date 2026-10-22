@@ -6,7 +6,9 @@
 import { clientIp, emailDomainAcceptsMail, isDisposableEmail, isRateLimited, looksLikeBot } from './inquiryGuards'
 
 const TO_ADDRESS = 'info@escortedmoroccotours.com'
-const FROM_ADDRESS = 'onboarding@resend.dev'
+// escortedmoroccotours.com is verified in Resend (checked 22 Oct 2026), so mail
+// goes out from the agency's own domain instead of Resend's test sender.
+const FROM_ADDRESS = 'Escorted Morocco Tours Website <website@escortedmoroccotours.com>'
 const SEND_FAILED = "Sorry, we couldn't send your message right now. Please try again in a few minutes."
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[^\s@<>()[\]\\,;:"]{2,}$/
 
