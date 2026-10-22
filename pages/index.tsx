@@ -92,7 +92,7 @@ export async function getServerSideProps({ req, res }:any) {
       featured,
       slug,
       duration,
-      priceFrom,
+      priceFrom, driveTimes,
       herotag,
       seodescription,
       mainImage,

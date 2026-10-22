@@ -5,7 +5,8 @@
     "build": "next build && next-sitemap",
     "start": "next start",
     "indexnow": "node scripts/submit-indexnow.mjs",
-    "indexnow:all": "node scripts/submit-indexnow.mjs --all"
+    "indexnow:all": "node scripts/submit-indexnow.mjs --all",
+    "validate:tours": "node scripts/validate-tours.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.4",

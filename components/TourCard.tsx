@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '../sanity'
+import { getTourRoute } from './tourRoute'
 
 const WHATSAPP = '212623668013'
 
@@ -8,8 +9,8 @@ const WHATSAPP = '212623668013'
    herotag ("Tour from Marrakech" -> "From Marrakech"); otherwise a theme word. */
 function shortTag(tour: any): string {
   const ht = String(tour?.herotag || '').trim()
-  const m = ht.match(/from\s+([a-zA-ZÀ-ſ'’.-]{3,16})/)
-  if (m) return `From ${m[1].trim()}`
+  const start = getTourRoute(tour).start
+  if (start) return `From ${start}`
 
   const dests = (tour?.destinations || []).map((d: any) => (d?.city || '').toLowerCase()).join(' ')
   const text = `${tour?.title || ''} ${ht} ${dests}`.toLowerCase()
@@ -23,9 +24,7 @@ function shortTag(tour: any): string {
 
 export default function TourCard({ tour }: any) {
   const slug = tour?.slug?.current
-  const dests = (tour?.destinations || []).filter((d: any) => d?.city)
-  const from = dests[0]?.city
-  const to = dests[dests.length - 1]?.city
+  const route = getTourRoute(tour)
   const tag = shortTag(tour)
   const desc = tour?.seodescription || tour?.heroparagraph || ''
   const img = urlFor(tour?.mainImage).url()
@@ -56,12 +55,19 @@ export default function TourCard({ tour }: any) {
           <a href={`/tours/${slug}`}>{tour?.title}</a>
         </h3>
 
-        {(from || to) && (
+        {route.label && (
           <p className="tcard__route">
             <span className="fa fa-map-marker" aria-hidden="true" />
-            <span>{from}</span>
-            {to && <span className="tcard__arrow" aria-hidden="true">→</span>}
-            {to && <span>{to}</span>}
+            {route.end && !route.roundTrip ? (
+              <>
+                <span>{route.start}</span>
+                <span className="tcard__arrow" aria-hidden="true">→</span>
+                <span className="sr-only"> to </span>
+                <span>{route.end}</span>
+              </>
+            ) : (
+              <span>{route.label}</span>
+            )}
           </p>
         )}
 

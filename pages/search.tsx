@@ -53,7 +53,7 @@ const searchResults = await sanityClient.fetch(
     title,
     slug,
     duration,
-    priceFrom,
+    priceFrom, driveTimes,
     herotag,
     seodescription,
     "destinations": destinations[]->{

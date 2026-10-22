@@ -47,7 +47,17 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter()
   const siteUrl = 'https://www.escortedmoroccotours.com'
-  const canonicalUrl = `${siteUrl}${router.asPath.split('?')[0]}`
+  // During ISR regeneration router.asPath can be the route pattern
+  // ("/destinations/[slug]"), which leaked into canonical tags and sent Google to a
+  // 404. Fill any [param] from router.query so the canonical is always the real URL.
+  const pathOnly = router.asPath.split(/[?#]/)[0]
+  const resolvedPath = /\[/.test(pathOnly)
+    ? router.pathname.replace(/\[(?:\.\.\.)?([^\]]+)\]/g, (_m, key) => {
+        const v = (router.query as any)?.[key]
+        return Array.isArray(v) ? v.join('/') : String(v ?? '')
+      })
+    : pathOnly
+  const canonicalUrl = `${siteUrl}${resolvedPath}`
   const brand = 'Escorted Morocco Tours'
   // Google truncates <title> around 60-70 chars, so keep the rendered title
   // under MAX_TITLE_LENGTH: drop the brand suffix before trimming any words.
@@ -163,8 +173,9 @@ export function createTourSchema(tour: any) {
         .filter(Boolean)
     } : undefined,
     "duration": tour.duration ? `P${tour.duration}D` : undefined,
-    // An Offer is only valid with a price, so tours without one carry none.
-    "offers": tour.priceFrom ? {
+    // An Offer is only valid with a real price. Tours without one, or with a
+    // placeholder estimate (priceEstimated) not yet confirmed by the agency, carry none.
+    "offers": tour.priceFrom && !tour.priceEstimated ? {
       "@type": "Offer",
       "price": Number(tour.priceFrom),
       "priceCurrency": tour.priceCurrency || "USD",

@@ -1,16 +1,13 @@
 import React, { useMemo, useState } from 'react'
 import TourCard from './TourCard'
+import { getTourRoute } from './tourRoute'
 
 type Tour = any
 
 /** Departure city, read from herotag ("... from Marrakech") first, then the
  *  first linked destination. Normalises the Fez/Fes + Marrakesh/Marrakech spellings. */
 function departureCity(tour: Tour): string {
-  const hero = String(tour?.herotag || '').toLowerCase()
-  const m = hero.match(/from\s+(marrake\w*|f[eè]s|fez|casablanca|tangier|agadir|ouarzazate)/)
-  const raw =
-    (m && m[1]) ||
-    String(tour?.destinations?.[0]?.city || '').toLowerCase()
+  const raw = getTourRoute(tour).start.toLowerCase()
   if (raw.startsWith('marrake')) return 'Marrakech'
   if (raw.startsWith('fe')) return 'Fes'
   if (raw.startsWith('casa')) return 'Casablanca'

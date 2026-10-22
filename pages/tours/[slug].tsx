@@ -8,6 +8,7 @@ import { createBodyComponents } from '../../components/portableTextComponents'
 import { parseTourBody, findIncludedList } from '../../components/tourBody'
 import PageHero from '../../components/PageHero'
 import TourCard from '../../components/TourCard'
+import { getTourRoute } from '../../components/tourRoute'
 import SEO, { createTourSchema, createBreadcrumbSchema, createFAQSchema } from '../../components/SEO'
 import { TRIPADVISOR_URL, TRIPADVISOR_RATING, TRIPADVISOR_REVIEW_COUNT } from '../../components/tripadvisor'
 
@@ -161,9 +162,8 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
     }
   }
 
+  const route = getTourRoute(tour)
   const dests = (tour.destinations || []).filter((d: any) => d?.city)
-  const from = dests[0]?.city
-  const to = dests[dests.length - 1]?.city
   const parsed = parseTourBody(tour.body)
   const totalDriveKm = (tour.driveTimes || []).reduce((a: number, d: DriveTime) => a + (d && d.km && !d.mode ? d.km : 0), 0)
   const tourFaqs = buildTourFaqs(
@@ -184,7 +184,7 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
   const facts = [
     { icon: 'fa-clock-o', label: 'Duration', value: `${tour.duration || 0} days` },
     { icon: 'fa-user', label: 'Tour type', value: 'Private & small-group' },
-    { icon: 'fa-map-marker', label: 'Route', value: from ? `${from}${to && to !== from ? ` → ${to}` : ''}` : 'Morocco' },
+    { icon: 'fa-map-marker', label: 'Route', value: route.label || 'Morocco' },
     { icon: 'fa-calendar', label: 'Availability', value: 'Year-round' },
     ...(tour.priceFrom
       ? [{ icon: 'fa-tag', label: 'Price from', value: `US$${Number(tour.priceFrom).toLocaleString('en-US')} per person` }]
@@ -385,8 +385,8 @@ function tourDetails({ tour, destinations, relatedTours }: any) {
                     {tour.priceFrom && (
                       <tr><th>Price from</th><td>US${Number(tour.priceFrom).toLocaleString('en-US')} per person, based on 2 travellers sharing a double room</td></tr>
                     )}
-                    {from && <tr><th>Starts</th><td>{from}</td></tr>}
-                    {to && <tr><th>Ends</th><td>{to}</td></tr>}
+                    {route.start && <tr><th>Starts</th><td>{route.start}</td></tr>}
+                    {route.end && <tr><th>Ends</th><td>{route.end}{route.roundTrip ? ' (round trip)' : ''}</td></tr>}
                     <tr><th>Tour type</th><td>Private &amp; small-group</td></tr>
                     {totalDriveKm > 0 && (
                       <tr><th>Total driving</th><td>about {totalDriveKm.toLocaleString('en-US')} km / {toMiles(totalDriveKm).toLocaleString('en-US')} mi</td></tr>
@@ -538,12 +538,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const query = `
   *[_type == 'tour' && slug.current == $slug][0]{
       _id, _createdAt, seotitle, seodescription, seokeywords, herotag, heroparagraph,
-      title, duration, priceFrom, driveTimes, slug, mainImage, coverImage,
+      title, duration, priceFrom, priceCurrency, priceEstimated, driveTimes, slug, mainImage, coverImage,
       "amenities": amenities[]->{ _createdAt, slug, title, icon },
       "destinations": destinations[]->{ _createdAt, city, slug, title },
       body,
-     "related": *[_type == "tour" && count(categories[@._ref in ^.^.categories[]._ref]) > 0] | order(duration asc)[0..4] {
-        _id, _createdAt, title, duration, priceFrom, slug, herotag, seodescription, mainImage,
+     "related": *[_type == "tour" && _id != ^._id && count(categories[@._ref in ^.^.categories[]._ref]) > 0] | order(duration asc)[0..4] {
+        _id, _createdAt, title, duration, priceFrom, driveTimes, slug, herotag, seodescription, mainImage,
         "destinations": destinations[]->{ city, slug }
       }
     }
