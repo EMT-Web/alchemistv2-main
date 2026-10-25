@@ -1638,3 +1638,26 @@ a.btn.cta-banner__wa:hover,
 .guide .guide__answer h2.guide__answer-title, .guide .guide__toc h2 { font-size: 1.1rem; line-height: 1.3; letter-spacing: 0; margin-bottom: 8px; }
 .guide__table td { white-space: nowrap; }
 .guide__table td:last-child { white-space: normal; min-width: 150px; }
+
+/* ---- Fact and comparison tables inside blog articles ---------------- */
+.blog-post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0 1.75rem;
+  font-size: .95rem;
+  display: block;
+  overflow-x: auto;
+}
+.blog-post-content th,
+.blog-post-content td {
+  border: 1px solid var(--r-line);
+  padding: .6rem .8rem;
+  text-align: left;
+  vertical-align: top;
+}
+.blog-post-content thead th {
+  background: var(--r-navy);
+  color: #fff;
+  font-weight: 600;
+}
+.blog-post-content tbody tr:nth-child(even) td { background: var(--r-bg-soft); }

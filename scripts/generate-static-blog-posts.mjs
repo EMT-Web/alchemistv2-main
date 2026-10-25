@@ -29,6 +29,7 @@ const IMAGES = {
   dadesGorge: '/cms/3d2f02760d4e4c97faa3dd08087b9c762edee566.jpg',
   marrakech: '/cms/c3c1d5c824879ec7b668b38db2d3cc2059b6c31c.jpg',
   campfireNight: '/cms/7bf5d45820575f7f5927e5c38966917236611e55.jpg',
+  highAtlas: '/images/atlas.jpg',
 }
 
 const SLUG_IMAGE = {
@@ -42,12 +43,14 @@ const SLUG_IMAGE = {
   'ait-benhaddou-ouarzazate-guide': IMAGES.dadesGorge,
   'why-private-escorted-tours-morocco': IMAGES.marrakech,
   'sahara-desert-stargazing-guide': IMAGES.campfireNight,
+  'merzouga-sahara-geology-atlas-mountains': IMAGES.highAtlas,
 }
 
 // Staggered recent publish dates, most recent = today
 const PUBLISH_DATES = [
   '2026-08-21', '2026-08-19', '2026-08-17', '2026-08-15', '2026-08-13',
   '2026-08-11', '2026-08-09', '2026-08-07', '2026-08-05', '2026-08-03',
+  '2026-10-25',
 ]
 
 function parseFrontmatter(raw) {

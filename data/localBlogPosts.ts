@@ -16,6 +16,61 @@ export interface LocalBlogPost {
 
 export const localBlogPosts: LocalBlogPost[] = [
   {
+    "slug": "merzouga-sahara-geology-atlas-mountains",
+    "title": "Why Is There a Desert at Merzouga? How the Atlas Mountains Made the Sahara Dunes",
+    "seotitle": "Why Is There a Desert at Merzouga? Atlas Mountains Geology",
+    "seodescription": "How the High Atlas and Anti Atlas formed, and why that put the Erg Chebbi dunes at Merzouga. A clear geology guide from local Sahara tour guides.",
+    "seokeywords": "how were the Atlas Mountains formed, Merzouga desert geology, Erg Chebbi dunes formation, High Atlas vs Anti Atlas, why is Morocco south of the Atlas a desert, Merzouga fossils",
+    "category": "Sahara Desert",
+    "image": "/images/atlas.jpg",
+    "publishedAt": "2026-10-25",
+    "bodyHtml": "<p><strong>Quick answer:</strong> The desert at Merzouga exists because of the Atlas Mountains. The High Atlas rose over the last 60 million years as Africa pushed into Europe, squeezing an old sea filled rift against the rigid, far older Anti Atlas. That new mountain wall blocks Atlantic rain, its eroding rock feeds rivers that carry sand south, and the low Tafilalt basin at the eastern end of the Anti Atlas traps that sand. The result is Erg Chebbi: a field of dunes about 22 km long, up to 5 km wide, with dunes reaching 150 m.</p>\n<p>Our guides drive the road from Marrakech over the High Atlas to Merzouga every week, and &quot;why is the desert right here?&quot; is one of the questions travelers ask most. This guide answers it in plain language, with the key numbers you can check along the way.</p>\n<h2>Key Facts at a Glance</h2>\n<table>\n<thead>\n<tr>\n<th>Fact</th>\n<th>Figure</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Highest peak of the High Atlas</td>\n<td>Jbel Toubkal, 4,167 m (highest in North Africa)</td>\n</tr>\n<tr>\n<td>When the High Atlas trough first formed</td>\n<td>About 250 to 180 million years ago</td>\n</tr>\n<tr>\n<td>When the uplift began</td>\n<td>About 60 million years ago, strongest in the last 20 million</td>\n</tr>\n<tr>\n<td>Age of the Anti Atlas core rocks</td>\n<td>More than 600 million years (Precambrian)</td>\n</tr>\n<tr>\n<td>Erg Chebbi size</td>\n<td>About 22 km north to south, up to 5 km wide</td>\n</tr>\n<tr>\n<td>Tallest Erg Chebbi dunes</td>\n<td>About 150 m</td>\n</tr>\n<tr>\n<td>Age of Erfoud and Merzouga fossils</td>\n<td>Around 400 million years</td>\n</tr>\n</tbody></table>\n<h2>How Were the Atlas Mountains Formed?</h2>\n<p>The <a href=\"https://en.wikipedia.org/wiki/High_Atlas\">High Atlas</a> formed in two stages: first as a sinking sea basin, then as a mountain range squeezed up from that basin.</p>\n<ol>\n<li><strong>Stretching (about 250 to 180 million years ago).</strong> As the supercontinent Pangaea broke apart and the Atlantic Ocean began to open, the crust of central Morocco was pulled apart and sank, creating a long rift trough.</li>\n<li><strong>Filling with sea sediment.</strong> Shallow seas flooded the trough for tens of millions of years and laid down thick layers of limestone and marl. You can see these striped layers today in the walls of the Todra and Dades gorges.</li>\n<li><strong>Squeezing (from about 60 million years ago).</strong> As the African plate moved north against Europe, the trough was compressed. Its soft layers folded and were pushed upward along faults. Most of the height was gained in the last 20 million years.</li>\n<li><strong>Lifting from below.</strong> The mantle beneath Morocco is unusually hot and the crust is thin, which raises the whole region and explains why Jbel Toubkal reaches 4,167 m. The range is still rising very slowly, which is why the region has occasional earthquakes.</li>\n</ol>\n<h2>What Role Did the Anti Atlas Play?</h2>\n<p>The <a href=\"https://en.wikipedia.org/wiki/Anti-Atlas\">Anti Atlas</a> acted as the anvil the High Atlas was hammered against.</p>\n<p>Its core is Precambrian rock more than 600 million years old, sitting on the edge of the <a href=\"https://en.wikipedia.org/wiki/West_African_Craton\">West African Craton</a>, one of the most stable blocks of continental crust on Earth. When the squeeze from the north arrived, this block was too strong to fold. The pressure concentrated in the weaker, sediment filled trough to its north instead, and that trough became the High Atlas.</p>\n<p>The boundary between the two is the South Atlas Fault, which runs close to Ouarzazate, Tinghir and Errachidia. If you travel from Marrakech to Merzouga, you drive along this line for much of the journey.</p>\n<h2>High Atlas vs Anti Atlas: What Is the Difference?</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>High Atlas</th>\n<th>Anti Atlas</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Age of main rocks</td>\n<td>About 250 to 50 million years</td>\n<td>More than 600 million years</td>\n</tr>\n<tr>\n<td>Rock type</td>\n<td>Folded limestone, marl and sandstone from old seas</td>\n<td>Hard Precambrian granite and metamorphic rock, plus old sediments</td>\n</tr>\n<tr>\n<td>Highest point</td>\n<td>Jbel Toubkal, 4,167 m</td>\n<td>Jbel Sirwa, about 3,300 m</td>\n</tr>\n<tr>\n<td>How it formed</td>\n<td>Old rift squeezed by the Africa and Europe collision</td>\n<td>Ancient ranges worn down, then gently domed upward</td>\n</tr>\n<tr>\n<td>Landscape</td>\n<td>Sharp peaks, deep gorges, snow in winter</td>\n<td>Rounded, rust colored hills and plateaus</td>\n</tr>\n</tbody></table>\n<h2>Why Is Merzouga a Desert?</h2>\n<p>Three effects of the mountains meet at Merzouga.</p>\n<ul>\n<li><strong>Rain shadow.</strong> The High Atlas is a wall across the path of moist Atlantic air. Rain and snow fall on its northern and western slopes, leaving the southeast side very dry. Merzouga gets rain on only a few days a year.</li>\n<li><strong>Sand supply.</strong> Frost, heat, wind and flash floods break down the High Atlas rock. Rivers such as the Ziz carry that debris south past Errachidia and Erfoud, then disappear into the desert. Over time, wind sorts the finest grains into sand.</li>\n<li><strong>A sand trap.</strong> <a href=\"https://en.wikipedia.org/wiki/Erg_Chebbi\">Erg Chebbi</a> sits in the low Tafilalt area at the eastern end of the Anti Atlas, framed by flat stony plateaus called hamada and small dark hills. Winds crossing this ground slow down and drop their sand here.</li>\n</ul>\n<p>The orange color of the dunes comes from a thin coating of iron oxide on each grain. It is strongest at sunrise and sunset, which is why our camel treks are timed for those hours.</p>\n<h2>Where Can You See This Geology on a Tour?</h2>\n<p>On the classic <a href=\"/marrakech-to-merzouga\">Marrakech to Merzouga route</a>, each stop shows a different chapter of the story:</p>\n<ol>\n<li><strong>Tizi n&#39;Tichka pass (2,260 m):</strong> the uplifted core of the High Atlas.</li>\n<li><strong>Ouarzazate and Skoura:</strong> wide plains and palm oases along the South Atlas Fault.</li>\n<li><strong>Dades and Todra gorges:</strong> old sea floor, folded and tilted on its side.</li>\n<li><strong>Erfoud and the Ziz valley:</strong> the river that carries mountain sediment south, and the fossil workshops.</li>\n<li><strong><a href=\"/destinations/merzouga-sahara-desert\">Merzouga and Erg Chebbi</a>:</strong> the dunes where the sand finally comes to rest.</li>\n</ol>\n<p>Around Erfoud and Merzouga, the black stone is full of orthoceras and trilobites. These animals lived in seas that covered the region about 400 million years ago, long before the High Atlas existed. Your guide can stop at a workshop so you can see how they are cut and polished.</p>\n<h2>Plan Your Trip</h2>\n<p>If you would like to see this landscape with a local guide who can explain it along the way, our <a href=\"/tours/3-days-sahara-tour-marrakech-to-fes-via-merzouga-morocco\">3 day Sahara tour from Marrakech to Fes via Merzouga</a> crosses the High Atlas, the gorges and the Ziz valley before a night in the Erg Chebbi dunes. For a shorter trip, see our <a href=\"/tours/marrakech-to-merzouga-2-day-desert-adventure-in-morocco\">2 day Marrakech to Merzouga desert adventure</a>. Every tour can be adjusted to your pace and interests.</p>\n",
+    "related": [
+      {
+        "text": "Best Time to Visit the Sahara Desert: A Season by Season Guide",
+        "href": "/blog/best-time-to-visit-sahara-desert"
+      },
+      {
+        "text": "Merzouga vs Zagora: Which Sahara Desert Tour Is Right for You?",
+        "href": "/blog/merzouga-vs-zagora-sahara-desert-tour"
+      },
+      {
+        "text": "Ait Benhaddou and Ouarzazate Guide",
+        "href": "/blog/ait-benhaddou-ouarzazate-guide"
+      },
+      {
+        "text": "Sahara Desert Stargazing: A Guide to Morocco's Night Skies",
+        "href": "/blog/sahara-desert-stargazing-guide"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How were the Atlas Mountains formed?",
+        "answer": "They began as a sea filled rift around 250 million years ago when Pangaea broke apart. From about 60 million years ago, the collision of Africa and Europe squeezed that rift and pushed it up into mountains."
+      },
+      {
+        "question": "What is the difference between the High Atlas and the Anti Atlas?",
+        "answer": "The High Atlas is younger and taller, made mostly of folded sea sediments, and reaches 4,167 m at Jbel Toubkal. The Anti Atlas is far older, built on Precambrian rock more than 600 million years old, and is lower and more rounded."
+      },
+      {
+        "question": "Why is there a desert at Merzouga?",
+        "answer": "The High Atlas blocks Atlantic rain, rivers carry eroded rock south from the mountains, and the low Tafilalt basin at the end of the Anti Atlas traps the sand, forming the Erg Chebbi dunes."
+      },
+      {
+        "question": "How big are the Erg Chebbi dunes?",
+        "answer": "Erg Chebbi stretches about 22 km from north to south and up to 5 km wide, with the tallest dunes rising about 150 m."
+      },
+      {
+        "question": "Are there fossils near Merzouga?",
+        "answer": "Yes. The Erfoud and Merzouga area is known for trilobites and orthoceras from seas that covered the region around 400 million years ago."
+      },
+      {
+        "question": "How long does it take to drive from Marrakech to Merzouga?",
+        "answer": "The drive is roughly 560 km and about 9 to 10 hours of driving, so most tours split it over two days with a night in the Dades or Todra area."
+      }
+    ]
+  },
+  {
     "slug": "best-time-to-visit-sahara-desert",
     "title": "Best Time to Visit the Sahara Desert: A Season-by-Season Guide",
     "seotitle": "Best Time to Visit the Sahara Desert | Season Guide",
