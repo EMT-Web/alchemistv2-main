@@ -12,6 +12,7 @@ function departureCity(tour: Tour): string {
   if (raw.startsWith('fe')) return 'Fes'
   if (raw.startsWith('casa')) return 'Casablanca'
   if (raw.startsWith('tangier')) return 'Tangier'
+  if (raw.startsWith('errachidia')) return 'Errachidia'
   if (raw.startsWith('agadir')) return 'Agadir'
   if (raw.startsWith('ouarzazate')) return 'Ouarzazate'
   return ''
@@ -32,7 +33,7 @@ const DURATION_FILTERS: { key: string; label: string; match: (t: Tour) => boolea
   { key: 'd8', label: '8+ Days', match: (t) => durationBucket(t) === '8+' },
 ]
 
-const CITY_ORDER = ['Marrakech', 'Fes', 'Casablanca', 'Tangier', 'Agadir', 'Ouarzazate']
+const CITY_ORDER = ['Marrakech', 'Fes', 'Casablanca', 'Tangier', 'Errachidia', 'Agadir', 'Ouarzazate']
 
 export default function ToursFilter({ tours = [] as Tour[] }) {
   const [active, setActive] = useState('all')

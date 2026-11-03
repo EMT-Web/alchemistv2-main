@@ -81,8 +81,8 @@ export default function  NextPage({tours}:any) {
   return (
     <>
     <SEO
-      title="Morocco Tours: 2 to 13 Day Private Itineraries"
-      description={`Compare ${tours.length} private Morocco tours from Marrakech, Fes, Casablanca and Tangier, from 2 day Sahara trips to 13 day grand tours. Every route can be adjusted.`}
+      title="Morocco Tours: 1 to 13 Day Private Itineraries"
+      description={`Compare ${tours.length} private Morocco tours from Marrakech, Fes, Casablanca, Tangier and Errachidia, from 1 day Sahara trips to 13 day grand tours. Every route can be adjusted.`}
       schema={combinedSchema}
     />
     <PageHero title='All Morocco Tours' tag='Get the best of your journey' p={`Join us on an adventure of a lifetime with our escorted tours in Morocco. From the bustling cities of Marrakech and Fez to the tranquil beauty of the Sahara Desert and the stunning Atlas Mountains, our tours offer a comprehensive and immersive journey through the culture, history, and natural wonders of Morocco. ${tours.length} Tours`} img='/cms/ea329707ee6a76072f888eaac2ea74174bc8b105.jpg'/>
