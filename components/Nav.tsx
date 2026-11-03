@@ -8,6 +8,7 @@ const TOURS_MENU = {
     ['Fez', '/category/tours-from-fez'],
     ['Casablanca', '/category/tours-from-casablanca'],
     ['Tangier', '/category/tours-from-tangier'],
+    ['Errachidia (Sahara)', '/tours-from-errachidia'],
   ],
   Duration: [
     ['1-3 Day Tours', '/category/1-3-day-tours'],

@@ -52,9 +52,11 @@ const config = {
     } else if (path.includes('/blog/')) {
       priority = 0.7
       changefreq = 'monthly'
-    } else if (path === '/best-time-to-visit-morocco' || path === '/marrakech-to-merzouga' || path === '/imperial-cities-of-morocco' || path === '/merzouga-luxury-desert-camps') {
+    } else if (path === '/best-time-to-visit-morocco' || path === '/marrakech-to-merzouga' || path === '/imperial-cities-of-morocco' || path === '/merzouga-luxury-desert-camps' || path === '/tours-from-errachidia') {
       priority = 0.8
       changefreq = 'monthly'
+    } else if (path === '/category/tours-from-errachidia') {
+      return null
     } else if (path.includes('/category/')) {
       priority = 0.6
       changefreq = 'weekly'

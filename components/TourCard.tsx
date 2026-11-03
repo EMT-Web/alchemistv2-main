@@ -48,7 +48,7 @@ export default function TourCard({ tour }: any) {
         )}
         <span className="tcard__tag">{tag}</span>
         <span className="tcard__days">
-          <span className="fa fa-clock-o" aria-hidden="true" /> {tour?.duration} Days
+          <span className="fa fa-clock-o" aria-hidden="true" /> {tour?.duration} {Number(tour?.duration) === 1 ? 'Day' : 'Days'}
         </span>
       </a>
 

@@ -48,6 +48,12 @@ module.exports = {
         destination: "/blog/why-private-escorted-tours-morocco",
         statusCode: 301,
       },
+      // The Errachidia tours have a dedicated landing page; keep one URL for them.
+      {
+        source: "/category/tours-from-errachidia",
+        destination: "/tours-from-errachidia",
+        statusCode: 301,
+      },
       {
         source: "/destination/:slug",
         destination: "/destinations/:slug",

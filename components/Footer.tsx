@@ -76,6 +76,7 @@ function Footer() {
                 <li><a href="/marrakech-to-merzouga">Marrakech to Merzouga</a></li>
                 <li><a href="/imperial-cities-of-morocco">Imperial Cities and the North</a></li>
                 <li><a href="/merzouga-luxury-desert-camps">Luxury Desert Camps</a></li>
+                <li><a href="/tours-from-errachidia">Tours from Errachidia</a></li>
                 <li><a href="/posts/culture">Culture</a></li>
                 <li><a href="/about">About Us</a></li>
               </ul>

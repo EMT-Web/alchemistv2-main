@@ -284,6 +284,7 @@ export const guides: Guide[] = [
       },
     ],
     related: [
+      { text: 'Sahara Tours from Errachidia, 2 Hours from the Dunes', href: '/tours-from-errachidia' },
       { text: 'Best Time to Visit Morocco: Month by Month', href: '/best-time-to-visit-morocco' },
       { text: 'Merzouga vs Zagora: Which Sahara Desert Tour?', href: '/blog/merzouga-vs-zagora-sahara-desert-tour' },
       { text: 'Imperial Cities of Morocco and the North', href: '/imperial-cities-of-morocco' },
@@ -590,6 +591,7 @@ export const guides: Guide[] = [
       },
     ],
     related: [
+      { text: 'Sahara Tours from Errachidia, 2 Hours from the Dunes', href: '/tours-from-errachidia' },
       { text: 'Luxury vs Standard Desert Camps in Merzouga', href: '/blog/luxury-vs-standard-desert-camps-merzouga' },
       { text: 'Marrakech to Merzouga: Route Guide and Driving Times', href: '/marrakech-to-merzouga' },
       { text: 'Best Time to Visit Morocco: Month by Month', href: '/best-time-to-visit-morocco' },
